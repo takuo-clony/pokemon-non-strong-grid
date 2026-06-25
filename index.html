@@ -1,0 +1,1935 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>参加可能ポケモン一覧</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --page-bg: #f6f7f9;
+      --panel: #ffffff;
+      --line: #dfe3ea;
+      --text: #1d2633;
+      --muted: #657184;
+      --accent: #2f6f73;
+      --image-bg: #f9fafb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--page-bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif;
+      line-height: 1.5;
+    }
+
+    main {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 40px;
+    }
+
+    .page-header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    .count {
+      color: var(--muted);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .pokemon-card {
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+    }
+
+    .pokemon-image-wrap {
+      display: grid;
+      place-items: center;
+      aspect-ratio: 1 / 1;
+      background: var(--image-bg);
+      border-bottom: 1px solid var(--line);
+      padding: 10px;
+    }
+
+    .pokemon-image-wrap img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .pokemon-name {
+      min-height: 42px;
+      display: grid;
+      place-items: center;
+      padding: 8px 6px 4px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.25;
+      overflow-wrap: anywhere;
+    }
+
+    .pokemon-no {
+      padding: 0 6px 9px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    @media (max-width: 920px) {
+      .grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      main {
+        width: min(100% - 20px, 1180px);
+        padding-top: 18px;
+      }
+
+      .page-header {
+        align-items: start;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="page-header">
+      <h1>未チェックポケモン一覧</h1>
+      <div class="count">255匹</div>
+    </header>
+    <section class="grid" aria-label="未チェックポケモン">
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/001_0003_フシギバナ_003.png" alt="フシギバナ" loading="lazy">
+        </div>
+        <div class="pokemon-name">フシギバナ</div>
+        <div class="pokemon-no">No.0003</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/003_0006_リザードン_006.png" alt="リザードン" loading="lazy">
+        </div>
+        <div class="pokemon-name">リザードン</div>
+        <div class="pokemon-no">No.0006</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/006_0009_カメックス_009.png" alt="カメックス" loading="lazy">
+        </div>
+        <div class="pokemon-name">カメックス</div>
+        <div class="pokemon-no">No.0009</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/008_0015_スピアー_015.png" alt="スピアー" loading="lazy">
+        </div>
+        <div class="pokemon-name">スピアー</div>
+        <div class="pokemon-no">No.0015</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/009_0015_メガスピアー_015_1.png" alt="メガスピアー" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガスピアー</div>
+        <div class="pokemon-no">No.0015</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/010_0018_ピジョット_018.png" alt="ピジョット" loading="lazy">
+        </div>
+        <div class="pokemon-name">ピジョット</div>
+        <div class="pokemon-no">No.0018</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/011_0018_メガピジョット_018_1.png" alt="メガピジョット" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガピジョット</div>
+        <div class="pokemon-no">No.0018</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/012_0024_アーボック_024.png" alt="アーボック" loading="lazy">
+        </div>
+        <div class="pokemon-name">アーボック</div>
+        <div class="pokemon-no">No.0024</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/013_0025_ピカチュウ_025.png" alt="ピカチュウ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ピカチュウ</div>
+        <div class="pokemon-no">No.0025</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/014_0026_ライチュウ_026.png" alt="ライチュウ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ライチュウ</div>
+        <div class="pokemon-no">No.0026</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/015_0026_アローラライチュウ_026_1.png" alt="アローラライチュウ" loading="lazy">
+        </div>
+        <div class="pokemon-name">アローラライチュウ</div>
+        <div class="pokemon-no">No.0026</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/016_0026_メガライチュウX_026_2.png" alt="メガライチュウX" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガライチュウX</div>
+        <div class="pokemon-no">No.0026</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/018_0036_ピクシー_036.png" alt="ピクシー" loading="lazy">
+        </div>
+        <div class="pokemon-name">ピクシー</div>
+        <div class="pokemon-no">No.0036</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/020_0038_キュウコン_038.png" alt="キュウコン" loading="lazy">
+        </div>
+        <div class="pokemon-name">キュウコン</div>
+        <div class="pokemon-no">No.0038</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/022_0045_ラフレシア_045.png" alt="ラフレシア" loading="lazy">
+        </div>
+        <div class="pokemon-name">ラフレシア</div>
+        <div class="pokemon-no">No.0045</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/023_0059_ウインディ_059.png" alt="ウインディ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ウインディ</div>
+        <div class="pokemon-no">No.0059</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/024_0059_ヒスイウインディ_059_1.png" alt="ヒスイウインディ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ヒスイウインディ</div>
+        <div class="pokemon-no">No.0059</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/025_0065_フーディン_065.png" alt="フーディン" loading="lazy">
+        </div>
+        <div class="pokemon-name">フーディン</div>
+        <div class="pokemon-no">No.0065</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/026_0065_メガフーディン_065_1.png" alt="メガフーディン" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガフーディン</div>
+        <div class="pokemon-no">No.0065</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/027_0068_カイリキー_068.png" alt="カイリキー" loading="lazy">
+        </div>
+        <div class="pokemon-name">カイリキー</div>
+        <div class="pokemon-no">No.0068</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/028_0071_ウツボット_071.png" alt="ウツボット" loading="lazy">
+        </div>
+        <div class="pokemon-name">ウツボット</div>
+        <div class="pokemon-no">No.0071</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/029_0071_メガウツボット_071_1.png" alt="メガウツボット" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガウツボット</div>
+        <div class="pokemon-no">No.0071</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/030_0080_ヤドラン_080.png" alt="ヤドラン" loading="lazy">
+        </div>
+        <div class="pokemon-name">ヤドラン</div>
+        <div class="pokemon-no">No.0080</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/031_0080_メガヤドラン_080_1.png" alt="メガヤドラン" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガヤドラン</div>
+        <div class="pokemon-no">No.0080</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/032_0080_ガラルヤドラン_080_2.png" alt="ガラルヤドラン" loading="lazy">
+        </div>
+        <div class="pokemon-name">ガラルヤドラン</div>
+        <div class="pokemon-no">No.0080</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/035_0115_ガルーラ_115.png" alt="ガルーラ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ガルーラ</div>
+        <div class="pokemon-no">No.0115</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/036_0115_メガガルーラ_115_1.png" alt="メガガルーラ" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガガルーラ</div>
+        <div class="pokemon-no">No.0115</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/037_0121_スターミー_121.png" alt="スターミー" loading="lazy">
+        </div>
+        <div class="pokemon-name">スターミー</div>
+        <div class="pokemon-no">No.0121</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/039_0127_カイロス_127.png" alt="カイロス" loading="lazy">
+        </div>
+        <div class="pokemon-name">カイロス</div>
+        <div class="pokemon-no">No.0127</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/040_0127_メガカイロス_127_1.png" alt="メガカイロス" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガカイロス</div>
+        <div class="pokemon-no">No.0127</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/041_0128_ケンタロス_128.png" alt="ケンタロス" loading="lazy">
+        </div>
+        <div class="pokemon-name">ケンタロス</div>
+        <div class="pokemon-no">No.0128</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/042_0128_パルデアケンタロス(かくとう)_128_1.png" alt="パルデアケンタロス(かくとう)" loading="lazy">
+        </div>
+        <div class="pokemon-name">パルデアケンタロス(かくとう)</div>
+        <div class="pokemon-no">No.0128</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/043_0128_パルデアケンタロス(ほのお)_128_3.png" alt="パルデアケンタロス(ほのお)" loading="lazy">
+        </div>
+        <div class="pokemon-name">パルデアケンタロス(ほのお)</div>
+        <div class="pokemon-no">No.0128</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/044_0128_パルデアケンタロス(みず)_128_2.png" alt="パルデアケンタロス(みず)" loading="lazy">
+        </div>
+        <div class="pokemon-name">パルデアケンタロス(みず)</div>
+        <div class="pokemon-no">No.0128</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/047_0132_メタモン_132.png" alt="メタモン" loading="lazy">
+        </div>
+        <div class="pokemon-name">メタモン</div>
+        <div class="pokemon-no">No.0132</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/048_0134_シャワーズ_134.png" alt="シャワーズ" loading="lazy">
+        </div>
+        <div class="pokemon-name">シャワーズ</div>
+        <div class="pokemon-no">No.0134</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/049_0135_サンダース_135.png" alt="サンダース" loading="lazy">
+        </div>
+        <div class="pokemon-name">サンダース</div>
+        <div class="pokemon-no">No.0135</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/050_0136_ブースター_136.png" alt="ブースター" loading="lazy">
+        </div>
+        <div class="pokemon-name">ブースター</div>
+        <div class="pokemon-no">No.0136</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/051_0142_プテラ_142.png" alt="プテラ" loading="lazy">
+        </div>
+        <div class="pokemon-name">プテラ</div>
+        <div class="pokemon-no">No.0142</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/052_0142_メガプテラ_142_1.png" alt="メガプテラ" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガプテラ</div>
+        <div class="pokemon-no">No.0142</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/053_0143_カビゴン_143.png" alt="カビゴン" loading="lazy">
+        </div>
+        <div class="pokemon-name">カビゴン</div>
+        <div class="pokemon-no">No.0143</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/054_0149_カイリュー_149.png" alt="カイリュー" loading="lazy">
+        </div>
+        <div class="pokemon-name">カイリュー</div>
+        <div class="pokemon-no">No.0149</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/056_0154_メガニウム_154.png" alt="メガニウム" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガニウム</div>
+        <div class="pokemon-no">No.0154</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/058_0157_バクフーン_157.png" alt="バクフーン" loading="lazy">
+        </div>
+        <div class="pokemon-name">バクフーン</div>
+        <div class="pokemon-no">No.0157</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/059_0157_ヒスイバクフーン_157_1.png" alt="ヒスイバクフーン" loading="lazy">
+        </div>
+        <div class="pokemon-name">ヒスイバクフーン</div>
+        <div class="pokemon-no">No.0157</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/060_0160_オーダイル_160.png" alt="オーダイル" loading="lazy">
+        </div>
+        <div class="pokemon-name">オーダイル</div>
+        <div class="pokemon-no">No.0160</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/061_0160_メガオーダイル_160_1.png" alt="メガオーダイル" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガオーダイル</div>
+        <div class="pokemon-no">No.0160</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/062_0168_アリアドス_168.png" alt="アリアドス" loading="lazy">
+        </div>
+        <div class="pokemon-name">アリアドス</div>
+        <div class="pokemon-no">No.0168</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/063_0181_デンリュウ_181.png" alt="デンリュウ" loading="lazy">
+        </div>
+        <div class="pokemon-name">デンリュウ</div>
+        <div class="pokemon-no">No.0181</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/064_0181_メガデンリュウ_181_1.png" alt="メガデンリュウ" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガデンリュウ</div>
+        <div class="pokemon-no">No.0181</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/065_0184_マリルリ_184.png" alt="マリルリ" loading="lazy">
+        </div>
+        <div class="pokemon-name">マリルリ</div>
+        <div class="pokemon-no">No.0184</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/066_0186_ニョロトノ_186.png" alt="ニョロトノ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ニョロトノ</div>
+        <div class="pokemon-no">No.0186</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/067_0196_エーフィ_196.png" alt="エーフィ" loading="lazy">
+        </div>
+        <div class="pokemon-name">エーフィ</div>
+        <div class="pokemon-no">No.0196</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/069_0199_ヤドキング_199.png" alt="ヤドキング" loading="lazy">
+        </div>
+        <div class="pokemon-name">ヤドキング</div>
+        <div class="pokemon-no">No.0199</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/070_0199_ガラルヤドキング_199_1.png" alt="ガラルヤドキング" loading="lazy">
+        </div>
+        <div class="pokemon-name">ガラルヤドキング</div>
+        <div class="pokemon-no">No.0199</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/071_0205_フォレトス_205.png" alt="フォレトス" loading="lazy">
+        </div>
+        <div class="pokemon-name">フォレトス</div>
+        <div class="pokemon-no">No.0205</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/072_0208_ハガネール_208.png" alt="ハガネール" loading="lazy">
+        </div>
+        <div class="pokemon-name">ハガネール</div>
+        <div class="pokemon-no">No.0208</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/073_0208_メガハガネール_208_1.png" alt="メガハガネール" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガハガネール</div>
+        <div class="pokemon-no">No.0208</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/074_0211_ハリーセン_211.png" alt="ハリーセン" loading="lazy">
+        </div>
+        <div class="pokemon-name">ハリーセン</div>
+        <div class="pokemon-no">No.0211</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/075_0212_ハッサム_212.png" alt="ハッサム" loading="lazy">
+        </div>
+        <div class="pokemon-name">ハッサム</div>
+        <div class="pokemon-no">No.0212</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/077_0214_ヘラクロス_214.png" alt="ヘラクロス" loading="lazy">
+        </div>
+        <div class="pokemon-name">ヘラクロス</div>
+        <div class="pokemon-no">No.0214</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/078_0214_メガヘラクロス_214_1.png" alt="メガヘラクロス" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガヘラクロス</div>
+        <div class="pokemon-no">No.0214</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/079_0227_エアームド_227.png" alt="エアームド" loading="lazy">
+        </div>
+        <div class="pokemon-name">エアームド</div>
+        <div class="pokemon-no">No.0227</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/080_0227_メガエアームド_227_1.png" alt="メガエアームド" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガエアームド</div>
+        <div class="pokemon-no">No.0227</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/081_0229_ヘルガー_229.png" alt="ヘルガー" loading="lazy">
+        </div>
+        <div class="pokemon-name">ヘルガー</div>
+        <div class="pokemon-no">No.0229</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/082_0229_メガヘルガー_229_1.png" alt="メガヘルガー" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガヘルガー</div>
+        <div class="pokemon-no">No.0229</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/083_0248_バンギラス_248.png" alt="バンギラス" loading="lazy">
+        </div>
+        <div class="pokemon-name">バンギラス</div>
+        <div class="pokemon-no">No.0248</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/084_0248_メガバンギラス_248_1.png" alt="メガバンギラス" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガバンギラス</div>
+        <div class="pokemon-no">No.0248</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/085_0254_ジュカイン_254.png" alt="ジュカイン" loading="lazy">
+        </div>
+        <div class="pokemon-name">ジュカイン</div>
+        <div class="pokemon-no">No.0254</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/086_0254_メガジュカイン_254_1.png" alt="メガジュカイン" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガジュカイン</div>
+        <div class="pokemon-no">No.0254</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/092_0282_サーナイト_282.png" alt="サーナイト" loading="lazy">
+        </div>
+        <div class="pokemon-name">サーナイト</div>
+        <div class="pokemon-no">No.0282</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/093_0282_メガサーナイト_282_1.png" alt="メガサーナイト" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガサーナイト</div>
+        <div class="pokemon-no">No.0282</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/094_0302_ヤミラミ_302.png" alt="ヤミラミ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ヤミラミ</div>
+        <div class="pokemon-no">No.0302</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/095_0302_メガヤミラミ_302_1.png" alt="メガヤミラミ" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガヤミラミ</div>
+        <div class="pokemon-no">No.0302</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/096_0303_クチート_303.png" alt="クチート" loading="lazy">
+        </div>
+        <div class="pokemon-name">クチート</div>
+        <div class="pokemon-no">No.0303</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/098_0306_ボスゴドラ_306.png" alt="ボスゴドラ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ボスゴドラ</div>
+        <div class="pokemon-no">No.0306</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/099_0306_メガボスゴドラ_306_1.png" alt="メガボスゴドラ" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガボスゴドラ</div>
+        <div class="pokemon-no">No.0306</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/100_0308_チャーレム_308.png" alt="チャーレム" loading="lazy">
+        </div>
+        <div class="pokemon-name">チャーレム</div>
+        <div class="pokemon-no">No.0308</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/101_0308_メガチャーレム_308_1.png" alt="メガチャーレム" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガチャーレム</div>
+        <div class="pokemon-no">No.0308</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/102_0310_ライボルト_310.png" alt="ライボルト" loading="lazy">
+        </div>
+        <div class="pokemon-name">ライボルト</div>
+        <div class="pokemon-no">No.0310</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/103_0310_メガライボルト_310_1.png" alt="メガライボルト" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガライボルト</div>
+        <div class="pokemon-no">No.0310</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/104_0319_サメハダー_319.png" alt="サメハダー" loading="lazy">
+        </div>
+        <div class="pokemon-name">サメハダー</div>
+        <div class="pokemon-no">No.0319</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/105_0319_メガサメハダー_319_1.png" alt="メガサメハダー" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガサメハダー</div>
+        <div class="pokemon-no">No.0319</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/106_0323_バクーダ_323.png" alt="バクーダ" loading="lazy">
+        </div>
+        <div class="pokemon-name">バクーダ</div>
+        <div class="pokemon-no">No.0323</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/107_0323_メガバクーダ_323_1.png" alt="メガバクーダ" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガバクーダ</div>
+        <div class="pokemon-no">No.0323</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/108_0324_コータス_324.png" alt="コータス" loading="lazy">
+        </div>
+        <div class="pokemon-name">コータス</div>
+        <div class="pokemon-no">No.0324</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/109_0334_チルタリス_334.png" alt="チルタリス" loading="lazy">
+        </div>
+        <div class="pokemon-name">チルタリス</div>
+        <div class="pokemon-no">No.0334</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/110_0334_メガチルタリス_334_1.png" alt="メガチルタリス" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガチルタリス</div>
+        <div class="pokemon-no">No.0334</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/111_0350_ミロカロス_350.png" alt="ミロカロス" loading="lazy">
+        </div>
+        <div class="pokemon-name">ミロカロス</div>
+        <div class="pokemon-no">No.0350</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/112_0351_ポワルン_351.png" alt="ポワルン" loading="lazy">
+        </div>
+        <div class="pokemon-name">ポワルン</div>
+        <div class="pokemon-no">No.0351</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/113_0351_ポワルン(たいようのすがた)_351_1.png" alt="ポワルン(たいようのすがた)" loading="lazy">
+        </div>
+        <div class="pokemon-name">ポワルン(たいようのすがた)</div>
+        <div class="pokemon-no">No.0351</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/114_0351_ポワルン(あまみずのすがた)_351_2.png" alt="ポワルン(あまみずのすがた)" loading="lazy">
+        </div>
+        <div class="pokemon-name">ポワルン(あまみずのすがた)</div>
+        <div class="pokemon-no">No.0351</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/115_0351_ポワルン(ゆきぐものすがた)_351_3.png" alt="ポワルン(ゆきぐものすがた)" loading="lazy">
+        </div>
+        <div class="pokemon-name">ポワルン(ゆきぐものすがた)</div>
+        <div class="pokemon-no">No.0351</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/116_0354_ジュペッタ_354.png" alt="ジュペッタ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ジュペッタ</div>
+        <div class="pokemon-no">No.0354</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/117_0354_メガジュペッタ_354_1.png" alt="メガジュペッタ" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガジュペッタ</div>
+        <div class="pokemon-no">No.0354</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/118_0358_チリーン_358.png" alt="チリーン" loading="lazy">
+        </div>
+        <div class="pokemon-name">チリーン</div>
+        <div class="pokemon-no">No.0358</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/119_0358_メガチリーン_358_1.png" alt="メガチリーン" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガチリーン</div>
+        <div class="pokemon-no">No.0358</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/120_0359_アブソル_359.png" alt="アブソル" loading="lazy">
+        </div>
+        <div class="pokemon-name">アブソル</div>
+        <div class="pokemon-no">No.0359</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/121_0359_メガアブソル_359_1.png" alt="メガアブソル" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガアブソル</div>
+        <div class="pokemon-no">No.0359</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/122_0362_オニゴーリ_362.png" alt="オニゴーリ" loading="lazy">
+        </div>
+        <div class="pokemon-name">オニゴーリ</div>
+        <div class="pokemon-no">No.0362</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/123_0362_メガオニゴーリ_362_1.png" alt="メガオニゴーリ" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガオニゴーリ</div>
+        <div class="pokemon-no">No.0362</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/124_0376_メタグロス_376.png" alt="メタグロス" loading="lazy">
+        </div>
+        <div class="pokemon-name">メタグロス</div>
+        <div class="pokemon-no">No.0376</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/126_0389_ドダイトス_389.png" alt="ドダイトス" loading="lazy">
+        </div>
+        <div class="pokemon-name">ドダイトス</div>
+        <div class="pokemon-no">No.0389</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/127_0392_ゴウカザル_392.png" alt="ゴウカザル" loading="lazy">
+        </div>
+        <div class="pokemon-name">ゴウカザル</div>
+        <div class="pokemon-no">No.0392</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/128_0395_エンペルト_395.png" alt="エンペルト" loading="lazy">
+        </div>
+        <div class="pokemon-name">エンペルト</div>
+        <div class="pokemon-no">No.0395</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/129_0398_ムクホーク_398.png" alt="ムクホーク" loading="lazy">
+        </div>
+        <div class="pokemon-name">ムクホーク</div>
+        <div class="pokemon-no">No.0398</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/131_0405_レントラー_405.png" alt="レントラー" loading="lazy">
+        </div>
+        <div class="pokemon-name">レントラー</div>
+        <div class="pokemon-no">No.0405</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/132_0407_ロズレイド_407.png" alt="ロズレイド" loading="lazy">
+        </div>
+        <div class="pokemon-name">ロズレイド</div>
+        <div class="pokemon-no">No.0407</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/133_0409_ラムパルド_409.png" alt="ラムパルド" loading="lazy">
+        </div>
+        <div class="pokemon-name">ラムパルド</div>
+        <div class="pokemon-no">No.0409</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/134_0411_トリデプス_411.png" alt="トリデプス" loading="lazy">
+        </div>
+        <div class="pokemon-name">トリデプス</div>
+        <div class="pokemon-no">No.0411</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/135_0428_ミミロップ_428.png" alt="ミミロップ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ミミロップ</div>
+        <div class="pokemon-no">No.0428</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/137_0442_ミカルゲ_442.png" alt="ミカルゲ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ミカルゲ</div>
+        <div class="pokemon-no">No.0442</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/139_0445_メガガブリアス_445_1.png" alt="メガガブリアス" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガガブリアス</div>
+        <div class="pokemon-no">No.0445</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/140_0448_ルカリオ_448.png" alt="ルカリオ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ルカリオ</div>
+        <div class="pokemon-no">No.0448</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/143_0454_ドクロッグ_454.png" alt="ドクロッグ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ドクロッグ</div>
+        <div class="pokemon-no">No.0454</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/144_0460_ユキノオー_460.png" alt="ユキノオー" loading="lazy">
+        </div>
+        <div class="pokemon-name">ユキノオー</div>
+        <div class="pokemon-no">No.0460</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/145_0460_メガユキノオー_460_1.png" alt="メガユキノオー" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガユキノオー</div>
+        <div class="pokemon-no">No.0460</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/146_0461_マニューラ_461.png" alt="マニューラ" loading="lazy">
+        </div>
+        <div class="pokemon-name">マニューラ</div>
+        <div class="pokemon-no">No.0461</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/147_0464_ドサイドン_464.png" alt="ドサイドン" loading="lazy">
+        </div>
+        <div class="pokemon-name">ドサイドン</div>
+        <div class="pokemon-no">No.0464</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/148_0470_リーフィア_470.png" alt="リーフィア" loading="lazy">
+        </div>
+        <div class="pokemon-name">リーフィア</div>
+        <div class="pokemon-no">No.0470</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/149_0471_グレイシア_471.png" alt="グレイシア" loading="lazy">
+        </div>
+        <div class="pokemon-name">グレイシア</div>
+        <div class="pokemon-no">No.0471</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/150_0472_グライオン_472.png" alt="グライオン" loading="lazy">
+        </div>
+        <div class="pokemon-name">グライオン</div>
+        <div class="pokemon-no">No.0472</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/153_0475_メガエルレイド_475_1.png" alt="メガエルレイド" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガエルレイド</div>
+        <div class="pokemon-no">No.0475</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/154_0478_ユキメノコ_478.png" alt="ユキメノコ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ユキメノコ</div>
+        <div class="pokemon-no">No.0478</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/155_0478_メガユキメノコ_478_1.png" alt="メガユキメノコ" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガユキメノコ</div>
+        <div class="pokemon-no">No.0478</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/156_0479_ロトム_479.png" alt="ロトム" loading="lazy">
+        </div>
+        <div class="pokemon-name">ロトム</div>
+        <div class="pokemon-no">No.0479</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/159_0479_フロストロトム_479_3.png" alt="フロストロトム" loading="lazy">
+        </div>
+        <div class="pokemon-name">フロストロトム</div>
+        <div class="pokemon-no">No.0479</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/160_0479_スピンロトム_479_4.png" alt="スピンロトム" loading="lazy">
+        </div>
+        <div class="pokemon-name">スピンロトム</div>
+        <div class="pokemon-no">No.0479</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/161_0479_カットロトム_479_5.png" alt="カットロトム" loading="lazy">
+        </div>
+        <div class="pokemon-name">カットロトム</div>
+        <div class="pokemon-no">No.0479</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/162_0497_ジャローダ_497.png" alt="ジャローダ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ジャローダ</div>
+        <div class="pokemon-no">No.0497</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/163_0500_エンブオー_500.png" alt="エンブオー" loading="lazy">
+        </div>
+        <div class="pokemon-name">エンブオー</div>
+        <div class="pokemon-no">No.0500</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/164_0500_メガエンブオー_500_1.png" alt="メガエンブオー" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガエンブオー</div>
+        <div class="pokemon-no">No.0500</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/165_0503_ダイケンキ_503.png" alt="ダイケンキ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ダイケンキ</div>
+        <div class="pokemon-no">No.0503</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/167_0505_ミルホッグ_505.png" alt="ミルホッグ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ミルホッグ</div>
+        <div class="pokemon-no">No.0505</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/168_0510_レパルダス_510.png" alt="レパルダス" loading="lazy">
+        </div>
+        <div class="pokemon-name">レパルダス</div>
+        <div class="pokemon-no">No.0510</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/169_0512_ヤナッキー_512.png" alt="ヤナッキー" loading="lazy">
+        </div>
+        <div class="pokemon-name">ヤナッキー</div>
+        <div class="pokemon-no">No.0512</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/170_0514_バオッキー_514.png" alt="バオッキー" loading="lazy">
+        </div>
+        <div class="pokemon-name">バオッキー</div>
+        <div class="pokemon-no">No.0514</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/171_0516_ヒヤッキー_516.png" alt="ヒヤッキー" loading="lazy">
+        </div>
+        <div class="pokemon-name">ヒヤッキー</div>
+        <div class="pokemon-no">No.0516</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/172_0518_ムシャーナ_518.png" alt="ムシャーナ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ムシャーナ</div>
+        <div class="pokemon-no">No.0518</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/173_0530_ドリュウズ_530.png" alt="ドリュウズ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ドリュウズ</div>
+        <div class="pokemon-no">No.0530</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/174_0530_メガドリュウズ_530_1.png" alt="メガドリュウズ" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガドリュウズ</div>
+        <div class="pokemon-no">No.0530</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/175_0531_タブンネ_531.png" alt="タブンネ" loading="lazy">
+        </div>
+        <div class="pokemon-name">タブンネ</div>
+        <div class="pokemon-no">No.0531</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/176_0531_メガタブンネ_531_1.png" alt="メガタブンネ" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガタブンネ</div>
+        <div class="pokemon-no">No.0531</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/177_0534_ローブシン_534.png" alt="ローブシン" loading="lazy">
+        </div>
+        <div class="pokemon-name">ローブシン</div>
+        <div class="pokemon-no">No.0534</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/178_0545_ペンドラー_545.png" alt="ペンドラー" loading="lazy">
+        </div>
+        <div class="pokemon-name">ペンドラー</div>
+        <div class="pokemon-no">No.0545</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/179_0545_メガペンドラー_545_1.png" alt="メガペンドラー" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガペンドラー</div>
+        <div class="pokemon-no">No.0545</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/181_0553_ワルビアル_553.png" alt="ワルビアル" loading="lazy">
+        </div>
+        <div class="pokemon-name">ワルビアル</div>
+        <div class="pokemon-no">No.0553</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/182_0560_ズルズキン_560.png" alt="ズルズキン" loading="lazy">
+        </div>
+        <div class="pokemon-name">ズルズキン</div>
+        <div class="pokemon-no">No.0560</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/183_0560_メガズルズキン_560_1.png" alt="メガズルズキン" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガズルズキン</div>
+        <div class="pokemon-no">No.0560</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/184_0563_デスカーン_563.png" alt="デスカーン" loading="lazy">
+        </div>
+        <div class="pokemon-name">デスカーン</div>
+        <div class="pokemon-no">No.0563</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/185_0569_ダストダス_569.png" alt="ダストダス" loading="lazy">
+        </div>
+        <div class="pokemon-name">ダストダス</div>
+        <div class="pokemon-no">No.0569</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/186_0571_ゾロアーク_571.png" alt="ゾロアーク" loading="lazy">
+        </div>
+        <div class="pokemon-name">ゾロアーク</div>
+        <div class="pokemon-no">No.0571</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/188_0579_ランクルス_579.png" alt="ランクルス" loading="lazy">
+        </div>
+        <div class="pokemon-name">ランクルス</div>
+        <div class="pokemon-no">No.0579</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/190_0587_エモンガ_587.png" alt="エモンガ" loading="lazy">
+        </div>
+        <div class="pokemon-name">エモンガ</div>
+        <div class="pokemon-no">No.0587</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/191_0604_シビルドン_604.png" alt="シビルドン" loading="lazy">
+        </div>
+        <div class="pokemon-name">シビルドン</div>
+        <div class="pokemon-no">No.0604</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/192_0604_メガシビルドン_604_1.png" alt="メガシビルドン" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガシビルドン</div>
+        <div class="pokemon-no">No.0604</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/193_0609_シャンデラ_609.png" alt="シャンデラ" loading="lazy">
+        </div>
+        <div class="pokemon-name">シャンデラ</div>
+        <div class="pokemon-no">No.0609</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/194_0609_メガシャンデラ_609_1.png" alt="メガシャンデラ" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガシャンデラ</div>
+        <div class="pokemon-no">No.0609</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/195_0614_ツンベアー_614.png" alt="ツンベアー" loading="lazy">
+        </div>
+        <div class="pokemon-name">ツンベアー</div>
+        <div class="pokemon-no">No.0614</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/196_0618_マッギョ_618.png" alt="マッギョ" loading="lazy">
+        </div>
+        <div class="pokemon-name">マッギョ</div>
+        <div class="pokemon-no">No.0618</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/197_0618_ガラルマッギョ_618_1.png" alt="ガラルマッギョ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ガラルマッギョ</div>
+        <div class="pokemon-no">No.0618</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/198_0623_ゴルーグ_623.png" alt="ゴルーグ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ゴルーグ</div>
+        <div class="pokemon-no">No.0623</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/199_0623_メガゴルーグ_623_1.png" alt="メガゴルーグ" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガゴルーグ</div>
+        <div class="pokemon-no">No.0623</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/202_0652_ブリガロン_652.png" alt="ブリガロン" loading="lazy">
+        </div>
+        <div class="pokemon-name">ブリガロン</div>
+        <div class="pokemon-no">No.0652</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/203_0652_メガブリガロン_652_1.png" alt="メガブリガロン" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガブリガロン</div>
+        <div class="pokemon-no">No.0652</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/204_0655_マフォクシー_655.png" alt="マフォクシー" loading="lazy">
+        </div>
+        <div class="pokemon-name">マフォクシー</div>
+        <div class="pokemon-no">No.0655</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/208_0660_ホルード_660.png" alt="ホルード" loading="lazy">
+        </div>
+        <div class="pokemon-name">ホルード</div>
+        <div class="pokemon-no">No.0660</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/209_0663_ファイアロー_663.png" alt="ファイアロー" loading="lazy">
+        </div>
+        <div class="pokemon-name">ファイアロー</div>
+        <div class="pokemon-no">No.0663</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/210_0666_ビビヨン_666.png" alt="ビビヨン" loading="lazy">
+        </div>
+        <div class="pokemon-name">ビビヨン</div>
+        <div class="pokemon-no">No.0666</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/211_0668_カエンジシ(オスのすがた)_668.png" alt="カエンジシ(オスのすがた)" loading="lazy">
+        </div>
+        <div class="pokemon-name">カエンジシ(オスのすがた)</div>
+        <div class="pokemon-no">No.0668</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/212_0668_カエンジシ(メスのすがた)_668_1.png" alt="カエンジシ(メスのすがた)" loading="lazy">
+        </div>
+        <div class="pokemon-name">カエンジシ(メスのすがた)</div>
+        <div class="pokemon-no">No.0668</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/213_0668_メガカエンジシ_668_2.png" alt="メガカエンジシ" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガカエンジシ</div>
+        <div class="pokemon-no">No.0668</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/214_0670_フラエッテ(えいえんのはな)_670_2.png" alt="フラエッテ(えいえんのはな)" loading="lazy">
+        </div>
+        <div class="pokemon-name">フラエッテ(えいえんのはな)</div>
+        <div class="pokemon-no">No.0670</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/216_0671_フラージェス_671.png" alt="フラージェス" loading="lazy">
+        </div>
+        <div class="pokemon-name">フラージェス</div>
+        <div class="pokemon-no">No.0671</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/217_0675_ゴロンダ_675.png" alt="ゴロンダ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ゴロンダ</div>
+        <div class="pokemon-no">No.0675</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/218_0676_トリミアン_676.png" alt="トリミアン" loading="lazy">
+        </div>
+        <div class="pokemon-name">トリミアン</div>
+        <div class="pokemon-no">No.0676</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/219_0678_ニャオニクス(オス)_678.png" alt="ニャオニクス(オス)" loading="lazy">
+        </div>
+        <div class="pokemon-name">ニャオニクス(オス)</div>
+        <div class="pokemon-no">No.0678</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/220_0678_ニャオニクス(メス)_678_1.png" alt="ニャオニクス(メス)" loading="lazy">
+        </div>
+        <div class="pokemon-name">ニャオニクス(メス)</div>
+        <div class="pokemon-no">No.0678</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/221_0678_メガニャオニクス(オス)_678_3.png" alt="メガニャオニクス(オス)" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガニャオニクス(オス)</div>
+        <div class="pokemon-no">No.0678</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/222_0678_メガニャオニクス(メス)_678_4.png" alt="メガニャオニクス(メス)" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガニャオニクス(メス)</div>
+        <div class="pokemon-no">No.0678</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/224_0681_ギルガルド(ブレードフォルム)_681_1.png" alt="ギルガルド(ブレードフォルム)" loading="lazy">
+        </div>
+        <div class="pokemon-name">ギルガルド(ブレードフォルム)</div>
+        <div class="pokemon-no">No.0681</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/225_0683_フレフワン_683.png" alt="フレフワン" loading="lazy">
+        </div>
+        <div class="pokemon-name">フレフワン</div>
+        <div class="pokemon-no">No.0683</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/226_0685_ペロリーム_685.png" alt="ペロリーム" loading="lazy">
+        </div>
+        <div class="pokemon-name">ペロリーム</div>
+        <div class="pokemon-no">No.0685</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/227_0687_カラマネロ_687.png" alt="カラマネロ" loading="lazy">
+        </div>
+        <div class="pokemon-name">カラマネロ</div>
+        <div class="pokemon-no">No.0687</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/228_0687_メガカラマネロ_687_1.png" alt="メガカラマネロ" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガカラマネロ</div>
+        <div class="pokemon-no">No.0687</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/229_0689_ガメノデス_689.png" alt="ガメノデス" loading="lazy">
+        </div>
+        <div class="pokemon-name">ガメノデス</div>
+        <div class="pokemon-no">No.0689</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/230_0689_メガガメノデス_689_1.png" alt="メガガメノデス" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガガメノデス</div>
+        <div class="pokemon-no">No.0689</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/231_0691_ドラミドロ_691.png" alt="ドラミドロ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ドラミドロ</div>
+        <div class="pokemon-no">No.0691</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/233_0693_ブロスター_693.png" alt="ブロスター" loading="lazy">
+        </div>
+        <div class="pokemon-name">ブロスター</div>
+        <div class="pokemon-no">No.0693</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/234_0695_エレザード_695.png" alt="エレザード" loading="lazy">
+        </div>
+        <div class="pokemon-name">エレザード</div>
+        <div class="pokemon-no">No.0695</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/235_0697_ガチゴラス_697.png" alt="ガチゴラス" loading="lazy">
+        </div>
+        <div class="pokemon-name">ガチゴラス</div>
+        <div class="pokemon-no">No.0697</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/236_0699_アマルルガ_699.png" alt="アマルルガ" loading="lazy">
+        </div>
+        <div class="pokemon-name">アマルルガ</div>
+        <div class="pokemon-no">No.0699</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/238_0701_ルチャブル_701.png" alt="ルチャブル" loading="lazy">
+        </div>
+        <div class="pokemon-name">ルチャブル</div>
+        <div class="pokemon-no">No.0701</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/239_0701_メガルチャブル_701_1.png" alt="メガルチャブル" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガルチャブル</div>
+        <div class="pokemon-no">No.0701</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/240_0702_デデンネ_702.png" alt="デデンネ" loading="lazy">
+        </div>
+        <div class="pokemon-name">デデンネ</div>
+        <div class="pokemon-no">No.0702</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/241_0706_ヌメルゴン_706.png" alt="ヌメルゴン" loading="lazy">
+        </div>
+        <div class="pokemon-name">ヌメルゴン</div>
+        <div class="pokemon-no">No.0706</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/242_0706_ヒスイヌメルゴン_706_1.png" alt="ヒスイヌメルゴン" loading="lazy">
+        </div>
+        <div class="pokemon-name">ヒスイヌメルゴン</div>
+        <div class="pokemon-no">No.0706</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/243_0707_クレッフィ_707.png" alt="クレッフィ" loading="lazy">
+        </div>
+        <div class="pokemon-name">クレッフィ</div>
+        <div class="pokemon-no">No.0707</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/244_0709_オーロット_709.png" alt="オーロット" loading="lazy">
+        </div>
+        <div class="pokemon-name">オーロット</div>
+        <div class="pokemon-no">No.0709</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/245_0711_パンプジン(こだましゅ)_711.png" alt="パンプジン(こだましゅ)" loading="lazy">
+        </div>
+        <div class="pokemon-name">パンプジン(こだましゅ)</div>
+        <div class="pokemon-no">No.0711</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/246_0711_パンプジン(ちゅうだましゅ)_711_1.png" alt="パンプジン(ちゅうだましゅ)" loading="lazy">
+        </div>
+        <div class="pokemon-name">パンプジン(ちゅうだましゅ)</div>
+        <div class="pokemon-no">No.0711</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/247_0711_パンプジン(おおだましゅ)_711_2.png" alt="パンプジン(おおだましゅ)" loading="lazy">
+        </div>
+        <div class="pokemon-name">パンプジン(おおだましゅ)</div>
+        <div class="pokemon-no">No.0711</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/248_0711_パンプジン(ギガだましゅ)_711_3.png" alt="パンプジン(ギガだましゅ)" loading="lazy">
+        </div>
+        <div class="pokemon-name">パンプジン(ギガだましゅ)</div>
+        <div class="pokemon-no">No.0711</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/249_0713_クレベース_713.png" alt="クレベース" loading="lazy">
+        </div>
+        <div class="pokemon-name">クレベース</div>
+        <div class="pokemon-no">No.0713</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/250_0713_ヒスイクレベース_713_1.png" alt="ヒスイクレベース" loading="lazy">
+        </div>
+        <div class="pokemon-name">ヒスイクレベース</div>
+        <div class="pokemon-no">No.0713</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/251_0715_オンバーン_715.png" alt="オンバーン" loading="lazy">
+        </div>
+        <div class="pokemon-name">オンバーン</div>
+        <div class="pokemon-no">No.0715</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/252_0724_ジュナイパー_724.png" alt="ジュナイパー" loading="lazy">
+        </div>
+        <div class="pokemon-name">ジュナイパー</div>
+        <div class="pokemon-no">No.0724</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/253_0724_ヒスイジュナイパー_724_1.png" alt="ヒスイジュナイパー" loading="lazy">
+        </div>
+        <div class="pokemon-name">ヒスイジュナイパー</div>
+        <div class="pokemon-no">No.0724</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/254_0727_ガオガエン_727.png" alt="ガオガエン" loading="lazy">
+        </div>
+        <div class="pokemon-name">ガオガエン</div>
+        <div class="pokemon-no">No.0727</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/256_0733_ドデカバシ_733.png" alt="ドデカバシ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ドデカバシ</div>
+        <div class="pokemon-no">No.0733</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/257_0740_ケケンカニ_740.png" alt="ケケンカニ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ケケンカニ</div>
+        <div class="pokemon-no">No.0740</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/258_0740_メガケケンカニ_740_1.png" alt="メガケケンカニ" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガケケンカニ</div>
+        <div class="pokemon-no">No.0740</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/259_0745_ルガルガン(まひる)_745.png" alt="ルガルガン(まひる)" loading="lazy">
+        </div>
+        <div class="pokemon-name">ルガルガン(まひる)</div>
+        <div class="pokemon-no">No.0745</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/260_0745_ルガルガン(まよなか)_745_1.png" alt="ルガルガン(まよなか)" loading="lazy">
+        </div>
+        <div class="pokemon-name">ルガルガン(まよなか)</div>
+        <div class="pokemon-no">No.0745</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/261_0745_ルガルガン(たそがれ)_745_2.png" alt="ルガルガン(たそがれ)" loading="lazy">
+        </div>
+        <div class="pokemon-name">ルガルガン(たそがれ)</div>
+        <div class="pokemon-no">No.0745</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/263_0750_バンバドロ_750.png" alt="バンバドロ" loading="lazy">
+        </div>
+        <div class="pokemon-name">バンバドロ</div>
+        <div class="pokemon-no">No.0750</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/264_0752_オニシズクモ_752.png" alt="オニシズクモ" loading="lazy">
+        </div>
+        <div class="pokemon-name">オニシズクモ</div>
+        <div class="pokemon-no">No.0752</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/265_0758_エンニュート_758.png" alt="エンニュート" loading="lazy">
+        </div>
+        <div class="pokemon-name">エンニュート</div>
+        <div class="pokemon-no">No.0758</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/266_0763_アマージョ_763.png" alt="アマージョ" loading="lazy">
+        </div>
+        <div class="pokemon-name">アマージョ</div>
+        <div class="pokemon-no">No.0763</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/267_0765_ヤレユータン_765.png" alt="ヤレユータン" loading="lazy">
+        </div>
+        <div class="pokemon-name">ヤレユータン</div>
+        <div class="pokemon-no">No.0765</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/268_0766_ナゲツケサル_766.png" alt="ナゲツケサル" loading="lazy">
+        </div>
+        <div class="pokemon-name">ナゲツケサル</div>
+        <div class="pokemon-no">No.0766</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/270_0780_ジジーロン_780.png" alt="ジジーロン" loading="lazy">
+        </div>
+        <div class="pokemon-name">ジジーロン</div>
+        <div class="pokemon-no">No.0780</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/271_0780_メガジジーロン_780_1.png" alt="メガジジーロン" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガジジーロン</div>
+        <div class="pokemon-no">No.0780</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/272_0784_ジャラランガ_784.png" alt="ジャラランガ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ジャラランガ</div>
+        <div class="pokemon-no">No.0784</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/274_0841_アップリュー_841.png" alt="アップリュー" loading="lazy">
+        </div>
+        <div class="pokemon-name">アップリュー</div>
+        <div class="pokemon-no">No.0841</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/275_0842_タルップル_842.png" alt="タルップル" loading="lazy">
+        </div>
+        <div class="pokemon-name">タルップル</div>
+        <div class="pokemon-no">No.0842</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/276_0844_サダイジャ_844.png" alt="サダイジャ" loading="lazy">
+        </div>
+        <div class="pokemon-name">サダイジャ</div>
+        <div class="pokemon-no">No.0844</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/277_0855_ポットデス_855.png" alt="ポットデス" loading="lazy">
+        </div>
+        <div class="pokemon-name">ポットデス</div>
+        <div class="pokemon-no">No.0855</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/278_0858_ブリムオン_858.png" alt="ブリムオン" loading="lazy">
+        </div>
+        <div class="pokemon-name">ブリムオン</div>
+        <div class="pokemon-no">No.0858</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/280_0866_バリコオル_866.png" alt="バリコオル" loading="lazy">
+        </div>
+        <div class="pokemon-name">バリコオル</div>
+        <div class="pokemon-no">No.0866</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/281_0867_デスバーン_867.png" alt="デスバーン" loading="lazy">
+        </div>
+        <div class="pokemon-name">デスバーン</div>
+        <div class="pokemon-no">No.0867</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/282_0869_マホイップ_869.png" alt="マホイップ" loading="lazy">
+        </div>
+        <div class="pokemon-name">マホイップ</div>
+        <div class="pokemon-no">No.0869</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/283_0870_タイレーツ_870.png" alt="タイレーツ" loading="lazy">
+        </div>
+        <div class="pokemon-name">タイレーツ</div>
+        <div class="pokemon-no">No.0870</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/284_0870_メガタイレーツ_870_1.png" alt="メガタイレーツ" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガタイレーツ</div>
+        <div class="pokemon-no">No.0870</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/285_0877_モルペコ_877.png" alt="モルペコ" loading="lazy">
+        </div>
+        <div class="pokemon-name">モルペコ</div>
+        <div class="pokemon-no">No.0877</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/287_0899_アヤシシ_899.png" alt="アヤシシ" loading="lazy">
+        </div>
+        <div class="pokemon-name">アヤシシ</div>
+        <div class="pokemon-no">No.0899</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/288_0900_バサギリ_900.png" alt="バサギリ" loading="lazy">
+        </div>
+        <div class="pokemon-name">バサギリ</div>
+        <div class="pokemon-no">No.0900</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/290_0902_イダイトウ(メス)_902_1.png" alt="イダイトウ(メス)" loading="lazy">
+        </div>
+        <div class="pokemon-name">イダイトウ(メス)</div>
+        <div class="pokemon-no">No.0902</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/292_0904_ハリーマン_904.png" alt="ハリーマン" loading="lazy">
+        </div>
+        <div class="pokemon-name">ハリーマン</div>
+        <div class="pokemon-no">No.0904</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/295_0914_ウェーニバル_914.png" alt="ウェーニバル" loading="lazy">
+        </div>
+        <div class="pokemon-name">ウェーニバル</div>
+        <div class="pokemon-no">No.0914</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/296_0925_イッカネズミ(3びきかぞく)_925.png" alt="イッカネズミ(3びきかぞく)" loading="lazy">
+        </div>
+        <div class="pokemon-name">イッカネズミ(3びきかぞく)</div>
+        <div class="pokemon-no">No.0925</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/297_0925_イッカネズミ(4ひきかぞく)_925_1.png" alt="イッカネズミ(4ひきかぞく)" loading="lazy">
+        </div>
+        <div class="pokemon-name">イッカネズミ(4ひきかぞく)</div>
+        <div class="pokemon-no">No.0925</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/298_0934_キョジオーン_934.png" alt="キョジオーン" loading="lazy">
+        </div>
+        <div class="pokemon-name">キョジオーン</div>
+        <div class="pokemon-no">No.0934</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/299_0936_グレンアルマ_936.png" alt="グレンアルマ" loading="lazy">
+        </div>
+        <div class="pokemon-name">グレンアルマ</div>
+        <div class="pokemon-no">No.0936</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/302_0952_スコヴィラン_952.png" alt="スコヴィラン" loading="lazy">
+        </div>
+        <div class="pokemon-name">スコヴィラン</div>
+        <div class="pokemon-no">No.0952</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/303_0952_メガスコヴィラン_952_1.png" alt="メガスコヴィラン" loading="lazy">
+        </div>
+        <div class="pokemon-name">メガスコヴィラン</div>
+        <div class="pokemon-no">No.0952</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/305_0959_デカヌチャン_959.png" alt="デカヌチャン" loading="lazy">
+        </div>
+        <div class="pokemon-name">デカヌチャン</div>
+        <div class="pokemon-no">No.0959</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/306_0964_イルカマン(ナイーブ)_964.png" alt="イルカマン(ナイーブ)" loading="lazy">
+        </div>
+        <div class="pokemon-name">イルカマン(ナイーブ)</div>
+        <div class="pokemon-no">No.0964</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/307_0964_イルカマン(マイティ)_964_1.png" alt="イルカマン(マイティ)" loading="lazy">
+        </div>
+        <div class="pokemon-name">イルカマン(マイティ)</div>
+        <div class="pokemon-no">No.0964</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/308_0968_ミミズズ_968.png" alt="ミミズズ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ミミズズ</div>
+        <div class="pokemon-no">No.0968</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/311_0972_ハカドッグ_972.png" alt="ハカドッグ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ハカドッグ</div>
+        <div class="pokemon-no">No.0972</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/312_0979_コノヨザル_979.png" alt="コノヨザル" loading="lazy">
+        </div>
+        <div class="pokemon-name">コノヨザル</div>
+        <div class="pokemon-no">No.0979</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/313_0981_リキキリン_981.png" alt="リキキリン" loading="lazy">
+        </div>
+        <div class="pokemon-name">リキキリン</div>
+        <div class="pokemon-no">No.0981</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/316_1013_ヤバソチャ_1013.png" alt="ヤバソチャ" loading="lazy">
+        </div>
+        <div class="pokemon-name">ヤバソチャ</div>
+        <div class="pokemon-no">No.1013</div>
+      </article>
+      <article class="pokemon-card">
+        <div class="pokemon-image-wrap">
+          <img src="pokemon_images/318_1019_カミツオロチ_1019.png" alt="カミツオロチ" loading="lazy">
+        </div>
+        <div class="pokemon-name">カミツオロチ</div>
+        <div class="pokemon-no">No.1019</div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
