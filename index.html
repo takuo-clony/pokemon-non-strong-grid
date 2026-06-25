@@ -18871,10 +18871,11 @@
                 p: p,
                 def: def,
                 halved: weaknesses.filter((atk) => def[atk] <= 0.5).length,
+                weak: weaknesses.filter((atk) => def[atk] >= 2).length,
                 sum: weaknesses.reduce((s, atk) => s + def[atk], 0),
               };
             })
-            .filter((c) => c.halved >= 1)
+            .filter((c) => c.halved >= 1 && c.weak === 0)
             .sort((a, b) => b.halved - a.halved || a.sum - b.sum || String(a.p.no).localeCompare(String(b.p.no)));
 
           const shown = ranked.slice(0, LIMIT);
@@ -18907,7 +18908,7 @@
           receiverHtml =
             '<div class="receiver-section">' +
             '<div class="receiver-head">このポケモンの弱点を交代で受けられるポケモン<span>' + countLabel + '</span></div>' +
-            '<div class="receiver-sub">弱点<span class="wk-icons">' + wkIcons + '</span>を半減(0.5倍以下)できる数が多い順</div>' +
+            '<div class="receiver-sub">弱点<span class="wk-icons">' + wkIcons + '</span>にばつぐんを受けず、半減(0.5倍以下)できる数が多い順</div>' +
             (items
               ? '<div class="receiver-list">' + items + '</div>'
               : '<p style="padding:6px 2px;color:#657184;">弱点を半減できるポケモンはいません。</p>') +
