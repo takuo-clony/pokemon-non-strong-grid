@@ -361,19 +361,69 @@
     }
 
     .ability-list li {
+      display: flex;
+      min-width: 0;
+    }
+
+    .ability-chip {
+      border: none;
       border-radius: 4px;
       background: #eef3f3;
       color: var(--text);
-      padding: 2px 5px;
+      padding: 3px 6px;
+      font: inherit;
       font-size: 8px;
       font-weight: 700;
       line-height: 1.3;
+      cursor: pointer;
+      transition: background-color 150ms ease, color 150ms ease;
     }
 
-    .ability-list li.ability-none {
+    .ability-chip:hover,
+    .ability-chip:focus-visible {
+      background: #d6e7e6;
+      color: var(--accent);
+    }
+
+    .ability-chip:focus-visible {
+      outline: 2px solid rgba(47, 111, 115, 0.4);
+      outline-offset: 1px;
+    }
+
+    .ability-chip.ability-none {
       background: transparent;
       color: var(--muted);
-      font-weight: 700;
+      cursor: default;
+    }
+
+    .ability-tooltip {
+      position: fixed;
+      z-index: 1000;
+      max-width: 280px;
+      border-radius: 8px;
+      background: #1d2633;
+      color: #ffffff;
+      padding: 9px 11px;
+      font-size: 11px;
+      line-height: 1.55;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.3);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 120ms ease;
+      pointer-events: none;
+    }
+
+    .ability-tooltip.is-visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .ability-tooltip strong {
+      display: block;
+      margin-bottom: 3px;
+      color: #8fe0d6;
+      font-size: 12px;
+      font-weight: 800;
     }
 
     .pokemon-card[hidden] {
@@ -396,8 +446,79 @@
         font-size: 20px;
       }
 
+      /* One Pokemon per row: image on the left, info on the right. */
       .grid {
-        gap: 6px;
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .pokemon-card {
+        display: flex;
+        align-items: stretch;
+      }
+
+      .pokemon-image-wrap {
+        flex: none;
+        width: 108px;
+        aspect-ratio: 1 / 1;
+        border-bottom: none;
+        border-right: 1px solid var(--line);
+      }
+
+      .pokemon-body {
+        flex: 1 1 auto;
+        min-width: 0;
+        padding: 9px 11px;
+      }
+
+      .pokemon-name {
+        min-height: 0;
+        display: block;
+        padding: 0 0 2px;
+        text-align: left;
+        font-size: 14px;
+      }
+
+      .pokemon-no {
+        padding: 0 0 7px;
+        text-align: left;
+        font-size: 11px;
+      }
+
+      .type-list {
+        justify-content: flex-start;
+        min-height: 0;
+        margin: 0 0 7px;
+      }
+
+      .type-list img {
+        width: 50px;
+        max-width: none;
+      }
+
+      .stat-total {
+        justify-content: flex-start;
+        gap: 8px;
+        font-size: 12px;
+      }
+
+      .stat-total strong {
+        font-size: 14px;
+      }
+
+      .stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 4px;
+        font-size: 11px;
+      }
+
+      .ability-chip {
+        font-size: 11px;
+        padding: 4px 8px;
+      }
+
+      .ability-label {
+        font-size: 11px;
       }
     }
   </style>
@@ -531,8 +652,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>しんりょく</li>
-              <li>ようりょくそ</li>
+              <li><button class="ability-chip" type="button" data-ability="しんりょく">しんりょく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ようりょくそ">ようりょくそ</button></li>
             </ul>
           </div>
         </div>
@@ -582,7 +703,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>あついしぼう</li>
+              <li><button class="ability-chip" type="button" data-ability="あついしぼう">あついしぼう</button></li>
             </ul>
           </div>
         </div>
@@ -631,8 +752,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>もうか</li>
-              <li>サンパワー</li>
+              <li><button class="ability-chip" type="button" data-ability="もうか">もうか</button></li>
+              <li><button class="ability-chip" type="button" data-ability="サンパワー">サンパワー</button></li>
             </ul>
           </div>
         </div>
@@ -682,7 +803,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>かたいツメ</li>
+              <li><button class="ability-chip" type="button" data-ability="かたいツメ">かたいツメ</button></li>
             </ul>
           </div>
         </div>
@@ -732,7 +853,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ひでり</li>
+              <li><button class="ability-chip" type="button" data-ability="ひでり">ひでり</button></li>
             </ul>
           </div>
         </div>
@@ -780,8 +901,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>げきりゅう</li>
-              <li>あめうけざら</li>
+              <li><button class="ability-chip" type="button" data-ability="げきりゅう">げきりゅう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="あめうけざら">あめうけざら</button></li>
             </ul>
           </div>
         </div>
@@ -830,7 +951,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>メガランチャー</li>
+              <li><button class="ability-chip" type="button" data-ability="メガランチャー">メガランチャー</button></li>
             </ul>
           </div>
         </div>
@@ -879,8 +1000,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>むしのしらせ</li>
-              <li>スナイパー</li>
+              <li><button class="ability-chip" type="button" data-ability="むしのしらせ">むしのしらせ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="スナイパー">スナイパー</button></li>
             </ul>
           </div>
         </div>
@@ -929,7 +1050,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>てきおうりょく</li>
+              <li><button class="ability-chip" type="button" data-ability="てきおうりょく">てきおうりょく</button></li>
             </ul>
           </div>
         </div>
@@ -978,9 +1099,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>するどいめ</li>
-              <li>ちどりあし</li>
-              <li>はとむね</li>
+              <li><button class="ability-chip" type="button" data-ability="するどいめ">するどいめ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ちどりあし">ちどりあし</button></li>
+              <li><button class="ability-chip" type="button" data-ability="はとむね">はとむね</button></li>
             </ul>
           </div>
         </div>
@@ -1029,7 +1150,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ノーガード</li>
+              <li><button class="ability-chip" type="button" data-ability="ノーガード">ノーガード</button></li>
             </ul>
           </div>
         </div>
@@ -1077,9 +1198,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>いかく</li>
-              <li>だっぴ</li>
-              <li>きんちょうかん</li>
+              <li><button class="ability-chip" type="button" data-ability="いかく">いかく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="だっぴ">だっぴ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="きんちょうかん">きんちょうかん</button></li>
             </ul>
           </div>
         </div>
@@ -1127,8 +1248,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>せいでんき</li>
-              <li>ひらいしん</li>
+              <li><button class="ability-chip" type="button" data-ability="せいでんき">せいでんき</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ひらいしん">ひらいしん</button></li>
             </ul>
           </div>
         </div>
@@ -1176,8 +1297,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>せいでんき</li>
-              <li>ひらいしん</li>
+              <li><button class="ability-chip" type="button" data-ability="せいでんき">せいでんき</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ひらいしん">ひらいしん</button></li>
             </ul>
           </div>
         </div>
@@ -1226,7 +1347,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>サーフテール</li>
+              <li><button class="ability-chip" type="button" data-ability="サーフテール">サーフテール</button></li>
             </ul>
           </div>
         </div>
@@ -1274,7 +1395,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>エレキメイカー</li>
+              <li><button class="ability-chip" type="button" data-ability="エレキメイカー">エレキメイカー</button></li>
             </ul>
           </div>
         </div>
@@ -1323,7 +1444,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ノーガード</li>
+              <li><button class="ability-chip" type="button" data-ability="ノーガード">ノーガード</button></li>
             </ul>
           </div>
         </div>
@@ -1371,9 +1492,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>メロメロボディ</li>
-              <li>マジックガード</li>
-              <li>てんねん</li>
+              <li><button class="ability-chip" type="button" data-ability="メロメロボディ">メロメロボディ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="マジックガード">マジックガード</button></li>
+              <li><button class="ability-chip" type="button" data-ability="てんねん">てんねん</button></li>
             </ul>
           </div>
         </div>
@@ -1423,7 +1544,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>マジックミラー</li>
+              <li><button class="ability-chip" type="button" data-ability="マジックミラー">マジックミラー</button></li>
             </ul>
           </div>
         </div>
@@ -1471,8 +1592,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>もらいび</li>
-              <li>ひでり</li>
+              <li><button class="ability-chip" type="button" data-ability="もらいび">もらいび</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ひでり">ひでり</button></li>
             </ul>
           </div>
         </div>
@@ -1522,8 +1643,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ゆきがくれ</li>
-              <li>ゆきふらし</li>
+              <li><button class="ability-chip" type="button" data-ability="ゆきがくれ">ゆきがくれ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ゆきふらし">ゆきふらし</button></li>
             </ul>
           </div>
         </div>
@@ -1572,8 +1693,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ようりょくそ</li>
-              <li>ほうし</li>
+              <li><button class="ability-chip" type="button" data-ability="ようりょくそ">ようりょくそ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ほうし">ほうし</button></li>
             </ul>
           </div>
         </div>
@@ -1621,9 +1742,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>いかく</li>
-              <li>もらいび</li>
-              <li>せいぎのこころ</li>
+              <li><button class="ability-chip" type="button" data-ability="いかく">いかく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="もらいび">もらいび</button></li>
+              <li><button class="ability-chip" type="button" data-ability="せいぎのこころ">せいぎのこころ</button></li>
             </ul>
           </div>
         </div>
@@ -1672,9 +1793,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>いかく</li>
-              <li>もらいび</li>
-              <li>いしあたま</li>
+              <li><button class="ability-chip" type="button" data-ability="いかく">いかく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="もらいび">もらいび</button></li>
+              <li><button class="ability-chip" type="button" data-ability="いしあたま">いしあたま</button></li>
             </ul>
           </div>
         </div>
@@ -1722,9 +1843,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>シンクロ</li>
-              <li>せいしんりょく</li>
-              <li>マジックガード</li>
+              <li><button class="ability-chip" type="button" data-ability="シンクロ">シンクロ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="せいしんりょく">せいしんりょく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="マジックガード">マジックガード</button></li>
             </ul>
           </div>
         </div>
@@ -1772,7 +1893,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>トレース</li>
+              <li><button class="ability-chip" type="button" data-ability="トレース">トレース</button></li>
             </ul>
           </div>
         </div>
@@ -1820,9 +1941,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>こんじょう</li>
-              <li>ノーガード</li>
-              <li>ふくつのこころ</li>
+              <li><button class="ability-chip" type="button" data-ability="こんじょう">こんじょう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ノーガード">ノーガード</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ふくつのこころ">ふくつのこころ</button></li>
             </ul>
           </div>
         </div>
@@ -1871,8 +1992,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ようりょくそ</li>
-              <li>くいしんぼう</li>
+              <li><button class="ability-chip" type="button" data-ability="ようりょくそ">ようりょくそ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="くいしんぼう">くいしんぼう</button></li>
             </ul>
           </div>
         </div>
@@ -1921,7 +2042,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>とびだすなかみ</li>
+              <li><button class="ability-chip" type="button" data-ability="とびだすなかみ">とびだすなかみ</button></li>
             </ul>
           </div>
         </div>
@@ -1970,9 +2091,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>どんかん</li>
-              <li>マイペース</li>
-              <li>さいせいりょく</li>
+              <li><button class="ability-chip" type="button" data-ability="どんかん">どんかん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="マイペース">マイペース</button></li>
+              <li><button class="ability-chip" type="button" data-ability="さいせいりょく">さいせいりょく</button></li>
             </ul>
           </div>
         </div>
@@ -2021,7 +2142,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>シェルアーマー</li>
+              <li><button class="ability-chip" type="button" data-ability="シェルアーマー">シェルアーマー</button></li>
             </ul>
           </div>
         </div>
@@ -2070,9 +2191,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>クイックドロウ</li>
-              <li>マイペース</li>
-              <li>さいせいりょく</li>
+              <li><button class="ability-chip" type="button" data-ability="クイックドロウ">クイックドロウ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="マイペース">マイペース</button></li>
+              <li><button class="ability-chip" type="button" data-ability="さいせいりょく">さいせいりょく</button></li>
             </ul>
           </div>
         </div>
@@ -2122,7 +2243,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>のろわれボディ</li>
+              <li><button class="ability-chip" type="button" data-ability="のろわれボディ">のろわれボディ</button></li>
             </ul>
           </div>
         </div>
@@ -2172,7 +2293,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>かげふみ</li>
+              <li><button class="ability-chip" type="button" data-ability="かげふみ">かげふみ</button></li>
             </ul>
           </div>
         </div>
@@ -2220,9 +2341,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>はやおき</li>
-              <li>きもったま</li>
-              <li>せいしんりょく</li>
+              <li><button class="ability-chip" type="button" data-ability="はやおき">はやおき</button></li>
+              <li><button class="ability-chip" type="button" data-ability="きもったま">きもったま</button></li>
+              <li><button class="ability-chip" type="button" data-ability="せいしんりょく">せいしんりょく</button></li>
             </ul>
           </div>
         </div>
@@ -2270,7 +2391,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>おやこあい</li>
+              <li><button class="ability-chip" type="button" data-ability="おやこあい">おやこあい</button></li>
             </ul>
           </div>
         </div>
@@ -2319,9 +2440,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>はっこう</li>
-              <li>しぜんかいふく</li>
-              <li>アナライズ</li>
+              <li><button class="ability-chip" type="button" data-ability="はっこう">はっこう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="しぜんかいふく">しぜんかいふく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="アナライズ">アナライズ</button></li>
             </ul>
           </div>
         </div>
@@ -2371,7 +2492,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ちからもち</li>
+              <li><button class="ability-chip" type="button" data-ability="ちからもち">ちからもち</button></li>
             </ul>
           </div>
         </div>
@@ -2419,9 +2540,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>かいりきバサミ</li>
-              <li>かたやぶり</li>
-              <li>じしんかじょう</li>
+              <li><button class="ability-chip" type="button" data-ability="かいりきバサミ">かいりきバサミ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="かたやぶり">かたやぶり</button></li>
+              <li><button class="ability-chip" type="button" data-ability="じしんかじょう">じしんかじょう</button></li>
             </ul>
           </div>
         </div>
@@ -2470,7 +2591,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>スカイスキン</li>
+              <li><button class="ability-chip" type="button" data-ability="スカイスキン">スカイスキン</button></li>
             </ul>
           </div>
         </div>
@@ -2518,9 +2639,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>いかく</li>
-              <li>いかりのつぼ</li>
-              <li>ちからずく</li>
+              <li><button class="ability-chip" type="button" data-ability="いかく">いかく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="いかりのつぼ">いかりのつぼ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ちからずく">ちからずく</button></li>
             </ul>
           </div>
         </div>
@@ -2568,9 +2689,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>いかく</li>
-              <li>いかりのつぼ</li>
-              <li>はんすう</li>
+              <li><button class="ability-chip" type="button" data-ability="いかく">いかく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="いかりのつぼ">いかりのつぼ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="はんすう">はんすう</button></li>
             </ul>
           </div>
         </div>
@@ -2619,9 +2740,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>いかく</li>
-              <li>いかりのつぼ</li>
-              <li>はんすう</li>
+              <li><button class="ability-chip" type="button" data-ability="いかく">いかく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="いかりのつぼ">いかりのつぼ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="はんすう">はんすう</button></li>
             </ul>
           </div>
         </div>
@@ -2670,9 +2791,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>いかく</li>
-              <li>いかりのつぼ</li>
-              <li>はんすう</li>
+              <li><button class="ability-chip" type="button" data-ability="いかく">いかく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="いかりのつぼ">いかりのつぼ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="はんすう">はんすう</button></li>
             </ul>
           </div>
         </div>
@@ -2722,8 +2843,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>いかく</li>
-              <li>じしんかじょう</li>
+              <li><button class="ability-chip" type="button" data-ability="いかく">いかく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="じしんかじょう">じしんかじょう</button></li>
             </ul>
           </div>
         </div>
@@ -2773,7 +2894,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>かたやぶり</li>
+              <li><button class="ability-chip" type="button" data-ability="かたやぶり">かたやぶり</button></li>
             </ul>
           </div>
         </div>
@@ -2821,8 +2942,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>じゅうなん</li>
-              <li>かわりもの</li>
+              <li><button class="ability-chip" type="button" data-ability="じゅうなん">じゅうなん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="かわりもの">かわりもの</button></li>
             </ul>
           </div>
         </div>
@@ -2870,8 +2991,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ちょすい</li>
-              <li>うるおいボディ</li>
+              <li><button class="ability-chip" type="button" data-ability="ちょすい">ちょすい</button></li>
+              <li><button class="ability-chip" type="button" data-ability="うるおいボディ">うるおいボディ</button></li>
             </ul>
           </div>
         </div>
@@ -2919,8 +3040,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ちくでん</li>
-              <li>はやあし</li>
+              <li><button class="ability-chip" type="button" data-ability="ちくでん">ちくでん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="はやあし">はやあし</button></li>
             </ul>
           </div>
         </div>
@@ -2968,8 +3089,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>もらいび</li>
-              <li>こんじょう</li>
+              <li><button class="ability-chip" type="button" data-ability="もらいび">もらいび</button></li>
+              <li><button class="ability-chip" type="button" data-ability="こんじょう">こんじょう</button></li>
             </ul>
           </div>
         </div>
@@ -3018,9 +3139,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>いしあたま</li>
-              <li>プレッシャー</li>
-              <li>きんちょうかん</li>
+              <li><button class="ability-chip" type="button" data-ability="いしあたま">いしあたま</button></li>
+              <li><button class="ability-chip" type="button" data-ability="プレッシャー">プレッシャー</button></li>
+              <li><button class="ability-chip" type="button" data-ability="きんちょうかん">きんちょうかん</button></li>
             </ul>
           </div>
         </div>
@@ -3069,7 +3190,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>かたいツメ</li>
+              <li><button class="ability-chip" type="button" data-ability="かたいツメ">かたいツメ</button></li>
             </ul>
           </div>
         </div>
@@ -3117,9 +3238,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>めんえき</li>
-              <li>あついしぼう</li>
-              <li>くいしんぼう</li>
+              <li><button class="ability-chip" type="button" data-ability="めんえき">めんえき</button></li>
+              <li><button class="ability-chip" type="button" data-ability="あついしぼう">あついしぼう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="くいしんぼう">くいしんぼう</button></li>
             </ul>
           </div>
         </div>
@@ -3168,8 +3289,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>せいしんりょく</li>
-              <li>マルチスケイル</li>
+              <li><button class="ability-chip" type="button" data-ability="せいしんりょく">せいしんりょく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="マルチスケイル">マルチスケイル</button></li>
             </ul>
           </div>
         </div>
@@ -3219,7 +3340,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>マルチスケイル</li>
+              <li><button class="ability-chip" type="button" data-ability="マルチスケイル">マルチスケイル</button></li>
             </ul>
           </div>
         </div>
@@ -3267,8 +3388,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>しんりょく</li>
-              <li>リーフガード</li>
+              <li><button class="ability-chip" type="button" data-ability="しんりょく">しんりょく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="リーフガード">リーフガード</button></li>
             </ul>
           </div>
         </div>
@@ -3318,7 +3439,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>メガソーラー</li>
+              <li><button class="ability-chip" type="button" data-ability="メガソーラー">メガソーラー</button></li>
             </ul>
           </div>
         </div>
@@ -3366,8 +3487,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>もうか</li>
-              <li>もらいび</li>
+              <li><button class="ability-chip" type="button" data-ability="もうか">もうか</button></li>
+              <li><button class="ability-chip" type="button" data-ability="もらいび">もらいび</button></li>
             </ul>
           </div>
         </div>
@@ -3416,8 +3537,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>もうか</li>
-              <li>おみとおし</li>
+              <li><button class="ability-chip" type="button" data-ability="もうか">もうか</button></li>
+              <li><button class="ability-chip" type="button" data-ability="おみとおし">おみとおし</button></li>
             </ul>
           </div>
         </div>
@@ -3465,8 +3586,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>げきりゅう</li>
-              <li>ちからずく</li>
+              <li><button class="ability-chip" type="button" data-ability="げきりゅう">げきりゅう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ちからずく">ちからずく</button></li>
             </ul>
           </div>
         </div>
@@ -3515,7 +3636,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ドラゴンスキン</li>
+              <li><button class="ability-chip" type="button" data-ability="ドラゴンスキン">ドラゴンスキン</button></li>
             </ul>
           </div>
         </div>
@@ -3564,9 +3685,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>むしのしらせ</li>
-              <li>ふみん</li>
-              <li>スナイパー</li>
+              <li><button class="ability-chip" type="button" data-ability="むしのしらせ">むしのしらせ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ふみん">ふみん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="スナイパー">スナイパー</button></li>
             </ul>
           </div>
         </div>
@@ -3614,8 +3735,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>せいでんき</li>
-              <li>プラス</li>
+              <li><button class="ability-chip" type="button" data-ability="せいでんき">せいでんき</button></li>
+              <li><button class="ability-chip" type="button" data-ability="プラス">プラス</button></li>
             </ul>
           </div>
         </div>
@@ -3664,7 +3785,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>かたやぶり</li>
+              <li><button class="ability-chip" type="button" data-ability="かたやぶり">かたやぶり</button></li>
             </ul>
           </div>
         </div>
@@ -3713,9 +3834,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>あついしぼう</li>
-              <li>ちからもち</li>
-              <li>そうしょく</li>
+              <li><button class="ability-chip" type="button" data-ability="あついしぼう">あついしぼう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ちからもち">ちからもち</button></li>
+              <li><button class="ability-chip" type="button" data-ability="そうしょく">そうしょく</button></li>
             </ul>
           </div>
         </div>
@@ -3763,9 +3884,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ちょすい</li>
-              <li>しめりけ</li>
-              <li>あめふらし</li>
+              <li><button class="ability-chip" type="button" data-ability="ちょすい">ちょすい</button></li>
+              <li><button class="ability-chip" type="button" data-ability="しめりけ">しめりけ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="あめふらし">あめふらし</button></li>
             </ul>
           </div>
         </div>
@@ -3813,8 +3934,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>シンクロ</li>
-              <li>マジックミラー</li>
+              <li><button class="ability-chip" type="button" data-ability="シンクロ">シンクロ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="マジックミラー">マジックミラー</button></li>
             </ul>
           </div>
         </div>
@@ -3863,8 +3984,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>シンクロ</li>
-              <li>せいしんりょく</li>
+              <li><button class="ability-chip" type="button" data-ability="シンクロ">シンクロ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="せいしんりょく">せいしんりょく</button></li>
             </ul>
           </div>
         </div>
@@ -3913,9 +4034,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>どんかん</li>
-              <li>マイペース</li>
-              <li>さいせいりょく</li>
+              <li><button class="ability-chip" type="button" data-ability="どんかん">どんかん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="マイペース">マイペース</button></li>
+              <li><button class="ability-chip" type="button" data-ability="さいせいりょく">さいせいりょく</button></li>
             </ul>
           </div>
         </div>
@@ -3964,9 +4085,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>きみょうなくすり</li>
-              <li>マイペース</li>
-              <li>さいせいりょく</li>
+              <li><button class="ability-chip" type="button" data-ability="きみょうなくすり">きみょうなくすり</button></li>
+              <li><button class="ability-chip" type="button" data-ability="マイペース">マイペース</button></li>
+              <li><button class="ability-chip" type="button" data-ability="さいせいりょく">さいせいりょく</button></li>
             </ul>
           </div>
         </div>
@@ -4015,8 +4136,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>がんじょう</li>
-              <li>ぼうじん</li>
+              <li><button class="ability-chip" type="button" data-ability="がんじょう">がんじょう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ぼうじん">ぼうじん</button></li>
             </ul>
           </div>
         </div>
@@ -4065,9 +4186,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>いしあたま</li>
-              <li>がんじょう</li>
-              <li>ちからずく</li>
+              <li><button class="ability-chip" type="button" data-ability="いしあたま">いしあたま</button></li>
+              <li><button class="ability-chip" type="button" data-ability="がんじょう">がんじょう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ちからずく">ちからずく</button></li>
             </ul>
           </div>
         </div>
@@ -4116,7 +4237,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>すなのちから</li>
+              <li><button class="ability-chip" type="button" data-ability="すなのちから">すなのちから</button></li>
             </ul>
           </div>
         </div>
@@ -4165,9 +4286,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>どくのトゲ</li>
-              <li>すいすい</li>
-              <li>いかく</li>
+              <li><button class="ability-chip" type="button" data-ability="どくのトゲ">どくのトゲ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="すいすい">すいすい</button></li>
+              <li><button class="ability-chip" type="button" data-ability="いかく">いかく</button></li>
             </ul>
           </div>
         </div>
@@ -4216,9 +4337,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>むしのしらせ</li>
-              <li>テクニシャン</li>
-              <li>ライトメタル</li>
+              <li><button class="ability-chip" type="button" data-ability="むしのしらせ">むしのしらせ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="テクニシャン">テクニシャン</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ライトメタル">ライトメタル</button></li>
             </ul>
           </div>
         </div>
@@ -4268,7 +4389,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>テクニシャン</li>
+              <li><button class="ability-chip" type="button" data-ability="テクニシャン">テクニシャン</button></li>
             </ul>
           </div>
         </div>
@@ -4317,9 +4438,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>むしのしらせ</li>
-              <li>こんじょう</li>
-              <li>じしんかじょう</li>
+              <li><button class="ability-chip" type="button" data-ability="むしのしらせ">むしのしらせ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="こんじょう">こんじょう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="じしんかじょう">じしんかじょう</button></li>
             </ul>
           </div>
         </div>
@@ -4368,7 +4489,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>スキルリンク</li>
+              <li><button class="ability-chip" type="button" data-ability="スキルリンク">スキルリンク</button></li>
             </ul>
           </div>
         </div>
@@ -4417,9 +4538,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>するどいめ</li>
-              <li>がんじょう</li>
-              <li>くだけるよろい</li>
+              <li><button class="ability-chip" type="button" data-ability="するどいめ">するどいめ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="がんじょう">がんじょう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="くだけるよろい">くだけるよろい</button></li>
             </ul>
           </div>
         </div>
@@ -4468,7 +4589,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>すじがねいり</li>
+              <li><button class="ability-chip" type="button" data-ability="すじがねいり">すじがねいり</button></li>
             </ul>
           </div>
         </div>
@@ -4517,9 +4638,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>はやおき</li>
-              <li>もらいび</li>
-              <li>きんちょうかん</li>
+              <li><button class="ability-chip" type="button" data-ability="はやおき">はやおき</button></li>
+              <li><button class="ability-chip" type="button" data-ability="もらいび">もらいび</button></li>
+              <li><button class="ability-chip" type="button" data-ability="きんちょうかん">きんちょうかん</button></li>
             </ul>
           </div>
         </div>
@@ -4568,7 +4689,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>サンパワー</li>
+              <li><button class="ability-chip" type="button" data-ability="サンパワー">サンパワー</button></li>
             </ul>
           </div>
         </div>
@@ -4617,8 +4738,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>すなおこし</li>
-              <li>きんちょうかん</li>
+              <li><button class="ability-chip" type="button" data-ability="すなおこし">すなおこし</button></li>
+              <li><button class="ability-chip" type="button" data-ability="きんちょうかん">きんちょうかん</button></li>
             </ul>
           </div>
         </div>
@@ -4667,7 +4788,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>すなおこし</li>
+              <li><button class="ability-chip" type="button" data-ability="すなおこし">すなおこし</button></li>
             </ul>
           </div>
         </div>
@@ -4715,8 +4836,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>しんりょく</li>
-              <li>かるわざ</li>
+              <li><button class="ability-chip" type="button" data-ability="しんりょく">しんりょく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="かるわざ">かるわざ</button></li>
             </ul>
           </div>
         </div>
@@ -4765,7 +4886,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ひらいしん</li>
+              <li><button class="ability-chip" type="button" data-ability="ひらいしん">ひらいしん</button></li>
             </ul>
           </div>
         </div>
@@ -4815,8 +4936,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>もうか</li>
-              <li>かそく</li>
+              <li><button class="ability-chip" type="button" data-ability="もうか">もうか</button></li>
+              <li><button class="ability-chip" type="button" data-ability="かそく">かそく</button></li>
             </ul>
           </div>
         </div>
@@ -4866,7 +4987,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>かそく</li>
+              <li><button class="ability-chip" type="button" data-ability="かそく">かそく</button></li>
             </ul>
           </div>
         </div>
@@ -4916,8 +5037,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>げきりゅう</li>
-              <li>しめりけ</li>
+              <li><button class="ability-chip" type="button" data-ability="げきりゅう">げきりゅう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="しめりけ">しめりけ</button></li>
             </ul>
           </div>
         </div>
@@ -4967,7 +5088,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>すいすい</li>
+              <li><button class="ability-chip" type="button" data-ability="すいすい">すいすい</button></li>
             </ul>
           </div>
         </div>
@@ -5017,9 +5138,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>するどいめ</li>
-              <li>あめふらし</li>
-              <li>あめうけざら</li>
+              <li><button class="ability-chip" type="button" data-ability="するどいめ">するどいめ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="あめふらし">あめふらし</button></li>
+              <li><button class="ability-chip" type="button" data-ability="あめうけざら">あめうけざら</button></li>
             </ul>
           </div>
         </div>
@@ -5068,9 +5189,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>シンクロ</li>
-              <li>トレース</li>
-              <li>テレパシー</li>
+              <li><button class="ability-chip" type="button" data-ability="シンクロ">シンクロ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="トレース">トレース</button></li>
+              <li><button class="ability-chip" type="button" data-ability="テレパシー">テレパシー</button></li>
             </ul>
           </div>
         </div>
@@ -5119,7 +5240,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>フェアリースキン</li>
+              <li><button class="ability-chip" type="button" data-ability="フェアリースキン">フェアリースキン</button></li>
             </ul>
           </div>
         </div>
@@ -5168,9 +5289,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>するどいめ</li>
-              <li>あとだし</li>
-              <li>いたずらごころ</li>
+              <li><button class="ability-chip" type="button" data-ability="するどいめ">するどいめ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="あとだし">あとだし</button></li>
+              <li><button class="ability-chip" type="button" data-ability="いたずらごころ">いたずらごころ</button></li>
             </ul>
           </div>
         </div>
@@ -5219,7 +5340,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>マジックミラー</li>
+              <li><button class="ability-chip" type="button" data-ability="マジックミラー">マジックミラー</button></li>
             </ul>
           </div>
         </div>
@@ -5268,9 +5389,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>かいりきバサミ</li>
-              <li>いかく</li>
-              <li>ちからずく</li>
+              <li><button class="ability-chip" type="button" data-ability="かいりきバサミ">かいりきバサミ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="いかく">いかく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ちからずく">ちからずく</button></li>
             </ul>
           </div>
         </div>
@@ -5320,7 +5441,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ちからもち</li>
+              <li><button class="ability-chip" type="button" data-ability="ちからもち">ちからもち</button></li>
             </ul>
           </div>
         </div>
@@ -5369,9 +5490,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>がんじょう</li>
-              <li>いしあたま</li>
-              <li>ヘヴィメタル</li>
+              <li><button class="ability-chip" type="button" data-ability="がんじょう">がんじょう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="いしあたま">いしあたま</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ヘヴィメタル">ヘヴィメタル</button></li>
             </ul>
           </div>
         </div>
@@ -5419,7 +5540,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>フィルター</li>
+              <li><button class="ability-chip" type="button" data-ability="フィルター">フィルター</button></li>
             </ul>
           </div>
         </div>
@@ -5468,8 +5589,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ヨガパワー</li>
-              <li>テレパシー</li>
+              <li><button class="ability-chip" type="button" data-ability="ヨガパワー">ヨガパワー</button></li>
+              <li><button class="ability-chip" type="button" data-ability="テレパシー">テレパシー</button></li>
             </ul>
           </div>
         </div>
@@ -5518,7 +5639,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ヨガパワー</li>
+              <li><button class="ability-chip" type="button" data-ability="ヨガパワー">ヨガパワー</button></li>
             </ul>
           </div>
         </div>
@@ -5566,9 +5687,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>せいでんき</li>
-              <li>ひらいしん</li>
-              <li>マイナス</li>
+              <li><button class="ability-chip" type="button" data-ability="せいでんき">せいでんき</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ひらいしん">ひらいしん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="マイナス">マイナス</button></li>
             </ul>
           </div>
         </div>
@@ -5616,7 +5737,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>いかく</li>
+              <li><button class="ability-chip" type="button" data-ability="いかく">いかく</button></li>
             </ul>
           </div>
         </div>
@@ -5665,8 +5786,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>さめはだ</li>
-              <li>かそく</li>
+              <li><button class="ability-chip" type="button" data-ability="さめはだ">さめはだ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="かそく">かそく</button></li>
             </ul>
           </div>
         </div>
@@ -5715,7 +5836,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>がんじょうあご</li>
+              <li><button class="ability-chip" type="button" data-ability="がんじょうあご">がんじょうあご</button></li>
             </ul>
           </div>
         </div>
@@ -5764,9 +5885,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>マグマのよろい</li>
-              <li>ハードロック</li>
-              <li>いかりのつぼ</li>
+              <li><button class="ability-chip" type="button" data-ability="マグマのよろい">マグマのよろい</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ハードロック">ハードロック</button></li>
+              <li><button class="ability-chip" type="button" data-ability="いかりのつぼ">いかりのつぼ</button></li>
             </ul>
           </div>
         </div>
@@ -5815,7 +5936,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ちからずく</li>
+              <li><button class="ability-chip" type="button" data-ability="ちからずく">ちからずく</button></li>
             </ul>
           </div>
         </div>
@@ -5863,9 +5984,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>しろいけむり</li>
-              <li>ひでり</li>
-              <li>シェルアーマー</li>
+              <li><button class="ability-chip" type="button" data-ability="しろいけむり">しろいけむり</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ひでり">ひでり</button></li>
+              <li><button class="ability-chip" type="button" data-ability="シェルアーマー">シェルアーマー</button></li>
             </ul>
           </div>
         </div>
@@ -5914,8 +6035,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>しぜんかいふく</li>
-              <li>ノーてんき</li>
+              <li><button class="ability-chip" type="button" data-ability="しぜんかいふく">しぜんかいふく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ノーてんき">ノーてんき</button></li>
             </ul>
           </div>
         </div>
@@ -5964,7 +6085,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>フェアリースキン</li>
+              <li><button class="ability-chip" type="button" data-ability="フェアリースキン">フェアリースキン</button></li>
             </ul>
           </div>
         </div>
@@ -6012,9 +6133,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ふしぎなうろこ</li>
-              <li>かちき</li>
-              <li>メロメロボディ</li>
+              <li><button class="ability-chip" type="button" data-ability="ふしぎなうろこ">ふしぎなうろこ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="かちき">かちき</button></li>
+              <li><button class="ability-chip" type="button" data-ability="メロメロボディ">メロメロボディ</button></li>
             </ul>
           </div>
         </div>
@@ -6062,7 +6183,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>てんきや</li>
+              <li><button class="ability-chip" type="button" data-ability="てんきや">てんきや</button></li>
             </ul>
           </div>
         </div>
@@ -6110,7 +6231,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>てんきや</li>
+              <li><button class="ability-chip" type="button" data-ability="てんきや">てんきや</button></li>
             </ul>
           </div>
         </div>
@@ -6158,7 +6279,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>てんきや</li>
+              <li><button class="ability-chip" type="button" data-ability="てんきや">てんきや</button></li>
             </ul>
           </div>
         </div>
@@ -6206,7 +6327,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>てんきや</li>
+              <li><button class="ability-chip" type="button" data-ability="てんきや">てんきや</button></li>
             </ul>
           </div>
         </div>
@@ -6254,9 +6375,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ふみん</li>
-              <li>おみとおし</li>
-              <li>のろわれボディ</li>
+              <li><button class="ability-chip" type="button" data-ability="ふみん">ふみん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="おみとおし">おみとおし</button></li>
+              <li><button class="ability-chip" type="button" data-ability="のろわれボディ">のろわれボディ</button></li>
             </ul>
           </div>
         </div>
@@ -6304,7 +6425,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>いたずらごころ</li>
+              <li><button class="ability-chip" type="button" data-ability="いたずらごころ">いたずらごころ</button></li>
             </ul>
           </div>
         </div>
@@ -6352,7 +6473,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ふゆう</li>
+              <li><button class="ability-chip" type="button" data-ability="ふゆう">ふゆう</button></li>
             </ul>
           </div>
         </div>
@@ -6401,7 +6522,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ふゆう</li>
+              <li><button class="ability-chip" type="button" data-ability="ふゆう">ふゆう</button></li>
             </ul>
           </div>
         </div>
@@ -6449,9 +6570,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>プレッシャー</li>
-              <li>きょううん</li>
-              <li>せいぎのこころ</li>
+              <li><button class="ability-chip" type="button" data-ability="プレッシャー">プレッシャー</button></li>
+              <li><button class="ability-chip" type="button" data-ability="きょううん">きょううん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="せいぎのこころ">せいぎのこころ</button></li>
             </ul>
           </div>
         </div>
@@ -6499,7 +6620,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>マジックミラー</li>
+              <li><button class="ability-chip" type="button" data-ability="マジックミラー">マジックミラー</button></li>
             </ul>
           </div>
         </div>
@@ -6547,9 +6668,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>せいしんりょく</li>
-              <li>アイスボディ</li>
-              <li>ムラっけ</li>
+              <li><button class="ability-chip" type="button" data-ability="せいしんりょく">せいしんりょく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="アイスボディ">アイスボディ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ムラっけ">ムラっけ</button></li>
             </ul>
           </div>
         </div>
@@ -6597,7 +6718,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>フリーズスキン</li>
+              <li><button class="ability-chip" type="button" data-ability="フリーズスキン">フリーズスキン</button></li>
             </ul>
           </div>
         </div>
@@ -6646,8 +6767,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>クリアボディ</li>
-              <li>ライトメタル</li>
+              <li><button class="ability-chip" type="button" data-ability="クリアボディ">クリアボディ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ライトメタル">ライトメタル</button></li>
             </ul>
           </div>
         </div>
@@ -6697,7 +6818,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>かたいツメ</li>
+              <li><button class="ability-chip" type="button" data-ability="かたいツメ">かたいツメ</button></li>
             </ul>
           </div>
         </div>
@@ -6746,8 +6867,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>しんりょく</li>
-              <li>シェルアーマー</li>
+              <li><button class="ability-chip" type="button" data-ability="しんりょく">しんりょく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="シェルアーマー">シェルアーマー</button></li>
             </ul>
           </div>
         </div>
@@ -6796,8 +6917,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>もうか</li>
-              <li>てつのこぶし</li>
+              <li><button class="ability-chip" type="button" data-ability="もうか">もうか</button></li>
+              <li><button class="ability-chip" type="button" data-ability="てつのこぶし">てつのこぶし</button></li>
             </ul>
           </div>
         </div>
@@ -6846,8 +6967,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>げきりゅう</li>
-              <li>かちき</li>
+              <li><button class="ability-chip" type="button" data-ability="げきりゅう">げきりゅう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="かちき">かちき</button></li>
             </ul>
           </div>
         </div>
@@ -6896,8 +7017,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>いかく</li>
-              <li>すてみ</li>
+              <li><button class="ability-chip" type="button" data-ability="いかく">いかく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="すてみ">すてみ</button></li>
             </ul>
           </div>
         </div>
@@ -6947,7 +7068,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>あまのじゃく</li>
+              <li><button class="ability-chip" type="button" data-ability="あまのじゃく">あまのじゃく</button></li>
             </ul>
           </div>
         </div>
@@ -6995,9 +7116,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>とうそうしん</li>
-              <li>いかく</li>
-              <li>こんじょう</li>
+              <li><button class="ability-chip" type="button" data-ability="とうそうしん">とうそうしん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="いかく">いかく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="こんじょう">こんじょう</button></li>
             </ul>
           </div>
         </div>
@@ -7046,9 +7167,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>しぜんかいふく</li>
-              <li>どくのトゲ</li>
-              <li>テクニシャン</li>
+              <li><button class="ability-chip" type="button" data-ability="しぜんかいふく">しぜんかいふく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="どくのトゲ">どくのトゲ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="テクニシャン">テクニシャン</button></li>
             </ul>
           </div>
         </div>
@@ -7096,8 +7217,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>かたやぶり</li>
-              <li>ちからずく</li>
+              <li><button class="ability-chip" type="button" data-ability="かたやぶり">かたやぶり</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ちからずく">ちからずく</button></li>
             </ul>
           </div>
         </div>
@@ -7146,8 +7267,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>がんじょう</li>
-              <li>ぼうおん</li>
+              <li><button class="ability-chip" type="button" data-ability="がんじょう">がんじょう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ぼうおん">ぼうおん</button></li>
             </ul>
           </div>
         </div>
@@ -7195,9 +7316,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>メロメロボディ</li>
-              <li>ぶきよう</li>
-              <li>じゅうなん</li>
+              <li><button class="ability-chip" type="button" data-ability="メロメロボディ">メロメロボディ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ぶきよう">ぶきよう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="じゅうなん">じゅうなん</button></li>
             </ul>
           </div>
         </div>
@@ -7247,7 +7368,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>きもったま</li>
+              <li><button class="ability-chip" type="button" data-ability="きもったま">きもったま</button></li>
             </ul>
           </div>
         </div>
@@ -7296,8 +7417,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>プレッシャー</li>
-              <li>すりぬけ</li>
+              <li><button class="ability-chip" type="button" data-ability="プレッシャー">プレッシャー</button></li>
+              <li><button class="ability-chip" type="button" data-ability="すりぬけ">すりぬけ</button></li>
             </ul>
           </div>
         </div>
@@ -7347,8 +7468,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>すながくれ</li>
-              <li>さめはだ</li>
+              <li><button class="ability-chip" type="button" data-ability="すながくれ">すながくれ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="さめはだ">さめはだ</button></li>
             </ul>
           </div>
         </div>
@@ -7397,7 +7518,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>すなのちから</li>
+              <li><button class="ability-chip" type="button" data-ability="すなのちから">すなのちから</button></li>
             </ul>
           </div>
         </div>
@@ -7446,9 +7567,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ふくつのこころ</li>
-              <li>せいしんりょく</li>
-              <li>せいぎのこころ</li>
+              <li><button class="ability-chip" type="button" data-ability="ふくつのこころ">ふくつのこころ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="せいしんりょく">せいしんりょく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="せいぎのこころ">せいぎのこころ</button></li>
             </ul>
           </div>
         </div>
@@ -7498,7 +7619,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>てきおうりょく</li>
+              <li><button class="ability-chip" type="button" data-ability="てきおうりょく">てきおうりょく</button></li>
             </ul>
           </div>
         </div>
@@ -7547,8 +7668,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>すなおこし</li>
-              <li>すなのちから</li>
+              <li><button class="ability-chip" type="button" data-ability="すなおこし">すなおこし</button></li>
+              <li><button class="ability-chip" type="button" data-ability="すなのちから">すなのちから</button></li>
             </ul>
           </div>
         </div>
@@ -7597,9 +7718,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>きけんよち</li>
-              <li>かんそうはだ</li>
-              <li>どくしゅ</li>
+              <li><button class="ability-chip" type="button" data-ability="きけんよち">きけんよち</button></li>
+              <li><button class="ability-chip" type="button" data-ability="かんそうはだ">かんそうはだ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="どくしゅ">どくしゅ</button></li>
             </ul>
           </div>
         </div>
@@ -7648,8 +7769,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ゆきふらし</li>
-              <li>ぼうおん</li>
+              <li><button class="ability-chip" type="button" data-ability="ゆきふらし">ゆきふらし</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ぼうおん">ぼうおん</button></li>
             </ul>
           </div>
         </div>
@@ -7698,7 +7819,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ゆきふらし</li>
+              <li><button class="ability-chip" type="button" data-ability="ゆきふらし">ゆきふらし</button></li>
             </ul>
           </div>
         </div>
@@ -7747,8 +7868,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>プレッシャー</li>
-              <li>わるいてぐせ</li>
+              <li><button class="ability-chip" type="button" data-ability="プレッシャー">プレッシャー</button></li>
+              <li><button class="ability-chip" type="button" data-ability="わるいてぐせ">わるいてぐせ</button></li>
             </ul>
           </div>
         </div>
@@ -7797,9 +7918,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ひらいしん</li>
-              <li>ハードロック</li>
-              <li>すてみ</li>
+              <li><button class="ability-chip" type="button" data-ability="ひらいしん">ひらいしん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ハードロック">ハードロック</button></li>
+              <li><button class="ability-chip" type="button" data-ability="すてみ">すてみ</button></li>
             </ul>
           </div>
         </div>
@@ -7847,8 +7968,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>リーフガード</li>
-              <li>ようりょくそ</li>
+              <li><button class="ability-chip" type="button" data-ability="リーフガード">リーフガード</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ようりょくそ">ようりょくそ</button></li>
             </ul>
           </div>
         </div>
@@ -7896,8 +8017,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ゆきがくれ</li>
-              <li>アイスボディ</li>
+              <li><button class="ability-chip" type="button" data-ability="ゆきがくれ">ゆきがくれ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="アイスボディ">アイスボディ</button></li>
             </ul>
           </div>
         </div>
@@ -7946,9 +8067,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>かいりきバサミ</li>
-              <li>すながくれ</li>
-              <li>ポイズンヒール</li>
+              <li><button class="ability-chip" type="button" data-ability="かいりきバサミ">かいりきバサミ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="すながくれ">すながくれ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ポイズンヒール">ポイズンヒール</button></li>
             </ul>
           </div>
         </div>
@@ -7998,9 +8119,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>どんかん</li>
-              <li>ゆきがくれ</li>
-              <li>あついしぼう</li>
+              <li><button class="ability-chip" type="button" data-ability="どんかん">どんかん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ゆきがくれ">ゆきがくれ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="あついしぼう">あついしぼう</button></li>
             </ul>
           </div>
         </div>
@@ -8050,9 +8171,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ふくつのこころ</li>
-              <li>きれあじ</li>
-              <li>せいぎのこころ</li>
+              <li><button class="ability-chip" type="button" data-ability="ふくつのこころ">ふくつのこころ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="きれあじ">きれあじ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="せいぎのこころ">せいぎのこころ</button></li>
             </ul>
           </div>
         </div>
@@ -8101,7 +8222,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>せいしんりょく</li>
+              <li><button class="ability-chip" type="button" data-ability="せいしんりょく">せいしんりょく</button></li>
             </ul>
           </div>
         </div>
@@ -8150,8 +8271,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ゆきがくれ</li>
-              <li>のろわれボディ</li>
+              <li><button class="ability-chip" type="button" data-ability="ゆきがくれ">ゆきがくれ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="のろわれボディ">のろわれボディ</button></li>
             </ul>
           </div>
         </div>
@@ -8200,7 +8321,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ゆきふらし</li>
+              <li><button class="ability-chip" type="button" data-ability="ゆきふらし">ゆきふらし</button></li>
             </ul>
           </div>
         </div>
@@ -8249,7 +8370,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ふゆう</li>
+              <li><button class="ability-chip" type="button" data-ability="ふゆう">ふゆう</button></li>
             </ul>
           </div>
         </div>
@@ -8299,7 +8420,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ふゆう</li>
+              <li><button class="ability-chip" type="button" data-ability="ふゆう">ふゆう</button></li>
             </ul>
           </div>
         </div>
@@ -8349,7 +8470,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ふゆう</li>
+              <li><button class="ability-chip" type="button" data-ability="ふゆう">ふゆう</button></li>
             </ul>
           </div>
         </div>
@@ -8398,7 +8519,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ふゆう</li>
+              <li><button class="ability-chip" type="button" data-ability="ふゆう">ふゆう</button></li>
             </ul>
           </div>
         </div>
@@ -8447,7 +8568,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ふゆう</li>
+              <li><button class="ability-chip" type="button" data-ability="ふゆう">ふゆう</button></li>
             </ul>
           </div>
         </div>
@@ -8496,7 +8617,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ふゆう</li>
+              <li><button class="ability-chip" type="button" data-ability="ふゆう">ふゆう</button></li>
             </ul>
           </div>
         </div>
@@ -8544,8 +8665,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>しんりょく</li>
-              <li>あまのじゃく</li>
+              <li><button class="ability-chip" type="button" data-ability="しんりょく">しんりょく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="あまのじゃく">あまのじゃく</button></li>
             </ul>
           </div>
         </div>
@@ -8594,8 +8715,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>もうか</li>
-              <li>すてみ</li>
+              <li><button class="ability-chip" type="button" data-ability="もうか">もうか</button></li>
+              <li><button class="ability-chip" type="button" data-ability="すてみ">すてみ</button></li>
             </ul>
           </div>
         </div>
@@ -8644,7 +8765,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>かたやぶり</li>
+              <li><button class="ability-chip" type="button" data-ability="かたやぶり">かたやぶり</button></li>
             </ul>
           </div>
         </div>
@@ -8692,8 +8813,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>げきりゅう</li>
-              <li>シェルアーマー</li>
+              <li><button class="ability-chip" type="button" data-ability="げきりゅう">げきりゅう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="シェルアーマー">シェルアーマー</button></li>
             </ul>
           </div>
         </div>
@@ -8743,8 +8864,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>げきりゅう</li>
-              <li>きれあじ</li>
+              <li><button class="ability-chip" type="button" data-ability="げきりゅう">げきりゅう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="きれあじ">きれあじ</button></li>
             </ul>
           </div>
         </div>
@@ -8792,9 +8913,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>はっこう</li>
-              <li>するどいめ</li>
-              <li>アナライズ</li>
+              <li><button class="ability-chip" type="button" data-ability="はっこう">はっこう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="するどいめ">するどいめ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="アナライズ">アナライズ</button></li>
             </ul>
           </div>
         </div>
@@ -8842,9 +8963,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>じゅうなん</li>
-              <li>かるわざ</li>
-              <li>いたずらごころ</li>
+              <li><button class="ability-chip" type="button" data-ability="じゅうなん">じゅうなん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="かるわざ">かるわざ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="いたずらごころ">いたずらごころ</button></li>
             </ul>
           </div>
         </div>
@@ -8892,8 +9013,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>くいしんぼう</li>
-              <li>しんりょく</li>
+              <li><button class="ability-chip" type="button" data-ability="くいしんぼう">くいしんぼう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="しんりょく">しんりょく</button></li>
             </ul>
           </div>
         </div>
@@ -8941,8 +9062,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>くいしんぼう</li>
-              <li>もうか</li>
+              <li><button class="ability-chip" type="button" data-ability="くいしんぼう">くいしんぼう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="もうか">もうか</button></li>
             </ul>
           </div>
         </div>
@@ -8990,8 +9111,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>くいしんぼう</li>
-              <li>げきりゅう</li>
+              <li><button class="ability-chip" type="button" data-ability="くいしんぼう">くいしんぼう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="げきりゅう">げきりゅう</button></li>
             </ul>
           </div>
         </div>
@@ -9039,9 +9160,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>よちむ</li>
-              <li>シンクロ</li>
-              <li>テレパシー</li>
+              <li><button class="ability-chip" type="button" data-ability="よちむ">よちむ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="シンクロ">シンクロ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="テレパシー">テレパシー</button></li>
             </ul>
           </div>
         </div>
@@ -9090,9 +9211,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>すなかき</li>
-              <li>すなのちから</li>
-              <li>かたやぶり</li>
+              <li><button class="ability-chip" type="button" data-ability="すなかき">すなかき</button></li>
+              <li><button class="ability-chip" type="button" data-ability="すなのちから">すなのちから</button></li>
+              <li><button class="ability-chip" type="button" data-ability="かたやぶり">かたやぶり</button></li>
             </ul>
           </div>
         </div>
@@ -9141,7 +9262,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>かんつうドリル</li>
+              <li><button class="ability-chip" type="button" data-ability="かんつうドリル">かんつうドリル</button></li>
             </ul>
           </div>
         </div>
@@ -9189,9 +9310,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>いやしのこころ</li>
-              <li>さいせいりょく</li>
-              <li>ぶきよう</li>
+              <li><button class="ability-chip" type="button" data-ability="いやしのこころ">いやしのこころ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="さいせいりょく">さいせいりょく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ぶきよう">ぶきよう</button></li>
             </ul>
           </div>
         </div>
@@ -9240,7 +9361,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>いやしのこころ</li>
+              <li><button class="ability-chip" type="button" data-ability="いやしのこころ">いやしのこころ</button></li>
             </ul>
           </div>
         </div>
@@ -9288,9 +9409,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>こんじょう</li>
-              <li>ちからずく</li>
-              <li>てつのこぶし</li>
+              <li><button class="ability-chip" type="button" data-ability="こんじょう">こんじょう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ちからずく">ちからずく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="てつのこぶし">てつのこぶし</button></li>
             </ul>
           </div>
         </div>
@@ -9339,9 +9460,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>どくのトゲ</li>
-              <li>むしのしらせ</li>
-              <li>かそく</li>
+              <li><button class="ability-chip" type="button" data-ability="どくのトゲ">どくのトゲ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="むしのしらせ">むしのしらせ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="かそく">かそく</button></li>
             </ul>
           </div>
         </div>
@@ -9390,7 +9511,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>シェルアーマー</li>
+              <li><button class="ability-chip" type="button" data-ability="シェルアーマー">シェルアーマー</button></li>
             </ul>
           </div>
         </div>
@@ -9440,9 +9561,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>いたずらごころ</li>
-              <li>すりぬけ</li>
-              <li>ようりょくそ</li>
+              <li><button class="ability-chip" type="button" data-ability="いたずらごころ">いたずらごころ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="すりぬけ">すりぬけ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ようりょくそ">ようりょくそ</button></li>
             </ul>
           </div>
         </div>
@@ -9491,9 +9612,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>いかく</li>
-              <li>じしんかじょう</li>
-              <li>いかりのつぼ</li>
+              <li><button class="ability-chip" type="button" data-ability="いかく">いかく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="じしんかじょう">じしんかじょう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="いかりのつぼ">いかりのつぼ</button></li>
             </ul>
           </div>
         </div>
@@ -9542,9 +9663,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>だっぴ</li>
-              <li>じしんかじょう</li>
-              <li>いかく</li>
+              <li><button class="ability-chip" type="button" data-ability="だっぴ">だっぴ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="じしんかじょう">じしんかじょう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="いかく">いかく</button></li>
             </ul>
           </div>
         </div>
@@ -9593,7 +9714,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>いかく</li>
+              <li><button class="ability-chip" type="button" data-ability="いかく">いかく</button></li>
             </ul>
           </div>
         </div>
@@ -9641,7 +9762,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ミイラ</li>
+              <li><button class="ability-chip" type="button" data-ability="ミイラ">ミイラ</button></li>
             </ul>
           </div>
         </div>
@@ -9689,9 +9810,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>あくしゅう</li>
-              <li>くだけるよろい</li>
-              <li>ゆうばく</li>
+              <li><button class="ability-chip" type="button" data-ability="あくしゅう">あくしゅう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="くだけるよろい">くだけるよろい</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ゆうばく">ゆうばく</button></li>
             </ul>
           </div>
         </div>
@@ -9739,7 +9860,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>イリュージョン</li>
+              <li><button class="ability-chip" type="button" data-ability="イリュージョン">イリュージョン</button></li>
             </ul>
           </div>
         </div>
@@ -9789,7 +9910,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>イリュージョン</li>
+              <li><button class="ability-chip" type="button" data-ability="イリュージョン">イリュージョン</button></li>
             </ul>
           </div>
         </div>
@@ -9837,9 +9958,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ぼうじん</li>
-              <li>マジックガード</li>
-              <li>さいせいりょく</li>
+              <li><button class="ability-chip" type="button" data-ability="ぼうじん">ぼうじん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="マジックガード">マジックガード</button></li>
+              <li><button class="ability-chip" type="button" data-ability="さいせいりょく">さいせいりょく</button></li>
             </ul>
           </div>
         </div>
@@ -9888,9 +10009,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>アイスボディ</li>
-              <li>ゆきふらし</li>
-              <li>くだけるよろい</li>
+              <li><button class="ability-chip" type="button" data-ability="アイスボディ">アイスボディ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ゆきふらし">ゆきふらし</button></li>
+              <li><button class="ability-chip" type="button" data-ability="くだけるよろい">くだけるよろい</button></li>
             </ul>
           </div>
         </div>
@@ -9939,8 +10060,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>せいでんき</li>
-              <li>でんきエンジン</li>
+              <li><button class="ability-chip" type="button" data-ability="せいでんき">せいでんき</button></li>
+              <li><button class="ability-chip" type="button" data-ability="でんきエンジン">でんきエンジン</button></li>
             </ul>
           </div>
         </div>
@@ -9988,7 +10109,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ふゆう</li>
+              <li><button class="ability-chip" type="button" data-ability="ふゆう">ふゆう</button></li>
             </ul>
           </div>
         </div>
@@ -10036,7 +10157,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>うなぎのぼり</li>
+              <li><button class="ability-chip" type="button" data-ability="うなぎのぼり">うなぎのぼり</button></li>
             </ul>
           </div>
         </div>
@@ -10085,9 +10206,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>もらいび</li>
-              <li>ほのおのからだ</li>
-              <li>すりぬけ</li>
+              <li><button class="ability-chip" type="button" data-ability="もらいび">もらいび</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ほのおのからだ">ほのおのからだ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="すりぬけ">すりぬけ</button></li>
             </ul>
           </div>
         </div>
@@ -10136,7 +10257,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>すりぬけ</li>
+              <li><button class="ability-chip" type="button" data-ability="すりぬけ">すりぬけ</button></li>
             </ul>
           </div>
         </div>
@@ -10184,9 +10305,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ゆきがくれ</li>
-              <li>ゆきかき</li>
-              <li>すいすい</li>
+              <li><button class="ability-chip" type="button" data-ability="ゆきがくれ">ゆきがくれ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ゆきかき">ゆきかき</button></li>
+              <li><button class="ability-chip" type="button" data-ability="すいすい">すいすい</button></li>
             </ul>
           </div>
         </div>
@@ -10235,9 +10356,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>せいでんき</li>
-              <li>じゅうなん</li>
-              <li>すながくれ</li>
+              <li><button class="ability-chip" type="button" data-ability="せいでんき">せいでんき</button></li>
+              <li><button class="ability-chip" type="button" data-ability="じゅうなん">じゅうなん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="すながくれ">すながくれ</button></li>
             </ul>
           </div>
         </div>
@@ -10286,7 +10407,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ぎたい</li>
+              <li><button class="ability-chip" type="button" data-ability="ぎたい">ぎたい</button></li>
             </ul>
           </div>
         </div>
@@ -10335,9 +10456,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>てつのこぶし</li>
-              <li>ぶきよう</li>
-              <li>ノーガード</li>
+              <li><button class="ability-chip" type="button" data-ability="てつのこぶし">てつのこぶし</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ぶきよう">ぶきよう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ノーガード">ノーガード</button></li>
             </ul>
           </div>
         </div>
@@ -10386,7 +10507,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ふかしのこぶし</li>
+              <li><button class="ability-chip" type="button" data-ability="ふかしのこぶし">ふかしのこぶし</button></li>
             </ul>
           </div>
         </div>
@@ -10436,7 +10557,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ふゆう</li>
+              <li><button class="ability-chip" type="button" data-ability="ふゆう">ふゆう</button></li>
             </ul>
           </div>
         </div>
@@ -10486,8 +10607,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ほのおのからだ</li>
-              <li>むしのしらせ</li>
+              <li><button class="ability-chip" type="button" data-ability="ほのおのからだ">ほのおのからだ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="むしのしらせ">むしのしらせ</button></li>
             </ul>
           </div>
         </div>
@@ -10536,8 +10657,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>しんりょく</li>
-              <li>ぼうだん</li>
+              <li><button class="ability-chip" type="button" data-ability="しんりょく">しんりょく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ぼうだん">ぼうだん</button></li>
             </ul>
           </div>
         </div>
@@ -10586,7 +10707,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ぼうだん</li>
+              <li><button class="ability-chip" type="button" data-ability="ぼうだん">ぼうだん</button></li>
             </ul>
           </div>
         </div>
@@ -10635,8 +10756,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>もうか</li>
-              <li>マジシャン</li>
+              <li><button class="ability-chip" type="button" data-ability="もうか">もうか</button></li>
+              <li><button class="ability-chip" type="button" data-ability="マジシャン">マジシャン</button></li>
             </ul>
           </div>
         </div>
@@ -10686,7 +10807,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ふゆう</li>
+              <li><button class="ability-chip" type="button" data-ability="ふゆう">ふゆう</button></li>
             </ul>
           </div>
         </div>
@@ -10736,8 +10857,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>げきりゅう</li>
-              <li>へんげんじざい</li>
+              <li><button class="ability-chip" type="button" data-ability="げきりゅう">げきりゅう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="へんげんじざい">へんげんじざい</button></li>
             </ul>
           </div>
         </div>
@@ -10787,7 +10908,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>へんげんじざい</li>
+              <li><button class="ability-chip" type="button" data-ability="へんげんじざい">へんげんじざい</button></li>
             </ul>
           </div>
         </div>
@@ -10836,9 +10957,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ものひろい</li>
-              <li>ほおぶくろ</li>
-              <li>ちからもち</li>
+              <li><button class="ability-chip" type="button" data-ability="ものひろい">ものひろい</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ほおぶくろ">ほおぶくろ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ちからもち">ちからもち</button></li>
             </ul>
           </div>
         </div>
@@ -10887,8 +11008,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ほのおのからだ</li>
-              <li>はやてのつばさ</li>
+              <li><button class="ability-chip" type="button" data-ability="ほのおのからだ">ほのおのからだ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="はやてのつばさ">はやてのつばさ</button></li>
             </ul>
           </div>
         </div>
@@ -10937,9 +11058,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>りんぷん</li>
-              <li>ふくがん</li>
-              <li>フレンドガード</li>
+              <li><button class="ability-chip" type="button" data-ability="りんぷん">りんぷん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ふくがん">ふくがん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="フレンドガード">フレンドガード</button></li>
             </ul>
           </div>
         </div>
@@ -10988,9 +11109,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>とうそうしん</li>
-              <li>きんちょうかん</li>
-              <li>じしんかじょう</li>
+              <li><button class="ability-chip" type="button" data-ability="とうそうしん">とうそうしん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="きんちょうかん">きんちょうかん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="じしんかじょう">じしんかじょう</button></li>
             </ul>
           </div>
         </div>
@@ -11039,9 +11160,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>とうそうしん</li>
-              <li>きんちょうかん</li>
-              <li>じしんかじょう</li>
+              <li><button class="ability-chip" type="button" data-ability="とうそうしん">とうそうしん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="きんちょうかん">きんちょうかん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="じしんかじょう">じしんかじょう</button></li>
             </ul>
           </div>
         </div>
@@ -11090,7 +11211,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ほのおのたてがみ</li>
+              <li><button class="ability-chip" type="button" data-ability="ほのおのたてがみ">ほのおのたてがみ</button></li>
             </ul>
           </div>
         </div>
@@ -11138,8 +11259,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>フラワーベール</li>
-              <li>きょうせい</li>
+              <li><button class="ability-chip" type="button" data-ability="フラワーベール">フラワーベール</button></li>
+              <li><button class="ability-chip" type="button" data-ability="きょうせい">きょうせい</button></li>
             </ul>
           </div>
         </div>
@@ -11188,7 +11309,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>フェアリーオーラ</li>
+              <li><button class="ability-chip" type="button" data-ability="フェアリーオーラ">フェアリーオーラ</button></li>
             </ul>
           </div>
         </div>
@@ -11236,8 +11357,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>フラワーベール</li>
-              <li>きょうせい</li>
+              <li><button class="ability-chip" type="button" data-ability="フラワーベール">フラワーベール</button></li>
+              <li><button class="ability-chip" type="button" data-ability="きょうせい">きょうせい</button></li>
             </ul>
           </div>
         </div>
@@ -11286,9 +11407,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>てつのこぶし</li>
-              <li>かたやぶり</li>
-              <li>きもったま</li>
+              <li><button class="ability-chip" type="button" data-ability="てつのこぶし">てつのこぶし</button></li>
+              <li><button class="ability-chip" type="button" data-ability="かたやぶり">かたやぶり</button></li>
+              <li><button class="ability-chip" type="button" data-ability="きもったま">きもったま</button></li>
             </ul>
           </div>
         </div>
@@ -11336,7 +11457,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ファーコート</li>
+              <li><button class="ability-chip" type="button" data-ability="ファーコート">ファーコート</button></li>
             </ul>
           </div>
         </div>
@@ -11384,9 +11505,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>するどいめ</li>
-              <li>すりぬけ</li>
-              <li>いたずらごころ</li>
+              <li><button class="ability-chip" type="button" data-ability="するどいめ">するどいめ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="すりぬけ">すりぬけ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="いたずらごころ">いたずらごころ</button></li>
             </ul>
           </div>
         </div>
@@ -11434,9 +11555,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>するどいめ</li>
-              <li>すりぬけ</li>
-              <li>かちき</li>
+              <li><button class="ability-chip" type="button" data-ability="するどいめ">するどいめ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="すりぬけ">すりぬけ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="かちき">かちき</button></li>
             </ul>
           </div>
         </div>
@@ -11484,7 +11605,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>トレース</li>
+              <li><button class="ability-chip" type="button" data-ability="トレース">トレース</button></li>
             </ul>
           </div>
         </div>
@@ -11532,7 +11653,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>トレース</li>
+              <li><button class="ability-chip" type="button" data-ability="トレース">トレース</button></li>
             </ul>
           </div>
         </div>
@@ -11582,7 +11703,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>バトルスイッチ</li>
+              <li><button class="ability-chip" type="button" data-ability="バトルスイッチ">バトルスイッチ</button></li>
             </ul>
           </div>
         </div>
@@ -11631,7 +11752,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>バトルスイッチ</li>
+              <li><button class="ability-chip" type="button" data-ability="バトルスイッチ">バトルスイッチ</button></li>
             </ul>
           </div>
         </div>
@@ -11679,8 +11800,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>いやしのこころ</li>
-              <li>アロマベール</li>
+              <li><button class="ability-chip" type="button" data-ability="いやしのこころ">いやしのこころ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="アロマベール">アロマベール</button></li>
             </ul>
           </div>
         </div>
@@ -11728,8 +11849,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>スイートベール</li>
-              <li>かるわざ</li>
+              <li><button class="ability-chip" type="button" data-ability="スイートベール">スイートベール</button></li>
+              <li><button class="ability-chip" type="button" data-ability="かるわざ">かるわざ</button></li>
             </ul>
           </div>
         </div>
@@ -11778,9 +11899,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>あまのじゃく</li>
-              <li>きゅうばん</li>
-              <li>すりぬけ</li>
+              <li><button class="ability-chip" type="button" data-ability="あまのじゃく">あまのじゃく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="きゅうばん">きゅうばん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="すりぬけ">すりぬけ</button></li>
             </ul>
           </div>
         </div>
@@ -11829,7 +11950,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>あまのじゃく</li>
+              <li><button class="ability-chip" type="button" data-ability="あまのじゃく">あまのじゃく</button></li>
             </ul>
           </div>
         </div>
@@ -11878,9 +11999,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>かたいツメ</li>
-              <li>スナイパー</li>
-              <li>わるいてぐせ</li>
+              <li><button class="ability-chip" type="button" data-ability="かたいツメ">かたいツメ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="スナイパー">スナイパー</button></li>
+              <li><button class="ability-chip" type="button" data-ability="わるいてぐせ">わるいてぐせ</button></li>
             </ul>
           </div>
         </div>
@@ -11929,7 +12050,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>かたいツメ</li>
+              <li><button class="ability-chip" type="button" data-ability="かたいツメ">かたいツメ</button></li>
             </ul>
           </div>
         </div>
@@ -11978,9 +12099,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>どくのトゲ</li>
-              <li>どくしゅ</li>
-              <li>てきおうりょく</li>
+              <li><button class="ability-chip" type="button" data-ability="どくのトゲ">どくのトゲ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="どくしゅ">どくしゅ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="てきおうりょく">てきおうりょく</button></li>
             </ul>
           </div>
         </div>
@@ -12030,7 +12151,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>さいせいりょく</li>
+              <li><button class="ability-chip" type="button" data-ability="さいせいりょく">さいせいりょく</button></li>
             </ul>
           </div>
         </div>
@@ -12078,7 +12199,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>メガランチャー</li>
+              <li><button class="ability-chip" type="button" data-ability="メガランチャー">メガランチャー</button></li>
             </ul>
           </div>
         </div>
@@ -12127,9 +12248,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>かんそうはだ</li>
-              <li>すながくれ</li>
-              <li>サンパワー</li>
+              <li><button class="ability-chip" type="button" data-ability="かんそうはだ">かんそうはだ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="すながくれ">すながくれ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="サンパワー">サンパワー</button></li>
             </ul>
           </div>
         </div>
@@ -12178,8 +12299,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>がんじょうあご</li>
-              <li>いしあたま</li>
+              <li><button class="ability-chip" type="button" data-ability="がんじょうあご">がんじょうあご</button></li>
+              <li><button class="ability-chip" type="button" data-ability="いしあたま">いしあたま</button></li>
             </ul>
           </div>
         </div>
@@ -12228,8 +12349,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>フリーズスキン</li>
-              <li>ゆきふらし</li>
+              <li><button class="ability-chip" type="button" data-ability="フリーズスキン">フリーズスキン</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ゆきふらし">ゆきふらし</button></li>
             </ul>
           </div>
         </div>
@@ -12278,8 +12399,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>メロメロボディ</li>
-              <li>フェアリースキン</li>
+              <li><button class="ability-chip" type="button" data-ability="メロメロボディ">メロメロボディ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="フェアリースキン">フェアリースキン</button></li>
             </ul>
           </div>
         </div>
@@ -12328,9 +12449,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>じゅうなん</li>
-              <li>かるわざ</li>
-              <li>かたやぶり</li>
+              <li><button class="ability-chip" type="button" data-ability="じゅうなん">じゅうなん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="かるわざ">かるわざ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="かたやぶり">かたやぶり</button></li>
             </ul>
           </div>
         </div>
@@ -12379,7 +12500,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ノーガード</li>
+              <li><button class="ability-chip" type="button" data-ability="ノーガード">ノーガード</button></li>
             </ul>
           </div>
         </div>
@@ -12428,9 +12549,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ほおぶくろ</li>
-              <li>ものひろい</li>
-              <li>プラス</li>
+              <li><button class="ability-chip" type="button" data-ability="ほおぶくろ">ほおぶくろ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ものひろい">ものひろい</button></li>
+              <li><button class="ability-chip" type="button" data-ability="プラス">プラス</button></li>
             </ul>
           </div>
         </div>
@@ -12478,9 +12599,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>そうしょく</li>
-              <li>うるおいボディ</li>
-              <li>ぬめぬめ</li>
+              <li><button class="ability-chip" type="button" data-ability="そうしょく">そうしょく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="うるおいボディ">うるおいボディ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ぬめぬめ">ぬめぬめ</button></li>
             </ul>
           </div>
         </div>
@@ -12529,9 +12650,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>そうしょく</li>
-              <li>シェルアーマー</li>
-              <li>ぬめぬめ</li>
+              <li><button class="ability-chip" type="button" data-ability="そうしょく">そうしょく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="シェルアーマー">シェルアーマー</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ぬめぬめ">ぬめぬめ</button></li>
             </ul>
           </div>
         </div>
@@ -12580,8 +12701,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>いたずらごころ</li>
-              <li>マジシャン</li>
+              <li><button class="ability-chip" type="button" data-ability="いたずらごころ">いたずらごころ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="マジシャン">マジシャン</button></li>
             </ul>
           </div>
         </div>
@@ -12630,9 +12751,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>しぜんかいふく</li>
-              <li>おみとおし</li>
-              <li>しゅうかく</li>
+              <li><button class="ability-chip" type="button" data-ability="しぜんかいふく">しぜんかいふく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="おみとおし">おみとおし</button></li>
+              <li><button class="ability-chip" type="button" data-ability="しゅうかく">しゅうかく</button></li>
             </ul>
           </div>
         </div>
@@ -12681,9 +12802,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ものひろい</li>
-              <li>おみとおし</li>
-              <li>ふみん</li>
+              <li><button class="ability-chip" type="button" data-ability="ものひろい">ものひろい</button></li>
+              <li><button class="ability-chip" type="button" data-ability="おみとおし">おみとおし</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ふみん">ふみん</button></li>
             </ul>
           </div>
         </div>
@@ -12732,9 +12853,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ものひろい</li>
-              <li>おみとおし</li>
-              <li>ふみん</li>
+              <li><button class="ability-chip" type="button" data-ability="ものひろい">ものひろい</button></li>
+              <li><button class="ability-chip" type="button" data-ability="おみとおし">おみとおし</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ふみん">ふみん</button></li>
             </ul>
           </div>
         </div>
@@ -12783,9 +12904,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ものひろい</li>
-              <li>おみとおし</li>
-              <li>ふみん</li>
+              <li><button class="ability-chip" type="button" data-ability="ものひろい">ものひろい</button></li>
+              <li><button class="ability-chip" type="button" data-ability="おみとおし">おみとおし</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ふみん">ふみん</button></li>
             </ul>
           </div>
         </div>
@@ -12834,9 +12955,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ものひろい</li>
-              <li>おみとおし</li>
-              <li>ふみん</li>
+              <li><button class="ability-chip" type="button" data-ability="ものひろい">ものひろい</button></li>
+              <li><button class="ability-chip" type="button" data-ability="おみとおし">おみとおし</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ふみん">ふみん</button></li>
             </ul>
           </div>
         </div>
@@ -12884,9 +13005,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>マイペース</li>
-              <li>アイスボディ</li>
-              <li>がんじょう</li>
+              <li><button class="ability-chip" type="button" data-ability="マイペース">マイペース</button></li>
+              <li><button class="ability-chip" type="button" data-ability="アイスボディ">アイスボディ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="がんじょう">がんじょう</button></li>
             </ul>
           </div>
         </div>
@@ -12935,9 +13056,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>がんじょうあご</li>
-              <li>アイスボディ</li>
-              <li>がんじょう</li>
+              <li><button class="ability-chip" type="button" data-ability="がんじょうあご">がんじょうあご</button></li>
+              <li><button class="ability-chip" type="button" data-ability="アイスボディ">アイスボディ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="がんじょう">がんじょう</button></li>
             </ul>
           </div>
         </div>
@@ -12986,9 +13107,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>おみとおし</li>
-              <li>すりぬけ</li>
-              <li>テレパシー</li>
+              <li><button class="ability-chip" type="button" data-ability="おみとおし">おみとおし</button></li>
+              <li><button class="ability-chip" type="button" data-ability="すりぬけ">すりぬけ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="テレパシー">テレパシー</button></li>
             </ul>
           </div>
         </div>
@@ -13037,8 +13158,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>しんりょく</li>
-              <li>えんかく</li>
+              <li><button class="ability-chip" type="button" data-ability="しんりょく">しんりょく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="えんかく">えんかく</button></li>
             </ul>
           </div>
         </div>
@@ -13087,8 +13208,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>しんりょく</li>
-              <li>きもったま</li>
+              <li><button class="ability-chip" type="button" data-ability="しんりょく">しんりょく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="きもったま">きもったま</button></li>
             </ul>
           </div>
         </div>
@@ -13137,8 +13258,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>もうか</li>
-              <li>いかく</li>
+              <li><button class="ability-chip" type="button" data-ability="もうか">もうか</button></li>
+              <li><button class="ability-chip" type="button" data-ability="いかく">いかく</button></li>
             </ul>
           </div>
         </div>
@@ -13188,8 +13309,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>げきりゅう</li>
-              <li>うるおいボイス</li>
+              <li><button class="ability-chip" type="button" data-ability="げきりゅう">げきりゅう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="うるおいボイス">うるおいボイス</button></li>
             </ul>
           </div>
         </div>
@@ -13238,9 +13359,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>するどいめ</li>
-              <li>スキルリンク</li>
-              <li>ちからずく</li>
+              <li><button class="ability-chip" type="button" data-ability="するどいめ">するどいめ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="スキルリンク">スキルリンク</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ちからずく">ちからずく</button></li>
             </ul>
           </div>
         </div>
@@ -13289,9 +13410,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>かいりきバサミ</li>
-              <li>てつのこぶし</li>
-              <li>いかりのつぼ</li>
+              <li><button class="ability-chip" type="button" data-ability="かいりきバサミ">かいりきバサミ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="てつのこぶし">てつのこぶし</button></li>
+              <li><button class="ability-chip" type="button" data-ability="いかりのつぼ">いかりのつぼ</button></li>
             </ul>
           </div>
         </div>
@@ -13340,7 +13461,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>てつのこぶし</li>
+              <li><button class="ability-chip" type="button" data-ability="てつのこぶし">てつのこぶし</button></li>
             </ul>
           </div>
         </div>
@@ -13388,9 +13509,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>するどいめ</li>
-              <li>すなかき</li>
-              <li>ふくつのこころ</li>
+              <li><button class="ability-chip" type="button" data-ability="するどいめ">するどいめ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="すなかき">すなかき</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ふくつのこころ">ふくつのこころ</button></li>
             </ul>
           </div>
         </div>
@@ -13438,9 +13559,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>するどいめ</li>
-              <li>やるき</li>
-              <li>ノーガード</li>
+              <li><button class="ability-chip" type="button" data-ability="するどいめ">するどいめ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="やるき">やるき</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ノーガード">ノーガード</button></li>
             </ul>
           </div>
         </div>
@@ -13488,7 +13609,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>かたいツメ</li>
+              <li><button class="ability-chip" type="button" data-ability="かたいツメ">かたいツメ</button></li>
             </ul>
           </div>
         </div>
@@ -13538,9 +13659,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ひとでなし</li>
-              <li>じゅうなん</li>
-              <li>さいせいりょく</li>
+              <li><button class="ability-chip" type="button" data-ability="ひとでなし">ひとでなし</button></li>
+              <li><button class="ability-chip" type="button" data-ability="じゅうなん">じゅうなん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="さいせいりょく">さいせいりょく</button></li>
             </ul>
           </div>
         </div>
@@ -13588,9 +13709,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>マイペース</li>
-              <li>じきゅうりょく</li>
-              <li>せいしんりょく</li>
+              <li><button class="ability-chip" type="button" data-ability="マイペース">マイペース</button></li>
+              <li><button class="ability-chip" type="button" data-ability="じきゅうりょく">じきゅうりょく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="せいしんりょく">せいしんりょく</button></li>
             </ul>
           </div>
         </div>
@@ -13639,8 +13760,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>すいほう</li>
-              <li>ちょすい</li>
+              <li><button class="ability-chip" type="button" data-ability="すいほう">すいほう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ちょすい">ちょすい</button></li>
             </ul>
           </div>
         </div>
@@ -13689,8 +13810,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ふしょく</li>
-              <li>どんかん</li>
+              <li><button class="ability-chip" type="button" data-ability="ふしょく">ふしょく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="どんかん">どんかん</button></li>
             </ul>
           </div>
         </div>
@@ -13738,9 +13859,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>リーフガード</li>
-              <li>じょおうのいげん</li>
-              <li>スイートベール</li>
+              <li><button class="ability-chip" type="button" data-ability="リーフガード">リーフガード</button></li>
+              <li><button class="ability-chip" type="button" data-ability="じょおうのいげん">じょおうのいげん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="スイートベール">スイートベール</button></li>
             </ul>
           </div>
         </div>
@@ -13789,9 +13910,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>せいしんりょく</li>
-              <li>テレパシー</li>
-              <li>きょうせい</li>
+              <li><button class="ability-chip" type="button" data-ability="せいしんりょく">せいしんりょく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="テレパシー">テレパシー</button></li>
+              <li><button class="ability-chip" type="button" data-ability="きょうせい">きょうせい</button></li>
             </ul>
           </div>
         </div>
@@ -13839,8 +13960,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>レシーバー</li>
-              <li>まけんき</li>
+              <li><button class="ability-chip" type="button" data-ability="レシーバー">レシーバー</button></li>
+              <li><button class="ability-chip" type="button" data-ability="まけんき">まけんき</button></li>
             </ul>
           </div>
         </div>
@@ -13890,7 +14011,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ばけのかわ</li>
+              <li><button class="ability-chip" type="button" data-ability="ばけのかわ">ばけのかわ</button></li>
             </ul>
           </div>
         </div>
@@ -13939,9 +14060,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ぎゃくじょう</li>
-              <li>そうしょく</li>
-              <li>ノーてんき</li>
+              <li><button class="ability-chip" type="button" data-ability="ぎゃくじょう">ぎゃくじょう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="そうしょく">そうしょく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ノーてんき">ノーてんき</button></li>
             </ul>
           </div>
         </div>
@@ -13990,7 +14111,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ぎゃくじょう</li>
+              <li><button class="ability-chip" type="button" data-ability="ぎゃくじょう">ぎゃくじょう</button></li>
             </ul>
           </div>
         </div>
@@ -14039,9 +14160,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ぼうだん</li>
-              <li>ぼうおん</li>
-              <li>ぼうじん</li>
+              <li><button class="ability-chip" type="button" data-ability="ぼうだん">ぼうだん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ぼうおん">ぼうおん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ぼうじん">ぼうじん</button></li>
             </ul>
           </div>
         </div>
@@ -14091,9 +14212,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>プレッシャー</li>
-              <li>きんちょうかん</li>
-              <li>ミラーアーマー</li>
+              <li><button class="ability-chip" type="button" data-ability="プレッシャー">プレッシャー</button></li>
+              <li><button class="ability-chip" type="button" data-ability="きんちょうかん">きんちょうかん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ミラーアーマー">ミラーアーマー</button></li>
             </ul>
           </div>
         </div>
@@ -14142,9 +14263,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>じゅくせい</li>
-              <li>くいしんぼう</li>
-              <li>はりきり</li>
+              <li><button class="ability-chip" type="button" data-ability="じゅくせい">じゅくせい</button></li>
+              <li><button class="ability-chip" type="button" data-ability="くいしんぼう">くいしんぼう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="はりきり">はりきり</button></li>
             </ul>
           </div>
         </div>
@@ -14193,9 +14314,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>じゅくせい</li>
-              <li>くいしんぼう</li>
-              <li>あついしぼう</li>
+              <li><button class="ability-chip" type="button" data-ability="じゅくせい">じゅくせい</button></li>
+              <li><button class="ability-chip" type="button" data-ability="くいしんぼう">くいしんぼう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="あついしぼう">あついしぼう</button></li>
             </ul>
           </div>
         </div>
@@ -14243,9 +14364,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>すなはき</li>
-              <li>だっぴ</li>
-              <li>すながくれ</li>
+              <li><button class="ability-chip" type="button" data-ability="すなはき">すなはき</button></li>
+              <li><button class="ability-chip" type="button" data-ability="だっぴ">だっぴ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="すながくれ">すながくれ</button></li>
             </ul>
           </div>
         </div>
@@ -14293,8 +14414,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>くだけるよろい</li>
-              <li>のろわれボディ</li>
+              <li><button class="ability-chip" type="button" data-ability="くだけるよろい">くだけるよろい</button></li>
+              <li><button class="ability-chip" type="button" data-ability="のろわれボディ">のろわれボディ</button></li>
             </ul>
           </div>
         </div>
@@ -14343,9 +14464,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>いやしのこころ</li>
-              <li>きけんよち</li>
-              <li>マジックミラー</li>
+              <li><button class="ability-chip" type="button" data-ability="いやしのこころ">いやしのこころ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="きけんよち">きけんよち</button></li>
+              <li><button class="ability-chip" type="button" data-ability="マジックミラー">マジックミラー</button></li>
             </ul>
           </div>
         </div>
@@ -14395,9 +14516,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>いたずらごころ</li>
-              <li>おみとおし</li>
-              <li>わるいてぐせ</li>
+              <li><button class="ability-chip" type="button" data-ability="いたずらごころ">いたずらごころ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="おみとおし">おみとおし</button></li>
+              <li><button class="ability-chip" type="button" data-ability="わるいてぐせ">わるいてぐせ</button></li>
             </ul>
           </div>
         </div>
@@ -14446,9 +14567,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ちどりあし</li>
-              <li>バリアフリー</li>
-              <li>アイスボディ</li>
+              <li><button class="ability-chip" type="button" data-ability="ちどりあし">ちどりあし</button></li>
+              <li><button class="ability-chip" type="button" data-ability="バリアフリー">バリアフリー</button></li>
+              <li><button class="ability-chip" type="button" data-ability="アイスボディ">アイスボディ</button></li>
             </ul>
           </div>
         </div>
@@ -14497,7 +14618,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>さまようたましい</li>
+              <li><button class="ability-chip" type="button" data-ability="さまようたましい">さまようたましい</button></li>
             </ul>
           </div>
         </div>
@@ -14545,8 +14666,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>スイートベール</li>
-              <li>アロマベール</li>
+              <li><button class="ability-chip" type="button" data-ability="スイートベール">スイートベール</button></li>
+              <li><button class="ability-chip" type="button" data-ability="アロマベール">アロマベール</button></li>
             </ul>
           </div>
         </div>
@@ -14594,8 +14715,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>カブトアーマー</li>
-              <li>まけんき</li>
+              <li><button class="ability-chip" type="button" data-ability="カブトアーマー">カブトアーマー</button></li>
+              <li><button class="ability-chip" type="button" data-ability="まけんき">まけんき</button></li>
             </ul>
           </div>
         </div>
@@ -14643,7 +14764,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>まけんき</li>
+              <li><button class="ability-chip" type="button" data-ability="まけんき">まけんき</button></li>
             </ul>
           </div>
         </div>
@@ -14692,7 +14813,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>はらぺこスイッチ</li>
+              <li><button class="ability-chip" type="button" data-ability="はらぺこスイッチ">はらぺこスイッチ</button></li>
             </ul>
           </div>
         </div>
@@ -14742,9 +14863,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>クリアボディ</li>
-              <li>すりぬけ</li>
-              <li>のろわれボディ</li>
+              <li><button class="ability-chip" type="button" data-ability="クリアボディ">クリアボディ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="すりぬけ">すりぬけ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="のろわれボディ">のろわれボディ</button></li>
             </ul>
           </div>
         </div>
@@ -14793,9 +14914,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>いかく</li>
-              <li>おみとおし</li>
-              <li>そうしょく</li>
+              <li><button class="ability-chip" type="button" data-ability="いかく">いかく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="おみとおし">おみとおし</button></li>
+              <li><button class="ability-chip" type="button" data-ability="そうしょく">そうしょく</button></li>
             </ul>
           </div>
         </div>
@@ -14844,9 +14965,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>むしのしらせ</li>
-              <li>ちからずく</li>
-              <li>きれあじ</li>
+              <li><button class="ability-chip" type="button" data-ability="むしのしらせ">むしのしらせ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ちからずく">ちからずく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="きれあじ">きれあじ</button></li>
             </ul>
           </div>
         </div>
@@ -14896,9 +15017,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>すいすい</li>
-              <li>てきおうりょく</li>
-              <li>かたやぶり</li>
+              <li><button class="ability-chip" type="button" data-ability="すいすい">すいすい</button></li>
+              <li><button class="ability-chip" type="button" data-ability="てきおうりょく">てきおうりょく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="かたやぶり">かたやぶり</button></li>
             </ul>
           </div>
         </div>
@@ -14947,9 +15068,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>すいすい</li>
-              <li>てきおうりょく</li>
-              <li>かたやぶり</li>
+              <li><button class="ability-chip" type="button" data-ability="すいすい">すいすい</button></li>
+              <li><button class="ability-chip" type="button" data-ability="てきおうりょく">てきおうりょく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="かたやぶり">かたやぶり</button></li>
             </ul>
           </div>
         </div>
@@ -14999,9 +15120,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>プレッシャー</li>
-              <li>かるわざ</li>
-              <li>どくしゅ</li>
+              <li><button class="ability-chip" type="button" data-ability="プレッシャー">プレッシャー</button></li>
+              <li><button class="ability-chip" type="button" data-ability="かるわざ">かるわざ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="どくしゅ">どくしゅ</button></li>
             </ul>
           </div>
         </div>
@@ -15050,9 +15171,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>どくのトゲ</li>
-              <li>すいすい</li>
-              <li>いかく</li>
+              <li><button class="ability-chip" type="button" data-ability="どくのトゲ">どくのトゲ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="すいすい">すいすい</button></li>
+              <li><button class="ability-chip" type="button" data-ability="いかく">いかく</button></li>
             </ul>
           </div>
         </div>
@@ -15102,8 +15223,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>しんりょく</li>
-              <li>へんげんじざい</li>
+              <li><button class="ability-chip" type="button" data-ability="しんりょく">しんりょく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="へんげんじざい">へんげんじざい</button></li>
             </ul>
           </div>
         </div>
@@ -15153,8 +15274,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>もうか</li>
-              <li>てんねん</li>
+              <li><button class="ability-chip" type="button" data-ability="もうか">もうか</button></li>
+              <li><button class="ability-chip" type="button" data-ability="てんねん">てんねん</button></li>
             </ul>
           </div>
         </div>
@@ -15203,8 +15324,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>げきりゅう</li>
-              <li>じしんかじょう</li>
+              <li><button class="ability-chip" type="button" data-ability="げきりゅう">げきりゅう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="じしんかじょう">じしんかじょう</button></li>
             </ul>
           </div>
         </div>
@@ -15252,9 +15373,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>フレンドガード</li>
-              <li>ほおぶくろ</li>
-              <li>テクニシャン</li>
+              <li><button class="ability-chip" type="button" data-ability="フレンドガード">フレンドガード</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ほおぶくろ">ほおぶくろ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="テクニシャン">テクニシャン</button></li>
             </ul>
           </div>
         </div>
@@ -15302,9 +15423,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>フレンドガード</li>
-              <li>ほおぶくろ</li>
-              <li>テクニシャン</li>
+              <li><button class="ability-chip" type="button" data-ability="フレンドガード">フレンドガード</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ほおぶくろ">ほおぶくろ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="テクニシャン">テクニシャン</button></li>
             </ul>
           </div>
         </div>
@@ -15352,9 +15473,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>きよめのしお</li>
-              <li>がんじょう</li>
-              <li>クリアボディ</li>
+              <li><button class="ability-chip" type="button" data-ability="きよめのしお">きよめのしお</button></li>
+              <li><button class="ability-chip" type="button" data-ability="がんじょう">がんじょう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="クリアボディ">クリアボディ</button></li>
             </ul>
           </div>
         </div>
@@ -15403,8 +15524,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>もらいび</li>
-              <li>くだけるよろい</li>
+              <li><button class="ability-chip" type="button" data-ability="もらいび">もらいび</button></li>
+              <li><button class="ability-chip" type="button" data-ability="くだけるよろい">くだけるよろい</button></li>
             </ul>
           </div>
         </div>
@@ -15454,8 +15575,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>もらいび</li>
-              <li>くだけるよろい</li>
+              <li><button class="ability-chip" type="button" data-ability="もらいび">もらいび</button></li>
+              <li><button class="ability-chip" type="button" data-ability="くだけるよろい">くだけるよろい</button></li>
             </ul>
           </div>
         </div>
@@ -15504,9 +15625,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>でんきにかえる</li>
-              <li>せいでんき</li>
-              <li>しめりけ</li>
+              <li><button class="ability-chip" type="button" data-ability="でんきにかえる">でんきにかえる</button></li>
+              <li><button class="ability-chip" type="button" data-ability="せいでんき">せいでんき</button></li>
+              <li><button class="ability-chip" type="button" data-ability="しめりけ">しめりけ</button></li>
             </ul>
           </div>
         </div>
@@ -15555,9 +15676,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>ようりょくそ</li>
-              <li>ふみん</li>
-              <li>ムラっけ</li>
+              <li><button class="ability-chip" type="button" data-ability="ようりょくそ">ようりょくそ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ふみん">ふみん</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ムラっけ">ムラっけ</button></li>
             </ul>
           </div>
         </div>
@@ -15606,7 +15727,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>とびだすハバネロ</li>
+              <li><button class="ability-chip" type="button" data-ability="とびだすハバネロ">とびだすハバネロ</button></li>
             </ul>
           </div>
         </div>
@@ -15655,9 +15776,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>びんじょう</li>
-              <li>おみとおし</li>
-              <li>かそく</li>
+              <li><button class="ability-chip" type="button" data-ability="びんじょう">びんじょう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="おみとおし">おみとおし</button></li>
+              <li><button class="ability-chip" type="button" data-ability="かそく">かそく</button></li>
             </ul>
           </div>
         </div>
@@ -15706,9 +15827,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>かたやぶり</li>
-              <li>マイペース</li>
-              <li>わるいてぐせ</li>
+              <li><button class="ability-chip" type="button" data-ability="かたやぶり">かたやぶり</button></li>
+              <li><button class="ability-chip" type="button" data-ability="マイペース">マイペース</button></li>
+              <li><button class="ability-chip" type="button" data-ability="わるいてぐせ">わるいてぐせ</button></li>
             </ul>
           </div>
         </div>
@@ -15756,7 +15877,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>マイティチェンジ</li>
+              <li><button class="ability-chip" type="button" data-ability="マイティチェンジ">マイティチェンジ</button></li>
             </ul>
           </div>
         </div>
@@ -15804,7 +15925,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>マイティチェンジ</li>
+              <li><button class="ability-chip" type="button" data-ability="マイティチェンジ">マイティチェンジ</button></li>
             </ul>
           </div>
         </div>
@@ -15852,8 +15973,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>どしょく</li>
-              <li>すながくれ</li>
+              <li><button class="ability-chip" type="button" data-ability="どしょく">どしょく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="すながくれ">すながくれ</button></li>
             </ul>
           </div>
         </div>
@@ -15903,8 +16024,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>どくげしょう</li>
-              <li>ふしょく</li>
+              <li><button class="ability-chip" type="button" data-ability="どくげしょう">どくげしょう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ふしょく">ふしょく</button></li>
             </ul>
           </div>
         </div>
@@ -15954,7 +16075,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>てきおうりょく</li>
+              <li><button class="ability-chip" type="button" data-ability="てきおうりょく">てきおうりょく</button></li>
             </ul>
           </div>
         </div>
@@ -16002,8 +16123,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>すなかき</li>
-              <li>もふもふ</li>
+              <li><button class="ability-chip" type="button" data-ability="すなかき">すなかき</button></li>
+              <li><button class="ability-chip" type="button" data-ability="もふもふ">もふもふ</button></li>
             </ul>
           </div>
         </div>
@@ -16052,9 +16173,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>やるき</li>
-              <li>せいしんりょく</li>
-              <li>まけんき</li>
+              <li><button class="ability-chip" type="button" data-ability="やるき">やるき</button></li>
+              <li><button class="ability-chip" type="button" data-ability="せいしんりょく">せいしんりょく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="まけんき">まけんき</button></li>
             </ul>
           </div>
         </div>
@@ -16103,9 +16224,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>はんすう</li>
-              <li>テイルアーマー</li>
-              <li>そうしょく</li>
+              <li><button class="ability-chip" type="button" data-ability="はんすう">はんすう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="テイルアーマー">テイルアーマー</button></li>
+              <li><button class="ability-chip" type="button" data-ability="そうしょく">そうしょく</button></li>
             </ul>
           </div>
         </div>
@@ -16155,9 +16276,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>まけんき</li>
-              <li>そうだいしょう</li>
-              <li>プレッシャー</li>
+              <li><button class="ability-chip" type="button" data-ability="まけんき">まけんき</button></li>
+              <li><button class="ability-chip" type="button" data-ability="そうだいしょう">そうだいしょう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="プレッシャー">プレッシャー</button></li>
             </ul>
           </div>
         </div>
@@ -16207,7 +16328,7 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>おうごんのからだ</li>
+              <li><button class="ability-chip" type="button" data-ability="おうごんのからだ">おうごんのからだ</button></li>
             </ul>
           </div>
         </div>
@@ -16256,8 +16377,8 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>おもてなし</li>
-              <li>たいねつ</li>
+              <li><button class="ability-chip" type="button" data-ability="おもてなし">おもてなし</button></li>
+              <li><button class="ability-chip" type="button" data-ability="たいねつ">たいねつ</button></li>
             </ul>
           </div>
         </div>
@@ -16307,9 +16428,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>じきゅうりょく</li>
-              <li>がんじょう</li>
-              <li>すじがねいり</li>
+              <li><button class="ability-chip" type="button" data-ability="じきゅうりょく">じきゅうりょく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="がんじょう">がんじょう</button></li>
+              <li><button class="ability-chip" type="button" data-ability="すじがねいり">すじがねいり</button></li>
             </ul>
           </div>
         </div>
@@ -16358,9 +16479,9 @@
           <div class="ability-block">
             <span class="ability-label">特性</span>
             <ul class="ability-list">
-              <li>かんろなミツ</li>
-              <li>さいせいりょく</li>
-              <li>ねんちゃく</li>
+              <li><button class="ability-chip" type="button" data-ability="かんろなミツ">かんろなミツ</button></li>
+              <li><button class="ability-chip" type="button" data-ability="さいせいりょく">さいせいりょく</button></li>
+              <li><button class="ability-chip" type="button" data-ability="ねんちゃく">ねんちゃく</button></li>
             </ul>
           </div>
         </div>
@@ -16369,6 +16490,7 @@
   </main>
   <script>
     (() => {
+      const ABILITY_EFFECTS = {"アイスボディ":"ゆき状態の時、ターン終わりに最大HPの1/16回復する。","あくしゅう":"技でダメージを与えた時10%の確率で相手をひるませる。","あついしぼう":"ほのおタイプ こおりタイプの技で受けるダメージが半減する。","あとだし":"同じ優先度の技の中で最後に行動する。","アナライズ":"ターンの最後に技を出すと技の威力が1.3倍になる。","あまのじゃく":"能力の変化が逆転し、上がる時には下がり、下がる時には上がる。","あめうけざら":"あめ状態の時、ターン終わりに最大HPの1/16回復する。","あめふらし":"登場した時から5ターンの間、あめ状態にする。","アロマベール":"自分と味方は、メロメロ状態、ちょうはつ状態、連続不可状態、わざふうじ状態、かいふくふうじ状態、アンコール状態にならない。","いかく":"登場した時、相手の攻撃を1段階下げる。","いしあたま":"自分もダメージを受ける技を出してもHPが減らない。","いたずらごころ":"変化技の優先度が1段階上がる。あくタイプの相手への変化技が無効になる。","いやしのこころ":"ターン終わりに、状態異常の味方を50%の確率で治す。","イリュージョン":"手持ちの1番後ろのポケモンの姿で現れる。技のダメージを受けると元に戻る。","うるおいボディ":"あめ状態の時、ターン終わりに状態異常が治る。","おみとおし":"登場した時、相手が持っている道具を知ることができる。","おやこあい":"攻撃技が2回の連続攻撃になる。2回目の攻撃は0.25倍の威力になるが、技の効果は2回分発動する。元から連続攻撃の技や、ダブルバトルで攻撃が2体以上に当たるときは発動しない。","かいりきバサミ":"相手の技や特性で攻撃を下げられない。","かげふみ":"ゴーストタイプ以外の相手が交代できなくなる。","かそく":"ターン終わりに素早さが1段階上がる。","かたいツメ":"接触技の威力が1.3倍になる。","かたやぶり":"相手の特性に関係なく技を出すことができる。例外となる特性もある。","かちき":"相手に能力を下げられると特攻が2段階上がる。","カブトアーマー":"相手の攻撃が急所に当たらない。","かるわざ":"持っていた道具がなくなると素早さが2倍になる。","かわりもの":"目の前のポケモンに変身する。HP以外のステータスも同じになる。","がんじょう":"HPが満タンの時、一撃でひんしになる技のダメージを受けると、HPを1残して耐える。一撃必殺も効かない。","がんじょうあご":"噛む技の威力が1.5倍になる。","かんそうはだ":"みずタイプの技が効かず、最大HPの1/4回復する。ほのおタイプの技の受けるダメージが1.25倍になる。あめ状態の時、ターン終わりに最大HPの1/8回復するが、にほんばれ状態の時、ターン終わりに最大HPの1/8減る。","きけんよち":"登場した時、相手が自分への効果バツグンや一撃必殺の技を持っていると、そのことを察知できる。","きもったま":"ノーマルタイプかくとうタイプの技をゴーストタイプに当てることができる。いかくも効かない。","きゅうばん":"相手の入れ替えさせる技や道具が効かない。","きょううん":"きゅうしょアップ+1になる。","きょうせい":"味方が道具を消費すると自分の持っている道具を味方に渡す。","きんちょうかん":"相手のきのみを食べられなくさせる。","くいしんぼう":"HPが1/4以下の時に食べるきのみをHPが1/2以下の時に食べてしまう。","くだけるよろい":"物理技でダメージを受けると防御が1段階下がり素早さが2段階上がる。","クリアボディ":"相手の技や特性で能力ランクが下がらない。","げきりゅう":"HPが最大HPの1/3以下になると、みずタイプの技の威力が1.5倍になる。","こんじょう":"状態異常の時、攻撃が1.5倍になる。やけど状態による物理技のダメージが半減される効果は無視する。","さいせいりょく":"手持ちに戻ると最大HPの1/3回復する。","サンパワー":"にほんばれ状態だと特攻が1.5倍になるが毎ターン最大HPの1/8減る。","シェルアーマー":"相手の攻撃が急所に当たらない。","じしんかじょう":"攻撃で相手を倒すと攻撃が1段階上がる。","しぜんかいふく":"手持ちに戻ると状態異常が治る。","しめりけ":"全員爆発の技が使用できず、爆発する特性も発動しない。","しゅうかく":"使ったきのみをターン終わりに50％の確率で作り出す。にほんばれ状態の時は必ず作り出す。","じゅうなん":"まひ状態にならない。","しろいけむり":"相手の技や特性で能力ランクが下がらない。","シンクロ":"相手の技や特性によってどく状態・もうどく状態・まひ状態・やけど状態になると相手も同じ状態にする。","しんりょく":"HPが最大HPの1/3以下になると、くさタイプの技の威力が1.5倍になる。","スイートベール":"自分と味方は、ねむり状態・ねむけ状態にならない。","すいすい":"あめ状態の時、素早さが2倍になる。","スカイスキン":"ノーマルタイプの技がひこうタイプになり、威力が1.2倍になる。","スキルリンク":"連続技を使うと最高回数まで出せる。","すてみ":"自分もダメージを受ける技の威力が1.2倍になる。","スナイパー":"急所に当てた時の威力が1.5倍ではなく2.25倍になる。","すなおこし":"登場したときから5ターンの間、すなあらし状態にする。","すなかき":"すなあらし状態の時、素早さが2倍になる。すなあらし状態のダメージを受けない。","すながくれ":"すなあらし状態の時、回避率が1.25倍になる。すなあらし状態のダメージを受けない。","すなのちから":"すなあらし状態の時、いわ・じめん・はがねタイプの技の威力が1.3倍になる。すなあらし状態のダメージを受けない。","すりぬけ":"相手のひかりのかべ・リフレクター・オーロラベール・しんぴのまもり・みがわりを無視して技を使うことができる。","するどいめ":"相手の回避率の変化を無視し、命中率も下げられない。","せいぎのこころ":"あくタイプの技のダメージを受けると攻撃が1段階上がる。","せいしんりょく":"相手の攻撃にひるまずいかくも効かない。","せいでんき":"接触技を受けると、30%の確率で相手をまひ状態にする。","そうしょく":"くさタイプの技が効かず、攻撃が1段階上がる。","たいねつ":"ほのおタイプの技で受けるダメージが半減する。やけど状態で受けるダメージも半減する。","だっぴ":"ターン終わりに30％の確率で状態異常が治る。","ちからずく":"攻撃の追加効果はなくなるが、1.3倍の威力で技を出すことができる。","ちからもち":"物理技の威力が2倍になる。","ちくでん":"でんきタイプの技が効かず最大HPの1/4回復する。","ちどりあし":"こんらん状態の時、回避率が2倍になる。","ちょすい":"みずタイプの技が効かず、最大HPの1/4回復する。","てきおうりょく":"自分と同じタイプの技の威力が1.5倍ではなく2倍になる。","テクニシャン":"威力が60以下の技の威力が1.5倍になる。","てつのこぶし":"パンチの技の威力が1.2倍になる。","テレパシー":"味方からの攻撃を回避する。","てんきや":"天気の影響を受けてみずタイプ・ほのおタイプ・こおりタイプのどれかに変わる。","てんねん":"相手の能力の変化を無視して攻撃できる。相手の能力の変化を無視して攻撃を受ける。素早さは無視できない。","とうそうしん":"相手と性別が同じ時技の威力が1.25倍に、違うと0.75倍になる。性別が不明の場合は通常の威力になる。","どくしゅ":"相手に接触技を当てると30%の確率でどく状態にする。","どくのトゲ":"接触技を受けると30%の確率で相手をどく状態にする。","トレース":"登場した時相手の特性と同じ特性になる。","どんかん":"メロメロ状態・ちょうはつ状態にならず、相手の特性「いかく」も効かない。","ぬめぬめ":"接触技を受けると相手の素早さを1段階下げる。","ねんちゃく":"持っている道具を相手に奪われず失わない。","ノーガード":"お互いの技の命中率が100％になる。","ノーてんき":"あらゆる天気の影響をなくす。","のろわれボディ":"技のダメージを受けると、30%の確率で4ターンの間、相手をわざふうじ状態にする。","ハードロック":"効果バツグンの技で受けるダメージを3/4にする。","はっこう":"相手の回避率の変化を無視し、命中率も下げられない。","はとむね":"相手の技や特性で防御を下げられない。","バトルスイッチ":"攻撃技を出すとブレードフォルムに、技の「キングシールド」を出すとシールドフォルムに変化する。","はやあし":"状態異常になると素早さが1.5倍になる。まひ状態の素早さが遅くなる効果も無視する。","はやおき":"ねむり状態になっても2倍の早さで目覚める。","はりきり":"物理技を使用する時自分の攻撃が1.5倍になるが命中率が0.8倍になる。","ひでり":"登場した時から5ターンの間、にほんばれ状態にする。","ひらいしん":"でんきタイプの技を自分によせつける。その技は効かずに特攻が1段階上がる。","ファーコート":"物理技で受けるダメージが半減する。","フィルター":"効果バツグンの技で受けるダメージを3/4にする。","フェアリーオーラ":"全員のフェアリータイプの技の威力が1.33倍になる。","フェアリースキン":"自分のノーマルタイプの技がフェアリータイプになり、威力が1.2倍になる。","ぶきよう":"このポケモンが持っている道具は効果を発揮しない。","ふくがん":"技の命中率が1.3倍になる。","ふくつのこころ":"ひるむと素早さが1段階上がる。","ふしぎなうろこ":"状態異常の時、防御が1.5倍になる。","ふみん":"ねむけ状態・ねむり状態にならない。","ふゆう":"地面にいないことになり、じめんタイプの技・まきびし状態・どくびし状態・ねばねばネット状態が効かない。","プラス":"プラスかマイナスの特性を持つ味方が場にいると自分の特攻が1.5倍になる。","フラワーベール":"味方のくさタイプのポケモンは能力が下がらず状態異常にもならない。","フリーズスキン":"ノーマルタイプの技がこおりタイプになり、威力が1.2倍になる。","プレッシャー":"自分に対し、相手の使う技のPPを1多く減らす。","フレンドガード":"味方が受けるダメージを3/4にする。","ヘヴィメタル":"自分の重さが2倍になる。","へんげんじざい":"登場するたび1回だけ自分が出す技と同じタイプに変化する。","ポイズンヒール":"どく状態・もうどく状態になると、ターン終わりにHPが減らずに最大HPの1/8回復する。","ぼうおん":"音の技が効かない。","ほうし":"接触技を受けると、30%の確率で相手をどく状態・まひ状態・ねむり状態のいずれかにする。","ぼうじん":"すなあらし状態で受けるダメージが効かない。粉の技、特性も効かない。","ぼうだん":"弾の技が効かない。","ほおぶくろ":"きのみを食べた時、その効果に加えて最大HPの1/3回復する。","ほのおのからだ":"接触技を受けると30%の確率で相手をやけど状態にする。","マイナス":"「プラス」か「マイナス」の特性を持つポケモンが味方にいると自分の特攻が1.5倍になる。","マイペース":"こんらん状態にならず、相手の特性「いかく」も効かない。","マグマのよろい":"こおり状態にならない。","まけんき":"相手に能力を下げられると攻撃が2段階上がる。","マジックガード":"攻撃以外ではダメージが効かない。","マジックミラー":"相手の変化技を受けずに相手に跳ね返す。","ミイラ":"接触技を受けると相手の特性を「ミイラ」にする。","むしのしらせ":"HPが最大HPの1/3以下になるとむしタイプの技の威力が1.5倍になる。","ムラっけ":"ターン終わりに能力のどれかが2段階上がり、別のどれかが1段階下がる。","メガランチャー":"波動の技の威力が1.5倍になる。","メロメロボディ":"異性から接触技を受けると30%の確率で相手をメロメロ状態にする。","めんえき":"どく状態・もうどく状態にならない。","もうか":"HPが最大HPの1/3以下になると、ほのおタイプの技の威力が1.5倍になる。","ものひろい":"自分が道具を持っていない時、自分以外のポケモンが消費した道具をターン終わりに拾ってくる。","もらいび":"ほのおタイプの技が効かず、自分はもらいび状態になる。","やるき":"ねむり状態・ねむけ状態にならない。","ゆうばく":"接触技でひんしになると相手の最大HPの1/4のダメージを与える。","ゆきがくれ":"ゆき状態の時、回避率が1.25倍になる。","ゆきふらし":"登場した時から5ターンの間、ゆき状態にする。","ようりょくそ":"にほんばれ状態の時、素早さが2倍になる。","ヨガパワー":"物理技の威力が2倍になる。","よちむ":"登場した時、相手の技の中から威力の高い技を1つ読み取る。","ライトメタル":"自分の重さが1/2になる。","リーフガード":"にほんばれ状態の時、状態異常にならない。","りんぷん":"技の追加効果が効かない。","わるいてぐせ":"自分が道具を持っていない時、接触技を受けると相手の道具を盗んでしまう。","エレキメイカー":"登場した時から5ターンの間、全体の場をエレキフィールド状態にする。","ぎゃくじょう":"相手の攻撃でHPが1/2以下になると特攻が1段階上がる。","ふしょく":"はがねタイプ・どくタイプの相手もどく状態・もうどく状態にできる。","もふもふ":"接触技で受けるダメージが半減する。ほのおタイプの技で受けるダメージは2倍になる。","ばけのかわ":"ばけたすがたの時に技のダメージを受けるとダメージの代わりに最大HPの1/8を消費し、ばれたすがたへと変わる。","じきゅうりょく":"技のダメージを受けると防御が1段階上がる。","とびだすなかみ":"相手に倒されたとき、HPの残りのぶんだけ相手にダメージをあたえる。","サーフテール":"エレキフィールド状態の時、素早さが2倍になる。","レシーバー":"倒された味方の特性と同じ特性になる。","じょおうのいげん":"自分と味方に対し、相手は先制技を使えない。","ゆきかき":"ゆき状態の時、素早さが2倍になる。","えんかく":"使う技が接触技ではなくなる。","うるおいボイス":"音の技がみずタイプになる。","ひとでなし":"どく状態・もうどく状態の相手を攻撃すると必ず急所に当たる。","すいほう":"ほのおタイプの技で受けるダメージが半減する。みずタイプの技の威力が2倍になる。やけど状態にならない。","ミラーアーマー":"自分が受ける能力の下げる効果を受けずに相手に跳ね返す。","すなはき":"技のダメージを受けた時から5ターンの間、すなあらし状態にする。","ぎたい":"フィールドによって自分のタイプが変わる。場がエレキフィールド状態だとでんきタイプ、グラスフィールド状態だとくさタイプ、サイコフィールド状態だとエスパータイプ、ミストフィールド状態だとフェアリータイプになる。","じゅくせい":"食べるきのみの効果が2倍になる。","さまようたましい":"接触技を受けると相手と特性を入れ替える。","バリアフリー":"登場したときに相手の場と味方の場のひかりのかべ状態・リフレクター状態・オーロラベール状態を解除する。","はらぺこスイッチ":"ターンの終わりにまんぷくもようとはらぺこもようの交互に姿が変える。","すじがねいり":"技を引き受ける特性や技の影響を無視する。","ふかしのこぶし":"接触技を使う時、相手の守りの効果を無視して、本来の1/4のダメージを与える。相手の守りの効果以外は発動される。","クイックドロウ":"30%の確率で同じ優先度の技の中で最初に行動する。","さめはだ":"接触技を受けると、相手の最大HPの1/8のダメージを与える。","でんきエンジン":"でんきタイプの技が効かず、素早さが1段階上がる。","いかりのつぼ":"相手の攻撃が急所に当たると、自分の攻撃が6段階目まで上がる。","マルチスケイル":"HPが満タンの時に受けるダメージが半減する。","はやてのつばさ":"HPが満タンの時、ひこうタイプの技の優先度が1上がる。","マジシャン":"自分が道具を持っていない時技でダメージを与えた相手の道具を奪う。","きみょうなくすり":"登場した時に、味方の能力変化を元に戻す。","テイルアーマー":"自分と味方に対し、先制技を使えない。","でんきにかえる":"技のダメージを受けるとでんき威力アップ状態になる。","はんすう":"きのみを食べた次のターン終わりまた同じきのみを1度だけ食べる。","どしょく":"じめんタイプの技が効かず、最大HPの1/4回復する。","びんじょう":"相手の能力が上がった時、自分も同じように能力が上がる。","マイティチェンジ":"場に出てから手持ちに戻るとマイティフォルムに変化する。","おうごんのからだ":"相手からの変化技が効かない。","どくげしょう":"物理技のダメージを受けると相手の場をどくびし状態にする。","そうだいしょう":"登場した時、その戦闘で倒された手持ちのポケモン1体につき技の威力が10％上がる。最大で50％まで上がる。","きれあじ":"切る技の威力が1.5倍になる。","きよめのしお":"状態異常にならない。ゴーストタイプの技で受けるダメージが半減する。","かんろなミツ":"登場した時、相手の回避率を1段階下げる。1回の戦闘で1度しか発動しない。","おもてなし":"登場した時、味方のHPをその味方の最大HPの1/4回復する。","メガソーラー":"天気がにほんばれ状態でなくても、にほんばれ状態として技を使うことができる。","ドラゴンスキン":"ノーマルタイプの技がドラゴンタイプになり、威力が1.2倍になる。","かんつうドリル":"接触技を使う時、相手の守りの効果を無視して本来の1/4のダメージを与える。相手の守りの効果以外は発動される。","とびだすハバネロ":"技のダメージを受けると相手をやけど状態にする。","うなぎのぼり":"地面にいないことになり、じめんタイプの技・まきびし状態・どくびし状態・ねばねばネット状態が効かない。攻撃で相手を倒すと自分の最も高い能力が1段階上がる。","ほのおのたてがみ":"ほのおタイプの技の威力が1.5倍になる。"};
       const grid = document.querySelector('.grid');
       const typeButtons = [...document.querySelectorAll('.type-filter')];
       const strongButtons = [...document.querySelectorAll('.strong-filter')];
@@ -16449,6 +16571,67 @@
           applySort();
         });
       }
+
+      // Tap an ability chip to show its effect in a tooltip.
+      const tooltip = document.createElement('div');
+      tooltip.className = 'ability-tooltip';
+      tooltip.setAttribute('role', 'tooltip');
+      document.body.appendChild(tooltip);
+      let activeChip = null;
+
+      function hideTooltip() {
+        tooltip.classList.remove('is-visible');
+        activeChip = null;
+      }
+
+      function showTooltip(chip) {
+        const name = chip.dataset.ability;
+        const effect = ABILITY_EFFECTS[name] || '効果データがありません。';
+        tooltip.textContent = '';
+        const title = document.createElement('strong');
+        title.textContent = name;
+        const body = document.createElement('span');
+        body.textContent = effect;
+        tooltip.appendChild(title);
+        tooltip.appendChild(body);
+        tooltip.classList.add('is-visible');
+
+        const rect = chip.getBoundingClientRect();
+        const tw = tooltip.offsetWidth;
+        const th = tooltip.offsetHeight;
+        let left = rect.left + rect.width / 2 - tw / 2;
+        left = Math.max(8, Math.min(left, window.innerWidth - tw - 8));
+        let top = rect.top - th - 8;
+        if (top < 8) top = rect.bottom + 8;
+        tooltip.style.left = left + 'px';
+        tooltip.style.top = top + 'px';
+        activeChip = chip;
+      }
+
+      document.addEventListener('click', (event) => {
+        const chip = event.target.closest('.ability-chip');
+        if (chip && !chip.classList.contains('ability-none')) {
+          event.preventDefault();
+          event.stopPropagation();
+          if (activeChip === chip) {
+            hideTooltip();
+          } else {
+            showTooltip(chip);
+          }
+          return;
+        }
+        if (activeChip) hideTooltip();
+      });
+
+      window.addEventListener('scroll', () => {
+        if (activeChip) hideTooltip();
+      }, true);
+      window.addEventListener('resize', () => {
+        if (activeChip) hideTooltip();
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && activeChip) hideTooltip();
+      });
     })();
   </script>
 </body>
