@@ -353,6 +353,36 @@
       white-space: nowrap;
     }
 
+    /* Highest stat (and ties) — the Pokemon's standout feature. */
+    .stats div.is-top1 {
+      background: var(--accent);
+    }
+
+    .stats div.is-top1 dt,
+    .stats div.is-top1 dd {
+      color: #ffffff;
+    }
+
+    /* Second-highest stat (and ties). */
+    .stats div.is-top2 {
+      background: #d7ebe9;
+    }
+
+    .stats div.is-top2 dt {
+      color: #3f7d80;
+    }
+
+    .stats div.is-top2 dd {
+      color: var(--accent);
+    }
+
+    .stat-star {
+      margin-left: 2px;
+      color: #ffd76a;
+      font-size: 9px;
+      line-height: 1;
+    }
+
     .ability-block {
       display: flex;
       align-items: flex-start;
@@ -653,17 +683,17 @@
               <dt>攻撃</dt>
               <dd>82</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>83</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>100</dd>
+              <dd>100<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>100</dd>
+              <dd>100<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -705,11 +735,11 @@
               <dt>攻撃</dt>
               <dd>100</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>123</dd>
+              <dd>123<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>122</dd>
             </div>
@@ -759,15 +789,15 @@
               <dt>防御</dt>
               <dd>78</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>109</dd>
+              <dd>109<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>100</dd>
             </div>
@@ -803,17 +833,17 @@
               <dt>HP</dt>
               <dd>78</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>130</dd>
+              <dd>130<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>111</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>130</dd>
+              <dd>130<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
@@ -862,11 +892,11 @@
               <dt>防御</dt>
               <dd>78</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>159</dd>
+              <dd>159<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>115</dd>
             </div>
@@ -907,7 +937,7 @@
               <dt>攻撃</dt>
               <dd>83</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>100</dd>
             </div>
@@ -915,9 +945,9 @@
               <dt>特攻</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>105</dd>
+              <dd>105<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -958,13 +988,13 @@
               <dt>攻撃</dt>
               <dd>103</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>120</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>135</dd>
+              <dd>135<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
@@ -1004,9 +1034,9 @@
               <dt>HP</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>90</dd>
+              <dd>90<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -1016,7 +1046,7 @@
               <dt>特攻</dt>
               <dd>45</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>80</dd>
             </div>
@@ -1055,9 +1085,9 @@
               <dt>HP</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>150</dd>
+              <dd>150<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -1071,7 +1101,7 @@
               <dt>特防</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>145</dd>
             </div>
@@ -1101,7 +1131,7 @@
             <strong>479</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>83</dd>
             </div>
@@ -1121,9 +1151,9 @@
               <dt>特防</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>101</dd>
+              <dd>101<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -1165,15 +1195,15 @@
               <dt>防御</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>135</dd>
+              <dd>135<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>121</dd>
             </div>
@@ -1206,9 +1236,9 @@
               <dt>HP</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>95</dd>
+              <dd>95<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -1222,7 +1252,7 @@
               <dt>特防</dt>
               <dd>79</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>80</dd>
             </div>
@@ -1257,7 +1287,7 @@
               <dt>HP</dt>
               <dd>35</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>55</dd>
             </div>
@@ -1273,9 +1303,9 @@
               <dt>特防</dt>
               <dd>50</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>90</dd>
+              <dd>90<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -1307,7 +1337,7 @@
               <dt>HP</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>90</dd>
             </div>
@@ -1315,7 +1345,7 @@
               <dt>防御</dt>
               <dd>55</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>90</dd>
             </div>
@@ -1323,9 +1353,9 @@
               <dt>特防</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>110</dd>
+              <dd>110<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -1366,7 +1396,7 @@
               <dt>防御</dt>
               <dd>50</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>95</dd>
             </div>
@@ -1374,9 +1404,9 @@
               <dt>特防</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>110</dd>
+              <dd>110<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -1407,9 +1437,9 @@
               <dt>HP</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>135</dd>
+              <dd>135<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -1423,7 +1453,7 @@
               <dt>特防</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>110</dd>
             </div>
@@ -1465,15 +1495,15 @@
               <dt>防御</dt>
               <dd>55</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>160</dd>
+              <dd>160<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>130</dd>
             </div>
@@ -1502,9 +1532,9 @@
             <strong>483</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top1">
               <dt>HP</dt>
-              <dd>95</dd>
+              <dd>95<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>攻撃</dt>
@@ -1514,11 +1544,11 @@
               <dt>防御</dt>
               <dd>73</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>95</dd>
+              <dd>95<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>90</dd>
             </div>
@@ -1567,11 +1597,11 @@
               <dt>防御</dt>
               <dd>93</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>135</dd>
+              <dd>135<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>110</dd>
             </div>
@@ -1616,17 +1646,17 @@
               <dt>防御</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>81</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>100</dd>
+              <dd>100<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>100</dd>
+              <dd>100<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -1672,13 +1702,13 @@
               <dt>特攻</dt>
               <dd>81</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>100</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>109</dd>
+              <dd>109<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -1719,11 +1749,11 @@
               <dt>防御</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>110</dd>
+              <dd>110<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>90</dd>
             </div>
@@ -1761,15 +1791,15 @@
               <dt>HP</dt>
               <dd>90</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>110</dd>
+              <dd>110<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>100</dd>
             </div>
@@ -1809,19 +1839,19 @@
             <strong>555</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>115</dd>
+              <dd>115<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>95</dd>
             </div>
@@ -1872,15 +1902,15 @@
               <dt>防御</dt>
               <dd>45</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>135</dd>
+              <dd>135<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>120</dd>
             </div>
@@ -1923,15 +1953,15 @@
               <dt>防御</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>175</dd>
+              <dd>175<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>105</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>150</dd>
             </div>
@@ -1960,13 +1990,13 @@
             <strong>505</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>90</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>130</dd>
+              <dd>130<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -2016,15 +2046,15 @@
               <dt>HP</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>105</dd>
+              <dd>105<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>100</dd>
             </div>
@@ -2067,7 +2097,7 @@
               <dt>HP</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>125</dd>
             </div>
@@ -2075,9 +2105,9 @@
               <dt>防御</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>135</dd>
+              <dd>135<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
@@ -2121,11 +2151,11 @@
               <dt>攻撃</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>110</dd>
+              <dd>110<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>100</dd>
             </div>
@@ -2173,11 +2203,11 @@
               <dt>攻撃</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>180</dd>
+              <dd>180<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>130</dd>
             </div>
@@ -2215,21 +2245,21 @@
             <strong>490</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>100</dd>
+              <dd>100<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>100</dd>
+              <dd>100<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
@@ -2280,15 +2310,15 @@
               <dt>防御</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>130</dd>
+              <dd>130<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>110</dd>
             </div>
@@ -2331,15 +2361,15 @@
               <dt>防御</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>170</dd>
+              <dd>170<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>130</dd>
             </div>
@@ -2368,11 +2398,11 @@
             <strong>490</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top1">
               <dt>HP</dt>
-              <dd>105</dd>
+              <dd>105<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>95</dd>
             </div>
@@ -2419,13 +2449,13 @@
             <strong>590</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>105</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>125</dd>
+              <dd>125<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -2481,7 +2511,7 @@
               <dt>防御</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>100</dd>
             </div>
@@ -2489,9 +2519,9 @@
               <dt>特防</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>115</dd>
+              <dd>115<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -2534,15 +2564,15 @@
               <dt>防御</dt>
               <dd>105</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>130</dd>
+              <dd>130<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>105</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>120</dd>
             </div>
@@ -2575,11 +2605,11 @@
               <dt>HP</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>125</dd>
+              <dd>125<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>100</dd>
             </div>
@@ -2627,11 +2657,11 @@
               <dt>HP</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>155</dd>
+              <dd>155<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>120</dd>
             </div>
@@ -2676,7 +2706,7 @@
               <dt>HP</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>100</dd>
             </div>
@@ -2692,9 +2722,9 @@
               <dt>特防</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>110</dd>
+              <dd>110<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -2727,11 +2757,11 @@
               <dt>HP</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>110</dd>
+              <dd>110<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>105</dd>
             </div>
@@ -2779,11 +2809,11 @@
               <dt>HP</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>110</dd>
+              <dd>110<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>105</dd>
             </div>
@@ -2831,11 +2861,11 @@
               <dt>HP</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>110</dd>
+              <dd>110<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>105</dd>
             </div>
@@ -2884,9 +2914,9 @@
               <dt>HP</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>125</dd>
+              <dd>125<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -2896,7 +2926,7 @@
               <dt>特攻</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>100</dd>
             </div>
@@ -2936,9 +2966,9 @@
               <dt>HP</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>155</dd>
+              <dd>155<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -2948,7 +2978,7 @@
               <dt>特攻</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>130</dd>
             </div>
@@ -2981,29 +3011,29 @@
             <strong>288</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top1">
               <dt>HP</dt>
-              <dd>48</dd>
+              <dd>48<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>48</dd>
+              <dd>48<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>48</dd>
+              <dd>48<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>48</dd>
+              <dd>48<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>48</dd>
+              <dd>48<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>48</dd>
+              <dd>48<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -3031,9 +3061,9 @@
             <strong>525</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top1">
               <dt>HP</dt>
-              <dd>130</dd>
+              <dd>130<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>攻撃</dt>
@@ -3043,7 +3073,7 @@
               <dt>防御</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>110</dd>
             </div>
@@ -3093,7 +3123,7 @@
               <dt>防御</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>110</dd>
             </div>
@@ -3101,9 +3131,9 @@
               <dt>特防</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>130</dd>
+              <dd>130<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -3135,9 +3165,9 @@
               <dt>HP</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>130</dd>
+              <dd>130<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -3147,7 +3177,7 @@
               <dt>特攻</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>110</dd>
             </div>
@@ -3186,7 +3216,7 @@
               <dt>HP</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>105</dd>
             </div>
@@ -3202,9 +3232,9 @@
               <dt>特防</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>130</dd>
+              <dd>130<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -3238,7 +3268,7 @@
               <dt>HP</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>135</dd>
             </div>
@@ -3254,9 +3284,9 @@
               <dt>特防</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>150</dd>
+              <dd>150<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -3283,11 +3313,11 @@
             <strong>540</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top1">
               <dt>HP</dt>
-              <dd>160</dd>
+              <dd>160<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>110</dd>
             </div>
@@ -3299,7 +3329,7 @@
               <dt>特攻</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>110</dd>
             </div>
@@ -3339,19 +3369,19 @@
               <dt>HP</dt>
               <dd>91</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>134</dd>
+              <dd>134<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>100</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>100</dd>
             </div>
@@ -3399,11 +3429,11 @@
               <dt>防御</dt>
               <dd>115</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>145</dd>
+              <dd>145<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>125</dd>
             </div>
@@ -3444,17 +3474,17 @@
               <dt>攻撃</dt>
               <dd>82</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>100</dd>
+              <dd>100<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>83</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>100</dd>
+              <dd>100<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -3496,15 +3526,15 @@
               <dt>攻撃</dt>
               <dd>92</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>115</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>143</dd>
+              <dd>143<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>115</dd>
             </div>
@@ -3549,15 +3579,15 @@
               <dt>防御</dt>
               <dd>78</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>109</dd>
+              <dd>109<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>100</dd>
             </div>
@@ -3600,15 +3630,15 @@
               <dt>防御</dt>
               <dd>78</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>119</dd>
+              <dd>119<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>95</dd>
             </div>
@@ -3642,11 +3672,11 @@
               <dt>HP</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>105</dd>
+              <dd>105<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>100</dd>
             </div>
@@ -3693,11 +3723,11 @@
               <dt>HP</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>160</dd>
+              <dd>160<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>125</dd>
             </div>
@@ -3739,15 +3769,15 @@
             <strong>400</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>90</dd>
+              <dd>90<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>70</dd>
             </div>
@@ -3755,7 +3785,7 @@
               <dt>特攻</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>70</dd>
             </div>
@@ -3790,7 +3820,7 @@
             <strong>510</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>90</dd>
             </div>
@@ -3802,11 +3832,11 @@
               <dt>防御</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>115</dd>
+              <dd>115<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>90</dd>
             </div>
@@ -3853,11 +3883,11 @@
               <dt>防御</dt>
               <dd>105</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>165</dd>
+              <dd>165<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>110</dd>
             </div>
@@ -3891,15 +3921,15 @@
             <strong>420</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top1">
               <dt>HP</dt>
-              <dd>100</dd>
+              <dd>100<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>攻撃</dt>
               <dd>50</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>80</dd>
             </div>
@@ -3907,7 +3937,7 @@
               <dt>特攻</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>80</dd>
             </div>
@@ -3942,7 +3972,7 @@
             <strong>500</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>90</dd>
             </div>
@@ -3954,13 +3984,13 @@
               <dt>防御</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>90</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>100</dd>
+              <dd>100<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -4005,15 +4035,15 @@
               <dt>防御</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>130</dd>
+              <dd>130<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>110</dd>
             </div>
@@ -4052,7 +4082,7 @@
               <dt>攻撃</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>110</dd>
             </div>
@@ -4060,9 +4090,9 @@
               <dt>特攻</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>130</dd>
+              <dd>130<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -4107,13 +4137,13 @@
               <dt>防御</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>100</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>110</dd>
+              <dd>110<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -4147,7 +4177,7 @@
             <strong>490</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>95</dd>
             </div>
@@ -4159,13 +4189,13 @@
               <dt>防御</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>110</dd>
+              <dd>110<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>110</dd>
+              <dd>110<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -4203,13 +4233,13 @@
               <dt>HP</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>90</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>140</dd>
+              <dd>140<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -4254,13 +4284,13 @@
               <dt>HP</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>200</dd>
+              <dd>200<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -4306,13 +4336,13 @@
               <dt>HP</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>125</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>230</dd>
+              <dd>230<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -4356,11 +4386,11 @@
               <dt>HP</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>95</dd>
+              <dd>95<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>85</dd>
             </div>
@@ -4372,7 +4402,7 @@
               <dt>特防</dt>
               <dd>55</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>85</dd>
             </div>
@@ -4408,11 +4438,11 @@
               <dt>HP</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>130</dd>
+              <dd>130<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>100</dd>
             </div>
@@ -4461,11 +4491,11 @@
               <dt>HP</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>150</dd>
+              <dd>150<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>140</dd>
             </div>
@@ -4511,9 +4541,9 @@
               <dt>HP</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>125</dd>
+              <dd>125<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -4523,7 +4553,7 @@
               <dt>特攻</dt>
               <dd>40</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>95</dd>
             </div>
@@ -4563,11 +4593,11 @@
               <dt>HP</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>185</dd>
+              <dd>185<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>115</dd>
             </div>
@@ -4613,13 +4643,13 @@
               <dt>HP</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>140</dd>
+              <dd>140<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -4665,11 +4695,11 @@
               <dt>HP</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>140</dd>
+              <dd>140<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>110</dd>
             </div>
@@ -4681,7 +4711,7 @@
               <dt>特防</dt>
               <dd>100</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>110</dd>
             </div>
@@ -4723,15 +4753,15 @@
               <dt>防御</dt>
               <dd>50</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>110</dd>
+              <dd>110<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>95</dd>
             </div>
@@ -4775,15 +4805,15 @@
               <dt>防御</dt>
               <dd>90</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>140</dd>
+              <dd>140<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>90</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>115</dd>
             </div>
@@ -4817,11 +4847,11 @@
               <dt>HP</dt>
               <dd>100</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>134</dd>
+              <dd>134<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>110</dd>
             </div>
@@ -4868,11 +4898,11 @@
               <dt>HP</dt>
               <dd>100</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>164</dd>
+              <dd>164<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>150</dd>
             </div>
@@ -4925,7 +4955,7 @@
               <dt>防御</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>105</dd>
             </div>
@@ -4933,9 +4963,9 @@
               <dt>特防</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>120</dd>
+              <dd>120<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -4968,7 +4998,7 @@
               <dt>HP</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>110</dd>
             </div>
@@ -4976,17 +5006,17 @@
               <dt>防御</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>145</dd>
+              <dd>145<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>145</dd>
+              <dd>145<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -5019,15 +5049,15 @@
               <dt>HP</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>120</dd>
+              <dd>120<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>110</dd>
             </div>
@@ -5071,15 +5101,15 @@
               <dt>HP</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>160</dd>
+              <dd>160<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>130</dd>
             </div>
@@ -5118,13 +5148,13 @@
             <strong>535</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>100</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>110</dd>
+              <dd>110<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -5174,11 +5204,11 @@
               <dt>HP</dt>
               <dd>100</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>150</dd>
+              <dd>150<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>110</dd>
             </div>
@@ -5186,7 +5216,7 @@
               <dt>特攻</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>110</dd>
             </div>
@@ -5229,11 +5259,11 @@
               <dt>攻撃</dt>
               <dd>50</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>100</dd>
+              <dd>100<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>95</dd>
             </div>
@@ -5285,11 +5315,11 @@
               <dt>防御</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>125</dd>
+              <dd>125<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>115</dd>
             </div>
@@ -5337,11 +5367,11 @@
               <dt>防御</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>165</dd>
+              <dd>165<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>135</dd>
             </div>
@@ -5379,19 +5409,19 @@
               <dt>HP</dt>
               <dd>50</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>75</dd>
+              <dd>75<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>75</dd>
+              <dd>75<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>65</dd>
             </div>
@@ -5435,15 +5465,15 @@
               <dt>攻撃</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>125</dd>
+              <dd>125<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>115</dd>
             </div>
@@ -5481,19 +5511,19 @@
               <dt>HP</dt>
               <dd>50</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>85</dd>
+              <dd>85<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>85</dd>
+              <dd>85<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>55</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>55</dd>
             </div>
@@ -5534,13 +5564,13 @@
               <dt>HP</dt>
               <dd>50</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>105</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>125</dd>
+              <dd>125<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -5584,13 +5614,13 @@
               <dt>HP</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>110</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>180</dd>
+              <dd>180<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -5635,13 +5665,13 @@
               <dt>HP</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>140</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>230</dd>
+              <dd>230<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -5689,7 +5719,7 @@
               <dt>攻撃</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>75</dd>
             </div>
@@ -5697,13 +5727,13 @@
               <dt>特攻</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>80</dd>
+              <dd>80<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -5736,11 +5766,11 @@
               <dt>HP</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>100</dd>
+              <dd>100<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>85</dd>
             </div>
@@ -5748,13 +5778,13 @@
               <dt>特攻</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>100</dd>
+              <dd>100<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -5785,7 +5815,7 @@
               <dt>HP</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>75</dd>
             </div>
@@ -5793,17 +5823,17 @@
               <dt>防御</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>105</dd>
+              <dd>105<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>105</dd>
+              <dd>105<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -5840,21 +5870,21 @@
               <dt>攻撃</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>135</dd>
+              <dd>135<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>135</dd>
+              <dd>135<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -5886,15 +5916,15 @@
               <dt>HP</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>120</dd>
+              <dd>120<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>40</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>95</dd>
             </div>
@@ -5902,7 +5932,7 @@
               <dt>特防</dt>
               <dd>40</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>95</dd>
             </div>
@@ -5937,15 +5967,15 @@
               <dt>HP</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>140</dd>
+              <dd>140<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>110</dd>
             </div>
@@ -5987,7 +6017,7 @@
               <dt>HP</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>100</dd>
             </div>
@@ -5995,9 +6025,9 @@
               <dt>防御</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>105</dd>
+              <dd>105<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
@@ -6039,7 +6069,7 @@
               <dt>HP</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>120</dd>
             </div>
@@ -6047,9 +6077,9 @@
               <dt>防御</dt>
               <dd>100</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>145</dd>
+              <dd>145<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
@@ -6088,15 +6118,15 @@
               <dt>HP</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>140</dd>
+              <dd>140<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>85</dd>
             </div>
@@ -6144,7 +6174,7 @@
               <dt>攻撃</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>90</dd>
             </div>
@@ -6152,9 +6182,9 @@
               <dt>特攻</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>105</dd>
+              <dd>105<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -6191,19 +6221,19 @@
               <dt>HP</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>110</dd>
+              <dd>110<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>110</dd>
+              <dd>110<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>110</dd>
+              <dd>110<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>105</dd>
             </div>
@@ -6248,13 +6278,13 @@
               <dt>防御</dt>
               <dd>79</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>100</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>125</dd>
+              <dd>125<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -6287,29 +6317,29 @@
             <strong>420</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top1">
               <dt>HP</dt>
-              <dd>70</dd>
+              <dd>70<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>70</dd>
+              <dd>70<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>70</dd>
+              <dd>70<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>70</dd>
+              <dd>70<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>70</dd>
+              <dd>70<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>70</dd>
+              <dd>70<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -6336,29 +6366,29 @@
             <strong>420</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top1">
               <dt>HP</dt>
-              <dd>70</dd>
+              <dd>70<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>70</dd>
+              <dd>70<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>70</dd>
+              <dd>70<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>70</dd>
+              <dd>70<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>70</dd>
+              <dd>70<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>70</dd>
+              <dd>70<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -6385,29 +6415,29 @@
             <strong>420</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top1">
               <dt>HP</dt>
-              <dd>70</dd>
+              <dd>70<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>70</dd>
+              <dd>70<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>70</dd>
+              <dd>70<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>70</dd>
+              <dd>70<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>70</dd>
+              <dd>70<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>70</dd>
+              <dd>70<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -6434,29 +6464,29 @@
             <strong>420</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top1">
               <dt>HP</dt>
-              <dd>70</dd>
+              <dd>70<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>70</dd>
+              <dd>70<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>70</dd>
+              <dd>70<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>70</dd>
+              <dd>70<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>70</dd>
+              <dd>70<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>70</dd>
+              <dd>70<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -6487,15 +6517,15 @@
               <dt>HP</dt>
               <dd>64</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>115</dd>
+              <dd>115<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>83</dd>
             </div>
@@ -6538,15 +6568,15 @@
               <dt>HP</dt>
               <dd>64</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>165</dd>
+              <dd>165<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>93</dd>
             </div>
@@ -6595,11 +6625,11 @@
               <dt>防御</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>95</dd>
+              <dd>95<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>90</dd>
             </div>
@@ -6645,11 +6675,11 @@
               <dt>防御</dt>
               <dd>110</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>135</dd>
+              <dd>135<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>120</dd>
             </div>
@@ -6686,15 +6716,15 @@
               <dt>HP</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>130</dd>
+              <dd>130<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>75</dd>
             </div>
@@ -6702,7 +6732,7 @@
               <dt>特防</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>75</dd>
             </div>
@@ -6737,15 +6767,15 @@
               <dt>HP</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>150</dd>
+              <dd>150<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>115</dd>
             </div>
@@ -6753,7 +6783,7 @@
               <dt>特防</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>115</dd>
             </div>
@@ -6782,29 +6812,29 @@
             <strong>480</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top1">
               <dt>HP</dt>
-              <dd>80</dd>
+              <dd>80<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>80</dd>
+              <dd>80<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>80</dd>
+              <dd>80<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>80</dd>
+              <dd>80<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>80</dd>
+              <dd>80<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>80</dd>
+              <dd>80<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -6837,23 +6867,23 @@
               <dt>HP</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>120</dd>
+              <dd>120<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>120</dd>
+              <dd>120<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>100</dd>
             </div>
@@ -6887,11 +6917,11 @@
               <dt>HP</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>135</dd>
+              <dd>135<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>130</dd>
             </div>
@@ -6939,13 +6969,13 @@
               <dt>HP</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>145</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>150</dd>
+              <dd>150<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -6989,11 +7019,11 @@
               <dt>HP</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>109</dd>
+              <dd>109<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>105</dd>
             </div>
@@ -7040,7 +7070,7 @@
               <dt>HP</dt>
               <dd>76</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>104</dd>
             </div>
@@ -7048,7 +7078,7 @@
               <dt>防御</dt>
               <dd>71</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>104</dd>
             </div>
@@ -7056,9 +7086,9 @@
               <dt>特防</dt>
               <dd>71</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>108</dd>
+              <dd>108<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -7099,11 +7129,11 @@
               <dt>防御</dt>
               <dd>88</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>111</dd>
+              <dd>111<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>101</dd>
             </div>
@@ -7142,9 +7172,9 @@
               <dt>HP</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>120</dd>
+              <dd>120<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -7158,7 +7188,7 @@
               <dt>特防</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>100</dd>
             </div>
@@ -7194,9 +7224,9 @@
               <dt>HP</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>140</dd>
+              <dd>140<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -7210,7 +7240,7 @@
               <dt>特防</dt>
               <dd>90</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>110</dd>
             </div>
@@ -7243,15 +7273,15 @@
               <dt>HP</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>120</dd>
+              <dd>120<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>79</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>95</dd>
             </div>
@@ -7303,11 +7333,11 @@
               <dt>防御</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>125</dd>
+              <dd>125<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>105</dd>
             </div>
@@ -7342,13 +7372,13 @@
             <strong>495</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>97</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>165</dd>
+              <dd>165<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -7401,15 +7431,15 @@
               <dt>攻撃</dt>
               <dd>52</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>168</dd>
+              <dd>168<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
               <dd>47</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>138</dd>
             </div>
@@ -7459,13 +7489,13 @@
               <dt>特攻</dt>
               <dd>54</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>96</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>105</dd>
+              <dd>105<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -7500,9 +7530,9 @@
               <dt>HP</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>136</dd>
+              <dd>136<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -7516,7 +7546,7 @@
               <dt>特防</dt>
               <dd>96</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>135</dd>
             </div>
@@ -7550,21 +7580,21 @@
               <dt>HP</dt>
               <dd>50</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>92</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>108</dd>
+              <dd>108<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>92</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>108</dd>
+              <dd>108<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -7598,13 +7628,13 @@
             <strong>600</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>108</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>130</dd>
+              <dd>130<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -7653,15 +7683,15 @@
               <dt>HP</dt>
               <dd>108</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>170</dd>
+              <dd>170<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>115</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>120</dd>
             </div>
@@ -7703,7 +7733,7 @@
               <dt>HP</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>110</dd>
             </div>
@@ -7711,9 +7741,9 @@
               <dt>防御</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>115</dd>
+              <dd>115<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
@@ -7756,15 +7786,15 @@
               <dt>HP</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>145</dd>
+              <dd>145<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>88</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>140</dd>
             </div>
@@ -7806,13 +7836,13 @@
               <dt>HP</dt>
               <dd>108</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>112</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>118</dd>
+              <dd>118<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -7857,15 +7887,15 @@
               <dt>HP</dt>
               <dd>83</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>106</dd>
+              <dd>106<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>86</dd>
             </div>
@@ -7905,21 +7935,21 @@
             <strong>494</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>90</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>92</dd>
+              <dd>92<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>92</dd>
+              <dd>92<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
@@ -7960,19 +7990,19 @@
               <dt>HP</dt>
               <dd>90</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>132</dd>
+              <dd>132<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>105</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>132</dd>
+              <dd>132<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>105</dd>
             </div>
@@ -8010,7 +8040,7 @@
               <dt>HP</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>120</dd>
             </div>
@@ -8026,9 +8056,9 @@
               <dt>特防</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>125</dd>
+              <dd>125<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -8061,11 +8091,11 @@
               <dt>HP</dt>
               <dd>115</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>140</dd>
+              <dd>140<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>130</dd>
             </div>
@@ -8112,13 +8142,13 @@
               <dt>HP</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>110</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>130</dd>
+              <dd>130<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -8166,13 +8196,13 @@
               <dt>攻撃</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>110</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>130</dd>
+              <dd>130<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
@@ -8213,13 +8243,13 @@
               <dt>HP</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>125</dd>
+              <dd>125<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -8229,7 +8259,7 @@
               <dt>特防</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>95</dd>
             </div>
@@ -8262,13 +8292,13 @@
             <strong>530</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>110</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>130</dd>
+              <dd>130<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -8319,9 +8349,9 @@
               <dt>HP</dt>
               <dd>68</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>125</dd>
+              <dd>125<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -8331,7 +8361,7 @@
               <dt>特攻</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>115</dd>
             </div>
@@ -8371,9 +8401,9 @@
               <dt>HP</dt>
               <dd>68</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>165</dd>
+              <dd>165<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -8383,7 +8413,7 @@
               <dt>特攻</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>115</dd>
             </div>
@@ -8421,7 +8451,7 @@
               <dt>HP</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>80</dd>
             </div>
@@ -8429,7 +8459,7 @@
               <dt>防御</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>80</dd>
             </div>
@@ -8437,9 +8467,9 @@
               <dt>特防</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>110</dd>
+              <dd>110<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -8480,15 +8510,15 @@
               <dt>防御</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>140</dd>
+              <dd>140<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>100</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>120</dd>
             </div>
@@ -8530,15 +8560,15 @@
               <dt>防御</dt>
               <dd>77</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>95</dd>
+              <dd>95<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>77</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>91</dd>
             </div>
@@ -8577,17 +8607,17 @@
               <dt>攻撃</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>107</dd>
+              <dd>107<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>105</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>107</dd>
+              <dd>107<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -8628,17 +8658,17 @@
               <dt>攻撃</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>107</dd>
+              <dd>107<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>105</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>107</dd>
+              <dd>107<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -8678,17 +8708,17 @@
               <dt>攻撃</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>107</dd>
+              <dd>107<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>105</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>107</dd>
+              <dd>107<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -8728,17 +8758,17 @@
               <dt>攻撃</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>107</dd>
+              <dd>107<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>105</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>107</dd>
+              <dd>107<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -8778,17 +8808,17 @@
               <dt>攻撃</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>107</dd>
+              <dd>107<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>105</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>107</dd>
+              <dd>107<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -8827,7 +8857,7 @@
               <dt>攻撃</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>95</dd>
             </div>
@@ -8835,13 +8865,13 @@
               <dt>特攻</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>113</dd>
+              <dd>113<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -8870,13 +8900,13 @@
             <strong>528</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>110</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>123</dd>
+              <dd>123<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -8921,23 +8951,23 @@
             <strong>628</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>110</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>148</dd>
+              <dd>148<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>110</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>110</dd>
             </div>
@@ -8974,7 +9004,7 @@
               <dt>HP</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>100</dd>
             </div>
@@ -8982,9 +9012,9 @@
               <dt>防御</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>108</dd>
+              <dd>108<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
@@ -9026,15 +9056,15 @@
               <dt>HP</dt>
               <dd>90</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>108</dd>
+              <dd>108<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>100</dd>
             </div>
@@ -9076,9 +9106,9 @@
               <dt>HP</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>85</dd>
+              <dd>85<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -9092,7 +9122,7 @@
               <dt>特防</dt>
               <dd>69</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>77</dd>
             </div>
@@ -9127,7 +9157,7 @@
               <dt>HP</dt>
               <dd>64</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>88</dd>
             </div>
@@ -9135,7 +9165,7 @@
               <dt>防御</dt>
               <dd>50</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>88</dd>
             </div>
@@ -9143,9 +9173,9 @@
               <dt>特防</dt>
               <dd>50</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>106</dd>
+              <dd>106<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -9178,7 +9208,7 @@
               <dt>HP</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>98</dd>
             </div>
@@ -9186,7 +9216,7 @@
               <dt>防御</dt>
               <dd>63</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>98</dd>
             </div>
@@ -9194,9 +9224,9 @@
               <dt>特防</dt>
               <dd>63</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>101</dd>
+              <dd>101<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -9228,7 +9258,7 @@
               <dt>HP</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>98</dd>
             </div>
@@ -9236,7 +9266,7 @@
               <dt>防御</dt>
               <dd>63</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>98</dd>
             </div>
@@ -9244,9 +9274,9 @@
               <dt>特防</dt>
               <dd>63</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>101</dd>
+              <dd>101<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -9278,7 +9308,7 @@
               <dt>HP</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>98</dd>
             </div>
@@ -9286,7 +9316,7 @@
               <dt>防御</dt>
               <dd>63</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>98</dd>
             </div>
@@ -9294,9 +9324,9 @@
               <dt>特防</dt>
               <dd>63</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>101</dd>
+              <dd>101<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -9324,9 +9354,9 @@
             <strong>487</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top1">
               <dt>HP</dt>
-              <dd>116</dd>
+              <dd>116<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>攻撃</dt>
@@ -9336,7 +9366,7 @@
               <dt>防御</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>107</dd>
             </div>
@@ -9376,13 +9406,13 @@
             <strong>508</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>110</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>135</dd>
+              <dd>135<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -9428,13 +9458,13 @@
             <strong>608</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>110</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>165</dd>
+              <dd>165<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -9477,15 +9507,15 @@
             <strong>445</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top1">
               <dt>HP</dt>
-              <dd>103</dd>
+              <dd>103<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>攻撃</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>86</dd>
             </div>
@@ -9493,7 +9523,7 @@
               <dt>特攻</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>86</dd>
             </div>
@@ -9529,7 +9559,7 @@
             <strong>545</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>103</dd>
             </div>
@@ -9537,17 +9567,17 @@
               <dt>攻撃</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>126</dd>
+              <dd>126<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>126</dd>
+              <dd>126<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -9578,13 +9608,13 @@
             <strong>505</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>105</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>140</dd>
+              <dd>140<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -9634,7 +9664,7 @@
               <dt>HP</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>100</dd>
             </div>
@@ -9650,9 +9680,9 @@
               <dt>特防</dt>
               <dd>69</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>112</dd>
+              <dd>112<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -9686,13 +9716,13 @@
               <dt>HP</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>140</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>149</dd>
+              <dd>149<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -9741,7 +9771,7 @@
               <dt>攻撃</dt>
               <dd>67</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>85</dd>
             </div>
@@ -9753,9 +9783,9 @@
               <dt>特防</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>116</dd>
+              <dd>116<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -9785,13 +9815,13 @@
             <strong>519</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>117</dd>
+              <dd>117<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -9841,21 +9871,21 @@
               <dt>HP</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>90</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>115</dd>
+              <dd>115<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
               <dd>45</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>115</dd>
+              <dd>115<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -9893,21 +9923,21 @@
               <dt>HP</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>130</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>135</dd>
+              <dd>135<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
               <dd>55</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>135</dd>
+              <dd>135<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -9946,15 +9976,15 @@
               <dt>攻撃</dt>
               <dd>50</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>145</dd>
+              <dd>145<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>105</dd>
             </div>
@@ -9991,11 +10021,11 @@
               <dt>HP</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>95</dd>
+              <dd>95<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>82</dd>
             </div>
@@ -10003,7 +10033,7 @@
               <dt>特攻</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>82</dd>
             </div>
@@ -10042,7 +10072,7 @@
               <dt>HP</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>105</dd>
             </div>
@@ -10050,15 +10080,15 @@
               <dt>防御</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>120</dd>
+              <dd>120<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>105</dd>
             </div>
@@ -10101,15 +10131,15 @@
               <dt>防御</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>125</dd>
+              <dd>125<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>110</dd>
             </div>
@@ -10138,7 +10168,7 @@
             <strong>490</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>110</dd>
             </div>
@@ -10150,9 +10180,9 @@
               <dt>防御</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>125</dd>
+              <dd>125<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
@@ -10194,7 +10224,7 @@
               <dt>HP</dt>
               <dd>71</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>95</dd>
             </div>
@@ -10202,11 +10232,11 @@
               <dt>防御</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>110</dd>
+              <dd>110<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>95</dd>
             </div>
@@ -10246,7 +10276,7 @@
               <dt>HP</dt>
               <dd>55</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>75</dd>
             </div>
@@ -10254,7 +10284,7 @@
               <dt>防御</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>75</dd>
             </div>
@@ -10262,9 +10292,9 @@
               <dt>特防</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>103</dd>
+              <dd>103<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -10296,15 +10326,15 @@
               <dt>HP</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>115</dd>
+              <dd>115<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>105</dd>
             </div>
@@ -10345,15 +10375,15 @@
               <dt>HP</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>145</dd>
+              <dd>145<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>135</dd>
             </div>
@@ -10399,15 +10429,15 @@
               <dt>攻撃</dt>
               <dd>55</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>90</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>145</dd>
+              <dd>145<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>90</dd>
             </div>
@@ -10451,15 +10481,15 @@
               <dt>攻撃</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>110</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>175</dd>
+              <dd>175<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>110</dd>
             </div>
@@ -10492,13 +10522,13 @@
             <strong>505</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>130</dd>
+              <dd>130<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -10544,9 +10574,9 @@
             <strong>471</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top1">
               <dt>HP</dt>
-              <dd>109</dd>
+              <dd>109<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>攻撃</dt>
@@ -10560,7 +10590,7 @@
               <dt>特攻</dt>
               <dd>81</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>99</dd>
             </div>
@@ -10596,15 +10626,15 @@
             <strong>471</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top1">
               <dt>HP</dt>
-              <dd>109</dd>
+              <dd>109<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>攻撃</dt>
               <dd>81</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>99</dd>
             </div>
@@ -10646,13 +10676,13 @@
             <strong>483</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>89</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>124</dd>
+              <dd>124<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -10702,11 +10732,11 @@
               <dt>HP</dt>
               <dd>89</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>159</dd>
+              <dd>159<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>105</dd>
             </div>
@@ -10714,7 +10744,7 @@
               <dt>特攻</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>105</dd>
             </div>
@@ -10753,7 +10783,7 @@
               <dt>HP</dt>
               <dd>92</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>105</dd>
             </div>
@@ -10761,9 +10791,9 @@
               <dt>防御</dt>
               <dd>90</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>125</dd>
+              <dd>125<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
@@ -10812,11 +10842,11 @@
               <dt>防御</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>135</dd>
+              <dd>135<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>105</dd>
             </div>
@@ -10855,13 +10885,13 @@
               <dt>HP</dt>
               <dd>88</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>107</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>122</dd>
+              <dd>122<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -10906,13 +10936,13 @@
               <dt>HP</dt>
               <dd>88</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>137</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>172</dd>
+              <dd>172<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -10964,15 +10994,15 @@
               <dt>防御</dt>
               <dd>72</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>114</dd>
+              <dd>114<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>100</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>104</dd>
             </div>
@@ -11016,15 +11046,15 @@
               <dt>防御</dt>
               <dd>72</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>159</dd>
+              <dd>159<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>125</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>134</dd>
             </div>
@@ -11067,7 +11097,7 @@
               <dt>防御</dt>
               <dd>67</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>103</dd>
             </div>
@@ -11075,9 +11105,9 @@
               <dt>特防</dt>
               <dd>71</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>122</dd>
+              <dd>122<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -11119,7 +11149,7 @@
               <dt>防御</dt>
               <dd>77</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>133</dd>
             </div>
@@ -11127,9 +11157,9 @@
               <dt>特防</dt>
               <dd>81</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>142</dd>
+              <dd>142<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -11157,9 +11187,9 @@
             <strong>423</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top1">
               <dt>HP</dt>
-              <dd>85</dd>
+              <dd>85<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>攻撃</dt>
@@ -11177,7 +11207,7 @@
               <dt>特防</dt>
               <dd>77</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>78</dd>
             </div>
@@ -11213,7 +11243,7 @@
               <dt>HP</dt>
               <dd>78</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>81</dd>
             </div>
@@ -11229,9 +11259,9 @@
               <dt>特防</dt>
               <dd>69</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>126</dd>
+              <dd>126<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -11272,15 +11302,15 @@
               <dt>防御</dt>
               <dd>50</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>90</dd>
+              <dd>90<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>50</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>89</dd>
             </div>
@@ -11324,15 +11354,15 @@
               <dt>防御</dt>
               <dd>72</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>109</dd>
+              <dd>109<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>66</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>106</dd>
             </div>
@@ -11376,15 +11406,15 @@
               <dt>防御</dt>
               <dd>72</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>109</dd>
+              <dd>109<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>66</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>106</dd>
             </div>
@@ -11428,15 +11458,15 @@
               <dt>防御</dt>
               <dd>92</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>129</dd>
+              <dd>129<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>86</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>126</dd>
             </div>
@@ -11477,13 +11507,13 @@
               <dt>防御</dt>
               <dd>67</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>125</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>128</dd>
+              <dd>128<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -11528,11 +11558,11 @@
               <dt>防御</dt>
               <dd>87</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>155</dd>
+              <dd>155<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>148</dd>
             </div>
@@ -11577,13 +11607,13 @@
               <dt>防御</dt>
               <dd>68</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>112</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>154</dd>
+              <dd>154<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -11616,13 +11646,13 @@
             <strong>495</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>124</dd>
+              <dd>124<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -11683,13 +11713,13 @@
               <dt>特攻</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>90</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>102</dd>
+              <dd>102<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -11728,7 +11758,7 @@
               <dt>防御</dt>
               <dd>76</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>83</dd>
             </div>
@@ -11736,9 +11766,9 @@
               <dt>特防</dt>
               <dd>81</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>104</dd>
+              <dd>104<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -11779,7 +11809,7 @@
               <dt>防御</dt>
               <dd>76</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>83</dd>
             </div>
@@ -11787,9 +11817,9 @@
               <dt>特防</dt>
               <dd>81</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>104</dd>
+              <dd>104<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -11830,15 +11860,15 @@
               <dt>防御</dt>
               <dd>76</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>143</dd>
+              <dd>143<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>101</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>124</dd>
             </div>
@@ -11879,15 +11909,15 @@
               <dt>防御</dt>
               <dd>76</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>143</dd>
+              <dd>143<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>101</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>124</dd>
             </div>
@@ -11918,7 +11948,7 @@
             <strong>500</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>60</dd>
             </div>
@@ -11926,19 +11956,19 @@
               <dt>攻撃</dt>
               <dd>50</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>140</dd>
+              <dd>140<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
               <dd>50</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>140</dd>
+              <dd>140<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>60</dd>
             </div>
@@ -11968,27 +11998,27 @@
             <strong>500</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>140</dd>
+              <dd>140<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>50</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>140</dd>
+              <dd>140<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>50</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>60</dd>
             </div>
@@ -12017,9 +12047,9 @@
             <strong>462</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top1">
               <dt>HP</dt>
-              <dd>101</dd>
+              <dd>101<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>攻撃</dt>
@@ -12029,7 +12059,7 @@
               <dt>防御</dt>
               <dd>72</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>99</dd>
             </div>
@@ -12075,11 +12105,11 @@
               <dt>攻撃</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>86</dd>
+              <dd>86<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>85</dd>
             </div>
@@ -12122,11 +12152,11 @@
               <dt>HP</dt>
               <dd>86</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>92</dd>
+              <dd>92<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>88</dd>
             </div>
@@ -12174,7 +12204,7 @@
               <dt>HP</dt>
               <dd>86</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>102</dd>
             </div>
@@ -12186,9 +12216,9 @@
               <dt>特攻</dt>
               <dd>98</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>120</dd>
+              <dd>120<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -12224,13 +12254,13 @@
               <dt>HP</dt>
               <dd>72</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>105</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>115</dd>
+              <dd>115<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -12276,11 +12306,11 @@
               <dt>HP</dt>
               <dd>72</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>140</dd>
+              <dd>140<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>130</dd>
             </div>
@@ -12334,13 +12364,13 @@
               <dt>防御</dt>
               <dd>90</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>97</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>123</dd>
+              <dd>123<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -12387,13 +12417,13 @@
               <dt>防御</dt>
               <dd>105</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>132</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>163</dd>
+              <dd>163<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -12436,11 +12466,11 @@
               <dt>防御</dt>
               <dd>88</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>120</dd>
+              <dd>120<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>89</dd>
             </div>
@@ -12486,17 +12516,17 @@
               <dt>防御</dt>
               <dd>52</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>109</dd>
+              <dd>109<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>94</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>109</dd>
+              <dd>109<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -12530,11 +12560,11 @@
               <dt>HP</dt>
               <dd>82</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>121</dd>
+              <dd>121<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>119</dd>
             </div>
@@ -12577,9 +12607,9 @@
             <strong>521</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top1">
               <dt>HP</dt>
-              <dd>123</dd>
+              <dd>123<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>攻撃</dt>
@@ -12589,7 +12619,7 @@
               <dt>防御</dt>
               <dd>72</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>99</dd>
             </div>
@@ -12640,13 +12670,13 @@
               <dt>防御</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>110</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>130</dd>
+              <dd>130<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -12683,7 +12713,7 @@
               <dt>HP</dt>
               <dd>78</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>92</dd>
             </div>
@@ -12699,9 +12729,9 @@
               <dt>特防</dt>
               <dd>63</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>118</dd>
+              <dd>118<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -12735,9 +12765,9 @@
               <dt>HP</dt>
               <dd>78</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>137</dd>
+              <dd>137<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -12751,7 +12781,7 @@
               <dt>特防</dt>
               <dd>93</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>118</dd>
             </div>
@@ -12793,7 +12823,7 @@
               <dt>防御</dt>
               <dd>57</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>81</dd>
             </div>
@@ -12801,9 +12831,9 @@
               <dt>特防</dt>
               <dd>67</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>101</dd>
+              <dd>101<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -12844,13 +12874,13 @@
               <dt>防御</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>110</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>150</dd>
+              <dd>150<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -12896,13 +12926,13 @@
               <dt>防御</dt>
               <dd>100</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>110</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>150</dd>
+              <dd>150<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -12944,15 +12974,15 @@
               <dt>攻撃</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>91</dd>
+              <dd>91<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>87</dd>
             </div>
@@ -12987,13 +13017,13 @@
             <strong>474</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>110</dd>
+              <dd>110<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -13047,9 +13077,9 @@
               <dt>攻撃</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>122</dd>
+              <dd>122<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -13059,7 +13089,7 @@
               <dt>特防</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>99</dd>
             </div>
@@ -13095,13 +13125,13 @@
               <dt>HP</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>90</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>122</dd>
+              <dd>122<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -13147,13 +13177,13 @@
               <dt>HP</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>122</dd>
+              <dd>122<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -13199,13 +13229,13 @@
               <dt>HP</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>100</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>122</dd>
+              <dd>122<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -13250,13 +13280,13 @@
               <dt>HP</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>117</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>184</dd>
+              <dd>184<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -13302,13 +13332,13 @@
               <dt>HP</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>127</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>184</dd>
+              <dd>184<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -13362,7 +13392,7 @@
               <dt>防御</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>97</dd>
             </div>
@@ -13370,9 +13400,9 @@
               <dt>特防</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>123</dd>
+              <dd>123<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -13406,19 +13436,19 @@
               <dt>HP</dt>
               <dd>78</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>107</dd>
+              <dd>107<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>100</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>100</dd>
             </div>
@@ -13457,19 +13487,19 @@
               <dt>HP</dt>
               <dd>88</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>112</dd>
+              <dd>112<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>95</dd>
             </div>
@@ -13504,13 +13534,13 @@
             <strong>530</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>115</dd>
+              <dd>115<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -13568,11 +13598,11 @@
               <dt>防御</dt>
               <dd>74</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>126</dd>
+              <dd>126<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>116</dd>
             </div>
@@ -13607,13 +13637,13 @@
             <strong>485</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>120</dd>
+              <dd>120<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -13659,13 +13689,13 @@
             <strong>478</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>97</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>132</dd>
+              <dd>132<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -13715,11 +13745,11 @@
               <dt>HP</dt>
               <dd>97</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>157</dd>
+              <dd>157<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>122</dd>
             </div>
@@ -13764,9 +13794,9 @@
               <dt>HP</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>115</dd>
+              <dd>115<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -13780,7 +13810,7 @@
               <dt>特防</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>112</dd>
             </div>
@@ -13811,13 +13841,13 @@
             <strong>487</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>115</dd>
+              <dd>115<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -13866,9 +13896,9 @@
               <dt>HP</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>117</dd>
+              <dd>117<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -13882,7 +13912,7 @@
               <dt>特防</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>110</dd>
             </div>
@@ -13921,15 +13951,15 @@
               <dt>攻撃</dt>
               <dd>63</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>152</dd>
+              <dd>152<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
               <dd>53</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>142</dd>
             </div>
@@ -13964,15 +13994,15 @@
             <strong>500</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>100</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>125</dd>
+              <dd>125<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>100</dd>
             </div>
@@ -14024,7 +14054,7 @@
               <dt>攻撃</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>92</dd>
             </div>
@@ -14032,9 +14062,9 @@
               <dt>特攻</dt>
               <dd>50</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>132</dd>
+              <dd>132<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -14079,7 +14109,7 @@
               <dt>防御</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>111</dd>
             </div>
@@ -14087,9 +14117,9 @@
               <dt>特防</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>117</dd>
+              <dd>117<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -14121,11 +14151,11 @@
               <dt>HP</dt>
               <dd>72</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>120</dd>
+              <dd>120<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>98</dd>
             </div>
@@ -14133,7 +14163,7 @@
               <dt>特攻</dt>
               <dd>50</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>98</dd>
             </div>
@@ -14169,7 +14199,7 @@
             <strong>490</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>90</dd>
             </div>
@@ -14181,13 +14211,13 @@
               <dt>防御</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>90</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>110</dd>
+              <dd>110<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -14220,13 +14250,13 @@
             <strong>490</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>100</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>120</dd>
+              <dd>120<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -14288,11 +14318,11 @@
               <dt>特攻</dt>
               <dd>50</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>105</dd>
+              <dd>105<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>96</dd>
             </div>
@@ -14334,11 +14364,11 @@
               <dt>防御</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>135</dd>
+              <dd>135<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>91</dd>
             </div>
@@ -14386,11 +14416,11 @@
               <dt>防御</dt>
               <dd>110</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>160</dd>
+              <dd>160<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>116</dd>
             </div>
@@ -14428,13 +14458,13 @@
               <dt>HP</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>110</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>125</dd>
+              <dd>125<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -14477,7 +14507,7 @@
             <strong>495</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>98</dd>
             </div>
@@ -14485,9 +14515,9 @@
               <dt>攻撃</dt>
               <dd>87</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>105</dd>
+              <dd>105<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -14533,15 +14563,15 @@
               <dt>HP</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>110</dd>
+              <dd>110<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>95</dd>
             </div>
@@ -14581,9 +14611,9 @@
             <strong>485</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top1">
               <dt>HP</dt>
-              <dd>110</dd>
+              <dd>110<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>攻撃</dt>
@@ -14593,7 +14623,7 @@
               <dt>防御</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>100</dd>
             </div>
@@ -14636,13 +14666,13 @@
               <dt>HP</dt>
               <dd>72</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>107</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>125</dd>
+              <dd>125<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -14695,11 +14725,11 @@
               <dt>防御</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>134</dd>
+              <dd>134<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>114</dd>
             </div>
@@ -14746,11 +14776,11 @@
               <dt>防御</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>136</dd>
+              <dd>136<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>103</dd>
             </div>
@@ -14787,19 +14817,19 @@
             <strong>510</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>120</dd>
+              <dd>120<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>95</dd>
             </div>
@@ -14851,11 +14881,11 @@
               <dt>防御</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>110</dd>
+              <dd>110<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>100</dd>
             </div>
@@ -14899,15 +14929,15 @@
               <dt>攻撃</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>145</dd>
+              <dd>145<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
               <dd>50</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>105</dd>
             </div>
@@ -14952,13 +14982,13 @@
               <dt>防御</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>110</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>121</dd>
+              <dd>121<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>素早</dt>
@@ -14994,13 +15024,13 @@
               <dt>HP</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>100</dd>
+              <dd>100<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>100</dd>
+              <dd>100<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -15010,7 +15040,7 @@
               <dt>特防</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>75</dd>
             </div>
@@ -15044,13 +15074,13 @@
               <dt>HP</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>135</dd>
+              <dd>135<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>135</dd>
+              <dd>135<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -15060,7 +15090,7 @@
               <dt>特防</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>100</dd>
             </div>
@@ -15094,7 +15124,7 @@
               <dt>HP</dt>
               <dd>58</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>95</dd>
             </div>
@@ -15110,9 +15140,9 @@
               <dt>特防</dt>
               <dd>58</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>97</dd>
+              <dd>97<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -15145,7 +15175,7 @@
               <dt>HP</dt>
               <dd>88</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>120</dd>
             </div>
@@ -15161,9 +15191,9 @@
               <dt>特防</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>142</dd>
+              <dd>142<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -15193,21 +15223,21 @@
             <strong>525</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>103</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>105</dd>
+              <dd>105<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>72</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>105</dd>
+              <dd>105<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
@@ -15249,11 +15279,11 @@
               <dt>HP</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>135</dd>
+              <dd>135<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>95</dd>
             </div>
@@ -15298,11 +15328,11 @@
             <strong>530</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top1">
               <dt>HP</dt>
-              <dd>120</dd>
+              <dd>120<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>112</dd>
             </div>
@@ -15350,9 +15380,9 @@
             <strong>530</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top1">
               <dt>HP</dt>
-              <dd>120</dd>
+              <dd>120<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>攻撃</dt>
@@ -15362,7 +15392,7 @@
               <dt>防御</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>100</dd>
             </div>
@@ -15407,9 +15437,9 @@
               <dt>HP</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>130</dd>
+              <dd>130<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -15423,7 +15453,7 @@
               <dt>特防</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>120</dd>
             </div>
@@ -15459,11 +15489,11 @@
               <dt>HP</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>115</dd>
+              <dd>115<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>95</dd>
             </div>
@@ -15512,7 +15542,7 @@
               <dt>HP</dt>
               <dd>76</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>110</dd>
             </div>
@@ -15528,9 +15558,9 @@
               <dt>特防</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>123</dd>
+              <dd>123<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -15560,7 +15590,7 @@
             <strong>530</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>104</dd>
             </div>
@@ -15572,9 +15602,9 @@
               <dt>防御</dt>
               <dd>100</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>110</dd>
+              <dd>110<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
@@ -15611,19 +15641,19 @@
             <strong>530</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>120</dd>
+              <dd>120<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>85</dd>
             </div>
@@ -15631,7 +15661,7 @@
               <dt>特防</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>85</dd>
             </div>
@@ -15665,7 +15695,7 @@
               <dt>HP</dt>
               <dd>74</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>75</dd>
             </div>
@@ -15677,13 +15707,13 @@
               <dt>特攻</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>111</dd>
+              <dd>111<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -15716,7 +15746,7 @@
               <dt>HP</dt>
               <dd>74</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>75</dd>
             </div>
@@ -15728,13 +15758,13 @@
               <dt>特攻</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>111</dd>
+              <dd>111<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -15763,17 +15793,17 @@
             <strong>500</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>100</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>100</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>130</dd>
+              <dd>130<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -15823,13 +15853,13 @@
               <dt>攻撃</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>100</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>125</dd>
+              <dd>125<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
@@ -15871,9 +15901,9 @@
               <dt>HP</dt>
               <dd>75</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>125</dd>
+              <dd>125<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -15883,7 +15913,7 @@
               <dt>特攻</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>100</dd>
             </div>
@@ -15918,9 +15948,9 @@
             <strong>495</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top1">
               <dt>HP</dt>
-              <dd>109</dd>
+              <dd>109<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>攻撃</dt>
@@ -15930,7 +15960,7 @@
               <dt>防御</dt>
               <dd>91</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>103</dd>
             </div>
@@ -15974,23 +16004,23 @@
               <dt>HP</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>108</dd>
+              <dd>108<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>108</dd>
+              <dd>108<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>75</dd>
             </div>
@@ -16026,19 +16056,19 @@
               <dt>HP</dt>
               <dd>65</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>138</dd>
+              <dd>138<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>138</dd>
+              <dd>138<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特防</dt>
               <dd>85</dd>
             </div>
@@ -16084,7 +16114,7 @@
               <dt>防御</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>101</dd>
             </div>
@@ -16092,9 +16122,9 @@
               <dt>特防</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>105</dd>
+              <dd>105<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -16140,11 +16170,11 @@
               <dt>特攻</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特防</dt>
-              <dd>105</dd>
+              <dd>105<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>素早</dt>
               <dd>94</dd>
             </div>
@@ -16175,15 +16205,15 @@
             <strong>457</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top1">
               <dt>HP</dt>
-              <dd>100</dd>
+              <dd>100<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>攻撃</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>72</dd>
             </div>
@@ -16195,9 +16225,9 @@
               <dt>特防</dt>
               <dd>62</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>素早</dt>
-              <dd>100</dd>
+              <dd>100<span class="stat-star">★</span></dd>
             </div>
           </dl>
           <div class="ability-block">
@@ -16228,15 +16258,15 @@
               <dt>HP</dt>
               <dd>100</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>160</dd>
+              <dd>160<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
               <dd>97</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>106</dd>
             </div>
@@ -16277,13 +16307,13 @@
               <dt>HP</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>攻撃</dt>
               <dd>85</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>145</dd>
+              <dd>145<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特攻</dt>
@@ -16333,13 +16363,13 @@
               <dt>攻撃</dt>
               <dd>55</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>90</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>130</dd>
+              <dd>130<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
@@ -16385,13 +16415,13 @@
               <dt>攻撃</dt>
               <dd>90</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>105</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>150</dd>
+              <dd>150<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
@@ -16430,11 +16460,11 @@
               <dt>HP</dt>
               <dd>72</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>101</dd>
+              <dd>101<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>100</dd>
             </div>
@@ -16477,13 +16507,13 @@
             <strong>535</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top2">
               <dt>HP</dt>
               <dd>110</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>115</dd>
+              <dd>115<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>防御</dt>
@@ -16529,9 +16559,9 @@
             <strong>520</strong>
           </div>
           <dl class="stats">
-            <div>
+            <div class="is-top1">
               <dt>HP</dt>
-              <dd>120</dd>
+              <dd>120<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>攻撃</dt>
@@ -16541,7 +16571,7 @@
               <dt>防御</dt>
               <dd>70</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>110</dd>
             </div>
@@ -16586,11 +16616,11 @@
               <dt>HP</dt>
               <dd>100</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>攻撃</dt>
-              <dd>135</dd>
+              <dd>135<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>120</dd>
             </div>
@@ -16643,13 +16673,13 @@
               <dt>攻撃</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>95</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>133</dd>
+              <dd>133<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
@@ -16693,13 +16723,13 @@
               <dt>攻撃</dt>
               <dd>60</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>106</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>121</dd>
+              <dd>121<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
@@ -16745,11 +16775,11 @@
               <dt>攻撃</dt>
               <dd>105</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>防御</dt>
-              <dd>130</dd>
+              <dd>130<span class="stat-star">★</span></dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>特攻</dt>
               <dd>125</dd>
             </div>
@@ -16797,13 +16827,13 @@
               <dt>攻撃</dt>
               <dd>80</dd>
             </div>
-            <div>
+            <div class="is-top2">
               <dt>防御</dt>
               <dd>110</dd>
             </div>
-            <div>
+            <div class="is-top1">
               <dt>特攻</dt>
-              <dd>120</dd>
+              <dd>120<span class="stat-star">★</span></dd>
             </div>
             <div>
               <dt>特防</dt>
