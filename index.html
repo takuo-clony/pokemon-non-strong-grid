@@ -191,6 +191,26 @@
       box-shadow: 0 1px 2px rgba(15, 23, 42, 0.2);
     }
 
+    .rank-badge {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      z-index: 1;
+      border-radius: 4px;
+      background: #1d2633;
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 800;
+      line-height: 1;
+      padding: 3px 5px;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.25);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .rank-badge[hidden] {
+      display: none;
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -610,6 +630,7 @@
     <section class="grid" aria-label="参加可能ポケモン">
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553138" target="_blank" rel="noopener noreferrer" aria-label="フシギバナの詳細ページを開く" data-types="grass poison" data-strong="0" data-index="0" data-total="525" data-hp="80" data-attack="82" data-defense="83" data-spatk="100" data-spdef="100" data-speed="80">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/001_0003_フシギバナ_003.png" alt="フシギバナ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -661,6 +682,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553139" target="_blank" rel="noopener noreferrer" aria-label="メガフシギバナの詳細ページを開く" data-types="grass poison" data-strong="1" data-index="1" data-total="625" data-hp="80" data-attack="100" data-defense="123" data-spatk="122" data-spdef="120" data-speed="80">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/002_0003_メガフシギバナ_003_1.png" alt="メガフシギバナ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -710,6 +732,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553152" target="_blank" rel="noopener noreferrer" aria-label="リザードンの詳細ページを開く" data-types="fire flying" data-strong="0" data-index="2" data-total="534" data-hp="78" data-attack="84" data-defense="78" data-spatk="109" data-spdef="85" data-speed="100">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/003_0006_リザードン_006.png" alt="リザードン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -761,6 +784,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553153" target="_blank" rel="noopener noreferrer" aria-label="メガリザードンXの詳細ページを開く" data-types="fire dragon" data-strong="1" data-index="3" data-total="634" data-hp="78" data-attack="130" data-defense="111" data-spatk="130" data-spdef="85" data-speed="100">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/004_0006_メガリザードンX_006_1.png" alt="メガリザードンX" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -811,6 +835,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553154" target="_blank" rel="noopener noreferrer" aria-label="メガリザードンYの詳細ページを開く" data-types="fire flying" data-strong="1" data-index="4" data-total="634" data-hp="78" data-attack="104" data-defense="78" data-spatk="159" data-spdef="115" data-speed="100">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/005_0006_メガリザードンY_006_2.png" alt="メガリザードンY" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -860,6 +885,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553155" target="_blank" rel="noopener noreferrer" aria-label="カメックスの詳細ページを開く" data-types="water" data-strong="0" data-index="5" data-total="530" data-hp="79" data-attack="83" data-defense="100" data-spatk="85" data-spdef="105" data-speed="78">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/006_0009_カメックス_009.png" alt="カメックス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -910,6 +936,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553156" target="_blank" rel="noopener noreferrer" aria-label="メガカメックスの詳細ページを開く" data-types="water" data-strong="1" data-index="6" data-total="630" data-hp="79" data-attack="103" data-defense="120" data-spatk="135" data-spdef="115" data-speed="78">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/007_0009_メガカメックス_009_1.png" alt="メガカメックス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -958,6 +985,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553157" target="_blank" rel="noopener noreferrer" aria-label="スピアーの詳細ページを開く" data-types="bug poison" data-strong="0" data-index="7" data-total="395" data-hp="65" data-attack="90" data-defense="40" data-spatk="45" data-spdef="80" data-speed="75">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/008_0015_スピアー_015.png" alt="スピアー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -1008,6 +1036,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553158" target="_blank" rel="noopener noreferrer" aria-label="メガスピアーの詳細ページを開く" data-types="bug poison" data-strong="0" data-index="8" data-total="495" data-hp="65" data-attack="150" data-defense="40" data-spatk="15" data-spdef="80" data-speed="145">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/009_0015_メガスピアー_015_1.png" alt="メガスピアー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -1057,6 +1086,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553159" target="_blank" rel="noopener noreferrer" aria-label="ピジョットの詳細ページを開く" data-types="normal flying" data-strong="0" data-index="9" data-total="479" data-hp="83" data-attack="80" data-defense="75" data-spatk="70" data-spdef="70" data-speed="101">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/010_0018_ピジョット_018.png" alt="ピジョット" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -1108,6 +1138,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554180" target="_blank" rel="noopener noreferrer" aria-label="メガピジョットの詳細ページを開く" data-types="normal flying" data-strong="0" data-index="10" data-total="579" data-hp="83" data-attack="80" data-defense="80" data-spatk="135" data-spdef="80" data-speed="121">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/011_0018_メガピジョット_018_1.png" alt="メガピジョット" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -1157,6 +1188,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554396" target="_blank" rel="noopener noreferrer" aria-label="アーボックの詳細ページを開く" data-types="poison" data-strong="0" data-index="11" data-total="448" data-hp="60" data-attack="95" data-defense="69" data-spatk="65" data-spdef="79" data-speed="80">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/012_0024_アーボック_024.png" alt="アーボック" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -1207,6 +1239,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553160" target="_blank" rel="noopener noreferrer" aria-label="ピカチュウの詳細ページを開く" data-types="electric" data-strong="0" data-index="12" data-total="320" data-hp="35" data-attack="55" data-defense="40" data-spatk="50" data-spdef="50" data-speed="90">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/013_0025_ピカチュウ_025.png" alt="ピカチュウ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -1256,6 +1289,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553161" target="_blank" rel="noopener noreferrer" aria-label="ライチュウの詳細ページを開く" data-types="electric" data-strong="0" data-index="13" data-total="485" data-hp="60" data-attack="90" data-defense="55" data-spatk="90" data-spdef="80" data-speed="110">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/014_0026_ライチュウ_026.png" alt="ライチュウ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -1305,6 +1339,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553892" target="_blank" rel="noopener noreferrer" aria-label="アローラライチュウの詳細ページを開く" data-types="electric psychic" data-strong="0" data-index="14" data-total="485" data-hp="60" data-attack="85" data-defense="50" data-spatk="95" data-spdef="85" data-speed="110">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/015_0026_アローラライチュウ_026_1.png" alt="アローラライチュウ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -1354,6 +1389,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553173" target="_blank" rel="noopener noreferrer" aria-label="メガライチュウXの詳細ページを開く" data-types="electric" data-strong="0" data-index="15" data-total="585" data-hp="60" data-attack="135" data-defense="95" data-spatk="90" data-spdef="95" data-speed="110">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/016_0026_メガライチュウX_026_2.png" alt="メガライチュウX" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -1403,6 +1439,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553174" target="_blank" rel="noopener noreferrer" aria-label="メガライチュウYの詳細ページを開く" data-types="electric" data-strong="1" data-index="16" data-total="585" data-hp="60" data-attack="100" data-defense="55" data-spatk="160" data-spdef="80" data-speed="130">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/017_0026_メガライチュウY_026_3.png" alt="メガライチュウY" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -1451,6 +1488,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553175" target="_blank" rel="noopener noreferrer" aria-label="ピクシーの詳細ページを開く" data-types="fairy" data-strong="0" data-index="17" data-total="483" data-hp="95" data-attack="70" data-defense="73" data-spatk="95" data-spdef="90" data-speed="60">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/018_0036_ピクシー_036.png" alt="ピクシー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -1502,6 +1540,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554199" target="_blank" rel="noopener noreferrer" aria-label="メガピクシーの詳細ページを開く" data-types="fairy flying" data-strong="1" data-index="18" data-total="583" data-hp="95" data-attack="80" data-defense="93" data-spatk="135" data-spdef="110" data-speed="70">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/019_0036_メガピクシー_036_1.png" alt="メガピクシー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -1551,6 +1590,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554153" target="_blank" rel="noopener noreferrer" aria-label="キュウコンの詳細ページを開く" data-types="fire" data-strong="0" data-index="19" data-total="505" data-hp="73" data-attack="76" data-defense="75" data-spatk="81" data-spdef="100" data-speed="100">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/020_0038_キュウコン_038.png" alt="キュウコン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -1601,6 +1641,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553176" target="_blank" rel="noopener noreferrer" aria-label="アローラキュウコンの詳細ページを開く" data-types="ice fairy" data-strong="1" data-index="20" data-total="505" data-hp="73" data-attack="67" data-defense="75" data-spatk="81" data-spdef="100" data-speed="109">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/021_0038_アローラキュウコン_038_1.png" alt="アローラキュウコン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -1651,6 +1692,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564110" target="_blank" rel="noopener noreferrer" aria-label="ラフレシアの詳細ページを開く" data-types="grass poison" data-strong="0" data-index="21" data-total="490" data-hp="75" data-attack="80" data-defense="85" data-spatk="110" data-spdef="90" data-speed="50">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/022_0045_ラフレシア_045.png" alt="ラフレシア" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -1701,6 +1743,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553177" target="_blank" rel="noopener noreferrer" aria-label="ウインディの詳細ページを開く" data-types="fire" data-strong="0" data-index="22" data-total="555" data-hp="90" data-attack="110" data-defense="80" data-spatk="100" data-spdef="80" data-speed="95">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/023_0059_ウインディ_059.png" alt="ウインディ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -1751,6 +1794,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553178" target="_blank" rel="noopener noreferrer" aria-label="ヒスイウインディの詳細ページを開く" data-types="fire rock" data-strong="0" data-index="23" data-total="555" data-hp="95" data-attack="115" data-defense="80" data-spatk="95" data-spdef="80" data-speed="90">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/024_0059_ヒスイウインディ_059_1.png" alt="ヒスイウインディ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -1802,6 +1846,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554154" target="_blank" rel="noopener noreferrer" aria-label="フーディンの詳細ページを開く" data-types="psychic" data-strong="0" data-index="24" data-total="500" data-hp="55" data-attack="50" data-defense="45" data-spatk="135" data-spdef="95" data-speed="120">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/025_0065_フーディン_065.png" alt="フーディン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -1852,6 +1897,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554200" target="_blank" rel="noopener noreferrer" aria-label="メガフーディンの詳細ページを開く" data-types="psychic" data-strong="0" data-index="25" data-total="600" data-hp="55" data-attack="50" data-defense="65" data-spatk="175" data-spdef="105" data-speed="150">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/026_0065_メガフーディン_065_1.png" alt="メガフーディン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -1900,6 +1946,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553179" target="_blank" rel="noopener noreferrer" aria-label="カイリキーの詳細ページを開く" data-types="fighting" data-strong="0" data-index="26" data-total="505" data-hp="90" data-attack="130" data-defense="80" data-spatk="65" data-spdef="85" data-speed="55">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/027_0068_カイリキー_068.png" alt="カイリキー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -1950,6 +1997,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553180" target="_blank" rel="noopener noreferrer" aria-label="ウツボットの詳細ページを開く" data-types="grass poison" data-strong="0" data-index="27" data-total="490" data-hp="80" data-attack="105" data-defense="65" data-spatk="100" data-spdef="70" data-speed="70">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/028_0071_ウツボット_071.png" alt="ウツボット" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -2000,6 +2048,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553181" target="_blank" rel="noopener noreferrer" aria-label="メガウツボットの詳細ページを開く" data-types="grass poison" data-strong="0" data-index="28" data-total="590" data-hp="80" data-attack="125" data-defense="85" data-spatk="135" data-spdef="95" data-speed="70">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/029_0071_メガウツボット_071_1.png" alt="メガウツボット" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -2049,6 +2098,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553203" target="_blank" rel="noopener noreferrer" aria-label="ヤドランの詳細ページを開く" data-types="water psychic" data-strong="0" data-index="29" data-total="490" data-hp="95" data-attack="75" data-defense="110" data-spatk="100" data-spdef="80" data-speed="30">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/030_0080_ヤドラン_080.png" alt="ヤドラン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -2100,6 +2150,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553204" target="_blank" rel="noopener noreferrer" aria-label="メガヤドランの詳細ページを開く" data-types="water psychic" data-strong="0" data-index="30" data-total="590" data-hp="95" data-attack="75" data-defense="180" data-spatk="130" data-spdef="80" data-speed="30">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/031_0080_メガヤドラン_080_1.png" alt="メガヤドラン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -2149,6 +2200,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554165" target="_blank" rel="noopener noreferrer" aria-label="ガラルヤドランの詳細ページを開く" data-types="poison psychic" data-strong="0" data-index="31" data-total="490" data-hp="95" data-attack="100" data-defense="95" data-spatk="100" data-spdef="70" data-speed="30">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/032_0080_ガラルヤドラン_080_2.png" alt="ガラルヤドラン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -2201,6 +2253,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553205" target="_blank" rel="noopener noreferrer" aria-label="ゲンガーの詳細ページを開く" data-types="ghost poison" data-strong="1" data-index="32" data-total="500" data-hp="60" data-attack="65" data-defense="60" data-spatk="130" data-spdef="75" data-speed="110">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/033_0094_ゲンガー_094.png" alt="ゲンガー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -2251,6 +2304,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553206" target="_blank" rel="noopener noreferrer" aria-label="メガゲンガーの詳細ページを開く" data-types="ghost poison" data-strong="1" data-index="33" data-total="600" data-hp="60" data-attack="65" data-defense="80" data-spatk="170" data-spdef="95" data-speed="130">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/034_0094_メガゲンガー_094_1.png" alt="メガゲンガー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -2300,6 +2354,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553207" target="_blank" rel="noopener noreferrer" aria-label="ガルーラの詳細ページを開く" data-types="normal" data-strong="0" data-index="34" data-total="490" data-hp="105" data-attack="95" data-defense="80" data-spatk="40" data-spdef="80" data-speed="90">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/035_0115_ガルーラ_115.png" alt="ガルーラ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -2350,6 +2405,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553208" target="_blank" rel="noopener noreferrer" aria-label="メガガルーラの詳細ページを開く" data-types="normal" data-strong="0" data-index="35" data-total="590" data-hp="105" data-attack="125" data-defense="100" data-spatk="60" data-spdef="100" data-speed="100">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/036_0115_メガガルーラ_115_1.png" alt="メガガルーラ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -2398,6 +2454,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553209" target="_blank" rel="noopener noreferrer" aria-label="スターミーの詳細ページを開く" data-types="water psychic" data-strong="0" data-index="36" data-total="520" data-hp="60" data-attack="75" data-defense="85" data-spatk="100" data-spdef="85" data-speed="115">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/037_0121_スターミー_121.png" alt="スターミー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -2450,6 +2507,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554202" target="_blank" rel="noopener noreferrer" aria-label="メガスターミーの詳細ページを開く" data-types="water psychic" data-strong="1" data-index="37" data-total="620" data-hp="60" data-attack="100" data-defense="105" data-spatk="130" data-spdef="105" data-speed="120">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/038_0121_メガスターミー_121_1.png" alt="メガスターミー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -2499,6 +2557,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553210" target="_blank" rel="noopener noreferrer" aria-label="カイロスの詳細ページを開く" data-types="bug" data-strong="0" data-index="38" data-total="500" data-hp="65" data-attack="125" data-defense="100" data-spatk="55" data-spdef="70" data-speed="85">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/039_0127_カイロス_127.png" alt="カイロス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -2549,6 +2608,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554203" target="_blank" rel="noopener noreferrer" aria-label="メガカイロスの詳細ページを開く" data-types="bug flying" data-strong="0" data-index="39" data-total="600" data-hp="65" data-attack="155" data-defense="120" data-spatk="65" data-spdef="90" data-speed="105">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/040_0127_メガカイロス_127_1.png" alt="メガカイロス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -2598,6 +2658,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553211" target="_blank" rel="noopener noreferrer" aria-label="ケンタロスの詳細ページを開く" data-types="normal" data-strong="0" data-index="40" data-total="490" data-hp="75" data-attack="100" data-defense="95" data-spatk="40" data-spdef="70" data-speed="110">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/041_0128_ケンタロス_128.png" alt="ケンタロス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -2648,6 +2709,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554363" target="_blank" rel="noopener noreferrer" aria-label="パルデアケンタロス(かくとう)の詳細ページを開く" data-types="fighting" data-strong="0" data-index="41" data-total="490" data-hp="75" data-attack="110" data-defense="105" data-spatk="30" data-spdef="70" data-speed="100">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/042_0128_パルデアケンタロス(かくとう)_128_1.png" alt="パルデアケンタロス(かくとう)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -2698,6 +2760,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554361" target="_blank" rel="noopener noreferrer" aria-label="パルデアケンタロス(ほのお)の詳細ページを開く" data-types="fighting fire" data-strong="0" data-index="42" data-total="490" data-hp="75" data-attack="110" data-defense="105" data-spatk="30" data-spdef="70" data-speed="100">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/043_0128_パルデアケンタロス(ほのお)_128_3.png" alt="パルデアケンタロス(ほのお)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -2749,6 +2812,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554362" target="_blank" rel="noopener noreferrer" aria-label="パルデアケンタロス(みず)の詳細ページを開く" data-types="fighting water" data-strong="0" data-index="43" data-total="490" data-hp="75" data-attack="110" data-defense="105" data-spatk="30" data-spdef="70" data-speed="100">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/044_0128_パルデアケンタロス(みず)_128_2.png" alt="パルデアケンタロス(みず)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -2801,6 +2865,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553233" target="_blank" rel="noopener noreferrer" aria-label="ギャラドスの詳細ページを開く" data-types="water flying" data-strong="1" data-index="44" data-total="540" data-hp="95" data-attack="125" data-defense="79" data-spatk="60" data-spdef="100" data-speed="81">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/045_0130_ギャラドス_130.png" alt="ギャラドス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -2852,6 +2917,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553234" target="_blank" rel="noopener noreferrer" aria-label="メガギャラドスの詳細ページを開く" data-types="water dark" data-strong="1" data-index="45" data-total="640" data-hp="95" data-attack="155" data-defense="109" data-spatk="70" data-spdef="130" data-speed="81">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/046_0130_メガギャラドス_130_1.png" alt="メガギャラドス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -2901,6 +2967,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553235" target="_blank" rel="noopener noreferrer" aria-label="メタモンの詳細ページを開く" data-types="normal" data-strong="0" data-index="46" data-total="288" data-hp="48" data-attack="48" data-defense="48" data-spatk="48" data-spdef="48" data-speed="48">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/047_0132_メタモン_132.png" alt="メタモン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -2950,6 +3017,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553236" target="_blank" rel="noopener noreferrer" aria-label="シャワーズの詳細ページを開く" data-types="water" data-strong="0" data-index="47" data-total="525" data-hp="130" data-attack="65" data-defense="60" data-spatk="110" data-spdef="95" data-speed="65">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/048_0134_シャワーズ_134.png" alt="シャワーズ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -2999,6 +3067,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553237" target="_blank" rel="noopener noreferrer" aria-label="サンダースの詳細ページを開く" data-types="electric" data-strong="0" data-index="48" data-total="525" data-hp="65" data-attack="65" data-defense="60" data-spatk="110" data-spdef="95" data-speed="130">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/049_0135_サンダース_135.png" alt="サンダース" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -3048,6 +3117,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553238" target="_blank" rel="noopener noreferrer" aria-label="ブースターの詳細ページを開く" data-types="fire" data-strong="0" data-index="49" data-total="525" data-hp="65" data-attack="130" data-defense="60" data-spatk="95" data-spdef="110" data-speed="65">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/050_0136_ブースター_136.png" alt="ブースター" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -3097,6 +3167,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553239" target="_blank" rel="noopener noreferrer" aria-label="プテラの詳細ページを開く" data-types="rock flying" data-strong="0" data-index="50" data-total="515" data-hp="80" data-attack="105" data-defense="65" data-spatk="60" data-spdef="75" data-speed="130">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/051_0142_プテラ_142.png" alt="プテラ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -3148,6 +3219,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554204" target="_blank" rel="noopener noreferrer" aria-label="メガプテラの詳細ページを開く" data-types="rock flying" data-strong="0" data-index="51" data-total="615" data-hp="80" data-attack="135" data-defense="85" data-spatk="70" data-spdef="95" data-speed="150">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/052_0142_メガプテラ_142_1.png" alt="メガプテラ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -3197,6 +3269,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553240" target="_blank" rel="noopener noreferrer" aria-label="カビゴンの詳細ページを開く" data-types="normal" data-strong="0" data-index="52" data-total="540" data-hp="160" data-attack="110" data-defense="65" data-spatk="65" data-spdef="110" data-speed="30">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/053_0143_カビゴン_143.png" alt="カビゴン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -3247,6 +3320,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553241" target="_blank" rel="noopener noreferrer" aria-label="カイリューの詳細ページを開く" data-types="dragon flying" data-strong="0" data-index="53" data-total="600" data-hp="91" data-attack="134" data-defense="95" data-spatk="100" data-spdef="100" data-speed="80">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/054_0149_カイリュー_149.png" alt="カイリュー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -3298,6 +3372,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553242" target="_blank" rel="noopener noreferrer" aria-label="メガカイリューの詳細ページを開く" data-types="dragon flying" data-strong="1" data-index="54" data-total="700" data-hp="91" data-attack="124" data-defense="115" data-spatk="145" data-spdef="125" data-speed="100">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/055_0149_メガカイリュー_149_1.png" alt="メガカイリュー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -3347,6 +3422,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553243" target="_blank" rel="noopener noreferrer" aria-label="メガニウムの詳細ページを開く" data-types="grass" data-strong="0" data-index="55" data-total="525" data-hp="80" data-attack="82" data-defense="100" data-spatk="83" data-spdef="100" data-speed="80">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/056_0154_メガニウム_154.png" alt="メガニウム" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -3397,6 +3473,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553244" target="_blank" rel="noopener noreferrer" aria-label="メガメガニウムの詳細ページを開く" data-types="grass fairy" data-strong="1" data-index="56" data-total="625" data-hp="80" data-attack="92" data-defense="115" data-spatk="143" data-spdef="115" data-speed="80">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/057_0154_メガメガニウム_154_1.png" alt="メガメガニウム" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -3446,6 +3523,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553245" target="_blank" rel="noopener noreferrer" aria-label="バクフーンの詳細ページを開く" data-types="fire" data-strong="0" data-index="57" data-total="534" data-hp="78" data-attack="84" data-defense="78" data-spatk="109" data-spdef="85" data-speed="100">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/058_0157_バクフーン_157.png" alt="バクフーン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -3495,6 +3573,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554150" target="_blank" rel="noopener noreferrer" aria-label="ヒスイバクフーンの詳細ページを開く" data-types="fire ghost" data-strong="0" data-index="58" data-total="534" data-hp="73" data-attack="84" data-defense="78" data-spatk="119" data-spdef="85" data-speed="95">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/059_0157_ヒスイバクフーン_157_1.png" alt="ヒスイバクフーン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -3545,6 +3624,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553246" target="_blank" rel="noopener noreferrer" aria-label="オーダイルの詳細ページを開く" data-types="water" data-strong="0" data-index="59" data-total="530" data-hp="85" data-attack="105" data-defense="100" data-spatk="79" data-spdef="83" data-speed="78">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/060_0160_オーダイル_160.png" alt="オーダイル" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -3594,6 +3674,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553247" target="_blank" rel="noopener noreferrer" aria-label="メガオーダイルの詳細ページを開く" data-types="water dragon" data-strong="0" data-index="60" data-total="630" data-hp="85" data-attack="160" data-defense="125" data-spatk="89" data-spdef="93" data-speed="78">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/061_0160_メガオーダイル_160_1.png" alt="メガオーダイル" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -3643,6 +3724,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553248" target="_blank" rel="noopener noreferrer" aria-label="アリアドスの詳細ページを開く" data-types="bug poison" data-strong="0" data-index="61" data-total="400" data-hp="70" data-attack="90" data-defense="70" data-spatk="60" data-spdef="70" data-speed="40">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/062_0168_アリアドス_168.png" alt="アリアドス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -3694,6 +3776,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553249" target="_blank" rel="noopener noreferrer" aria-label="デンリュウの詳細ページを開く" data-types="electric" data-strong="0" data-index="62" data-total="510" data-hp="90" data-attack="75" data-defense="85" data-spatk="115" data-spdef="90" data-speed="55">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/063_0181_デンリュウ_181.png" alt="デンリュウ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -3743,6 +3826,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553250" target="_blank" rel="noopener noreferrer" aria-label="メガデンリュウの詳細ページを開く" data-types="electric dragon" data-strong="0" data-index="63" data-total="610" data-hp="90" data-attack="95" data-defense="105" data-spatk="165" data-spdef="110" data-speed="45">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/064_0181_メガデンリュウ_181_1.png" alt="メガデンリュウ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -3792,6 +3876,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553251" target="_blank" rel="noopener noreferrer" aria-label="マリルリの詳細ページを開く" data-types="water fairy" data-strong="0" data-index="64" data-total="420" data-hp="100" data-attack="50" data-defense="80" data-spatk="60" data-spdef="80" data-speed="50">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/065_0184_マリルリ_184.png" alt="マリルリ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -3843,6 +3928,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553252" target="_blank" rel="noopener noreferrer" aria-label="ニョロトノの詳細ページを開く" data-types="water" data-strong="0" data-index="65" data-total="500" data-hp="90" data-attack="75" data-defense="75" data-spatk="90" data-spdef="100" data-speed="70">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/066_0186_ニョロトノ_186.png" alt="ニョロトノ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -3893,6 +3979,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553253" target="_blank" rel="noopener noreferrer" aria-label="エーフィの詳細ページを開く" data-types="psychic" data-strong="0" data-index="66" data-total="525" data-hp="65" data-attack="65" data-defense="60" data-spatk="130" data-spdef="95" data-speed="110">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/067_0196_エーフィ_196.png" alt="エーフィ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -3943,6 +4030,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553282" target="_blank" rel="noopener noreferrer" aria-label="ブラッキーの詳細ページを開く" data-types="dark" data-strong="1" data-index="67" data-total="525" data-hp="95" data-attack="65" data-defense="110" data-spatk="60" data-spdef="130" data-speed="65">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/068_0197_ブラッキー_197.png" alt="ブラッキー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -3992,6 +4080,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553283" target="_blank" rel="noopener noreferrer" aria-label="ヤドキングの詳細ページを開く" data-types="water psychic" data-strong="0" data-index="68" data-total="490" data-hp="95" data-attack="75" data-defense="80" data-spatk="100" data-spdef="110" data-speed="30">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/069_0199_ヤドキング_199.png" alt="ヤドキング" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -4043,6 +4132,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553284" target="_blank" rel="noopener noreferrer" aria-label="ガラルヤドキングの詳細ページを開く" data-types="poison psychic" data-strong="0" data-index="69" data-total="490" data-hp="95" data-attack="65" data-defense="80" data-spatk="110" data-spdef="110" data-speed="30">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/070_0199_ガラルヤドキング_199_1.png" alt="ガラルヤドキング" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -4094,6 +4184,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554394" target="_blank" rel="noopener noreferrer" aria-label="フォレトスの詳細ページを開く" data-types="bug steel" data-strong="0" data-index="70" data-total="465" data-hp="75" data-attack="90" data-defense="140" data-spatk="60" data-spdef="60" data-speed="40">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/071_0205_フォレトス_205.png" alt="フォレトス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -4144,6 +4235,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553318" target="_blank" rel="noopener noreferrer" aria-label="ハガネールの詳細ページを開く" data-types="steel ground" data-strong="0" data-index="71" data-total="510" data-hp="75" data-attack="85" data-defense="200" data-spatk="55" data-spdef="65" data-speed="30">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/072_0208_ハガネール_208.png" alt="ハガネール" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -4195,6 +4287,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553319" target="_blank" rel="noopener noreferrer" aria-label="メガハガネールの詳細ページを開く" data-types="steel ground" data-strong="0" data-index="72" data-total="610" data-hp="75" data-attack="125" data-defense="230" data-spatk="55" data-spdef="95" data-speed="30">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/073_0208_メガハガネール_208_1.png" alt="メガハガネール" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -4244,6 +4337,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564112" target="_blank" rel="noopener noreferrer" aria-label="ハリーセンの詳細ページを開く" data-types="water poison" data-strong="0" data-index="73" data-total="440" data-hp="65" data-attack="95" data-defense="85" data-spatk="55" data-spdef="55" data-speed="85">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/074_0211_ハリーセン_211.png" alt="ハリーセン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -4295,6 +4389,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553285" target="_blank" rel="noopener noreferrer" aria-label="ハッサムの詳細ページを開く" data-types="bug steel" data-strong="0" data-index="74" data-total="500" data-hp="70" data-attack="130" data-defense="100" data-spatk="55" data-spdef="80" data-speed="65">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/075_0212_ハッサム_212.png" alt="ハッサム" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -4347,6 +4442,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553286" target="_blank" rel="noopener noreferrer" aria-label="メガハッサムの詳細ページを開く" data-types="bug steel" data-strong="1" data-index="75" data-total="600" data-hp="70" data-attack="150" data-defense="140" data-spatk="65" data-spdef="100" data-speed="75">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/076_0212_メガハッサム_212_1.png" alt="メガハッサム" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -4396,6 +4492,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553287" target="_blank" rel="noopener noreferrer" aria-label="ヘラクロスの詳細ページを開く" data-types="bug fighting" data-strong="0" data-index="76" data-total="500" data-hp="80" data-attack="125" data-defense="75" data-spatk="40" data-spdef="95" data-speed="85">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/077_0214_ヘラクロス_214.png" alt="ヘラクロス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -4447,6 +4544,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553288" target="_blank" rel="noopener noreferrer" aria-label="メガヘラクロスの詳細ページを開く" data-types="bug fighting" data-strong="0" data-index="77" data-total="600" data-hp="80" data-attack="185" data-defense="115" data-spatk="40" data-spdef="105" data-speed="75">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/078_0214_メガヘラクロス_214_1.png" alt="メガヘラクロス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -4496,6 +4594,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553289" target="_blank" rel="noopener noreferrer" aria-label="エアームドの詳細ページを開く" data-types="steel flying" data-strong="0" data-index="78" data-total="465" data-hp="65" data-attack="80" data-defense="140" data-spatk="40" data-spdef="70" data-speed="70">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/079_0227_エアームド_227.png" alt="エアームド" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -4547,6 +4646,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554205" target="_blank" rel="noopener noreferrer" aria-label="メガエアームドの詳細ページを開く" data-types="steel flying" data-strong="0" data-index="79" data-total="565" data-hp="65" data-attack="140" data-defense="110" data-spatk="40" data-spdef="100" data-speed="110">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/080_0227_メガエアームド_227_1.png" alt="メガエアームド" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -4596,6 +4696,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553290" target="_blank" rel="noopener noreferrer" aria-label="ヘルガーの詳細ページを開く" data-types="dark fire" data-strong="0" data-index="80" data-total="500" data-hp="75" data-attack="90" data-defense="50" data-spatk="110" data-spdef="80" data-speed="95">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/081_0229_ヘルガー_229.png" alt="ヘルガー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -4647,6 +4748,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553291" target="_blank" rel="noopener noreferrer" aria-label="メガヘルガーの詳細ページを開く" data-types="dark fire" data-strong="0" data-index="81" data-total="600" data-hp="75" data-attack="90" data-defense="90" data-spatk="140" data-spdef="90" data-speed="115">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/082_0229_メガヘルガー_229_1.png" alt="メガヘルガー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -4696,6 +4798,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553292" target="_blank" rel="noopener noreferrer" aria-label="バンギラスの詳細ページを開く" data-types="rock dark" data-strong="0" data-index="82" data-total="600" data-hp="100" data-attack="134" data-defense="110" data-spatk="95" data-spdef="100" data-speed="61">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/083_0248_バンギラス_248.png" alt="バンギラス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -4746,6 +4849,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553293" target="_blank" rel="noopener noreferrer" aria-label="メガバンギラスの詳細ページを開く" data-types="rock dark" data-strong="0" data-index="83" data-total="700" data-hp="100" data-attack="164" data-defense="150" data-spatk="95" data-spdef="120" data-speed="71">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/084_0248_メガバンギラス_248_1.png" alt="メガバンギラス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -4795,6 +4899,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564138" target="_blank" rel="noopener noreferrer" aria-label="ジュカインの詳細ページを開く" data-types="grass" data-strong="0" data-index="84" data-total="530" data-hp="70" data-attack="85" data-defense="65" data-spatk="105" data-spdef="85" data-speed="120">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/085_0254_ジュカイン_254.png" alt="ジュカイン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -4844,6 +4949,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564158" target="_blank" rel="noopener noreferrer" aria-label="メガジュカインの詳細ページを開く" data-types="grass dragon" data-strong="0" data-index="85" data-total="630" data-hp="70" data-attack="110" data-defense="75" data-spatk="145" data-spdef="85" data-speed="145">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/086_0254_メガジュカイン_254_1.png" alt="メガジュカイン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -4894,6 +5000,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564137" target="_blank" rel="noopener noreferrer" aria-label="バシャーモの詳細ページを開く" data-types="fire fighting" data-strong="1" data-index="86" data-total="530" data-hp="80" data-attack="120" data-defense="70" data-spatk="110" data-spdef="70" data-speed="80">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/087_0257_バシャーモ_257.png" alt="バシャーモ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -4945,6 +5052,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564157" target="_blank" rel="noopener noreferrer" aria-label="メガバシャーモの詳細ページを開く" data-types="fire fighting" data-strong="1" data-index="87" data-total="630" data-hp="80" data-attack="160" data-defense="80" data-spatk="130" data-spdef="80" data-speed="100">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/088_0257_メガバシャーモ_257_1.png" alt="メガバシャーモ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -4995,6 +5103,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564136" target="_blank" rel="noopener noreferrer" aria-label="ラグラージの詳細ページを開く" data-types="water ground" data-strong="1" data-index="88" data-total="535" data-hp="100" data-attack="110" data-defense="90" data-spatk="85" data-spdef="90" data-speed="60">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/089_0260_ラグラージ_260.png" alt="ラグラージ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -5046,6 +5155,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564156" target="_blank" rel="noopener noreferrer" aria-label="メガラグラージの詳細ページを開く" data-types="water ground" data-strong="1" data-index="89" data-total="635" data-hp="100" data-attack="150" data-defense="110" data-spatk="95" data-spdef="110" data-speed="70">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/090_0260_メガラグラージ_260_1.png" alt="メガラグラージ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -5096,6 +5206,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553312" target="_blank" rel="noopener noreferrer" aria-label="ペリッパーの詳細ページを開く" data-types="water flying" data-strong="1" data-index="90" data-total="440" data-hp="60" data-attack="50" data-defense="100" data-spatk="95" data-spdef="70" data-speed="65">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/091_0279_ペリッパー_279.png" alt="ペリッパー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -5147,6 +5258,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553313" target="_blank" rel="noopener noreferrer" aria-label="サーナイトの詳細ページを開く" data-types="psychic fairy" data-strong="0" data-index="91" data-total="518" data-hp="68" data-attack="65" data-defense="65" data-spatk="125" data-spdef="115" data-speed="80">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/092_0282_サーナイト_282.png" alt="サーナイト" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -5198,6 +5310,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553314" target="_blank" rel="noopener noreferrer" aria-label="メガサーナイトの詳細ページを開く" data-types="psychic fairy" data-strong="0" data-index="92" data-total="618" data-hp="68" data-attack="85" data-defense="65" data-spatk="165" data-spdef="135" data-speed="100">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/093_0282_メガサーナイト_282_1.png" alt="メガサーナイト" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -5247,6 +5360,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553315" target="_blank" rel="noopener noreferrer" aria-label="ヤミラミの詳細ページを開く" data-types="dark ghost" data-strong="0" data-index="93" data-total="380" data-hp="50" data-attack="75" data-defense="75" data-spatk="65" data-spdef="65" data-speed="50">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/094_0302_ヤミラミ_302.png" alt="ヤミラミ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -5298,6 +5412,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553316" target="_blank" rel="noopener noreferrer" aria-label="メガヤミラミの詳細ページを開く" data-types="dark ghost" data-strong="0" data-index="94" data-total="480" data-hp="50" data-attack="85" data-defense="125" data-spatk="85" data-spdef="115" data-speed="20">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/095_0302_メガヤミラミ_302_1.png" alt="メガヤミラミ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -5347,6 +5462,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564135" target="_blank" rel="noopener noreferrer" aria-label="クチートの詳細ページを開く" data-types="steel fairy" data-strong="0" data-index="95" data-total="380" data-hp="50" data-attack="85" data-defense="85" data-spatk="55" data-spdef="55" data-speed="50">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/096_0303_クチート_303.png" alt="クチート" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -5399,6 +5515,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564155" target="_blank" rel="noopener noreferrer" aria-label="メガクチートの詳細ページを開く" data-types="steel fairy" data-strong="1" data-index="96" data-total="480" data-hp="50" data-attack="105" data-defense="125" data-spatk="55" data-spdef="95" data-speed="50">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/097_0303_メガクチート_303_1.png" alt="メガクチート" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -5448,6 +5565,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553317" target="_blank" rel="noopener noreferrer" aria-label="ボスゴドラの詳細ページを開く" data-types="steel rock" data-strong="0" data-index="97" data-total="530" data-hp="70" data-attack="110" data-defense="180" data-spatk="60" data-spdef="60" data-speed="50">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/098_0306_ボスゴドラ_306.png" alt="ボスゴドラ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -5499,6 +5617,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553320" target="_blank" rel="noopener noreferrer" aria-label="メガボスゴドラの詳細ページを開く" data-types="steel" data-strong="0" data-index="98" data-total="630" data-hp="70" data-attack="140" data-defense="230" data-spatk="60" data-spdef="80" data-speed="50">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/099_0306_メガボスゴドラ_306_1.png" alt="メガボスゴドラ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -5547,6 +5666,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554167" target="_blank" rel="noopener noreferrer" aria-label="チャーレムの詳細ページを開く" data-types="fighting psychic" data-strong="0" data-index="99" data-total="410" data-hp="60" data-attack="60" data-defense="75" data-spatk="60" data-spdef="75" data-speed="80">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/100_0308_チャーレム_308.png" alt="チャーレム" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -5597,6 +5717,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554168" target="_blank" rel="noopener noreferrer" aria-label="メガチャーレムの詳細ページを開く" data-types="fighting psychic" data-strong="0" data-index="100" data-total="510" data-hp="60" data-attack="100" data-defense="85" data-spatk="80" data-spdef="85" data-speed="100">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/101_0308_メガチャーレム_308_1.png" alt="メガチャーレム" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -5646,6 +5767,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553321" target="_blank" rel="noopener noreferrer" aria-label="ライボルトの詳細ページを開く" data-types="electric" data-strong="0" data-index="101" data-total="475" data-hp="70" data-attack="75" data-defense="60" data-spatk="105" data-spdef="60" data-speed="105">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/102_0310_ライボルト_310.png" alt="ライボルト" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -5696,6 +5818,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553322" target="_blank" rel="noopener noreferrer" aria-label="メガライボルトの詳細ページを開く" data-types="electric" data-strong="0" data-index="102" data-total="575" data-hp="70" data-attack="75" data-defense="80" data-spatk="135" data-spdef="80" data-speed="135">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/103_0310_メガライボルト_310_1.png" alt="メガライボルト" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -5744,6 +5867,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554169" target="_blank" rel="noopener noreferrer" aria-label="サメハダーの詳細ページを開く" data-types="water dark" data-strong="0" data-index="103" data-total="460" data-hp="70" data-attack="120" data-defense="40" data-spatk="95" data-spdef="40" data-speed="95">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/104_0319_サメハダー_319.png" alt="サメハダー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -5794,6 +5918,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554170" target="_blank" rel="noopener noreferrer" aria-label="メガサメハダーの詳細ページを開く" data-types="water dark" data-strong="0" data-index="104" data-total="560" data-hp="70" data-attack="140" data-defense="70" data-spatk="110" data-spdef="65" data-speed="105">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/105_0319_メガサメハダー_319_1.png" alt="メガサメハダー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -5843,6 +5968,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554171" target="_blank" rel="noopener noreferrer" aria-label="バクーダの詳細ページを開く" data-types="fire ground" data-strong="0" data-index="105" data-total="460" data-hp="70" data-attack="100" data-defense="70" data-spatk="105" data-spdef="75" data-speed="40">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/106_0323_バクーダ_323.png" alt="バクーダ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -5894,6 +6020,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554172" target="_blank" rel="noopener noreferrer" aria-label="メガバクーダの詳細ページを開く" data-types="fire ground" data-strong="0" data-index="106" data-total="560" data-hp="70" data-attack="120" data-defense="100" data-spatk="145" data-spdef="105" data-speed="20">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/107_0323_メガバクーダ_323_1.png" alt="メガバクーダ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -5943,6 +6070,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553328" target="_blank" rel="noopener noreferrer" aria-label="コータスの詳細ページを開く" data-types="fire" data-strong="0" data-index="107" data-total="470" data-hp="70" data-attack="85" data-defense="140" data-spatk="85" data-spdef="70" data-speed="20">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/108_0324_コータス_324.png" alt="コータス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -5993,6 +6121,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553329" target="_blank" rel="noopener noreferrer" aria-label="チルタリスの詳細ページを開く" data-types="dragon flying" data-strong="0" data-index="108" data-total="490" data-hp="75" data-attack="70" data-defense="90" data-spatk="70" data-spdef="105" data-speed="80">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/109_0334_チルタリス_334.png" alt="チルタリス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -6043,6 +6172,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553330" target="_blank" rel="noopener noreferrer" aria-label="メガチルタリスの詳細ページを開く" data-types="dragon fairy" data-strong="0" data-index="109" data-total="590" data-hp="75" data-attack="110" data-defense="110" data-spatk="110" data-spdef="105" data-speed="80">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/110_0334_メガチルタリス_334_1.png" alt="メガチルタリス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -6092,6 +6222,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553331" target="_blank" rel="noopener noreferrer" aria-label="ミロカロスの詳細ページを開く" data-types="water" data-strong="0" data-index="110" data-total="540" data-hp="95" data-attack="60" data-defense="79" data-spatk="100" data-spdef="125" data-speed="81">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/111_0350_ミロカロス_350.png" alt="ミロカロス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -6142,6 +6273,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553137" target="_blank" rel="noopener noreferrer" aria-label="ポワルンの詳細ページを開く" data-types="normal" data-strong="0" data-index="111" data-total="420" data-hp="70" data-attack="70" data-defense="70" data-spatk="70" data-spdef="70" data-speed="70">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/112_0351_ポワルン_351.png" alt="ポワルン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -6190,6 +6322,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553137" target="_blank" rel="noopener noreferrer" aria-label="ポワルン(たいようのすがた)の詳細ページを開く" data-types="fire" data-strong="0" data-index="112" data-total="420" data-hp="70" data-attack="70" data-defense="70" data-spatk="70" data-spdef="70" data-speed="70">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/113_0351_ポワルン(たいようのすがた)_351_1.png" alt="ポワルン(たいようのすがた)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -6238,6 +6371,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553137" target="_blank" rel="noopener noreferrer" aria-label="ポワルン(あまみずのすがた)の詳細ページを開く" data-types="water" data-strong="0" data-index="113" data-total="420" data-hp="70" data-attack="70" data-defense="70" data-spatk="70" data-spdef="70" data-speed="70">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/114_0351_ポワルン(あまみずのすがた)_351_2.png" alt="ポワルン(あまみずのすがた)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -6286,6 +6420,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553137" target="_blank" rel="noopener noreferrer" aria-label="ポワルン(ゆきぐものすがた)の詳細ページを開く" data-types="ice" data-strong="0" data-index="114" data-total="420" data-hp="70" data-attack="70" data-defense="70" data-spatk="70" data-spdef="70" data-speed="70">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/115_0351_ポワルン(ゆきぐものすがた)_351_3.png" alt="ポワルン(ゆきぐものすがた)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -6334,6 +6469,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553332" target="_blank" rel="noopener noreferrer" aria-label="ジュペッタの詳細ページを開く" data-types="ghost" data-strong="0" data-index="115" data-total="455" data-hp="64" data-attack="115" data-defense="65" data-spatk="83" data-spdef="63" data-speed="65">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/116_0354_ジュペッタ_354.png" alt="ジュペッタ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -6384,6 +6520,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554206" target="_blank" rel="noopener noreferrer" aria-label="メガジュペッタの詳細ページを開く" data-types="ghost" data-strong="0" data-index="116" data-total="555" data-hp="64" data-attack="165" data-defense="75" data-spatk="93" data-spdef="83" data-speed="75">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/117_0354_メガジュペッタ_354_1.png" alt="メガジュペッタ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -6432,6 +6569,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554173" target="_blank" rel="noopener noreferrer" aria-label="チリーンの詳細ページを開く" data-types="psychic" data-strong="0" data-index="117" data-total="455" data-hp="75" data-attack="50" data-defense="80" data-spatk="95" data-spdef="90" data-speed="65">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/118_0358_チリーン_358.png" alt="チリーン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -6480,6 +6618,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554174" target="_blank" rel="noopener noreferrer" aria-label="メガチリーンの詳細ページを開く" data-types="psychic steel" data-strong="0" data-index="118" data-total="555" data-hp="75" data-attack="50" data-defense="110" data-spatk="135" data-spdef="120" data-speed="65">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/119_0358_メガチリーン_358_1.png" alt="メガチリーン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -6529,6 +6668,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553333" target="_blank" rel="noopener noreferrer" aria-label="アブソルの詳細ページを開く" data-types="dark" data-strong="0" data-index="119" data-total="465" data-hp="65" data-attack="130" data-defense="60" data-spatk="75" data-spdef="60" data-speed="75">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/120_0359_アブソル_359.png" alt="アブソル" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -6579,6 +6719,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553334" target="_blank" rel="noopener noreferrer" aria-label="メガアブソルの詳細ページを開く" data-types="dark" data-strong="0" data-index="120" data-total="565" data-hp="65" data-attack="150" data-defense="60" data-spatk="115" data-spdef="60" data-speed="115">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/121_0359_メガアブソル_359_1.png" alt="メガアブソル" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -6627,6 +6768,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553335" target="_blank" rel="noopener noreferrer" aria-label="オニゴーリの詳細ページを開く" data-types="ice" data-strong="0" data-index="121" data-total="480" data-hp="80" data-attack="80" data-defense="80" data-spatk="80" data-spdef="80" data-speed="80">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/122_0362_オニゴーリ_362.png" alt="オニゴーリ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -6677,6 +6819,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554207" target="_blank" rel="noopener noreferrer" aria-label="メガオニゴーリの詳細ページを開く" data-types="ice" data-strong="0" data-index="122" data-total="580" data-hp="80" data-attack="120" data-defense="80" data-spatk="120" data-spdef="80" data-speed="100">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/123_0362_メガオニゴーリ_362_1.png" alt="メガオニゴーリ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -6725,6 +6868,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553336" target="_blank" rel="noopener noreferrer" aria-label="メタグロスの詳細ページを開く" data-types="steel psychic" data-strong="0" data-index="123" data-total="600" data-hp="80" data-attack="135" data-defense="130" data-spatk="95" data-spdef="90" data-speed="70">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/124_0376_メタグロス_376.png" alt="メタグロス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -6776,6 +6920,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564159" target="_blank" rel="noopener noreferrer" aria-label="メガメタグロスの詳細ページを開く" data-types="steel psychic" data-strong="1" data-index="124" data-total="700" data-hp="80" data-attack="145" data-defense="150" data-spatk="105" data-spdef="110" data-speed="110">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/125_0376_メガメタグロス_376_1.png" alt="メガメタグロス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -6825,6 +6970,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553337" target="_blank" rel="noopener noreferrer" aria-label="ドダイトスの詳細ページを開く" data-types="grass ground" data-strong="0" data-index="125" data-total="525" data-hp="95" data-attack="109" data-defense="105" data-spatk="75" data-spdef="85" data-speed="56">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/126_0389_ドダイトス_389.png" alt="ドダイトス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -6875,6 +7021,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553338" target="_blank" rel="noopener noreferrer" aria-label="ゴウカザルの詳細ページを開く" data-types="fire fighting" data-strong="0" data-index="126" data-total="534" data-hp="76" data-attack="104" data-defense="71" data-spatk="104" data-spdef="71" data-speed="108">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/127_0392_ゴウカザル_392.png" alt="ゴウカザル" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -6925,6 +7072,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553339" target="_blank" rel="noopener noreferrer" aria-label="エンペルトの詳細ページを開く" data-types="water steel" data-strong="0" data-index="127" data-total="530" data-hp="84" data-attack="86" data-defense="88" data-spatk="111" data-spdef="101" data-speed="60">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/128_0395_エンペルト_395.png" alt="エンペルト" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -6975,6 +7123,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564134" target="_blank" rel="noopener noreferrer" aria-label="ムクホークの詳細ページを開く" data-types="normal flying" data-strong="0" data-index="128" data-total="485" data-hp="85" data-attack="120" data-defense="70" data-spatk="50" data-spdef="60" data-speed="100">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/129_0398_ムクホーク_398.png" alt="ムクホーク" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -7026,6 +7175,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564153" target="_blank" rel="noopener noreferrer" aria-label="メガムクホークの詳細ページを開く" data-types="fighting flying" data-strong="1" data-index="129" data-total="585" data-hp="85" data-attack="140" data-defense="100" data-spatk="60" data-spdef="90" data-speed="110">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/130_0398_メガムクホーク_398_1.png" alt="メガムクホーク" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -7075,6 +7225,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554393" target="_blank" rel="noopener noreferrer" aria-label="レントラーの詳細ページを開く" data-types="electric" data-strong="0" data-index="130" data-total="523" data-hp="80" data-attack="120" data-defense="79" data-spatk="95" data-spdef="79" data-speed="70">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/131_0405_レントラー_405.png" alt="レントラー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -7125,6 +7276,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554392" target="_blank" rel="noopener noreferrer" aria-label="ロズレイドの詳細ページを開く" data-types="grass poison" data-strong="0" data-index="131" data-total="515" data-hp="60" data-attack="70" data-defense="65" data-spatk="125" data-spdef="105" data-speed="90">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/132_0407_ロズレイド_407.png" alt="ロズレイド" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -7176,6 +7328,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554391" target="_blank" rel="noopener noreferrer" aria-label="ラムパルドの詳細ページを開く" data-types="rock" data-strong="0" data-index="132" data-total="495" data-hp="97" data-attack="165" data-defense="60" data-spatk="65" data-spdef="50" data-speed="58">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/133_0409_ラムパルド_409.png" alt="ラムパルド" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -7225,6 +7378,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554390" target="_blank" rel="noopener noreferrer" aria-label="トリデプスの詳細ページを開く" data-types="rock steel" data-strong="0" data-index="133" data-total="495" data-hp="60" data-attack="52" data-defense="168" data-spatk="47" data-spdef="138" data-speed="30">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/134_0411_トリデプス_411.png" alt="トリデプス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -7275,6 +7429,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553340" target="_blank" rel="noopener noreferrer" aria-label="ミミロップの詳細ページを開く" data-types="normal" data-strong="0" data-index="134" data-total="480" data-hp="65" data-attack="76" data-defense="84" data-spatk="54" data-spdef="96" data-speed="105">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/135_0428_ミミロップ_428.png" alt="ミミロップ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -7326,6 +7481,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554166" target="_blank" rel="noopener noreferrer" aria-label="メガミミロップの詳細ページを開く" data-types="normal fighting" data-strong="1" data-index="135" data-total="580" data-hp="65" data-attack="136" data-defense="94" data-spatk="54" data-spdef="96" data-speed="135">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/136_0428_メガミミロップ_428_1.png" alt="メガミミロップ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -7375,6 +7531,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553341" target="_blank" rel="noopener noreferrer" aria-label="ミカルゲの詳細ページを開く" data-types="ghost dark" data-strong="0" data-index="136" data-total="485" data-hp="50" data-attack="92" data-defense="108" data-spatk="92" data-spdef="108" data-speed="35">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/137_0442_ミカルゲ_442.png" alt="ミカルゲ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -7426,6 +7583,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553342" target="_blank" rel="noopener noreferrer" aria-label="ガブリアスの詳細ページを開く" data-types="dragon ground" data-strong="1" data-index="137" data-total="600" data-hp="108" data-attack="130" data-defense="95" data-spatk="80" data-spdef="85" data-speed="102">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/138_0445_ガブリアス_445.png" alt="ガブリアス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -7476,6 +7634,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553343" target="_blank" rel="noopener noreferrer" aria-label="メガガブリアスの詳細ページを開く" data-types="dragon ground" data-strong="0" data-index="138" data-total="700" data-hp="108" data-attack="170" data-defense="115" data-spatk="120" data-spdef="95" data-speed="92">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/139_0445_メガガブリアス_445_1.png" alt="メガガブリアス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -7525,6 +7684,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553353" target="_blank" rel="noopener noreferrer" aria-label="ルカリオの詳細ページを開く" data-types="fighting steel" data-strong="0" data-index="139" data-total="525" data-hp="70" data-attack="110" data-defense="70" data-spatk="115" data-spdef="70" data-speed="90">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/140_0448_ルカリオ_448.png" alt="ルカリオ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -7577,6 +7737,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553354" target="_blank" rel="noopener noreferrer" aria-label="メガルカリオの詳細ページを開く" data-types="fighting steel" data-strong="1" data-index="140" data-total="625" data-hp="70" data-attack="145" data-defense="88" data-spatk="140" data-spdef="70" data-speed="112">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/141_0448_メガルカリオ_448_1.png" alt="メガルカリオ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -7627,6 +7788,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553355" target="_blank" rel="noopener noreferrer" aria-label="カバルドンの詳細ページを開く" data-types="ground" data-strong="1" data-index="141" data-total="525" data-hp="108" data-attack="112" data-defense="118" data-spatk="68" data-spdef="72" data-speed="47">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/142_0450_カバルドン_450.png" alt="カバルドン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -7676,6 +7838,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554387" target="_blank" rel="noopener noreferrer" aria-label="ドクロッグの詳細ページを開く" data-types="poison fighting" data-strong="0" data-index="142" data-total="490" data-hp="83" data-attack="106" data-defense="65" data-spatk="86" data-spdef="65" data-speed="85">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/143_0454_ドクロッグ_454.png" alt="ドクロッグ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -7727,6 +7890,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553356" target="_blank" rel="noopener noreferrer" aria-label="ユキノオーの詳細ページを開く" data-types="grass ice" data-strong="0" data-index="143" data-total="494" data-hp="90" data-attack="92" data-defense="75" data-spatk="92" data-spdef="85" data-speed="60">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/144_0460_ユキノオー_460.png" alt="ユキノオー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -7777,6 +7941,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553357" target="_blank" rel="noopener noreferrer" aria-label="メガユキノオーの詳細ページを開く" data-types="grass ice" data-strong="0" data-index="144" data-total="594" data-hp="90" data-attack="132" data-defense="105" data-spatk="132" data-spdef="105" data-speed="30">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/145_0460_メガユキノオー_460_1.png" alt="メガユキノオー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -7826,6 +7991,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553358" target="_blank" rel="noopener noreferrer" aria-label="マニューラの詳細ページを開く" data-types="dark ice" data-strong="0" data-index="145" data-total="510" data-hp="70" data-attack="120" data-defense="65" data-spatk="45" data-spdef="85" data-speed="125">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/146_0461_マニューラ_461.png" alt="マニューラ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -7876,6 +8042,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553359" target="_blank" rel="noopener noreferrer" aria-label="ドサイドンの詳細ページを開く" data-types="ground rock" data-strong="0" data-index="146" data-total="535" data-hp="115" data-attack="140" data-defense="130" data-spatk="55" data-spdef="55" data-speed="40">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/147_0464_ドサイドン_464.png" alt="ドサイドン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -7927,6 +8094,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553360" target="_blank" rel="noopener noreferrer" aria-label="リーフィアの詳細ページを開く" data-types="grass" data-strong="0" data-index="147" data-total="525" data-hp="65" data-attack="110" data-defense="130" data-spatk="60" data-spdef="65" data-speed="95">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/148_0470_リーフィア_470.png" alt="リーフィア" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -7976,6 +8144,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553361" target="_blank" rel="noopener noreferrer" aria-label="グレイシアの詳細ページを開く" data-types="ice" data-strong="0" data-index="148" data-total="525" data-hp="65" data-attack="60" data-defense="110" data-spatk="130" data-spdef="95" data-speed="65">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/149_0471_グレイシア_471.png" alt="グレイシア" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -8025,6 +8194,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553362" target="_blank" rel="noopener noreferrer" aria-label="グライオンの詳細ページを開く" data-types="ground flying" data-strong="0" data-index="149" data-total="510" data-hp="75" data-attack="95" data-defense="125" data-spatk="45" data-spdef="75" data-speed="95">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/150_0472_グライオン_472.png" alt="グライオン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -8077,6 +8247,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553363" target="_blank" rel="noopener noreferrer" aria-label="マンムーの詳細ページを開く" data-types="ice ground" data-strong="1" data-index="150" data-total="530" data-hp="110" data-attack="130" data-defense="80" data-spatk="70" data-spdef="60" data-speed="80">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/151_0473_マンムー_473.png" alt="マンムー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -8129,6 +8300,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553364" target="_blank" rel="noopener noreferrer" aria-label="エルレイドの詳細ページを開く" data-types="psychic fighting" data-strong="1" data-index="151" data-total="518" data-hp="68" data-attack="125" data-defense="65" data-spatk="65" data-spdef="115" data-speed="80">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/152_0475_エルレイド_475.png" alt="エルレイド" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -8180,6 +8352,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554208" target="_blank" rel="noopener noreferrer" aria-label="メガエルレイドの詳細ページを開く" data-types="psychic fighting" data-strong="0" data-index="152" data-total="618" data-hp="68" data-attack="165" data-defense="95" data-spatk="65" data-spdef="115" data-speed="110">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/153_0475_メガエルレイド_475_1.png" alt="メガエルレイド" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -8229,6 +8402,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553365" target="_blank" rel="noopener noreferrer" aria-label="ユキメノコの詳細ページを開く" data-types="ice ghost" data-strong="0" data-index="153" data-total="480" data-hp="70" data-attack="80" data-defense="70" data-spatk="80" data-spdef="70" data-speed="110">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/154_0478_ユキメノコ_478.png" alt="ユキメノコ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -8279,6 +8453,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553366" target="_blank" rel="noopener noreferrer" aria-label="メガユキメノコの詳細ページを開く" data-types="ice ghost" data-strong="0" data-index="154" data-total="580" data-hp="70" data-attack="80" data-defense="70" data-spatk="140" data-spdef="100" data-speed="120">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/155_0478_メガユキメノコ_478_1.png" alt="メガユキメノコ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -8328,6 +8503,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553367" target="_blank" rel="noopener noreferrer" aria-label="ロトムの詳細ページを開く" data-types="electric ghost" data-strong="0" data-index="155" data-total="440" data-hp="50" data-attack="50" data-defense="77" data-spatk="95" data-spdef="77" data-speed="91">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/156_0479_ロトム_479.png" alt="ロトム" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -8378,6 +8554,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553368" target="_blank" rel="noopener noreferrer" aria-label="ヒートロトムの詳細ページを開く" data-types="electric fire" data-strong="1" data-index="156" data-total="520" data-hp="50" data-attack="65" data-defense="107" data-spatk="105" data-spdef="107" data-speed="86">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/157_0479_ヒートロトム_479_1.png" alt="ヒートロトム" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -8428,6 +8605,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553369" target="_blank" rel="noopener noreferrer" aria-label="ウォッシュロトムの詳細ページを開く" data-types="electric water" data-strong="1" data-index="157" data-total="520" data-hp="50" data-attack="65" data-defense="107" data-spatk="105" data-spdef="107" data-speed="86">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/158_0479_ウォッシュロトム_479_2.png" alt="ウォッシュロトム" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -8477,6 +8655,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554389" target="_blank" rel="noopener noreferrer" aria-label="フロストロトムの詳細ページを開く" data-types="electric ice" data-strong="0" data-index="158" data-total="520" data-hp="50" data-attack="65" data-defense="107" data-spatk="105" data-spdef="107" data-speed="86">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/159_0479_フロストロトム_479_3.png" alt="フロストロトム" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -8526,6 +8705,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554388" target="_blank" rel="noopener noreferrer" aria-label="スピンロトムの詳細ページを開く" data-types="electric flying" data-strong="0" data-index="159" data-total="520" data-hp="50" data-attack="65" data-defense="107" data-spatk="105" data-spdef="107" data-speed="86">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/160_0479_スピンロトム_479_4.png" alt="スピンロトム" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -8575,6 +8755,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553370" target="_blank" rel="noopener noreferrer" aria-label="カットロトムの詳細ページを開く" data-types="electric grass" data-strong="0" data-index="160" data-total="520" data-hp="50" data-attack="65" data-defense="107" data-spatk="105" data-spdef="107" data-speed="86">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/161_0479_カットロトム_479_5.png" alt="カットロトム" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -8624,6 +8805,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553371" target="_blank" rel="noopener noreferrer" aria-label="ジャローダの詳細ページを開く" data-types="grass" data-strong="0" data-index="161" data-total="528" data-hp="75" data-attack="75" data-defense="95" data-spatk="75" data-spdef="95" data-speed="113">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/162_0497_ジャローダ_497.png" alt="ジャローダ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -8673,6 +8855,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553372" target="_blank" rel="noopener noreferrer" aria-label="エンブオーの詳細ページを開く" data-types="fire fighting" data-strong="0" data-index="162" data-total="528" data-hp="110" data-attack="123" data-defense="65" data-spatk="100" data-spdef="65" data-speed="65">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/163_0500_エンブオー_500.png" alt="エンブオー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -8723,6 +8906,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553373" target="_blank" rel="noopener noreferrer" aria-label="メガエンブオーの詳細ページを開く" data-types="fire fighting" data-strong="0" data-index="163" data-total="628" data-hp="110" data-attack="148" data-defense="75" data-spatk="110" data-spdef="110" data-speed="75">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/164_0500_メガエンブオー_500_1.png" alt="メガエンブオー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -8772,6 +8956,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553374" target="_blank" rel="noopener noreferrer" aria-label="ダイケンキの詳細ページを開く" data-types="water" data-strong="0" data-index="164" data-total="528" data-hp="95" data-attack="100" data-defense="85" data-spatk="108" data-spdef="70" data-speed="70">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/165_0503_ダイケンキ_503.png" alt="ダイケンキ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -8822,6 +9007,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553375" target="_blank" rel="noopener noreferrer" aria-label="ヒスイダイケンキの詳細ページを開く" data-types="water dark" data-strong="1" data-index="165" data-total="528" data-hp="90" data-attack="108" data-defense="80" data-spatk="100" data-spdef="65" data-speed="85">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/166_0503_ヒスイダイケンキ_503_1.png" alt="ヒスイダイケンキ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -8872,6 +9058,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554386" target="_blank" rel="noopener noreferrer" aria-label="ミルホッグの詳細ページを開く" data-types="normal" data-strong="0" data-index="166" data-total="420" data-hp="60" data-attack="85" data-defense="69" data-spatk="60" data-spdef="69" data-speed="77">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/167_0505_ミルホッグ_505.png" alt="ミルホッグ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -8922,6 +9109,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554385" target="_blank" rel="noopener noreferrer" aria-label="レパルダスの詳細ページを開く" data-types="dark" data-strong="0" data-index="167" data-total="446" data-hp="64" data-attack="88" data-defense="50" data-spatk="88" data-spdef="50" data-speed="106">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/168_0510_レパルダス_510.png" alt="レパルダス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -8972,6 +9160,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554384" target="_blank" rel="noopener noreferrer" aria-label="ヤナッキーの詳細ページを開く" data-types="grass" data-strong="0" data-index="168" data-total="498" data-hp="75" data-attack="98" data-defense="63" data-spatk="98" data-spdef="63" data-speed="101">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/169_0512_ヤナッキー_512.png" alt="ヤナッキー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -9021,6 +9210,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554383" target="_blank" rel="noopener noreferrer" aria-label="バオッキーの詳細ページを開く" data-types="fire" data-strong="0" data-index="169" data-total="498" data-hp="75" data-attack="98" data-defense="63" data-spatk="98" data-spdef="63" data-speed="101">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/170_0514_バオッキー_514.png" alt="バオッキー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -9070,6 +9260,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554382" target="_blank" rel="noopener noreferrer" aria-label="ヒヤッキーの詳細ページを開く" data-types="water" data-strong="0" data-index="170" data-total="498" data-hp="75" data-attack="98" data-defense="63" data-spatk="98" data-spdef="63" data-speed="101">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/171_0516_ヒヤッキー_516.png" alt="ヒヤッキー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -9119,6 +9310,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564140" target="_blank" rel="noopener noreferrer" aria-label="ムシャーナの詳細ページを開く" data-types="psychic" data-strong="0" data-index="171" data-total="487" data-hp="116" data-attack="55" data-defense="85" data-spatk="107" data-spdef="95" data-speed="29">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/172_0518_ムシャーナ_518.png" alt="ムシャーナ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -9169,6 +9361,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553376" target="_blank" rel="noopener noreferrer" aria-label="ドリュウズの詳細ページを開く" data-types="ground steel" data-strong="0" data-index="172" data-total="508" data-hp="110" data-attack="135" data-defense="60" data-spatk="50" data-spdef="65" data-speed="88">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/173_0530_ドリュウズ_530.png" alt="ドリュウズ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -9220,6 +9413,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554209" target="_blank" rel="noopener noreferrer" aria-label="メガドリュウズの詳細ページを開く" data-types="ground steel" data-strong="0" data-index="173" data-total="608" data-hp="110" data-attack="165" data-defense="100" data-spatk="65" data-spdef="65" data-speed="103">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/174_0530_メガドリュウズ_530_1.png" alt="メガドリュウズ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -9269,6 +9463,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553377" target="_blank" rel="noopener noreferrer" aria-label="タブンネの詳細ページを開く" data-types="normal" data-strong="0" data-index="174" data-total="445" data-hp="103" data-attack="60" data-defense="86" data-spatk="60" data-spdef="86" data-speed="50">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/175_0531_タブンネ_531.png" alt="タブンネ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -9319,6 +9514,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553378" target="_blank" rel="noopener noreferrer" aria-label="メガタブンネの詳細ページを開く" data-types="normal fairy" data-strong="0" data-index="175" data-total="545" data-hp="103" data-attack="60" data-defense="126" data-spatk="80" data-spdef="126" data-speed="50">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/176_0531_メガタブンネ_531_1.png" alt="メガタブンネ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -9368,6 +9564,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553390" target="_blank" rel="noopener noreferrer" aria-label="ローブシンの詳細ページを開く" data-types="fighting" data-strong="0" data-index="176" data-total="505" data-hp="105" data-attack="140" data-defense="95" data-spatk="55" data-spdef="65" data-speed="45">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/177_0534_ローブシン_534.png" alt="ローブシン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -9418,6 +9615,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564133" target="_blank" rel="noopener noreferrer" aria-label="ペンドラーの詳細ページを開く" data-types="bug poison" data-strong="0" data-index="177" data-total="485" data-hp="60" data-attack="100" data-defense="89" data-spatk="55" data-spdef="69" data-speed="112">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/178_0545_ペンドラー_545.png" alt="ペンドラー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -9469,6 +9667,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564152" target="_blank" rel="noopener noreferrer" aria-label="メガペンドラーの詳細ページを開く" data-types="bug poison" data-strong="0" data-index="178" data-total="585" data-hp="60" data-attack="140" data-defense="149" data-spatk="75" data-spdef="99" data-speed="62">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/179_0545_メガペンドラー_545_1.png" alt="メガペンドラー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -9519,6 +9718,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553389" target="_blank" rel="noopener noreferrer" aria-label="エルフーンの詳細ページを開く" data-types="grass fairy" data-strong="1" data-index="179" data-total="480" data-hp="60" data-attack="67" data-defense="85" data-spatk="77" data-spdef="75" data-speed="116">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/180_0547_エルフーン_547.png" alt="エルフーン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -9570,6 +9770,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553388" target="_blank" rel="noopener noreferrer" aria-label="ワルビアルの詳細ページを開く" data-types="ground dark" data-strong="0" data-index="180" data-total="519" data-hp="95" data-attack="117" data-defense="80" data-spatk="65" data-spdef="70" data-speed="92">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/181_0553_ワルビアル_553.png" alt="ワルビアル" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -9621,6 +9822,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564132" target="_blank" rel="noopener noreferrer" aria-label="ズルズキンの詳細ページを開く" data-types="dark fighting" data-strong="0" data-index="181" data-total="488" data-hp="65" data-attack="90" data-defense="115" data-spatk="45" data-spdef="115" data-speed="58">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/182_0560_ズルズキン_560.png" alt="ズルズキン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -9672,6 +9874,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564151" target="_blank" rel="noopener noreferrer" aria-label="メガズルズキンの詳細ページを開く" data-types="dark fighting" data-strong="0" data-index="182" data-total="588" data-hp="65" data-attack="130" data-defense="135" data-spatk="55" data-spdef="135" data-speed="68">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/183_0560_メガズルズキン_560_1.png" alt="メガズルズキン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -9721,6 +9924,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554381" target="_blank" rel="noopener noreferrer" aria-label="デスカーンの詳細ページを開く" data-types="ghost" data-strong="0" data-index="183" data-total="483" data-hp="58" data-attack="50" data-defense="145" data-spatk="95" data-spdef="105" data-speed="30">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/184_0563_デスカーン_563.png" alt="デスカーン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -9769,6 +9973,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553387" target="_blank" rel="noopener noreferrer" aria-label="ダストダスの詳細ページを開く" data-types="poison" data-strong="0" data-index="184" data-total="474" data-hp="80" data-attack="95" data-defense="82" data-spatk="60" data-spdef="82" data-speed="75">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/185_0569_ダストダス_569.png" alt="ダストダス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -9819,6 +10024,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553386" target="_blank" rel="noopener noreferrer" aria-label="ゾロアークの詳細ページを開く" data-types="dark" data-strong="0" data-index="185" data-total="510" data-hp="60" data-attack="105" data-defense="60" data-spatk="120" data-spdef="60" data-speed="105">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/186_0571_ゾロアーク_571.png" alt="ゾロアーク" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -9868,6 +10074,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553385" target="_blank" rel="noopener noreferrer" aria-label="ヒスイゾロアークの詳細ページを開く" data-types="normal ghost" data-strong="1" data-index="186" data-total="510" data-hp="55" data-attack="100" data-defense="60" data-spatk="125" data-spdef="60" data-speed="110">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/187_0571_ヒスイゾロアーク_571_1.png" alt="ヒスイゾロアーク" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -9917,6 +10124,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554380" target="_blank" rel="noopener noreferrer" aria-label="ランクルスの詳細ページを開く" data-types="psychic" data-strong="0" data-index="187" data-total="490" data-hp="110" data-attack="65" data-defense="75" data-spatk="125" data-spdef="85" data-speed="30">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/188_0579_ランクルス_579.png" alt="ランクルス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -9968,6 +10176,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553384" target="_blank" rel="noopener noreferrer" aria-label="バイバニラの詳細ページを開く" data-types="ice" data-strong="1" data-index="188" data-total="535" data-hp="71" data-attack="95" data-defense="85" data-spatk="110" data-spdef="95" data-speed="79">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/189_0584_バイバニラ_584.png" alt="バイバニラ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -10018,6 +10227,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553383" target="_blank" rel="noopener noreferrer" aria-label="エモンガの詳細ページを開く" data-types="electric flying" data-strong="0" data-index="189" data-total="428" data-hp="55" data-attack="75" data-defense="60" data-spatk="75" data-spdef="60" data-speed="103">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/190_0587_エモンガ_587.png" alt="エモンガ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -10068,6 +10278,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564131" target="_blank" rel="noopener noreferrer" aria-label="シビルドンの詳細ページを開く" data-types="electric" data-strong="0" data-index="190" data-total="515" data-hp="85" data-attack="115" data-defense="80" data-spatk="105" data-spdef="80" data-speed="50">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/191_0604_シビルドン_604.png" alt="シビルドン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -10116,6 +10327,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564150" target="_blank" rel="noopener noreferrer" aria-label="メガシビルドンの詳細ページを開く" data-types="electric" data-strong="0" data-index="191" data-total="615" data-hp="85" data-attack="145" data-defense="80" data-spatk="135" data-spdef="90" data-speed="80">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/192_0604_メガシビルドン_604_1.png" alt="メガシビルドン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -10164,6 +10376,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554175" target="_blank" rel="noopener noreferrer" aria-label="シャンデラの詳細ページを開く" data-types="ghost fire" data-strong="0" data-index="192" data-total="520" data-hp="60" data-attack="55" data-defense="90" data-spatk="145" data-spdef="90" data-speed="80">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/193_0609_シャンデラ_609.png" alt="シャンデラ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -10215,6 +10428,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554176" target="_blank" rel="noopener noreferrer" aria-label="メガシャンデラの詳細ページを開く" data-types="ghost fire" data-strong="0" data-index="193" data-total="620" data-hp="60" data-attack="75" data-defense="110" data-spatk="175" data-spdef="110" data-speed="90">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/194_0609_メガシャンデラ_609_1.png" alt="メガシャンデラ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -10264,6 +10478,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554379" target="_blank" rel="noopener noreferrer" aria-label="ツンベアーの詳細ページを開く" data-types="ice" data-strong="0" data-index="194" data-total="505" data-hp="95" data-attack="130" data-defense="80" data-spatk="70" data-spdef="80" data-speed="50">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/195_0614_ツンベアー_614.png" alt="ツンベアー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -10314,6 +10529,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554378" target="_blank" rel="noopener noreferrer" aria-label="マッギョの詳細ページを開く" data-types="ground electric" data-strong="0" data-index="195" data-total="471" data-hp="109" data-attack="66" data-defense="84" data-spatk="81" data-spdef="99" data-speed="32">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/196_0618_マッギョ_618.png" alt="マッギョ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -10365,6 +10581,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553382" target="_blank" rel="noopener noreferrer" aria-label="ガラルマッギョの詳細ページを開く" data-types="ground steel" data-strong="0" data-index="196" data-total="471" data-hp="109" data-attack="81" data-defense="99" data-spatk="66" data-spdef="84" data-speed="32">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/197_0618_ガラルマッギョ_618_1.png" alt="ガラルマッギョ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -10414,6 +10631,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553381" target="_blank" rel="noopener noreferrer" aria-label="ゴルーグの詳細ページを開く" data-types="ground ghost" data-strong="0" data-index="197" data-total="483" data-hp="89" data-attack="124" data-defense="80" data-spatk="55" data-spdef="80" data-speed="55">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/198_0623_ゴルーグ_623.png" alt="ゴルーグ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -10465,6 +10683,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554210" target="_blank" rel="noopener noreferrer" aria-label="メガゴルーグの詳細ページを開く" data-types="ground ghost" data-strong="0" data-index="198" data-total="583" data-hp="89" data-attack="159" data-defense="105" data-spatk="70" data-spdef="105" data-speed="55">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/199_0623_メガゴルーグ_623_1.png" alt="メガゴルーグ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -10515,6 +10734,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553380" target="_blank" rel="noopener noreferrer" aria-label="サザンドラの詳細ページを開く" data-types="dark dragon" data-strong="1" data-index="199" data-total="600" data-hp="92" data-attack="105" data-defense="90" data-spatk="125" data-spdef="90" data-speed="98">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/200_0635_サザンドラ_635.png" alt="サザンドラ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -10565,6 +10785,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553379" target="_blank" rel="noopener noreferrer" aria-label="ウルガモスの詳細ページを開く" data-types="bug fire" data-strong="1" data-index="200" data-total="550" data-hp="85" data-attack="60" data-defense="65" data-spatk="135" data-spdef="105" data-speed="100">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/201_0637_ウルガモス_637.png" alt="ウルガモス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -10615,6 +10836,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553352" target="_blank" rel="noopener noreferrer" aria-label="ブリガロンの詳細ページを開く" data-types="grass fighting" data-strong="0" data-index="201" data-total="530" data-hp="88" data-attack="107" data-defense="122" data-spatk="74" data-spdef="75" data-speed="64">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/202_0652_ブリガロン_652.png" alt="ブリガロン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -10665,6 +10887,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553351" target="_blank" rel="noopener noreferrer" aria-label="メガブリガロンの詳細ページを開く" data-types="grass fighting" data-strong="0" data-index="202" data-total="630" data-hp="88" data-attack="137" data-defense="172" data-spatk="74" data-spdef="115" data-speed="44">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/203_0652_メガブリガロン_652_1.png" alt="メガブリガロン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -10714,6 +10937,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553350" target="_blank" rel="noopener noreferrer" aria-label="マフォクシーの詳細ページを開く" data-types="fire psychic" data-strong="0" data-index="203" data-total="534" data-hp="75" data-attack="69" data-defense="72" data-spatk="114" data-spdef="100" data-speed="104">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/204_0655_マフォクシー_655.png" alt="マフォクシー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -10765,6 +10989,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553349" target="_blank" rel="noopener noreferrer" aria-label="メガマフォクシーの詳細ページを開く" data-types="fire psychic" data-strong="1" data-index="204" data-total="634" data-hp="75" data-attack="69" data-defense="72" data-spatk="159" data-spdef="125" data-speed="134">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/205_0655_メガマフォクシー_655_1.png" alt="メガマフォクシー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -10815,6 +11040,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553348" target="_blank" rel="noopener noreferrer" aria-label="ゲッコウガの詳細ページを開く" data-types="water dark" data-strong="1" data-index="205" data-total="530" data-hp="72" data-attack="95" data-defense="67" data-spatk="103" data-spdef="71" data-speed="122">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/206_0658_ゲッコウガ_658.png" alt="ゲッコウガ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -10866,6 +11092,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553347" target="_blank" rel="noopener noreferrer" aria-label="メガゲッコウガの詳細ページを開く" data-types="water dark" data-strong="1" data-index="206" data-total="630" data-hp="72" data-attack="125" data-defense="77" data-spatk="133" data-spdef="81" data-speed="142">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/207_0658_メガゲッコウガ_658_1.png" alt="メガゲッコウガ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -10915,6 +11142,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553346" target="_blank" rel="noopener noreferrer" aria-label="ホルードの詳細ページを開く" data-types="normal ground" data-strong="0" data-index="207" data-total="423" data-hp="85" data-attack="56" data-defense="77" data-spatk="50" data-spdef="77" data-speed="78">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/208_0660_ホルード_660.png" alt="ホルード" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -10966,6 +11194,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553345" target="_blank" rel="noopener noreferrer" aria-label="ファイアローの詳細ページを開く" data-types="fire flying" data-strong="0" data-index="208" data-total="499" data-hp="78" data-attack="81" data-defense="71" data-spatk="74" data-spdef="69" data-speed="126">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/209_0663_ファイアロー_663.png" alt="ファイアロー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -11016,6 +11245,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553327" target="_blank" rel="noopener noreferrer" aria-label="ビビヨンの詳細ページを開く" data-types="bug flying" data-strong="0" data-index="209" data-total="411" data-hp="80" data-attack="52" data-defense="50" data-spatk="90" data-spdef="50" data-speed="89">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/210_0666_ビビヨン_666.png" alt="ビビヨン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -11067,6 +11297,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564130" target="_blank" rel="noopener noreferrer" aria-label="カエンジシ(オスのすがた)の詳細ページを開く" data-types="fire normal" data-strong="0" data-index="210" data-total="507" data-hp="86" data-attack="68" data-defense="72" data-spatk="109" data-spdef="66" data-speed="106">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/211_0668_カエンジシ(オスのすがた)_668.png" alt="カエンジシ(オスのすがた)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -11118,6 +11349,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/" target="_blank" rel="noopener noreferrer" aria-label="カエンジシ(メスのすがた)の詳細ページを開く" data-types="fire normal" data-strong="0" data-index="211" data-total="507" data-hp="86" data-attack="68" data-defense="72" data-spatk="109" data-spdef="66" data-speed="106">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/212_0668_カエンジシ(メスのすがた)_668_1.png" alt="カエンジシ(メスのすがた)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -11169,6 +11401,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564149" target="_blank" rel="noopener noreferrer" aria-label="メガカエンジシの詳細ページを開く" data-types="fire normal" data-strong="0" data-index="212" data-total="607" data-hp="86" data-attack="88" data-defense="92" data-spatk="129" data-spdef="86" data-speed="126">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/213_0668_メガカエンジシ_668_2.png" alt="メガカエンジシ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -11218,6 +11451,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553326" target="_blank" rel="noopener noreferrer" aria-label="フラエッテ(えいえんのはな)の詳細ページを開く" data-types="fairy" data-strong="0" data-index="213" data-total="551" data-hp="74" data-attack="65" data-defense="67" data-spatk="125" data-spdef="128" data-speed="92">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/214_0670_フラエッテ(えいえんのはな)_670_2.png" alt="フラエッテ(えいえんのはな)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -11268,6 +11502,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553325" target="_blank" rel="noopener noreferrer" aria-label="メガフラエッテ(えいえんのはな)の詳細ページを開く" data-types="fairy" data-strong="1" data-index="214" data-total="651" data-hp="74" data-attack="85" data-defense="87" data-spatk="155" data-spdef="148" data-speed="102">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/215_0670_メガフラエッテ(えいえんのはな)_670_1.png" alt="メガフラエッテ(えいえんのはな)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -11316,6 +11551,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554377" target="_blank" rel="noopener noreferrer" aria-label="フラージェスの詳細ページを開く" data-types="fairy" data-strong="0" data-index="215" data-total="552" data-hp="78" data-attack="65" data-defense="68" data-spatk="112" data-spdef="154" data-speed="75">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/216_0671_フラージェス_671.png" alt="フラージェス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -11365,6 +11601,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554376" target="_blank" rel="noopener noreferrer" aria-label="ゴロンダの詳細ページを開く" data-types="fighting dark" data-strong="0" data-index="216" data-total="495" data-hp="95" data-attack="124" data-defense="78" data-spatk="69" data-spdef="71" data-speed="58">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/217_0675_ゴロンダ_675.png" alt="ゴロンダ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -11416,6 +11653,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553281" target="_blank" rel="noopener noreferrer" aria-label="トリミアンの詳細ページを開く" data-types="normal" data-strong="0" data-index="217" data-total="472" data-hp="75" data-attack="80" data-defense="60" data-spatk="65" data-spdef="90" data-speed="102">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/218_0676_トリミアン_676.png" alt="トリミアン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -11464,6 +11702,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553280" target="_blank" rel="noopener noreferrer" aria-label="ニャオニクス(オス)の詳細ページを開く" data-types="psychic" data-strong="0" data-index="218" data-total="466" data-hp="74" data-attack="48" data-defense="76" data-spatk="83" data-spdef="81" data-speed="104">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/219_0678_ニャオニクス(オス)_678.png" alt="ニャオニクス(オス)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -11514,6 +11753,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554177" target="_blank" rel="noopener noreferrer" aria-label="ニャオニクス(メス)の詳細ページを開く" data-types="psychic" data-strong="0" data-index="219" data-total="466" data-hp="74" data-attack="48" data-defense="76" data-spatk="83" data-spdef="81" data-speed="104">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/220_0678_ニャオニクス(メス)_678_1.png" alt="ニャオニクス(メス)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -11564,6 +11804,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554178" target="_blank" rel="noopener noreferrer" aria-label="メガニャオニクス(オス)の詳細ページを開く" data-types="psychic" data-strong="0" data-index="220" data-total="566" data-hp="74" data-attack="48" data-defense="76" data-spatk="143" data-spdef="101" data-speed="124">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/221_0678_メガニャオニクス(オス)_678_3.png" alt="メガニャオニクス(オス)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -11612,6 +11853,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554179" target="_blank" rel="noopener noreferrer" aria-label="メガニャオニクス(メス)の詳細ページを開く" data-types="psychic" data-strong="0" data-index="221" data-total="566" data-hp="74" data-attack="48" data-defense="76" data-spatk="143" data-spdef="101" data-speed="124">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/222_0678_メガニャオニクス(メス)_678_4.png" alt="メガニャオニクス(メス)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -11661,6 +11903,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553262" target="_blank" rel="noopener noreferrer" aria-label="ギルガルド(シールドフォルム)の詳細ページを開く" data-types="steel ghost" data-strong="1" data-index="222" data-total="500" data-hp="60" data-attack="50" data-defense="140" data-spatk="50" data-spdef="140" data-speed="60">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/223_0681_ギルガルド(シールドフォルム)_681.png" alt="ギルガルド(シールドフォルム)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -11710,6 +11953,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553262" target="_blank" rel="noopener noreferrer" aria-label="ギルガルド(ブレードフォルム)の詳細ページを開く" data-types="steel ghost" data-strong="0" data-index="223" data-total="500" data-hp="60" data-attack="140" data-defense="50" data-spatk="140" data-spdef="50" data-speed="60">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/224_0681_ギルガルド(ブレードフォルム)_681_1.png" alt="ギルガルド(ブレードフォルム)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -11759,6 +12003,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554375" target="_blank" rel="noopener noreferrer" aria-label="フレフワンの詳細ページを開く" data-types="fairy" data-strong="0" data-index="224" data-total="462" data-hp="101" data-attack="72" data-defense="72" data-spatk="99" data-spdef="89" data-speed="29">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/225_0683_フレフワン_683.png" alt="フレフワン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -11808,6 +12053,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554374" target="_blank" rel="noopener noreferrer" aria-label="ペロリームの詳細ページを開く" data-types="fairy" data-strong="0" data-index="225" data-total="480" data-hp="82" data-attack="80" data-defense="86" data-spatk="85" data-spdef="75" data-speed="72">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/226_0685_ペロリーム_685.png" alt="ペロリーム" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -11857,6 +12103,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564129" target="_blank" rel="noopener noreferrer" aria-label="カラマネロの詳細ページを開く" data-types="dark psychic" data-strong="0" data-index="226" data-total="482" data-hp="86" data-attack="92" data-defense="88" data-spatk="68" data-spdef="75" data-speed="73">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/227_0687_カラマネロ_687.png" alt="カラマネロ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -11908,6 +12155,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564148" target="_blank" rel="noopener noreferrer" aria-label="メガカラマネロの詳細ページを開く" data-types="dark psychic" data-strong="0" data-index="227" data-total="582" data-hp="86" data-attack="102" data-defense="88" data-spatk="98" data-spdef="120" data-speed="88">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/228_0687_メガカラマネロ_687_1.png" alt="メガカラマネロ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -11957,6 +12205,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564128" target="_blank" rel="noopener noreferrer" aria-label="ガメノデスの詳細ページを開く" data-types="rock water" data-strong="0" data-index="228" data-total="500" data-hp="72" data-attack="105" data-defense="115" data-spatk="54" data-spdef="86" data-speed="68">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/229_0689_ガメノデス_689.png" alt="ガメノデス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -12008,6 +12257,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564147" target="_blank" rel="noopener noreferrer" aria-label="メガガメノデスの詳細ページを開く" data-types="rock fighting" data-strong="0" data-index="229" data-total="600" data-hp="72" data-attack="140" data-defense="130" data-spatk="64" data-spdef="106" data-speed="88">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/230_0689_メガガメノデス_689_1.png" alt="メガガメノデス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -12057,6 +12307,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564127" target="_blank" rel="noopener noreferrer" aria-label="ドラミドロの詳細ページを開く" data-types="poison dragon" data-strong="0" data-index="230" data-total="494" data-hp="65" data-attack="75" data-defense="90" data-spatk="97" data-spdef="123" data-speed="44">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/231_0691_ドラミドロ_691.png" alt="ドラミドロ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -12109,6 +12360,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564146" target="_blank" rel="noopener noreferrer" aria-label="メガドラミドロの詳細ページを開く" data-types="poison dragon" data-strong="1" data-index="231" data-total="594" data-hp="65" data-attack="85" data-defense="105" data-spatk="132" data-spdef="163" data-speed="44">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/232_0691_メガドラミドロ_691_1.png" alt="メガドラミドロ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -12158,6 +12410,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553261" target="_blank" rel="noopener noreferrer" aria-label="ブロスターの詳細ページを開く" data-types="water" data-strong="0" data-index="232" data-total="500" data-hp="71" data-attack="73" data-defense="88" data-spatk="120" data-spdef="89" data-speed="59">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/233_0693_ブロスター_693.png" alt="ブロスター" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -12206,6 +12459,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554373" target="_blank" rel="noopener noreferrer" aria-label="エレザードの詳細ページを開く" data-types="electric normal" data-strong="0" data-index="233" data-total="481" data-hp="62" data-attack="55" data-defense="52" data-spatk="109" data-spdef="94" data-speed="109">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/234_0695_エレザード_695.png" alt="エレザード" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -12257,6 +12511,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553260" target="_blank" rel="noopener noreferrer" aria-label="ガチゴラスの詳細ページを開く" data-types="rock dragon" data-strong="0" data-index="234" data-total="521" data-hp="82" data-attack="121" data-defense="119" data-spatk="69" data-spdef="59" data-speed="71">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/235_0697_ガチゴラス_697.png" alt="ガチゴラス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -12307,6 +12562,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553259" target="_blank" rel="noopener noreferrer" aria-label="アマルルガの詳細ページを開く" data-types="rock ice" data-strong="0" data-index="235" data-total="521" data-hp="123" data-attack="77" data-defense="72" data-spatk="99" data-spdef="92" data-speed="58">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/236_0699_アマルルガ_699.png" alt="アマルルガ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -12358,6 +12614,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553257" target="_blank" rel="noopener noreferrer" aria-label="ニンフィアの詳細ページを開く" data-types="fairy" data-strong="1" data-index="236" data-total="525" data-hp="95" data-attack="65" data-defense="65" data-spatk="110" data-spdef="130" data-speed="60">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/237_0700_ニンフィア_700.png" alt="ニンフィア" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -12407,6 +12664,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553258" target="_blank" rel="noopener noreferrer" aria-label="ルチャブルの詳細ページを開く" data-types="fighting flying" data-strong="0" data-index="237" data-total="500" data-hp="78" data-attack="92" data-defense="75" data-spatk="74" data-spdef="63" data-speed="118">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/238_0701_ルチャブル_701.png" alt="ルチャブル" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -12458,6 +12716,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553256" target="_blank" rel="noopener noreferrer" aria-label="メガルチャブルの詳細ページを開く" data-types="fighting flying" data-strong="0" data-index="238" data-total="600" data-hp="78" data-attack="137" data-defense="100" data-spatk="74" data-spdef="93" data-speed="118">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/239_0701_メガルチャブル_701_1.png" alt="メガルチャブル" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -12507,6 +12766,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554372" target="_blank" rel="noopener noreferrer" aria-label="デデンネの詳細ページを開く" data-types="electric fairy" data-strong="0" data-index="239" data-total="431" data-hp="67" data-attack="58" data-defense="57" data-spatk="81" data-spdef="67" data-speed="101">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/240_0702_デデンネ_702.png" alt="デデンネ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -12558,6 +12818,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553255" target="_blank" rel="noopener noreferrer" aria-label="ヌメルゴンの詳細ページを開く" data-types="dragon" data-strong="0" data-index="240" data-total="600" data-hp="90" data-attack="100" data-defense="70" data-spatk="110" data-spdef="150" data-speed="80">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/241_0706_ヌメルゴン_706.png" alt="ヌメルゴン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -12608,6 +12869,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554370" target="_blank" rel="noopener noreferrer" aria-label="ヒスイヌメルゴンの詳細ページを開く" data-types="steel dragon" data-strong="0" data-index="241" data-total="600" data-hp="80" data-attack="100" data-defense="100" data-spatk="110" data-spdef="150" data-speed="60">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/242_0706_ヒスイヌメルゴン_706_1.png" alt="ヒスイヌメルゴン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -12659,6 +12921,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553254" target="_blank" rel="noopener noreferrer" aria-label="クレッフィの詳細ページを開く" data-types="steel fairy" data-strong="0" data-index="242" data-total="470" data-hp="57" data-attack="80" data-defense="91" data-spatk="80" data-spdef="87" data-speed="75">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/243_0707_クレッフィ_707.png" alt="クレッフィ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -12709,6 +12972,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553230" target="_blank" rel="noopener noreferrer" aria-label="オーロットの詳細ページを開く" data-types="ghost grass" data-strong="0" data-index="243" data-total="474" data-hp="85" data-attack="110" data-defense="76" data-spatk="65" data-spdef="82" data-speed="56">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/244_0709_オーロット_709.png" alt="オーロット" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -12760,6 +13024,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553229" target="_blank" rel="noopener noreferrer" aria-label="パンプジン(こだましゅ)の詳細ページを開く" data-types="ghost grass" data-strong="0" data-index="244" data-total="494" data-hp="55" data-attack="85" data-defense="122" data-spatk="58" data-spdef="75" data-speed="99">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/245_0711_パンプジン(こだましゅ)_711.png" alt="パンプジン(こだましゅ)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -12811,6 +13076,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553229" target="_blank" rel="noopener noreferrer" aria-label="パンプジン(ちゅうだましゅ)の詳細ページを開く" data-types="ghost grass" data-strong="0" data-index="245" data-total="494" data-hp="65" data-attack="90" data-defense="122" data-spatk="58" data-spdef="75" data-speed="84">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/246_0711_パンプジン(ちゅうだましゅ)_711_1.png" alt="パンプジン(ちゅうだましゅ)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -12862,6 +13128,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553229" target="_blank" rel="noopener noreferrer" aria-label="パンプジン(おおだましゅ)の詳細ページを開く" data-types="ghost grass" data-strong="0" data-index="246" data-total="494" data-hp="75" data-attack="95" data-defense="122" data-spatk="58" data-spdef="75" data-speed="69">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/247_0711_パンプジン(おおだましゅ)_711_2.png" alt="パンプジン(おおだましゅ)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -12913,6 +13180,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553229" target="_blank" rel="noopener noreferrer" aria-label="パンプジン(ギガだましゅ)の詳細ページを開く" data-types="ghost grass" data-strong="0" data-index="247" data-total="494" data-hp="85" data-attack="100" data-defense="122" data-spatk="58" data-spdef="75" data-speed="54">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/248_0711_パンプジン(ギガだましゅ)_711_3.png" alt="パンプジン(ギガだましゅ)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -12964,6 +13232,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554369" target="_blank" rel="noopener noreferrer" aria-label="クレベースの詳細ページを開く" data-types="ice" data-strong="0" data-index="248" data-total="514" data-hp="95" data-attack="117" data-defense="184" data-spatk="44" data-spdef="46" data-speed="28">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/249_0713_クレベース_713.png" alt="クレベース" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -13014,6 +13283,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554368" target="_blank" rel="noopener noreferrer" aria-label="ヒスイクレベースの詳細ページを開く" data-types="ice rock" data-strong="0" data-index="249" data-total="514" data-hp="95" data-attack="127" data-defense="184" data-spatk="34" data-spdef="36" data-speed="38">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/250_0713_ヒスイクレベース_713_1.png" alt="ヒスイクレベース" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -13065,6 +13335,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553228" target="_blank" rel="noopener noreferrer" aria-label="オンバーンの詳細ページを開く" data-types="flying dragon" data-strong="0" data-index="250" data-total="535" data-hp="85" data-attack="70" data-defense="80" data-spatk="97" data-spdef="80" data-speed="123">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/251_0715_オンバーン_715.png" alt="オンバーン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -13116,6 +13387,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553227" target="_blank" rel="noopener noreferrer" aria-label="ジュナイパーの詳細ページを開く" data-types="grass ghost" data-strong="0" data-index="251" data-total="530" data-hp="78" data-attack="107" data-defense="75" data-spatk="100" data-spdef="100" data-speed="70">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/252_0724_ジュナイパー_724.png" alt="ジュナイパー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -13166,6 +13438,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553226" target="_blank" rel="noopener noreferrer" aria-label="ヒスイジュナイパーの詳細ページを開く" data-types="grass fighting" data-strong="0" data-index="252" data-total="530" data-hp="88" data-attack="112" data-defense="80" data-spatk="95" data-spdef="95" data-speed="60">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/253_0724_ヒスイジュナイパー_724_1.png" alt="ヒスイジュナイパー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -13216,6 +13489,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553225" target="_blank" rel="noopener noreferrer" aria-label="ガオガエンの詳細ページを開く" data-types="fire dark" data-strong="0" data-index="253" data-total="530" data-hp="95" data-attack="115" data-defense="90" data-spatk="80" data-spdef="90" data-speed="60">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/254_0727_ガオガエン_727.png" alt="ガオガエン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -13267,6 +13541,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553224" target="_blank" rel="noopener noreferrer" aria-label="アシレーヌの詳細ページを開く" data-types="water fairy" data-strong="1" data-index="254" data-total="530" data-hp="80" data-attack="74" data-defense="74" data-spatk="126" data-spdef="116" data-speed="60">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/255_0730_アシレーヌ_730.png" alt="アシレーヌ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -13317,6 +13592,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553394" target="_blank" rel="noopener noreferrer" aria-label="ドデカバシの詳細ページを開く" data-types="normal flying" data-strong="0" data-index="255" data-total="485" data-hp="80" data-attack="120" data-defense="75" data-spatk="75" data-spdef="75" data-speed="60">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/256_0733_ドデカバシ_733.png" alt="ドデカバシ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -13368,6 +13644,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553223" target="_blank" rel="noopener noreferrer" aria-label="ケケンカニの詳細ページを開く" data-types="fighting ice" data-strong="0" data-index="256" data-total="478" data-hp="97" data-attack="132" data-defense="77" data-spatk="62" data-spdef="67" data-speed="43">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/257_0740_ケケンカニ_740.png" alt="ケケンカニ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -13419,6 +13696,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553222" target="_blank" rel="noopener noreferrer" aria-label="メガケケンカニの詳細ページを開く" data-types="fighting ice" data-strong="0" data-index="257" data-total="578" data-hp="97" data-attack="157" data-defense="122" data-spatk="62" data-spdef="107" data-speed="33">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/258_0740_メガケケンカニ_740_1.png" alt="メガケケンカニ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -13468,6 +13746,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553218" target="_blank" rel="noopener noreferrer" aria-label="ルガルガン(まひる)の詳細ページを開く" data-types="rock" data-strong="0" data-index="258" data-total="487" data-hp="75" data-attack="115" data-defense="65" data-spatk="55" data-spdef="65" data-speed="112">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/259_0745_ルガルガン(まひる)_745.png" alt="ルガルガン(まひる)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -13518,6 +13797,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553219" target="_blank" rel="noopener noreferrer" aria-label="ルガルガン(まよなか)の詳細ページを開く" data-types="rock" data-strong="0" data-index="259" data-total="487" data-hp="85" data-attack="115" data-defense="75" data-spatk="55" data-spdef="75" data-speed="82">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/260_0745_ルガルガン(まよなか)_745_1.png" alt="ルガルガン(まよなか)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -13568,6 +13848,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554439" target="_blank" rel="noopener noreferrer" aria-label="ルガルガン(たそがれ)の詳細ページを開く" data-types="rock" data-strong="0" data-index="260" data-total="487" data-hp="75" data-attack="117" data-defense="65" data-spatk="55" data-spdef="65" data-speed="110">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/261_0745_ルガルガン(たそがれ)_745_2.png" alt="ルガルガン(たそがれ)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -13617,6 +13898,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553220" target="_blank" rel="noopener noreferrer" aria-label="ドヒドイデの詳細ページを開く" data-types="poison water" data-strong="1" data-index="261" data-total="495" data-hp="50" data-attack="63" data-defense="152" data-spatk="53" data-spdef="142" data-speed="35">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/262_0748_ドヒドイデ_748.png" alt="ドヒドイデ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -13668,6 +13950,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554367" target="_blank" rel="noopener noreferrer" aria-label="バンバドロの詳細ページを開く" data-types="ground" data-strong="0" data-index="262" data-total="500" data-hp="100" data-attack="125" data-defense="100" data-spatk="55" data-spdef="85" data-speed="35">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/263_0750_バンバドロ_750.png" alt="バンバドロ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -13718,6 +14001,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553221" target="_blank" rel="noopener noreferrer" aria-label="オニシズクモの詳細ページを開く" data-types="water bug" data-strong="0" data-index="263" data-total="454" data-hp="68" data-attack="70" data-defense="92" data-spatk="50" data-spdef="132" data-speed="42">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/264_0752_オニシズクモ_752.png" alt="オニシズクモ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -13768,6 +14052,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553216" target="_blank" rel="noopener noreferrer" aria-label="エンニュートの詳細ページを開く" data-types="poison fire" data-strong="0" data-index="264" data-total="480" data-hp="68" data-attack="64" data-defense="60" data-spatk="111" data-spdef="60" data-speed="117">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/265_0758_エンニュート_758.png" alt="エンニュート" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -13818,6 +14103,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553215" target="_blank" rel="noopener noreferrer" aria-label="アマージョの詳細ページを開く" data-types="grass" data-strong="0" data-index="265" data-total="510" data-hp="72" data-attack="120" data-defense="98" data-spatk="50" data-spdef="98" data-speed="72">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/266_0763_アマージョ_763.png" alt="アマージョ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -13868,6 +14154,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553214" target="_blank" rel="noopener noreferrer" aria-label="ヤレユータンの詳細ページを開く" data-types="normal psychic" data-strong="0" data-index="266" data-total="490" data-hp="90" data-attack="60" data-defense="80" data-spatk="90" data-spdef="110" data-speed="60">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/267_0765_ヤレユータン_765.png" alt="ヤレユータン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -13919,6 +14206,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554366" target="_blank" rel="noopener noreferrer" aria-label="ナゲツケサルの詳細ページを開く" data-types="fighting" data-strong="0" data-index="267" data-total="490" data-hp="100" data-attack="120" data-defense="90" data-spatk="40" data-spdef="60" data-speed="80">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/268_0766_ナゲツケサル_766.png" alt="ナゲツケサル" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -13969,6 +14257,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553213" target="_blank" rel="noopener noreferrer" aria-label="ミミッキュの詳細ページを開く" data-types="ghost fairy" data-strong="1" data-index="268" data-total="476" data-hp="55" data-attack="90" data-defense="80" data-spatk="50" data-spdef="105" data-speed="96">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/269_0778_ミミッキュ_778.png" alt="ミミッキュ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -14018,6 +14307,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553212" target="_blank" rel="noopener noreferrer" aria-label="ジジーロンの詳細ページを開く" data-types="normal dragon" data-strong="0" data-index="269" data-total="485" data-hp="78" data-attack="60" data-defense="85" data-spatk="135" data-spdef="91" data-speed="36">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/270_0780_ジジーロン_780.png" alt="ジジーロン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -14069,6 +14359,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553201" target="_blank" rel="noopener noreferrer" aria-label="メガジジーロンの詳細ページを開く" data-types="normal dragon" data-strong="0" data-index="270" data-total="585" data-hp="78" data-attack="85" data-defense="110" data-spatk="160" data-spdef="116" data-speed="36">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/271_0780_メガジジーロン_780_1.png" alt="メガジジーロン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -14118,6 +14409,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553200" target="_blank" rel="noopener noreferrer" aria-label="ジャラランガの詳細ページを開く" data-types="dragon fighting" data-strong="0" data-index="271" data-total="600" data-hp="75" data-attack="110" data-defense="125" data-spatk="100" data-spdef="105" data-speed="85">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/272_0784_ジャラランガ_784.png" alt="ジャラランガ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -14170,6 +14462,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553199" target="_blank" rel="noopener noreferrer" aria-label="アーマーガアの詳細ページを開く" data-types="flying steel" data-strong="1" data-index="272" data-total="495" data-hp="98" data-attack="87" data-defense="105" data-spatk="53" data-spdef="85" data-speed="67">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/273_0823_アーマーガア_823.png" alt="アーマーガア" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -14221,6 +14514,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554156" target="_blank" rel="noopener noreferrer" aria-label="アップリューの詳細ページを開く" data-types="grass dragon" data-strong="0" data-index="273" data-total="485" data-hp="70" data-attack="110" data-defense="80" data-spatk="95" data-spdef="60" data-speed="70">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/274_0841_アップリュー_841.png" alt="アップリュー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -14272,6 +14566,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554155" target="_blank" rel="noopener noreferrer" aria-label="タルップルの詳細ページを開く" data-types="grass dragon" data-strong="0" data-index="274" data-total="485" data-hp="110" data-attack="85" data-defense="80" data-spatk="100" data-spdef="80" data-speed="30">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/275_0842_タルップル_842.png" alt="タルップル" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -14323,6 +14618,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553198" target="_blank" rel="noopener noreferrer" aria-label="サダイジャの詳細ページを開く" data-types="ground" data-strong="0" data-index="275" data-total="510" data-hp="72" data-attack="107" data-defense="125" data-spatk="65" data-spdef="70" data-speed="71">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/276_0844_サダイジャ_844.png" alt="サダイジャ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -14373,6 +14669,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553195" target="_blank" rel="noopener noreferrer" aria-label="ポットデスの詳細ページを開く" data-types="ghost" data-strong="0" data-index="276" data-total="508" data-hp="60" data-attack="65" data-defense="65" data-spatk="134" data-spdef="114" data-speed="70">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/277_0855_ポットデス_855.png" alt="ポットデス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -14422,6 +14719,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553194" target="_blank" rel="noopener noreferrer" aria-label="ブリムオンの詳細ページを開く" data-types="psychic fairy" data-strong="0" data-index="277" data-total="510" data-hp="57" data-attack="90" data-defense="95" data-spatk="136" data-spdef="103" data-speed="29">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/278_0858_ブリムオン_858.png" alt="ブリムオン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -14474,6 +14772,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553193" target="_blank" rel="noopener noreferrer" aria-label="オーロンゲの詳細ページを開く" data-types="dark fairy" data-strong="1" data-index="278" data-total="510" data-hp="95" data-attack="120" data-defense="65" data-spatk="95" data-spdef="75" data-speed="60">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/279_0861_オーロンゲ_861.png" alt="オーロンゲ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -14525,6 +14824,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553891" target="_blank" rel="noopener noreferrer" aria-label="バリコオルの詳細ページを開く" data-types="ice psychic" data-strong="0" data-index="279" data-total="520" data-hp="80" data-attack="85" data-defense="75" data-spatk="110" data-spdef="100" data-speed="70">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/280_0866_バリコオル_866.png" alt="バリコオル" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -14576,6 +14876,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553192" target="_blank" rel="noopener noreferrer" aria-label="デスバーンの詳細ページを開く" data-types="ground ghost" data-strong="0" data-index="280" data-total="483" data-hp="58" data-attack="95" data-defense="145" data-spatk="50" data-spdef="105" data-speed="30">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/281_0867_デスバーン_867.png" alt="デスバーン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -14625,6 +14926,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553191" target="_blank" rel="noopener noreferrer" aria-label="マホイップの詳細ページを開く" data-types="fairy" data-strong="0" data-index="281" data-total="495" data-hp="65" data-attack="60" data-defense="75" data-spatk="110" data-spdef="121" data-speed="64">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/282_0869_マホイップ_869.png" alt="マホイップ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -14674,6 +14976,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564126" target="_blank" rel="noopener noreferrer" aria-label="タイレーツの詳細ページを開く" data-types="fighting" data-strong="0" data-index="282" data-total="470" data-hp="65" data-attack="100" data-defense="100" data-spatk="70" data-spdef="60" data-speed="75">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/283_0870_タイレーツ_870.png" alt="タイレーツ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -14723,6 +15026,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564145" target="_blank" rel="noopener noreferrer" aria-label="メガタイレーツの詳細ページを開く" data-types="fighting" data-strong="0" data-index="283" data-total="570" data-hp="65" data-attack="135" data-defense="135" data-spatk="70" data-spdef="65" data-speed="100">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/284_0870_メガタイレーツ_870_1.png" alt="メガタイレーツ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -14771,6 +15075,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553395" target="_blank" rel="noopener noreferrer" aria-label="モルペコの詳細ページを開く" data-types="electric dark" data-strong="0" data-index="284" data-total="436" data-hp="58" data-attack="95" data-defense="58" data-spatk="70" data-spdef="58" data-speed="97">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/285_0877_モルペコ_877.png" alt="モルペコ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -14821,6 +15126,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553190" target="_blank" rel="noopener noreferrer" aria-label="ドラパルトの詳細ページを開く" data-types="dragon ghost" data-strong="1" data-index="285" data-total="600" data-hp="88" data-attack="120" data-defense="75" data-spatk="100" data-spdef="75" data-speed="142">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/286_0887_ドラパルト_887.png" alt="ドラパルト" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -14872,6 +15178,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554365" target="_blank" rel="noopener noreferrer" aria-label="アヤシシの詳細ページを開く" data-types="normal psychic" data-strong="0" data-index="286" data-total="525" data-hp="103" data-attack="105" data-defense="72" data-spatk="105" data-spdef="75" data-speed="65">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/287_0899_アヤシシ_899.png" alt="アヤシシ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -14923,6 +15230,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553189" target="_blank" rel="noopener noreferrer" aria-label="バサギリの詳細ページを開く" data-types="bug rock" data-strong="0" data-index="287" data-total="500" data-hp="70" data-attack="135" data-defense="95" data-spatk="45" data-spdef="70" data-speed="85">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/288_0900_バサギリ_900.png" alt="バサギリ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -14975,6 +15283,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553186" target="_blank" rel="noopener noreferrer" aria-label="イダイトウ(オス)の詳細ページを開く" data-types="water ghost" data-strong="1" data-index="288" data-total="530" data-hp="120" data-attack="112" data-defense="65" data-spatk="80" data-spdef="75" data-speed="78">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/289_0902_イダイトウ(オス)_902.png" alt="イダイトウ(オス)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -15026,6 +15335,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553187" target="_blank" rel="noopener noreferrer" aria-label="イダイトウ(メス)の詳細ページを開く" data-types="water ghost" data-strong="0" data-index="289" data-total="530" data-hp="120" data-attack="92" data-defense="65" data-spatk="100" data-spdef="75" data-speed="78">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/290_0902_イダイトウ(メス)_902_1.png" alt="イダイトウ(メス)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -15078,6 +15388,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553185" target="_blank" rel="noopener noreferrer" aria-label="オオニューラの詳細ページを開く" data-types="fighting poison" data-strong="1" data-index="290" data-total="510" data-hp="80" data-attack="130" data-defense="60" data-spatk="40" data-spdef="80" data-speed="120">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/291_0903_オオニューラ_903.png" alt="オオニューラ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -15129,6 +15440,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564125" target="_blank" rel="noopener noreferrer" aria-label="ハリーマンの詳細ページを開く" data-types="dark poison" data-strong="0" data-index="291" data-total="510" data-hp="85" data-attack="115" data-defense="95" data-spatk="65" data-spdef="65" data-speed="85">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/292_0904_ハリーマン_904.png" alt="ハリーマン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -15181,6 +15493,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553397" target="_blank" rel="noopener noreferrer" aria-label="マスカーニャの詳細ページを開く" data-types="grass dark" data-strong="1" data-index="292" data-total="530" data-hp="76" data-attack="110" data-defense="70" data-spatk="81" data-spdef="70" data-speed="123">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/293_0908_マスカーニャ_908.png" alt="マスカーニャ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -15232,6 +15545,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554157" target="_blank" rel="noopener noreferrer" aria-label="ラウドボーンの詳細ページを開く" data-types="fire ghost" data-strong="1" data-index="293" data-total="530" data-hp="104" data-attack="75" data-defense="100" data-spatk="110" data-spdef="75" data-speed="66">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/294_0911_ラウドボーン_911.png" alt="ラウドボーン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -15282,6 +15596,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553396" target="_blank" rel="noopener noreferrer" aria-label="ウェーニバルの詳細ページを開く" data-types="water fighting" data-strong="0" data-index="294" data-total="530" data-hp="85" data-attack="120" data-defense="80" data-spatk="85" data-spdef="75" data-speed="85">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/295_0914_ウェーニバル_914.png" alt="ウェーニバル" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -15332,6 +15647,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553170" target="_blank" rel="noopener noreferrer" aria-label="イッカネズミ(3びきかぞく)の詳細ページを開く" data-types="normal" data-strong="0" data-index="295" data-total="470" data-hp="74" data-attack="75" data-defense="70" data-spatk="65" data-spdef="75" data-speed="111">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/296_0925_イッカネズミ(3びきかぞく)_925.png" alt="イッカネズミ(3びきかぞく)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -15382,6 +15698,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553170" target="_blank" rel="noopener noreferrer" aria-label="イッカネズミ(4ひきかぞく)の詳細ページを開く" data-types="normal" data-strong="0" data-index="296" data-total="470" data-hp="74" data-attack="75" data-defense="70" data-spatk="65" data-spdef="75" data-speed="111">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/297_0925_イッカネズミ(4ひきかぞく)_925_1.png" alt="イッカネズミ(4ひきかぞく)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -15432,6 +15749,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553168" target="_blank" rel="noopener noreferrer" aria-label="キョジオーンの詳細ページを開く" data-types="rock" data-strong="0" data-index="297" data-total="500" data-hp="100" data-attack="100" data-defense="130" data-spatk="45" data-spdef="90" data-speed="35">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/298_0934_キョジオーン_934.png" alt="キョジオーン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -15482,6 +15800,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553167" target="_blank" rel="noopener noreferrer" aria-label="グレンアルマの詳細ページを開く" data-types="fire psychic" data-strong="0" data-index="298" data-total="525" data-hp="85" data-attack="60" data-defense="100" data-spatk="125" data-spdef="80" data-speed="75">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/299_0936_グレンアルマ_936.png" alt="グレンアルマ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -15533,6 +15852,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553166" target="_blank" rel="noopener noreferrer" aria-label="ソウブレイズの詳細ページを開く" data-types="fire ghost" data-strong="1" data-index="299" data-total="525" data-hp="75" data-attack="125" data-defense="80" data-spatk="60" data-spdef="100" data-speed="85">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/300_0937_ソウブレイズ_937.png" alt="ソウブレイズ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -15584,6 +15904,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554364" target="_blank" rel="noopener noreferrer" aria-label="ハラバリーの詳細ページを開く" data-types="electric" data-strong="1" data-index="300" data-total="495" data-hp="109" data-attack="64" data-defense="91" data-spatk="103" data-spdef="83" data-speed="45">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/301_0939_ハラバリー_939.png" alt="ハラバリー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -15634,6 +15955,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553164" target="_blank" rel="noopener noreferrer" aria-label="スコヴィランの詳細ページを開く" data-types="grass fire" data-strong="0" data-index="301" data-total="486" data-hp="65" data-attack="108" data-defense="65" data-spatk="108" data-spdef="65" data-speed="75">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/302_0952_スコヴィラン_952.png" alt="スコヴィラン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -15685,6 +16007,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554212" target="_blank" rel="noopener noreferrer" aria-label="メガスコヴィランの詳細ページを開く" data-types="grass fire" data-strong="0" data-index="302" data-total="586" data-hp="65" data-attack="138" data-defense="85" data-spatk="138" data-spdef="85" data-speed="75">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/303_0952_メガスコヴィラン_952_1.png" alt="メガスコヴィラン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -15735,6 +16058,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554360" target="_blank" rel="noopener noreferrer" aria-label="クエスパトラの詳細ページを開く" data-types="psychic" data-strong="1" data-index="303" data-total="481" data-hp="95" data-attack="60" data-defense="60" data-spatk="101" data-spdef="60" data-speed="105">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/304_0956_クエスパトラ_956.png" alt="クエスパトラ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -15785,6 +16109,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553163" target="_blank" rel="noopener noreferrer" aria-label="デカヌチャンの詳細ページを開く" data-types="fairy steel" data-strong="0" data-index="304" data-total="506" data-hp="85" data-attack="75" data-defense="77" data-spatk="70" data-spdef="105" data-speed="94">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/305_0959_デカヌチャン_959.png" alt="デカヌチャン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -15836,6 +16161,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553162" target="_blank" rel="noopener noreferrer" aria-label="イルカマン(ナイーブ)の詳細ページを開く" data-types="water" data-strong="0" data-index="305" data-total="457" data-hp="100" data-attack="70" data-defense="72" data-spatk="53" data-spdef="62" data-speed="100">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/306_0964_イルカマン(ナイーブ)_964.png" alt="イルカマン(ナイーブ)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -15884,6 +16210,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553162" target="_blank" rel="noopener noreferrer" aria-label="イルカマン(マイティ)の詳細ページを開く" data-types="water" data-strong="0" data-index="306" data-total="650" data-hp="100" data-attack="160" data-defense="97" data-spatk="106" data-spdef="87" data-speed="100">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/307_0964_イルカマン(マイティ)_964_1.png" alt="イルカマン(マイティ)" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -15932,6 +16259,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553151" target="_blank" rel="noopener noreferrer" aria-label="ミミズズの詳細ページを開く" data-types="steel" data-strong="0" data-index="307" data-total="480" data-hp="70" data-attack="85" data-defense="145" data-spatk="60" data-spdef="55" data-speed="65">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/308_0968_ミミズズ_968.png" alt="ミミズズ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -15982,6 +16310,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553150" target="_blank" rel="noopener noreferrer" aria-label="キラフロルの詳細ページを開く" data-types="rock poison" data-strong="1" data-index="308" data-total="525" data-hp="83" data-attack="55" data-defense="90" data-spatk="130" data-spdef="81" data-speed="86">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/309_0970_キラフロル_970.png" alt="キラフロル" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -16033,6 +16362,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554211" target="_blank" rel="noopener noreferrer" aria-label="メガキラフロルの詳細ページを開く" data-types="rock poison" data-strong="1" data-index="309" data-total="625" data-hp="83" data-attack="90" data-defense="105" data-spatk="150" data-spdef="96" data-speed="101">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/310_0970_メガキラフロル_970_1.png" alt="メガキラフロル" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -16082,6 +16412,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564123" target="_blank" rel="noopener noreferrer" aria-label="ハカドッグの詳細ページを開く" data-types="ghost" data-strong="0" data-index="310" data-total="488" data-hp="72" data-attack="101" data-defense="100" data-spatk="50" data-spdef="97" data-speed="68">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/311_0972_ハカドッグ_972.png" alt="ハカドッグ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -16131,6 +16462,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564124" target="_blank" rel="noopener noreferrer" aria-label="コノヨザルの詳細ページを開く" data-types="fighting ghost" data-strong="0" data-index="311" data-total="535" data-hp="110" data-attack="115" data-defense="80" data-spatk="50" data-spdef="90" data-speed="90">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/312_0979_コノヨザル_979.png" alt="コノヨザル" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -16182,6 +16514,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553165" target="_blank" rel="noopener noreferrer" aria-label="リキキリンの詳細ページを開く" data-types="normal psychic" data-strong="0" data-index="312" data-total="520" data-hp="120" data-attack="90" data-defense="70" data-spatk="110" data-spdef="70" data-speed="60">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/313_0981_リキキリン_981.png" alt="リキキリン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -16234,6 +16567,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553149" target="_blank" rel="noopener noreferrer" aria-label="ドドゲザンの詳細ページを開く" data-types="dark steel" data-strong="1" data-index="313" data-total="550" data-hp="100" data-attack="135" data-defense="120" data-spatk="60" data-spdef="85" data-speed="50">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/314_0983_ドドゲザン_983.png" alt="ドドゲザン" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -16286,6 +16620,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564122" target="_blank" rel="noopener noreferrer" aria-label="サーフゴーの詳細ページを開く" data-types="steel ghost" data-strong="1" data-index="314" data-total="550" data-hp="87" data-attack="60" data-defense="95" data-spatk="133" data-spdef="91" data-speed="84">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/315_1000_サーフゴー_1000.png" alt="サーフゴー" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -16335,6 +16670,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553145" target="_blank" rel="noopener noreferrer" aria-label="ヤバソチャの詳細ページを開く" data-types="grass ghost" data-strong="0" data-index="315" data-total="508" data-hp="71" data-attack="60" data-defense="106" data-spatk="121" data-spdef="80" data-speed="70">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/316_1013_ヤバソチャ_1013.png" alt="ヤバソチャ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -16386,6 +16722,7 @@
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553144" target="_blank" rel="noopener noreferrer" aria-label="ブリジュラスの詳細ページを開く" data-types="steel dragon" data-strong="1" data-index="316" data-total="600" data-hp="90" data-attack="105" data-defense="130" data-spatk="125" data-spdef="65" data-speed="85">
         <div class="pokemon-image-wrap">
           <span class="strong-badge">厨</span>
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/317_1018_ブリジュラス_1018.png" alt="ブリジュラス" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -16437,6 +16774,7 @@
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553143" target="_blank" rel="noopener noreferrer" aria-label="カミツオロチの詳細ページを開く" data-types="grass dragon" data-strong="0" data-index="317" data-total="540" data-hp="106" data-attack="80" data-defense="110" data-spatk="120" data-spdef="80" data-speed="44">
         <div class="pokemon-image-wrap">
+          <span class="rank-badge" hidden></span>
           <img src="pokemon_images/318_1019_カミツオロチ_1019.png" alt="カミツオロチ" loading="lazy">
         </div>
         <div class="pokemon-body">
@@ -16514,6 +16852,7 @@
           if (matches) visible += 1;
         }
         if (count) count.textContent = String(visible);
+        updateRanks();
       }
 
       function applySort() {
@@ -16526,6 +16865,32 @@
           return Number(a.dataset.index) - Number(b.dataset.index);
         });
         for (const card of sorted) grid.appendChild(card);
+        updateRanks();
+      }
+
+      // When sorting by a stat, number the visible cards from the top (#1, #2, ...).
+      function updateRanks() {
+        const key = sortSelect ? sortSelect.value : 'index';
+        if (key === 'index') {
+          for (const card of cards) {
+            const badge = card.querySelector('.rank-badge');
+            if (badge) badge.hidden = true;
+          }
+          return;
+        }
+        let rank = 0;
+        for (const card of grid.querySelectorAll('.pokemon-card')) {
+          const badge = card.querySelector('.rank-badge');
+          if (card.hidden) {
+            if (badge) badge.hidden = true;
+            continue;
+          }
+          rank += 1;
+          if (badge) {
+            badge.textContent = '#' + rank;
+            badge.hidden = false;
+          }
+        }
       }
 
       for (const button of typeButtons) {
