@@ -245,6 +245,49 @@
       white-space: nowrap;
     }
 
+    .ability-block {
+      display: flex;
+      align-items: flex-start;
+      gap: 4px;
+      margin-top: 6px;
+      padding-top: 5px;
+      border-top: 1px dashed var(--line);
+    }
+
+    .ability-label {
+      flex: none;
+      color: var(--accent);
+      font-size: 8px;
+      font-weight: 800;
+      line-height: 1.4;
+      padding-top: 1px;
+    }
+
+    .ability-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .ability-list li {
+      border-radius: 4px;
+      background: #eef3f3;
+      color: var(--text);
+      padding: 2px 5px;
+      font-size: 8px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .ability-list li.ability-none {
+      background: transparent;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
     .pokemon-card[hidden] {
       display: none;
     }
@@ -376,6 +419,13 @@
               <dd>80</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>しんりょく</li>
+              <li>ようりょくそ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553152" target="_blank" rel="noopener noreferrer" aria-label="リザードンの詳細ページを開く" data-types="fire flying">
@@ -419,6 +469,13 @@
               <dd>100</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>もうか</li>
+              <li>サンパワー</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553155" target="_blank" rel="noopener noreferrer" aria-label="カメックスの詳細ページを開く" data-types="water">
@@ -461,6 +518,13 @@
               <dd>78</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>げきりゅう</li>
+              <li>あめうけざら</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553157" target="_blank" rel="noopener noreferrer" aria-label="スピアーの詳細ページを開く" data-types="bug poison">
@@ -504,6 +568,13 @@
               <dd>75</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>むしのしらせ</li>
+              <li>スナイパー</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553158" target="_blank" rel="noopener noreferrer" aria-label="メガスピアーの詳細ページを開く" data-types="bug poison">
@@ -547,6 +618,12 @@
               <dd>145</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>てきおうりょく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553159" target="_blank" rel="noopener noreferrer" aria-label="ピジョットの詳細ページを開く" data-types="normal flying">
@@ -590,6 +667,14 @@
               <dd>101</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>するどいめ</li>
+              <li>ちどりあし</li>
+              <li>はとむね</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554180" target="_blank" rel="noopener noreferrer" aria-label="メガピジョットの詳細ページを開く" data-types="normal flying">
@@ -633,6 +718,12 @@
               <dd>121</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ノーガード</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554396" target="_blank" rel="noopener noreferrer" aria-label="アーボックの詳細ページを開く" data-types="poison">
@@ -675,6 +766,14 @@
               <dd>80</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>いかく</li>
+              <li>だっぴ</li>
+              <li>きんちょうかん</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553160" target="_blank" rel="noopener noreferrer" aria-label="ピカチュウの詳細ページを開く" data-types="electric">
@@ -717,6 +816,13 @@
               <dd>90</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>せいでんき</li>
+              <li>ひらいしん</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553161" target="_blank" rel="noopener noreferrer" aria-label="ライチュウの詳細ページを開く" data-types="electric">
@@ -759,6 +865,13 @@
               <dd>110</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>せいでんき</li>
+              <li>ひらいしん</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553892" target="_blank" rel="noopener noreferrer" aria-label="アローラライチュウの詳細ページを開く" data-types="electric psychic">
@@ -802,6 +915,12 @@
               <dd>110</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>サーフテール</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553173" target="_blank" rel="noopener noreferrer" aria-label="メガライチュウXの詳細ページを開く" data-types="electric">
@@ -844,6 +963,12 @@
               <dd>110</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>エレキメイカー</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553175" target="_blank" rel="noopener noreferrer" aria-label="ピクシーの詳細ページを開く" data-types="fairy">
@@ -886,6 +1011,14 @@
               <dd>60</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>メロメロボディ</li>
+              <li>マジックガード</li>
+              <li>てんねん</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554153" target="_blank" rel="noopener noreferrer" aria-label="キュウコンの詳細ページを開く" data-types="fire">
@@ -928,6 +1061,13 @@
               <dd>100</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>もらいび</li>
+              <li>ひでり</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564110" target="_blank" rel="noopener noreferrer" aria-label="ラフレシアの詳細ページを開く" data-types="grass poison">
@@ -971,6 +1111,13 @@
               <dd>50</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ようりょくそ</li>
+              <li>ほうし</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553177" target="_blank" rel="noopener noreferrer" aria-label="ウインディの詳細ページを開く" data-types="fire">
@@ -1013,6 +1160,14 @@
               <dd>95</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>いかく</li>
+              <li>もらいび</li>
+              <li>せいぎのこころ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553178" target="_blank" rel="noopener noreferrer" aria-label="ヒスイウインディの詳細ページを開く" data-types="fire rock">
@@ -1056,6 +1211,14 @@
               <dd>90</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>いかく</li>
+              <li>もらいび</li>
+              <li>いしあたま</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554154" target="_blank" rel="noopener noreferrer" aria-label="フーディンの詳細ページを開く" data-types="psychic">
@@ -1098,6 +1261,14 @@
               <dd>120</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>シンクロ</li>
+              <li>せいしんりょく</li>
+              <li>マジックガード</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554200" target="_blank" rel="noopener noreferrer" aria-label="メガフーディンの詳細ページを開く" data-types="psychic">
@@ -1140,6 +1311,12 @@
               <dd>150</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>トレース</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553179" target="_blank" rel="noopener noreferrer" aria-label="カイリキーの詳細ページを開く" data-types="fighting">
@@ -1182,6 +1359,14 @@
               <dd>55</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>こんじょう</li>
+              <li>ノーガード</li>
+              <li>ふくつのこころ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553180" target="_blank" rel="noopener noreferrer" aria-label="ウツボットの詳細ページを開く" data-types="grass poison">
@@ -1225,6 +1410,13 @@
               <dd>70</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ようりょくそ</li>
+              <li>くいしんぼう</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553181" target="_blank" rel="noopener noreferrer" aria-label="メガウツボットの詳細ページを開く" data-types="grass poison">
@@ -1268,6 +1460,12 @@
               <dd>70</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>とびだすなかみ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553203" target="_blank" rel="noopener noreferrer" aria-label="ヤドランの詳細ページを開く" data-types="water psychic">
@@ -1311,6 +1509,14 @@
               <dd>30</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>どんかん</li>
+              <li>マイペース</li>
+              <li>さいせいりょく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553204" target="_blank" rel="noopener noreferrer" aria-label="メガヤドランの詳細ページを開く" data-types="water psychic">
@@ -1354,6 +1560,12 @@
               <dd>30</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>シェルアーマー</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554165" target="_blank" rel="noopener noreferrer" aria-label="ガラルヤドランの詳細ページを開く" data-types="poison psychic">
@@ -1397,6 +1609,14 @@
               <dd>30</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>クイックドロウ</li>
+              <li>マイペース</li>
+              <li>さいせいりょく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553207" target="_blank" rel="noopener noreferrer" aria-label="ガルーラの詳細ページを開く" data-types="normal">
@@ -1439,6 +1659,14 @@
               <dd>90</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>はやおき</li>
+              <li>きもったま</li>
+              <li>せいしんりょく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553208" target="_blank" rel="noopener noreferrer" aria-label="メガガルーラの詳細ページを開く" data-types="normal">
@@ -1481,6 +1709,12 @@
               <dd>100</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>おやこあい</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553209" target="_blank" rel="noopener noreferrer" aria-label="スターミーの詳細ページを開く" data-types="water psychic">
@@ -1524,6 +1758,14 @@
               <dd>115</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>はっこう</li>
+              <li>しぜんかいふく</li>
+              <li>アナライズ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553210" target="_blank" rel="noopener noreferrer" aria-label="カイロスの詳細ページを開く" data-types="bug">
@@ -1566,6 +1808,14 @@
               <dd>85</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>かいりきバサミ</li>
+              <li>かたやぶり</li>
+              <li>じしんかじょう</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554203" target="_blank" rel="noopener noreferrer" aria-label="メガカイロスの詳細ページを開く" data-types="bug flying">
@@ -1609,6 +1859,12 @@
               <dd>105</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>スカイスキン</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553211" target="_blank" rel="noopener noreferrer" aria-label="ケンタロスの詳細ページを開く" data-types="normal">
@@ -1651,6 +1907,14 @@
               <dd>110</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>いかく</li>
+              <li>いかりのつぼ</li>
+              <li>ちからずく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554363" target="_blank" rel="noopener noreferrer" aria-label="パルデアケンタロス(かくとう)の詳細ページを開く" data-types="fighting">
@@ -1693,6 +1957,14 @@
               <dd>100</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>いかく</li>
+              <li>いかりのつぼ</li>
+              <li>はんすう</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554361" target="_blank" rel="noopener noreferrer" aria-label="パルデアケンタロス(ほのお)の詳細ページを開く" data-types="fighting fire">
@@ -1736,6 +2008,14 @@
               <dd>100</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>いかく</li>
+              <li>いかりのつぼ</li>
+              <li>はんすう</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554362" target="_blank" rel="noopener noreferrer" aria-label="パルデアケンタロス(みず)の詳細ページを開く" data-types="fighting water">
@@ -1779,6 +2059,14 @@
               <dd>100</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>いかく</li>
+              <li>いかりのつぼ</li>
+              <li>はんすう</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553235" target="_blank" rel="noopener noreferrer" aria-label="メタモンの詳細ページを開く" data-types="normal">
@@ -1821,6 +2109,13 @@
               <dd>48</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>じゅうなん</li>
+              <li>かわりもの</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553236" target="_blank" rel="noopener noreferrer" aria-label="シャワーズの詳細ページを開く" data-types="water">
@@ -1863,6 +2158,13 @@
               <dd>65</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ちょすい</li>
+              <li>うるおいボディ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553237" target="_blank" rel="noopener noreferrer" aria-label="サンダースの詳細ページを開く" data-types="electric">
@@ -1905,6 +2207,13 @@
               <dd>130</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ちくでん</li>
+              <li>はやあし</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553238" target="_blank" rel="noopener noreferrer" aria-label="ブースターの詳細ページを開く" data-types="fire">
@@ -1947,6 +2256,13 @@
               <dd>65</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>もらいび</li>
+              <li>こんじょう</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553239" target="_blank" rel="noopener noreferrer" aria-label="プテラの詳細ページを開く" data-types="rock flying">
@@ -1990,6 +2306,14 @@
               <dd>130</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>いしあたま</li>
+              <li>プレッシャー</li>
+              <li>きんちょうかん</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554204" target="_blank" rel="noopener noreferrer" aria-label="メガプテラの詳細ページを開く" data-types="rock flying">
@@ -2033,6 +2357,12 @@
               <dd>150</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>かたいツメ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553240" target="_blank" rel="noopener noreferrer" aria-label="カビゴンの詳細ページを開く" data-types="normal">
@@ -2075,6 +2405,14 @@
               <dd>30</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>めんえき</li>
+              <li>あついしぼう</li>
+              <li>くいしんぼう</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553241" target="_blank" rel="noopener noreferrer" aria-label="カイリューの詳細ページを開く" data-types="dragon flying">
@@ -2118,6 +2456,13 @@
               <dd>80</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>せいしんりょく</li>
+              <li>マルチスケイル</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553243" target="_blank" rel="noopener noreferrer" aria-label="メガニウムの詳細ページを開く" data-types="grass">
@@ -2160,6 +2505,13 @@
               <dd>80</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>しんりょく</li>
+              <li>リーフガード</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553245" target="_blank" rel="noopener noreferrer" aria-label="バクフーンの詳細ページを開く" data-types="fire">
@@ -2202,6 +2554,13 @@
               <dd>100</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>もうか</li>
+              <li>もらいび</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554150" target="_blank" rel="noopener noreferrer" aria-label="ヒスイバクフーンの詳細ページを開く" data-types="fire ghost">
@@ -2245,6 +2604,13 @@
               <dd>95</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>もうか</li>
+              <li>おみとおし</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553246" target="_blank" rel="noopener noreferrer" aria-label="オーダイルの詳細ページを開く" data-types="water">
@@ -2287,6 +2653,13 @@
               <dd>78</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>げきりゅう</li>
+              <li>ちからずく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553247" target="_blank" rel="noopener noreferrer" aria-label="メガオーダイルの詳細ページを開く" data-types="water dragon">
@@ -2330,6 +2703,12 @@
               <dd>78</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ドラゴンスキン</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553248" target="_blank" rel="noopener noreferrer" aria-label="アリアドスの詳細ページを開く" data-types="bug poison">
@@ -2373,6 +2752,14 @@
               <dd>40</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>むしのしらせ</li>
+              <li>ふみん</li>
+              <li>スナイパー</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553249" target="_blank" rel="noopener noreferrer" aria-label="デンリュウの詳細ページを開く" data-types="electric">
@@ -2415,6 +2802,13 @@
               <dd>55</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>せいでんき</li>
+              <li>プラス</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553250" target="_blank" rel="noopener noreferrer" aria-label="メガデンリュウの詳細ページを開く" data-types="electric dragon">
@@ -2458,6 +2852,12 @@
               <dd>45</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>かたやぶり</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553251" target="_blank" rel="noopener noreferrer" aria-label="マリルリの詳細ページを開く" data-types="water fairy">
@@ -2501,6 +2901,14 @@
               <dd>50</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>あついしぼう</li>
+              <li>ちからもち</li>
+              <li>そうしょく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553252" target="_blank" rel="noopener noreferrer" aria-label="ニョロトノの詳細ページを開く" data-types="water">
@@ -2543,6 +2951,14 @@
               <dd>70</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ちょすい</li>
+              <li>しめりけ</li>
+              <li>あめふらし</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553253" target="_blank" rel="noopener noreferrer" aria-label="エーフィの詳細ページを開く" data-types="psychic">
@@ -2585,6 +3001,13 @@
               <dd>110</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>シンクロ</li>
+              <li>マジックミラー</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553283" target="_blank" rel="noopener noreferrer" aria-label="ヤドキングの詳細ページを開く" data-types="water psychic">
@@ -2628,6 +3051,14 @@
               <dd>30</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>どんかん</li>
+              <li>マイペース</li>
+              <li>さいせいりょく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553284" target="_blank" rel="noopener noreferrer" aria-label="ガラルヤドキングの詳細ページを開く" data-types="poison psychic">
@@ -2671,6 +3102,14 @@
               <dd>30</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>きみょうなくすり</li>
+              <li>マイペース</li>
+              <li>さいせいりょく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554394" target="_blank" rel="noopener noreferrer" aria-label="フォレトスの詳細ページを開く" data-types="bug steel">
@@ -2714,6 +3153,13 @@
               <dd>40</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>がんじょう</li>
+              <li>ぼうじん</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553318" target="_blank" rel="noopener noreferrer" aria-label="ハガネールの詳細ページを開く" data-types="steel ground">
@@ -2757,6 +3203,14 @@
               <dd>30</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>いしあたま</li>
+              <li>がんじょう</li>
+              <li>ちからずく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553319" target="_blank" rel="noopener noreferrer" aria-label="メガハガネールの詳細ページを開く" data-types="steel ground">
@@ -2800,6 +3254,12 @@
               <dd>30</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>すなのちから</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564112" target="_blank" rel="noopener noreferrer" aria-label="ハリーセンの詳細ページを開く" data-types="water poison">
@@ -2843,6 +3303,14 @@
               <dd>85</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>どくのトゲ</li>
+              <li>すいすい</li>
+              <li>いかく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553285" target="_blank" rel="noopener noreferrer" aria-label="ハッサムの詳細ページを開く" data-types="bug steel">
@@ -2886,6 +3354,14 @@
               <dd>65</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>むしのしらせ</li>
+              <li>テクニシャン</li>
+              <li>ライトメタル</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553287" target="_blank" rel="noopener noreferrer" aria-label="ヘラクロスの詳細ページを開く" data-types="bug fighting">
@@ -2929,6 +3405,14 @@
               <dd>85</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>むしのしらせ</li>
+              <li>こんじょう</li>
+              <li>じしんかじょう</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553288" target="_blank" rel="noopener noreferrer" aria-label="メガヘラクロスの詳細ページを開く" data-types="bug fighting">
@@ -2972,6 +3456,12 @@
               <dd>75</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>スキルリンク</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553289" target="_blank" rel="noopener noreferrer" aria-label="エアームドの詳細ページを開く" data-types="steel flying">
@@ -3015,6 +3505,14 @@
               <dd>70</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>するどいめ</li>
+              <li>がんじょう</li>
+              <li>くだけるよろい</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554205" target="_blank" rel="noopener noreferrer" aria-label="メガエアームドの詳細ページを開く" data-types="steel flying">
@@ -3058,6 +3556,12 @@
               <dd>110</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>すじがねいり</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553290" target="_blank" rel="noopener noreferrer" aria-label="ヘルガーの詳細ページを開く" data-types="dark fire">
@@ -3101,6 +3605,14 @@
               <dd>95</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>はやおき</li>
+              <li>もらいび</li>
+              <li>きんちょうかん</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553291" target="_blank" rel="noopener noreferrer" aria-label="メガヘルガーの詳細ページを開く" data-types="dark fire">
@@ -3144,6 +3656,12 @@
               <dd>115</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>サンパワー</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553292" target="_blank" rel="noopener noreferrer" aria-label="バンギラスの詳細ページを開く" data-types="rock dark">
@@ -3187,6 +3705,13 @@
               <dd>61</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>すなおこし</li>
+              <li>きんちょうかん</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553293" target="_blank" rel="noopener noreferrer" aria-label="メガバンギラスの詳細ページを開く" data-types="rock dark">
@@ -3230,6 +3755,12 @@
               <dd>71</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>すなおこし</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564138" target="_blank" rel="noopener noreferrer" aria-label="ジュカインの詳細ページを開く" data-types="grass">
@@ -3272,6 +3803,13 @@
               <dd>120</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>しんりょく</li>
+              <li>かるわざ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564158" target="_blank" rel="noopener noreferrer" aria-label="メガジュカインの詳細ページを開く" data-types="grass dragon">
@@ -3315,6 +3853,12 @@
               <dd>145</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ひらいしん</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553313" target="_blank" rel="noopener noreferrer" aria-label="サーナイトの詳細ページを開く" data-types="psychic fairy">
@@ -3358,6 +3902,14 @@
               <dd>80</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>シンクロ</li>
+              <li>トレース</li>
+              <li>テレパシー</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553314" target="_blank" rel="noopener noreferrer" aria-label="メガサーナイトの詳細ページを開く" data-types="psychic fairy">
@@ -3401,6 +3953,12 @@
               <dd>100</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>フェアリースキン</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553315" target="_blank" rel="noopener noreferrer" aria-label="ヤミラミの詳細ページを開く" data-types="dark ghost">
@@ -3444,6 +4002,14 @@
               <dd>50</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>するどいめ</li>
+              <li>あとだし</li>
+              <li>いたずらごころ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553316" target="_blank" rel="noopener noreferrer" aria-label="メガヤミラミの詳細ページを開く" data-types="dark ghost">
@@ -3487,6 +4053,12 @@
               <dd>20</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>マジックミラー</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564135" target="_blank" rel="noopener noreferrer" aria-label="クチートの詳細ページを開く" data-types="steel fairy">
@@ -3530,6 +4102,14 @@
               <dd>50</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>かいりきバサミ</li>
+              <li>いかく</li>
+              <li>ちからずく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553317" target="_blank" rel="noopener noreferrer" aria-label="ボスゴドラの詳細ページを開く" data-types="steel rock">
@@ -3573,6 +4153,14 @@
               <dd>50</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>がんじょう</li>
+              <li>いしあたま</li>
+              <li>ヘヴィメタル</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553320" target="_blank" rel="noopener noreferrer" aria-label="メガボスゴドラの詳細ページを開く" data-types="steel">
@@ -3615,6 +4203,12 @@
               <dd>50</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>フィルター</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554167" target="_blank" rel="noopener noreferrer" aria-label="チャーレムの詳細ページを開く" data-types="fighting psychic">
@@ -3658,6 +4252,13 @@
               <dd>80</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ヨガパワー</li>
+              <li>テレパシー</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554168" target="_blank" rel="noopener noreferrer" aria-label="メガチャーレムの詳細ページを開く" data-types="fighting psychic">
@@ -3701,6 +4302,12 @@
               <dd>100</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ヨガパワー</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553321" target="_blank" rel="noopener noreferrer" aria-label="ライボルトの詳細ページを開く" data-types="electric">
@@ -3743,6 +4350,14 @@
               <dd>105</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>せいでんき</li>
+              <li>ひらいしん</li>
+              <li>マイナス</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553322" target="_blank" rel="noopener noreferrer" aria-label="メガライボルトの詳細ページを開く" data-types="electric">
@@ -3785,6 +4400,12 @@
               <dd>135</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>いかく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554169" target="_blank" rel="noopener noreferrer" aria-label="サメハダーの詳細ページを開く" data-types="water dark">
@@ -3828,6 +4449,13 @@
               <dd>95</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>さめはだ</li>
+              <li>かそく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554170" target="_blank" rel="noopener noreferrer" aria-label="メガサメハダーの詳細ページを開く" data-types="water dark">
@@ -3871,6 +4499,12 @@
               <dd>105</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>がんじょうあご</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554171" target="_blank" rel="noopener noreferrer" aria-label="バクーダの詳細ページを開く" data-types="fire ground">
@@ -3914,6 +4548,14 @@
               <dd>40</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>マグマのよろい</li>
+              <li>ハードロック</li>
+              <li>いかりのつぼ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554172" target="_blank" rel="noopener noreferrer" aria-label="メガバクーダの詳細ページを開く" data-types="fire ground">
@@ -3957,6 +4599,12 @@
               <dd>20</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ちからずく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553328" target="_blank" rel="noopener noreferrer" aria-label="コータスの詳細ページを開く" data-types="fire">
@@ -3999,6 +4647,14 @@
               <dd>20</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>しろいけむり</li>
+              <li>ひでり</li>
+              <li>シェルアーマー</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553329" target="_blank" rel="noopener noreferrer" aria-label="チルタリスの詳細ページを開く" data-types="dragon flying">
@@ -4042,6 +4698,13 @@
               <dd>80</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>しぜんかいふく</li>
+              <li>ノーてんき</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553330" target="_blank" rel="noopener noreferrer" aria-label="メガチルタリスの詳細ページを開く" data-types="dragon fairy">
@@ -4085,6 +4748,12 @@
               <dd>80</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>フェアリースキン</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553331" target="_blank" rel="noopener noreferrer" aria-label="ミロカロスの詳細ページを開く" data-types="water">
@@ -4127,6 +4796,14 @@
               <dd>81</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ふしぎなうろこ</li>
+              <li>かちき</li>
+              <li>メロメロボディ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553137" target="_blank" rel="noopener noreferrer" aria-label="ポワルンの詳細ページを開く" data-types="normal">
@@ -4169,6 +4846,12 @@
               <dd>70</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>てんきや</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553137" target="_blank" rel="noopener noreferrer" aria-label="ポワルン(たいようのすがた)の詳細ページを開く" data-types="fire">
@@ -4211,6 +4894,12 @@
               <dd>70</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>てんきや</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553137" target="_blank" rel="noopener noreferrer" aria-label="ポワルン(あまみずのすがた)の詳細ページを開く" data-types="water">
@@ -4253,6 +4942,12 @@
               <dd>70</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>てんきや</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553137" target="_blank" rel="noopener noreferrer" aria-label="ポワルン(ゆきぐものすがた)の詳細ページを開く" data-types="ice">
@@ -4295,6 +4990,12 @@
               <dd>70</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>てんきや</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553332" target="_blank" rel="noopener noreferrer" aria-label="ジュペッタの詳細ページを開く" data-types="ghost">
@@ -4337,6 +5038,14 @@
               <dd>65</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ふみん</li>
+              <li>おみとおし</li>
+              <li>のろわれボディ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554206" target="_blank" rel="noopener noreferrer" aria-label="メガジュペッタの詳細ページを開く" data-types="ghost">
@@ -4379,6 +5088,12 @@
               <dd>75</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>いたずらごころ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554173" target="_blank" rel="noopener noreferrer" aria-label="チリーンの詳細ページを開く" data-types="psychic">
@@ -4421,6 +5136,12 @@
               <dd>65</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ふゆう</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554174" target="_blank" rel="noopener noreferrer" aria-label="メガチリーンの詳細ページを開く" data-types="psychic steel">
@@ -4464,6 +5185,12 @@
               <dd>65</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ふゆう</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553333" target="_blank" rel="noopener noreferrer" aria-label="アブソルの詳細ページを開く" data-types="dark">
@@ -4506,6 +5233,14 @@
               <dd>75</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>プレッシャー</li>
+              <li>きょううん</li>
+              <li>せいぎのこころ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553334" target="_blank" rel="noopener noreferrer" aria-label="メガアブソルの詳細ページを開く" data-types="dark">
@@ -4548,6 +5283,12 @@
               <dd>115</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>マジックミラー</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553335" target="_blank" rel="noopener noreferrer" aria-label="オニゴーリの詳細ページを開く" data-types="ice">
@@ -4590,6 +5331,14 @@
               <dd>80</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>せいしんりょく</li>
+              <li>アイスボディ</li>
+              <li>ムラっけ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554207" target="_blank" rel="noopener noreferrer" aria-label="メガオニゴーリの詳細ページを開く" data-types="ice">
@@ -4632,6 +5381,12 @@
               <dd>100</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>フリーズスキン</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553336" target="_blank" rel="noopener noreferrer" aria-label="メタグロスの詳細ページを開く" data-types="steel psychic">
@@ -4675,6 +5430,13 @@
               <dd>70</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>クリアボディ</li>
+              <li>ライトメタル</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553337" target="_blank" rel="noopener noreferrer" aria-label="ドダイトスの詳細ページを開く" data-types="grass ground">
@@ -4718,6 +5480,13 @@
               <dd>56</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>しんりょく</li>
+              <li>シェルアーマー</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553338" target="_blank" rel="noopener noreferrer" aria-label="ゴウカザルの詳細ページを開く" data-types="fire fighting">
@@ -4761,6 +5530,13 @@
               <dd>108</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>もうか</li>
+              <li>てつのこぶし</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553339" target="_blank" rel="noopener noreferrer" aria-label="エンペルトの詳細ページを開く" data-types="water steel">
@@ -4804,6 +5580,13 @@
               <dd>60</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>げきりゅう</li>
+              <li>かちき</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564134" target="_blank" rel="noopener noreferrer" aria-label="ムクホークの詳細ページを開く" data-types="normal flying">
@@ -4847,6 +5630,13 @@
               <dd>100</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>いかく</li>
+              <li>すてみ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554393" target="_blank" rel="noopener noreferrer" aria-label="レントラーの詳細ページを開く" data-types="electric">
@@ -4889,6 +5679,14 @@
               <dd>70</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>とうそうしん</li>
+              <li>いかく</li>
+              <li>こんじょう</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554392" target="_blank" rel="noopener noreferrer" aria-label="ロズレイドの詳細ページを開く" data-types="grass poison">
@@ -4932,6 +5730,14 @@
               <dd>90</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>しぜんかいふく</li>
+              <li>どくのトゲ</li>
+              <li>テクニシャン</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554391" target="_blank" rel="noopener noreferrer" aria-label="ラムパルドの詳細ページを開く" data-types="rock">
@@ -4974,6 +5780,13 @@
               <dd>58</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>かたやぶり</li>
+              <li>ちからずく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554390" target="_blank" rel="noopener noreferrer" aria-label="トリデプスの詳細ページを開く" data-types="rock steel">
@@ -5017,6 +5830,13 @@
               <dd>30</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>がんじょう</li>
+              <li>ぼうおん</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553340" target="_blank" rel="noopener noreferrer" aria-label="ミミロップの詳細ページを開く" data-types="normal">
@@ -5059,6 +5879,14 @@
               <dd>105</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>メロメロボディ</li>
+              <li>ぶきよう</li>
+              <li>じゅうなん</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553341" target="_blank" rel="noopener noreferrer" aria-label="ミカルゲの詳細ページを開く" data-types="ghost dark">
@@ -5102,6 +5930,13 @@
               <dd>35</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>プレッシャー</li>
+              <li>すりぬけ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553343" target="_blank" rel="noopener noreferrer" aria-label="メガガブリアスの詳細ページを開く" data-types="dragon ground">
@@ -5145,6 +5980,12 @@
               <dd>92</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>すなのちから</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553353" target="_blank" rel="noopener noreferrer" aria-label="ルカリオの詳細ページを開く" data-types="fighting steel">
@@ -5188,6 +6029,14 @@
               <dd>90</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ふくつのこころ</li>
+              <li>せいしんりょく</li>
+              <li>せいぎのこころ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554387" target="_blank" rel="noopener noreferrer" aria-label="ドクロッグの詳細ページを開く" data-types="poison fighting">
@@ -5231,6 +6080,14 @@
               <dd>85</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>きけんよち</li>
+              <li>かんそうはだ</li>
+              <li>どくしゅ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553356" target="_blank" rel="noopener noreferrer" aria-label="ユキノオーの詳細ページを開く" data-types="grass ice">
@@ -5274,6 +6131,13 @@
               <dd>60</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ゆきふらし</li>
+              <li>ぼうおん</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553357" target="_blank" rel="noopener noreferrer" aria-label="メガユキノオーの詳細ページを開く" data-types="grass ice">
@@ -5317,6 +6181,12 @@
               <dd>30</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ゆきふらし</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553358" target="_blank" rel="noopener noreferrer" aria-label="マニューラの詳細ページを開く" data-types="dark ice">
@@ -5360,6 +6230,13 @@
               <dd>125</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>プレッシャー</li>
+              <li>わるいてぐせ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553359" target="_blank" rel="noopener noreferrer" aria-label="ドサイドンの詳細ページを開く" data-types="ground rock">
@@ -5403,6 +6280,14 @@
               <dd>40</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ひらいしん</li>
+              <li>ハードロック</li>
+              <li>すてみ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553360" target="_blank" rel="noopener noreferrer" aria-label="リーフィアの詳細ページを開く" data-types="grass">
@@ -5445,6 +6330,13 @@
               <dd>95</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>リーフガード</li>
+              <li>ようりょくそ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553361" target="_blank" rel="noopener noreferrer" aria-label="グレイシアの詳細ページを開く" data-types="ice">
@@ -5487,6 +6379,13 @@
               <dd>65</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ゆきがくれ</li>
+              <li>アイスボディ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553362" target="_blank" rel="noopener noreferrer" aria-label="グライオンの詳細ページを開く" data-types="ground flying">
@@ -5530,6 +6429,14 @@
               <dd>95</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>かいりきバサミ</li>
+              <li>すながくれ</li>
+              <li>ポイズンヒール</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554208" target="_blank" rel="noopener noreferrer" aria-label="メガエルレイドの詳細ページを開く" data-types="psychic fighting">
@@ -5573,6 +6480,12 @@
               <dd>110</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>せいしんりょく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553365" target="_blank" rel="noopener noreferrer" aria-label="ユキメノコの詳細ページを開く" data-types="ice ghost">
@@ -5616,6 +6529,13 @@
               <dd>110</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ゆきがくれ</li>
+              <li>のろわれボディ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553366" target="_blank" rel="noopener noreferrer" aria-label="メガユキメノコの詳細ページを開く" data-types="ice ghost">
@@ -5659,6 +6579,12 @@
               <dd>120</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ゆきふらし</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553367" target="_blank" rel="noopener noreferrer" aria-label="ロトムの詳細ページを開く" data-types="electric ghost">
@@ -5702,6 +6628,12 @@
               <dd>91</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ふゆう</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554389" target="_blank" rel="noopener noreferrer" aria-label="フロストロトムの詳細ページを開く" data-types="electric ice">
@@ -5745,6 +6677,12 @@
               <dd>86</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ふゆう</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554388" target="_blank" rel="noopener noreferrer" aria-label="スピンロトムの詳細ページを開く" data-types="electric flying">
@@ -5788,6 +6726,12 @@
               <dd>86</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ふゆう</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553370" target="_blank" rel="noopener noreferrer" aria-label="カットロトムの詳細ページを開く" data-types="electric grass">
@@ -5831,6 +6775,12 @@
               <dd>86</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ふゆう</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553371" target="_blank" rel="noopener noreferrer" aria-label="ジャローダの詳細ページを開く" data-types="grass">
@@ -5873,6 +6823,13 @@
               <dd>113</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>しんりょく</li>
+              <li>あまのじゃく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553372" target="_blank" rel="noopener noreferrer" aria-label="エンブオーの詳細ページを開く" data-types="fire fighting">
@@ -5916,6 +6873,13 @@
               <dd>65</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>もうか</li>
+              <li>すてみ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553373" target="_blank" rel="noopener noreferrer" aria-label="メガエンブオーの詳細ページを開く" data-types="fire fighting">
@@ -5959,6 +6923,12 @@
               <dd>75</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>かたやぶり</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553374" target="_blank" rel="noopener noreferrer" aria-label="ダイケンキの詳細ページを開く" data-types="water">
@@ -6001,6 +6971,13 @@
               <dd>70</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>げきりゅう</li>
+              <li>シェルアーマー</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554386" target="_blank" rel="noopener noreferrer" aria-label="ミルホッグの詳細ページを開く" data-types="normal">
@@ -6043,6 +7020,14 @@
               <dd>77</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>はっこう</li>
+              <li>するどいめ</li>
+              <li>アナライズ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554385" target="_blank" rel="noopener noreferrer" aria-label="レパルダスの詳細ページを開く" data-types="dark">
@@ -6085,6 +7070,14 @@
               <dd>106</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>じゅうなん</li>
+              <li>かるわざ</li>
+              <li>いたずらごころ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554384" target="_blank" rel="noopener noreferrer" aria-label="ヤナッキーの詳細ページを開く" data-types="grass">
@@ -6127,6 +7120,13 @@
               <dd>101</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>くいしんぼう</li>
+              <li>しんりょく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554383" target="_blank" rel="noopener noreferrer" aria-label="バオッキーの詳細ページを開く" data-types="fire">
@@ -6169,6 +7169,13 @@
               <dd>101</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>くいしんぼう</li>
+              <li>もうか</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554382" target="_blank" rel="noopener noreferrer" aria-label="ヒヤッキーの詳細ページを開く" data-types="water">
@@ -6211,6 +7218,13 @@
               <dd>101</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>くいしんぼう</li>
+              <li>げきりゅう</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564140" target="_blank" rel="noopener noreferrer" aria-label="ムシャーナの詳細ページを開く" data-types="psychic">
@@ -6253,6 +7267,14 @@
               <dd>29</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>よちむ</li>
+              <li>シンクロ</li>
+              <li>テレパシー</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553376" target="_blank" rel="noopener noreferrer" aria-label="ドリュウズの詳細ページを開く" data-types="ground steel">
@@ -6296,6 +7318,14 @@
               <dd>88</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>すなかき</li>
+              <li>すなのちから</li>
+              <li>かたやぶり</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554209" target="_blank" rel="noopener noreferrer" aria-label="メガドリュウズの詳細ページを開く" data-types="ground steel">
@@ -6339,6 +7369,12 @@
               <dd>103</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>かんつうドリル</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553377" target="_blank" rel="noopener noreferrer" aria-label="タブンネの詳細ページを開く" data-types="normal">
@@ -6381,6 +7417,14 @@
               <dd>50</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>いやしのこころ</li>
+              <li>さいせいりょく</li>
+              <li>ぶきよう</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553378" target="_blank" rel="noopener noreferrer" aria-label="メガタブンネの詳細ページを開く" data-types="normal fairy">
@@ -6424,6 +7468,12 @@
               <dd>50</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>いやしのこころ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553390" target="_blank" rel="noopener noreferrer" aria-label="ローブシンの詳細ページを開く" data-types="fighting">
@@ -6466,6 +7516,14 @@
               <dd>45</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>こんじょう</li>
+              <li>ちからずく</li>
+              <li>てつのこぶし</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564133" target="_blank" rel="noopener noreferrer" aria-label="ペンドラーの詳細ページを開く" data-types="bug poison">
@@ -6509,6 +7567,14 @@
               <dd>112</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>どくのトゲ</li>
+              <li>むしのしらせ</li>
+              <li>かそく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564152" target="_blank" rel="noopener noreferrer" aria-label="メガペンドラーの詳細ページを開く" data-types="bug poison">
@@ -6552,6 +7618,12 @@
               <dd>62</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>シェルアーマー</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553388" target="_blank" rel="noopener noreferrer" aria-label="ワルビアルの詳細ページを開く" data-types="ground dark">
@@ -6595,6 +7667,14 @@
               <dd>92</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>いかく</li>
+              <li>じしんかじょう</li>
+              <li>いかりのつぼ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564132" target="_blank" rel="noopener noreferrer" aria-label="ズルズキンの詳細ページを開く" data-types="dark fighting">
@@ -6638,6 +7718,14 @@
               <dd>58</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>だっぴ</li>
+              <li>じしんかじょう</li>
+              <li>いかく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564151" target="_blank" rel="noopener noreferrer" aria-label="メガズルズキンの詳細ページを開く" data-types="dark fighting">
@@ -6681,6 +7769,12 @@
               <dd>68</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>いかく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554381" target="_blank" rel="noopener noreferrer" aria-label="デスカーンの詳細ページを開く" data-types="ghost">
@@ -6723,6 +7817,12 @@
               <dd>30</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ミイラ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553387" target="_blank" rel="noopener noreferrer" aria-label="ダストダスの詳細ページを開く" data-types="poison">
@@ -6765,6 +7865,14 @@
               <dd>75</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>あくしゅう</li>
+              <li>くだけるよろい</li>
+              <li>ゆうばく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553386" target="_blank" rel="noopener noreferrer" aria-label="ゾロアークの詳細ページを開く" data-types="dark">
@@ -6807,6 +7915,12 @@
               <dd>105</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>イリュージョン</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554380" target="_blank" rel="noopener noreferrer" aria-label="ランクルスの詳細ページを開く" data-types="psychic">
@@ -6849,6 +7963,14 @@
               <dd>30</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ぼうじん</li>
+              <li>マジックガード</li>
+              <li>さいせいりょく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553383" target="_blank" rel="noopener noreferrer" aria-label="エモンガの詳細ページを開く" data-types="electric flying">
@@ -6892,6 +8014,13 @@
               <dd>103</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>せいでんき</li>
+              <li>でんきエンジン</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564131" target="_blank" rel="noopener noreferrer" aria-label="シビルドンの詳細ページを開く" data-types="electric">
@@ -6934,6 +8063,12 @@
               <dd>50</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ふゆう</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564150" target="_blank" rel="noopener noreferrer" aria-label="メガシビルドンの詳細ページを開く" data-types="electric">
@@ -6976,6 +8111,12 @@
               <dd>80</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>うなぎのぼり</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554175" target="_blank" rel="noopener noreferrer" aria-label="シャンデラの詳細ページを開く" data-types="ghost fire">
@@ -7019,6 +8160,14 @@
               <dd>80</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>もらいび</li>
+              <li>ほのおのからだ</li>
+              <li>すりぬけ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554176" target="_blank" rel="noopener noreferrer" aria-label="メガシャンデラの詳細ページを開く" data-types="ghost fire">
@@ -7062,6 +8211,12 @@
               <dd>90</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>すりぬけ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554379" target="_blank" rel="noopener noreferrer" aria-label="ツンベアーの詳細ページを開く" data-types="ice">
@@ -7104,6 +8259,14 @@
               <dd>50</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ゆきがくれ</li>
+              <li>ゆきかき</li>
+              <li>すいすい</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554378" target="_blank" rel="noopener noreferrer" aria-label="マッギョの詳細ページを開く" data-types="ground electric">
@@ -7147,6 +8310,14 @@
               <dd>32</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>せいでんき</li>
+              <li>じゅうなん</li>
+              <li>すながくれ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553382" target="_blank" rel="noopener noreferrer" aria-label="ガラルマッギョの詳細ページを開く" data-types="ground steel">
@@ -7190,6 +8361,12 @@
               <dd>32</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ぎたい</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553381" target="_blank" rel="noopener noreferrer" aria-label="ゴルーグの詳細ページを開く" data-types="ground ghost">
@@ -7233,6 +8410,14 @@
               <dd>55</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>てつのこぶし</li>
+              <li>ぶきよう</li>
+              <li>ノーガード</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554210" target="_blank" rel="noopener noreferrer" aria-label="メガゴルーグの詳細ページを開く" data-types="ground ghost">
@@ -7276,6 +8461,12 @@
               <dd>55</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ふかしのこぶし</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553352" target="_blank" rel="noopener noreferrer" aria-label="ブリガロンの詳細ページを開く" data-types="grass fighting">
@@ -7319,6 +8510,13 @@
               <dd>64</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>しんりょく</li>
+              <li>ぼうだん</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553351" target="_blank" rel="noopener noreferrer" aria-label="メガブリガロンの詳細ページを開く" data-types="grass fighting">
@@ -7362,6 +8560,12 @@
               <dd>44</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ぼうだん</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553350" target="_blank" rel="noopener noreferrer" aria-label="マフォクシーの詳細ページを開く" data-types="fire psychic">
@@ -7405,6 +8609,13 @@
               <dd>104</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>もうか</li>
+              <li>マジシャン</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553346" target="_blank" rel="noopener noreferrer" aria-label="ホルードの詳細ページを開く" data-types="normal ground">
@@ -7448,6 +8659,14 @@
               <dd>78</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ものひろい</li>
+              <li>ほおぶくろ</li>
+              <li>ちからもち</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553345" target="_blank" rel="noopener noreferrer" aria-label="ファイアローの詳細ページを開く" data-types="fire flying">
@@ -7491,6 +8710,13 @@
               <dd>126</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ほのおのからだ</li>
+              <li>はやてのつばさ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553327" target="_blank" rel="noopener noreferrer" aria-label="ビビヨンの詳細ページを開く" data-types="bug flying">
@@ -7534,6 +8760,14 @@
               <dd>89</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>りんぷん</li>
+              <li>ふくがん</li>
+              <li>フレンドガード</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564130" target="_blank" rel="noopener noreferrer" aria-label="カエンジシ(オスのすがた)の詳細ページを開く" data-types="fire normal">
@@ -7577,6 +8811,14 @@
               <dd>106</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>とうそうしん</li>
+              <li>きんちょうかん</li>
+              <li>じしんかじょう</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/" target="_blank" rel="noopener noreferrer" aria-label="カエンジシ(メスのすがた)の詳細ページを開く" data-types="fire normal">
@@ -7620,6 +8862,14 @@
               <dd>106</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>とうそうしん</li>
+              <li>きんちょうかん</li>
+              <li>じしんかじょう</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564149" target="_blank" rel="noopener noreferrer" aria-label="メガカエンジシの詳細ページを開く" data-types="fire normal">
@@ -7663,6 +8913,12 @@
               <dd>126</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ほのおのたてがみ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553326" target="_blank" rel="noopener noreferrer" aria-label="フラエッテ(えいえんのはな)の詳細ページを開く" data-types="fairy">
@@ -7705,6 +8961,13 @@
               <dd>92</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>フラワーベール</li>
+              <li>きょうせい</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554377" target="_blank" rel="noopener noreferrer" aria-label="フラージェスの詳細ページを開く" data-types="fairy">
@@ -7747,6 +9010,13 @@
               <dd>75</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>フラワーベール</li>
+              <li>きょうせい</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554376" target="_blank" rel="noopener noreferrer" aria-label="ゴロンダの詳細ページを開く" data-types="fighting dark">
@@ -7790,6 +9060,14 @@
               <dd>58</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>てつのこぶし</li>
+              <li>かたやぶり</li>
+              <li>きもったま</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553281" target="_blank" rel="noopener noreferrer" aria-label="トリミアンの詳細ページを開く" data-types="normal">
@@ -7832,6 +9110,12 @@
               <dd>102</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ファーコート</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553280" target="_blank" rel="noopener noreferrer" aria-label="ニャオニクス(オス)の詳細ページを開く" data-types="psychic">
@@ -7874,6 +9158,14 @@
               <dd>104</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>するどいめ</li>
+              <li>すりぬけ</li>
+              <li>いたずらごころ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554177" target="_blank" rel="noopener noreferrer" aria-label="ニャオニクス(メス)の詳細ページを開く" data-types="psychic">
@@ -7916,6 +9208,14 @@
               <dd>104</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>するどいめ</li>
+              <li>すりぬけ</li>
+              <li>かちき</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554178" target="_blank" rel="noopener noreferrer" aria-label="メガニャオニクス(オス)の詳細ページを開く" data-types="psychic">
@@ -7958,6 +9258,12 @@
               <dd>124</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>トレース</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554179" target="_blank" rel="noopener noreferrer" aria-label="メガニャオニクス(メス)の詳細ページを開く" data-types="psychic">
@@ -8000,6 +9306,12 @@
               <dd>124</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>トレース</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553262" target="_blank" rel="noopener noreferrer" aria-label="ギルガルド(ブレードフォルム)の詳細ページを開く" data-types="steel ghost">
@@ -8043,6 +9355,12 @@
               <dd>60</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>バトルスイッチ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554375" target="_blank" rel="noopener noreferrer" aria-label="フレフワンの詳細ページを開く" data-types="fairy">
@@ -8085,6 +9403,13 @@
               <dd>29</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>いやしのこころ</li>
+              <li>アロマベール</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554374" target="_blank" rel="noopener noreferrer" aria-label="ペロリームの詳細ページを開く" data-types="fairy">
@@ -8127,6 +9452,13 @@
               <dd>72</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>スイートベール</li>
+              <li>かるわざ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564129" target="_blank" rel="noopener noreferrer" aria-label="カラマネロの詳細ページを開く" data-types="dark psychic">
@@ -8170,6 +9502,14 @@
               <dd>73</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>あまのじゃく</li>
+              <li>きゅうばん</li>
+              <li>すりぬけ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564148" target="_blank" rel="noopener noreferrer" aria-label="メガカラマネロの詳細ページを開く" data-types="dark psychic">
@@ -8213,6 +9553,12 @@
               <dd>88</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>あまのじゃく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564128" target="_blank" rel="noopener noreferrer" aria-label="ガメノデスの詳細ページを開く" data-types="rock water">
@@ -8256,6 +9602,14 @@
               <dd>68</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>かたいツメ</li>
+              <li>スナイパー</li>
+              <li>わるいてぐせ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564147" target="_blank" rel="noopener noreferrer" aria-label="メガガメノデスの詳細ページを開く" data-types="rock fighting">
@@ -8299,6 +9653,12 @@
               <dd>88</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>かたいツメ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564127" target="_blank" rel="noopener noreferrer" aria-label="ドラミドロの詳細ページを開く" data-types="poison dragon">
@@ -8342,6 +9702,14 @@
               <dd>44</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>どくのトゲ</li>
+              <li>どくしゅ</li>
+              <li>てきおうりょく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553261" target="_blank" rel="noopener noreferrer" aria-label="ブロスターの詳細ページを開く" data-types="water">
@@ -8384,6 +9752,12 @@
               <dd>59</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>メガランチャー</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554373" target="_blank" rel="noopener noreferrer" aria-label="エレザードの詳細ページを開く" data-types="electric normal">
@@ -8427,6 +9801,14 @@
               <dd>109</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>かんそうはだ</li>
+              <li>すながくれ</li>
+              <li>サンパワー</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553260" target="_blank" rel="noopener noreferrer" aria-label="ガチゴラスの詳細ページを開く" data-types="rock dragon">
@@ -8470,6 +9852,13 @@
               <dd>71</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>がんじょうあご</li>
+              <li>いしあたま</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553259" target="_blank" rel="noopener noreferrer" aria-label="アマルルガの詳細ページを開く" data-types="rock ice">
@@ -8513,6 +9902,13 @@
               <dd>58</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>フリーズスキン</li>
+              <li>ゆきふらし</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553258" target="_blank" rel="noopener noreferrer" aria-label="ルチャブルの詳細ページを開く" data-types="fighting flying">
@@ -8556,6 +9952,14 @@
               <dd>118</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>じゅうなん</li>
+              <li>かるわざ</li>
+              <li>かたやぶり</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553256" target="_blank" rel="noopener noreferrer" aria-label="メガルチャブルの詳細ページを開く" data-types="fighting flying">
@@ -8599,6 +10003,12 @@
               <dd>118</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ノーガード</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554372" target="_blank" rel="noopener noreferrer" aria-label="デデンネの詳細ページを開く" data-types="electric fairy">
@@ -8642,6 +10052,14 @@
               <dd>101</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ほおぶくろ</li>
+              <li>ものひろい</li>
+              <li>プラス</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553255" target="_blank" rel="noopener noreferrer" aria-label="ヌメルゴンの詳細ページを開く" data-types="dragon">
@@ -8684,6 +10102,14 @@
               <dd>80</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>そうしょく</li>
+              <li>うるおいボディ</li>
+              <li>ぬめぬめ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554370" target="_blank" rel="noopener noreferrer" aria-label="ヒスイヌメルゴンの詳細ページを開く" data-types="steel dragon">
@@ -8727,6 +10153,14 @@
               <dd>60</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>そうしょく</li>
+              <li>シェルアーマー</li>
+              <li>ぬめぬめ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553254" target="_blank" rel="noopener noreferrer" aria-label="クレッフィの詳細ページを開く" data-types="steel fairy">
@@ -8770,6 +10204,13 @@
               <dd>75</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>いたずらごころ</li>
+              <li>マジシャン</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553230" target="_blank" rel="noopener noreferrer" aria-label="オーロットの詳細ページを開く" data-types="ghost grass">
@@ -8813,6 +10254,14 @@
               <dd>56</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>しぜんかいふく</li>
+              <li>おみとおし</li>
+              <li>しゅうかく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553229" target="_blank" rel="noopener noreferrer" aria-label="パンプジン(こだましゅ)の詳細ページを開く" data-types="ghost grass">
@@ -8856,6 +10305,14 @@
               <dd>99</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ものひろい</li>
+              <li>おみとおし</li>
+              <li>ふみん</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553229" target="_blank" rel="noopener noreferrer" aria-label="パンプジン(ちゅうだましゅ)の詳細ページを開く" data-types="ghost grass">
@@ -8899,6 +10356,14 @@
               <dd>84</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ものひろい</li>
+              <li>おみとおし</li>
+              <li>ふみん</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553229" target="_blank" rel="noopener noreferrer" aria-label="パンプジン(おおだましゅ)の詳細ページを開く" data-types="ghost grass">
@@ -8942,6 +10407,14 @@
               <dd>69</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ものひろい</li>
+              <li>おみとおし</li>
+              <li>ふみん</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553229" target="_blank" rel="noopener noreferrer" aria-label="パンプジン(ギガだましゅ)の詳細ページを開く" data-types="ghost grass">
@@ -8985,6 +10458,14 @@
               <dd>54</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ものひろい</li>
+              <li>おみとおし</li>
+              <li>ふみん</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554369" target="_blank" rel="noopener noreferrer" aria-label="クレベースの詳細ページを開く" data-types="ice">
@@ -9027,6 +10508,14 @@
               <dd>28</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>マイペース</li>
+              <li>アイスボディ</li>
+              <li>がんじょう</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554368" target="_blank" rel="noopener noreferrer" aria-label="ヒスイクレベースの詳細ページを開く" data-types="ice rock">
@@ -9070,6 +10559,14 @@
               <dd>38</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>がんじょうあご</li>
+              <li>アイスボディ</li>
+              <li>がんじょう</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553228" target="_blank" rel="noopener noreferrer" aria-label="オンバーンの詳細ページを開く" data-types="flying dragon">
@@ -9113,6 +10610,14 @@
               <dd>123</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>おみとおし</li>
+              <li>すりぬけ</li>
+              <li>テレパシー</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553227" target="_blank" rel="noopener noreferrer" aria-label="ジュナイパーの詳細ページを開く" data-types="grass ghost">
@@ -9156,6 +10661,13 @@
               <dd>70</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>しんりょく</li>
+              <li>えんかく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553226" target="_blank" rel="noopener noreferrer" aria-label="ヒスイジュナイパーの詳細ページを開く" data-types="grass fighting">
@@ -9199,6 +10711,13 @@
               <dd>60</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>しんりょく</li>
+              <li>きもったま</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553225" target="_blank" rel="noopener noreferrer" aria-label="ガオガエンの詳細ページを開く" data-types="fire dark">
@@ -9242,6 +10761,13 @@
               <dd>60</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>もうか</li>
+              <li>いかく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553394" target="_blank" rel="noopener noreferrer" aria-label="ドデカバシの詳細ページを開く" data-types="normal flying">
@@ -9285,6 +10811,14 @@
               <dd>60</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>するどいめ</li>
+              <li>スキルリンク</li>
+              <li>ちからずく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553223" target="_blank" rel="noopener noreferrer" aria-label="ケケンカニの詳細ページを開く" data-types="fighting ice">
@@ -9328,6 +10862,14 @@
               <dd>43</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>かいりきバサミ</li>
+              <li>てつのこぶし</li>
+              <li>いかりのつぼ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553222" target="_blank" rel="noopener noreferrer" aria-label="メガケケンカニの詳細ページを開く" data-types="fighting ice">
@@ -9371,6 +10913,12 @@
               <dd>33</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>てつのこぶし</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553218" target="_blank" rel="noopener noreferrer" aria-label="ルガルガン(まひる)の詳細ページを開く" data-types="rock">
@@ -9413,6 +10961,14 @@
               <dd>112</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>するどいめ</li>
+              <li>すなかき</li>
+              <li>ふくつのこころ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553219" target="_blank" rel="noopener noreferrer" aria-label="ルガルガン(まよなか)の詳細ページを開く" data-types="rock">
@@ -9455,6 +11011,14 @@
               <dd>82</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>するどいめ</li>
+              <li>やるき</li>
+              <li>ノーガード</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554439" target="_blank" rel="noopener noreferrer" aria-label="ルガルガン(たそがれ)の詳細ページを開く" data-types="rock">
@@ -9497,6 +11061,12 @@
               <dd>110</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>かたいツメ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554367" target="_blank" rel="noopener noreferrer" aria-label="バンバドロの詳細ページを開く" data-types="ground">
@@ -9539,6 +11109,14 @@
               <dd>35</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>マイペース</li>
+              <li>じきゅうりょく</li>
+              <li>せいしんりょく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553221" target="_blank" rel="noopener noreferrer" aria-label="オニシズクモの詳細ページを開く" data-types="water bug">
@@ -9582,6 +11160,13 @@
               <dd>42</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>すいほう</li>
+              <li>ちょすい</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553216" target="_blank" rel="noopener noreferrer" aria-label="エンニュートの詳細ページを開く" data-types="poison fire">
@@ -9625,6 +11210,13 @@
               <dd>117</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ふしょく</li>
+              <li>どんかん</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553215" target="_blank" rel="noopener noreferrer" aria-label="アマージョの詳細ページを開く" data-types="grass">
@@ -9667,6 +11259,14 @@
               <dd>72</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>リーフガード</li>
+              <li>じょおうのいげん</li>
+              <li>スイートベール</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553214" target="_blank" rel="noopener noreferrer" aria-label="ヤレユータンの詳細ページを開く" data-types="normal psychic">
@@ -9710,6 +11310,14 @@
               <dd>60</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>せいしんりょく</li>
+              <li>テレパシー</li>
+              <li>きょうせい</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554366" target="_blank" rel="noopener noreferrer" aria-label="ナゲツケサルの詳細ページを開く" data-types="fighting">
@@ -9752,6 +11360,13 @@
               <dd>80</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>レシーバー</li>
+              <li>まけんき</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553212" target="_blank" rel="noopener noreferrer" aria-label="ジジーロンの詳細ページを開く" data-types="normal dragon">
@@ -9795,6 +11410,14 @@
               <dd>36</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ぎゃくじょう</li>
+              <li>そうしょく</li>
+              <li>ノーてんき</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553201" target="_blank" rel="noopener noreferrer" aria-label="メガジジーロンの詳細ページを開く" data-types="normal dragon">
@@ -9838,6 +11461,12 @@
               <dd>36</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ぎゃくじょう</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553200" target="_blank" rel="noopener noreferrer" aria-label="ジャラランガの詳細ページを開く" data-types="dragon fighting">
@@ -9881,6 +11510,14 @@
               <dd>85</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ぼうだん</li>
+              <li>ぼうおん</li>
+              <li>ぼうじん</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554156" target="_blank" rel="noopener noreferrer" aria-label="アップリューの詳細ページを開く" data-types="grass dragon">
@@ -9924,6 +11561,14 @@
               <dd>70</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>じゅくせい</li>
+              <li>くいしんぼう</li>
+              <li>はりきり</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554155" target="_blank" rel="noopener noreferrer" aria-label="タルップルの詳細ページを開く" data-types="grass dragon">
@@ -9967,6 +11612,14 @@
               <dd>30</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>じゅくせい</li>
+              <li>くいしんぼう</li>
+              <li>あついしぼう</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553198" target="_blank" rel="noopener noreferrer" aria-label="サダイジャの詳細ページを開く" data-types="ground">
@@ -10009,6 +11662,14 @@
               <dd>71</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>すなはき</li>
+              <li>だっぴ</li>
+              <li>すながくれ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553195" target="_blank" rel="noopener noreferrer" aria-label="ポットデスの詳細ページを開く" data-types="ghost">
@@ -10051,6 +11712,13 @@
               <dd>70</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>くだけるよろい</li>
+              <li>のろわれボディ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553194" target="_blank" rel="noopener noreferrer" aria-label="ブリムオンの詳細ページを開く" data-types="psychic fairy">
@@ -10094,6 +11762,14 @@
               <dd>29</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>いやしのこころ</li>
+              <li>きけんよち</li>
+              <li>マジックミラー</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553891" target="_blank" rel="noopener noreferrer" aria-label="バリコオルの詳細ページを開く" data-types="ice psychic">
@@ -10137,6 +11813,14 @@
               <dd>70</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ちどりあし</li>
+              <li>バリアフリー</li>
+              <li>アイスボディ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553192" target="_blank" rel="noopener noreferrer" aria-label="デスバーンの詳細ページを開く" data-types="ground ghost">
@@ -10180,6 +11864,12 @@
               <dd>30</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>さまようたましい</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553191" target="_blank" rel="noopener noreferrer" aria-label="マホイップの詳細ページを開く" data-types="fairy">
@@ -10222,6 +11912,13 @@
               <dd>64</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>スイートベール</li>
+              <li>アロマベール</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564126" target="_blank" rel="noopener noreferrer" aria-label="タイレーツの詳細ページを開く" data-types="fighting">
@@ -10264,6 +11961,13 @@
               <dd>75</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>カブトアーマー</li>
+              <li>まけんき</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564145" target="_blank" rel="noopener noreferrer" aria-label="メガタイレーツの詳細ページを開く" data-types="fighting">
@@ -10306,6 +12010,12 @@
               <dd>100</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>まけんき</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553395" target="_blank" rel="noopener noreferrer" aria-label="モルペコの詳細ページを開く" data-types="electric dark">
@@ -10349,6 +12059,12 @@
               <dd>97</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>はらぺこスイッチ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554365" target="_blank" rel="noopener noreferrer" aria-label="アヤシシの詳細ページを開く" data-types="normal psychic">
@@ -10392,6 +12108,14 @@
               <dd>65</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>いかく</li>
+              <li>おみとおし</li>
+              <li>そうしょく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553189" target="_blank" rel="noopener noreferrer" aria-label="バサギリの詳細ページを開く" data-types="bug rock">
@@ -10435,6 +12159,14 @@
               <dd>85</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>むしのしらせ</li>
+              <li>ちからずく</li>
+              <li>きれあじ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553187" target="_blank" rel="noopener noreferrer" aria-label="イダイトウ(メス)の詳細ページを開く" data-types="water ghost">
@@ -10478,6 +12210,14 @@
               <dd>78</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>すいすい</li>
+              <li>てきおうりょく</li>
+              <li>かたやぶり</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564125" target="_blank" rel="noopener noreferrer" aria-label="ハリーマンの詳細ページを開く" data-types="dark poison">
@@ -10521,6 +12261,14 @@
               <dd>85</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>どくのトゲ</li>
+              <li>すいすい</li>
+              <li>いかく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553396" target="_blank" rel="noopener noreferrer" aria-label="ウェーニバルの詳細ページを開く" data-types="water fighting">
@@ -10564,6 +12312,13 @@
               <dd>85</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>げきりゅう</li>
+              <li>じしんかじょう</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553170" target="_blank" rel="noopener noreferrer" aria-label="イッカネズミ(3びきかぞく)の詳細ページを開く" data-types="normal">
@@ -10606,6 +12361,14 @@
               <dd>111</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>フレンドガード</li>
+              <li>ほおぶくろ</li>
+              <li>テクニシャン</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553170" target="_blank" rel="noopener noreferrer" aria-label="イッカネズミ(4ひきかぞく)の詳細ページを開く" data-types="normal">
@@ -10648,6 +12411,14 @@
               <dd>111</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>フレンドガード</li>
+              <li>ほおぶくろ</li>
+              <li>テクニシャン</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553168" target="_blank" rel="noopener noreferrer" aria-label="キョジオーンの詳細ページを開く" data-types="rock">
@@ -10690,6 +12461,14 @@
               <dd>35</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>きよめのしお</li>
+              <li>がんじょう</li>
+              <li>クリアボディ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553167" target="_blank" rel="noopener noreferrer" aria-label="グレンアルマの詳細ページを開く" data-types="fire psychic">
@@ -10733,6 +12512,13 @@
               <dd>75</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>もらいび</li>
+              <li>くだけるよろい</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553164" target="_blank" rel="noopener noreferrer" aria-label="スコヴィランの詳細ページを開く" data-types="grass fire">
@@ -10776,6 +12562,14 @@
               <dd>75</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>ようりょくそ</li>
+              <li>ふみん</li>
+              <li>ムラっけ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/554212" target="_blank" rel="noopener noreferrer" aria-label="メガスコヴィランの詳細ページを開く" data-types="grass fire">
@@ -10819,6 +12613,12 @@
               <dd>75</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>とびだすハバネロ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553163" target="_blank" rel="noopener noreferrer" aria-label="デカヌチャンの詳細ページを開く" data-types="fairy steel">
@@ -10862,6 +12662,14 @@
               <dd>94</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>かたやぶり</li>
+              <li>マイペース</li>
+              <li>わるいてぐせ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553162" target="_blank" rel="noopener noreferrer" aria-label="イルカマン(ナイーブ)の詳細ページを開く" data-types="water">
@@ -10904,6 +12712,12 @@
               <dd>100</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>マイティチェンジ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553162" target="_blank" rel="noopener noreferrer" aria-label="イルカマン(マイティ)の詳細ページを開く" data-types="water">
@@ -10946,6 +12760,12 @@
               <dd>100</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>マイティチェンジ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553151" target="_blank" rel="noopener noreferrer" aria-label="ミミズズの詳細ページを開く" data-types="steel">
@@ -10988,6 +12808,13 @@
               <dd>65</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>どしょく</li>
+              <li>すながくれ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564123" target="_blank" rel="noopener noreferrer" aria-label="ハカドッグの詳細ページを開く" data-types="ghost">
@@ -11030,6 +12857,13 @@
               <dd>68</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>すなかき</li>
+              <li>もふもふ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/564124" target="_blank" rel="noopener noreferrer" aria-label="コノヨザルの詳細ページを開く" data-types="fighting ghost">
@@ -11073,6 +12907,14 @@
               <dd>90</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>やるき</li>
+              <li>せいしんりょく</li>
+              <li>まけんき</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553165" target="_blank" rel="noopener noreferrer" aria-label="リキキリンの詳細ページを開く" data-types="normal psychic">
@@ -11116,6 +12958,14 @@
               <dd>60</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>はんすう</li>
+              <li>テイルアーマー</li>
+              <li>そうしょく</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553145" target="_blank" rel="noopener noreferrer" aria-label="ヤバソチャの詳細ページを開く" data-types="grass ghost">
@@ -11159,6 +13009,13 @@
               <dd>70</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>おもてなし</li>
+              <li>たいねつ</li>
+            </ul>
+          </div>
         </div>
       </a>
       <a class="pokemon-card" href="https://gamewith.jp/pokemon-champions/553143" target="_blank" rel="noopener noreferrer" aria-label="カミツオロチの詳細ページを開く" data-types="grass dragon">
@@ -11202,6 +13059,14 @@
               <dd>44</dd>
             </div>
           </dl>
+          <div class="ability-block">
+            <span class="ability-label">特性</span>
+            <ul class="ability-list">
+              <li>かんろなミツ</li>
+              <li>さいせいりょく</li>
+              <li>ねんちゃく</li>
+            </ul>
+          </div>
         </div>
       </a>
     </section>
